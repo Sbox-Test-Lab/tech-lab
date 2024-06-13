@@ -13,6 +13,7 @@
           "__guid": "51ffe752-9e83-4c92-839e-45b6b2d97bbc",
           "Flags": 0,
           "Name": "Sun",
+          "Position": "0,0,1024",
           "Rotation": "0,0.258819,0,0.9659258",
           "Tags": "light_directional,light",
           "Enabled": true,
@@ -93,224 +94,6 @@
               "ZNear": 16
             }
           ]
-        },
-        {
-          "__guid": "a1ff2ec0-013d-4ab5-b023-b81a3a44f1ef",
-          "Flags": 0,
-          "Name": "Object",
-          "Position": "0,0,864",
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SoundPointComponent",
-              "__guid": "8fbe4f09-d3ad-4110-ad83-b4c9820ed080",
-              "DistanceAttenuation": false,
-              "DistanceAttenuationOverride": false,
-              "Force2d": false,
-              "MaxRepeatTime": 1,
-              "MinRepeatTime": 1,
-              "Occlusion": false,
-              "OcclusionOverride": false,
-              "OcclusionRadius": 32,
-              "Pitch": 1,
-              "PlayOnStart": true,
-              "ReflectionOverride": false,
-              "Reflections": false,
-              "Repeat": false,
-              "SoundOverride": false,
-              "StopOnNew": false,
-              "TargetMixer": {
-                "Name": "unknown",
-                "Id": "00000000-0000-0000-0000-000000000000"
-              },
-              "Volume": 1
-            }
-          ]
-        },
-        {
-          "__guid": "423b79a7-5fd5-4b53-9663-86de1f2ba89b",
-          "Flags": 0,
-          "Name": "Object",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Children": [
-            {
-              "__guid": "7d3a209e-ff22-4b91-8aff-4433032c0be6",
-              "Flags": 0,
-              "Name": "Spray",
-              "Position": "675.7297,79.8407,918.6636",
-              "Rotation": "0,0.7071068,0,0.7071068",
-              "Tags": "particles",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.ParticleEffect",
-                  "__guid": "3d1a1e4c-d190-46b7-86cf-36d69c2d98fe",
-                  "Alpha": {
-                    "Type": "Curve",
-                    "CurveA": [
-                      {
-                        "y": 1
-                      },
-                      {
-                        "x": 0.48029557,
-                        "y": 1,
-                        "in": 1.5365853,
-                        "out": -1.5365853
-                      },
-                      {
-                        "x": 1,
-                        "in": 1.312303,
-                        "out": -1.312303
-                      }
-                    ],
-                    "Constants": "1,0,0,0"
-                  },
-                  "ApplyColor": true,
-                  "ApplyRotation": false,
-                  "ApplyShape": true,
-                  "Bounce": {
-                    "Constants": "1,0,0,0"
-                  },
-                  "Brightness": {
-                    "Constants": "1,0,0,0"
-                  },
-                  "Bumpiness": {},
-                  "Collision": false,
-                  "CollisionRadius": 1,
-                  "Damping": {},
-                  "DieOnCollisionChance": {},
-                  "Force": false,
-                  "ForceDirection": "0,0,-200",
-                  "ForceScale": {
-                    "Constants": "1,0,0,0"
-                  },
-                  "Friction": {
-                    "Constants": "1,0,0,0"
-                  },
-                  "Gradient": {
-                    "Type": "Range",
-                    "Evaluation": "Particle",
-                    "GradientA": {
-                      "color": [
-                        {
-                          "t": 0.5,
-                          "c": "1,1,1,1"
-                        }
-                      ],
-                      "alpha": []
-                    },
-                    "GradientB": {
-                      "color": [
-                        {
-                          "t": 0.5,
-                          "c": "1,1,1,1"
-                        }
-                      ],
-                      "alpha": []
-                    },
-                    "ConstantA": "0,0.98515,0.83738,1",
-                    "ConstantB": "0,0.63333,1,1"
-                  },
-                  "Lifetime": {
-                    "Type": "Range",
-                    "Evaluation": "Particle",
-                    "Constants": "1,2,0,0"
-                  },
-                  "MaxParticles": 5000,
-                  "PerParticleTimeScale": {
-                    "Constants": "1,0.4,0,0"
-                  },
-                  "PreWarm": 0,
-                  "PushStrength": {},
-                  "Roll": {
-                    "Type": "Range",
-                    "Evaluation": "Particle",
-                    "Constants": "0,360,0,0"
-                  },
-                  "Scale": {
-                    "Type": "Curve",
-                    "CurveA": {
-                      "rangey": "0,3",
-                      "frames": [
-                        {
-                          "in": -9.333329,
-                          "out": 9.333329
-                        },
-                        {
-                          "x": 0.03325123,
-                          "y": 1,
-                          "in": -0.056075174,
-                          "out": 0.056075174
-                        },
-                        {
-                          "x": 1,
-                          "in": 2.9152544,
-                          "out": -2.9152544
-                        }
-                      ]
-                    },
-                    "Constants": "1,0,0,0"
-                  },
-                  "SequenceId": {},
-                  "SequenceSpeed": {
-                    "Constants": "1,0,0,0"
-                  },
-                  "SequenceTime": {
-                    "Constants": "1,0,0,0"
-                  },
-                  "SheetSequence": false,
-                  "Space": "World",
-                  "StartVelocity": {
-                    "Type": "Range",
-                    "Evaluation": "Particle",
-                    "Constants": "100,200,0,0"
-                  },
-                  "Stretch": {},
-                  "TimeScale": 1,
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "Sandbox.ParticleSpriteRenderer",
-                  "__guid": "2e9703ff-1ec5-47f3-9508-628c67677074",
-                  "Additive": false,
-                  "BlurAmount": 0.5,
-                  "BlurOpacity": 0.91,
-                  "BlurSpacing": 0.73,
-                  "DepthFeather": 0,
-                  "FaceVelocity": false,
-                  "FogStrength": 1,
-                  "LeadingTrail": true,
-                  "MotionBlur": false,
-                  "Opaque": false,
-                  "RotationOffset": 0,
-                  "Scale": 1,
-                  "Shadows": false,
-                  "SortMode": "Unsorted",
-                  "Texture": "materials/effects/gradient_circle_trans_tga_5118bc8e.generated.vtex"
-                },
-                {
-                  "__type": "Sandbox.ParticleConeEmitter",
-                  "__guid": "b0ba0796-54ad-4517-b454-d6830bb2ebd0",
-                  "Burst": 0,
-                  "ConeAngle": 2.97,
-                  "ConeFar": 50,
-                  "ConeNear": 1,
-                  "Delay": 0,
-                  "DestroyOnEnd": false,
-                  "Duration": 3,
-                  "InVolume": false,
-                  "Loop": true,
-                  "OnEdge": false,
-                  "Rate": 500
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -370,6 +153,34 @@
           "Strength": 1,
           "Threshold": 0.5,
           "ThresholdWidth": 0
+        }
+      ]
+    },
+    {
+      "__guid": "d133a772-e94d-46ce-b62b-e9c48398e3c6",
+      "Flags": 0,
+      "Name": "Network",
+      "Position": "85.91736,-42.5718,844.9589",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
+        {
+          "__guid": "ebc64120-34db-4f09-af48-8f68d158085e",
+          "Flags": 0,
+          "Name": "Network Helper",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.NetworkHelper",
+              "__guid": "1185256a-857c-432c-a6c2-f31a85207db5",
+              "SpawnPoints": [],
+              "StartServer": true
+            }
+          ]
         }
       ]
     },
@@ -535,7 +346,7 @@
         {
           "__guid": "a98ce61a-cdb5-48f3-9c68-639d7f275e19",
           "Flags": 0,
-          "Name": "vinyl_player",
+          "Name": "Turntable",
           "Position": "0.002401364,-7.61803,30.5118",
           "Scale": "0.7,0.7,0.7",
           "Enabled": true,
@@ -552,13 +363,79 @@
               "Tint": "1,1,1,1"
             }
           ]
+        },
+        {
+          "__guid": "b0b06533-0958-43f0-87f5-451efeffdbf6",
+          "Flags": 0,
+          "Name": "lionstatue",
+          "Position": "-26.51599,25.04757,30.69774",
+          "Rotation": "-0.0000005888199,0.000001579526,0.000003496537,1",
+          "Scale": "0.25,0.25,0.25",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "fe10d1a4-79a9-40e5-a7bb-de0c6a86ff91",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/lionstatue/source/lionstatue.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "591dca99-e6c6-4a8e-85df-6575746cbc7d",
+          "Flags": 0,
+          "Name": "vaz2105",
+          "Position": "1.044217,22.27564,30.69795",
+          "Rotation": "0.00000005073343,0.00000136836,-0.5289254,0.8486685",
+          "Scale": "0.2,0.2,0.2",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "a6667211-a8d5-4405-ab1c-fcf1beb8a50c",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "vaz2105.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "e054fe37-9d55-4993-aacc-db0c0ffdd9ea",
+          "Flags": 0,
+          "Name": "maniken",
+          "Position": "-18.64879,0.356293,30.69794",
+          "Rotation": "-0.0000009085276,0.000004299125,0.1305184,-0.991446",
+          "Scale": "0.2,0.2,0.2",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "58690d0a-f815-47aa-8ff6-83bb35b26e43",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/theatr/maniken.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
         }
       ]
     },
     {
       "__guid": "553e72cb-e496-47e4-b3d2-dc3623ade455",
       "Flags": 0,
-      "Name": "Table",
+      "Name": "Table!",
       "Position": "0,0,805.8045",
       "Rotation": "0.000001165514,0.000001490116,-0.000003496541,0.9999999",
       "Scale": "1.515993,1.153996,1",
@@ -574,34 +451,6 @@
           "IsStatic": false,
           "Model": "models/blue_table.vmdl",
           "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "d133a772-e94d-46ce-b62b-e9c48398e3c6",
-      "Flags": 0,
-      "Name": "Network",
-      "Position": "85.91736,-42.5718,844.9589",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Children": [
-        {
-          "__guid": "ebc64120-34db-4f09-af48-8f68d158085e",
-          "Flags": 0,
-          "Name": "Network Helper",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.NetworkHelper",
-              "__guid": "1185256a-857c-432c-a6c2-f31a85207db5",
-              "SpawnPoints": [],
-              "StartServer": true
-            }
-          ]
         }
       ]
     },
@@ -646,28 +495,6 @@
       ]
     },
     {
-      "__guid": "e054fe37-9d55-4993-aacc-db0c0ffdd9ea",
-      "Flags": 0,
-      "Name": "maniken",
-      "Position": "397.064,-196.6755,806.4834",
-      "Rotation": "-0.000003108401,0.0000009798441,0.7071036,-0.7071099",
-      "Scale": "0.2441208,0.2441208,0.2441208",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "58690d0a-f815-47aa-8ff6-83bb35b26e43",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/theatr/maniken.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
       "__guid": "4723d948-5e32-49e6-970a-a0c8ff83432d",
       "Flags": 0,
       "Name": "dev_furniture_couch",
@@ -692,9 +519,9 @@
     {
       "__guid": "6c3865df-e338-4dd8-98cd-0d9180e02a1c",
       "Flags": 0,
-      "Name": "alarm_clock_01",
-      "Position": "608,-640,805",
-      "Rotation": "0,0,0.8870109,0.4617486",
+      "Name": "tick! TOCK.",
+      "Position": "515.2185,134.7989,846.6404",
+      "Rotation": "0,0,0.6755904,-0.7372773",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -713,7 +540,7 @@
     {
       "__guid": "0c9f60ef-a356-4282-8c08-387000d532f8",
       "Flags": 0,
-      "Name": "untitled_2",
+      "Name": "Ladder",
       "Position": "-522.7267,267.2851,806.3091",
       "Rotation": "-0.000009062233,0.00000319954,0.008726535,0.9999619",
       "Scale": "0.5,0.5,0.5",
@@ -735,7 +562,7 @@
     {
       "__guid": "c81f34fe-d898-42d7-aaec-ddbc0beb70f2",
       "Flags": 0,
-      "Name": "moyai",
+      "Name": "Stone",
       "Position": "-609.9674,-437.8628,811.0494",
       "Rotation": "-0.0001629137,0.07315117,0.002221107,0.9973184",
       "Enabled": true,
@@ -754,1490 +581,1128 @@
       ]
     },
     {
-      "__guid": "18859ccd-d5b4-4c7c-b9aa-d6c5107d88fc",
+      "__guid": "bf3650e8-1a7c-466e-a6f9-12686dbac0bb",
       "Flags": 0,
-      "Name": "fire_blanket",
-      "Position": "620.1337,-167.722,818.0731",
-      "Rotation": "0.04234136,0.01848526,-0.9154899,0.3996795",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "455d45e4-d7d7-4907-bbd2-34ce3864ab8e",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/props/fire_blanket/fire_blanket.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "591dca99-e6c6-4a8e-85df-6575746cbc7d",
-      "Flags": 0,
-      "Name": "vaz2105",
-      "Position": "1.044464,22.27556,836.5025",
-      "Rotation": "0.000000251713,0.000003249444,-0.5289283,0.8486665",
-      "Scale": "0.2,0.2,0.2",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "a6667211-a8d5-4405-ab1c-fcf1beb8a50c",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "vaz2105.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "c09ddb74-1cc5-4f3c-a3de-aa7644fc77b7",
-      "Flags": 0,
-      "Name": "paint_roller",
-      "Position": "595.4867,518.3258,819.6453",
-      "Rotation": "-0.000003722824,0.126288,0.00002924283,0.9919937",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "5b9d71b6-f3b8-4ccd-981e-0fa474937f40",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/props/paintsuplies/paint_roller.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "c5ae816e-86db-49de-8d3c-454a50feca99",
-      "Flags": 0,
-      "Name": "skeletonkey",
-      "Position": "562.829,510.4708,815.9702",
-      "Rotation": "-0.000001519918,0.000007629358,0.9999999,0.00002288807",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "a02f797d-4c8f-42f7-b02c-fbcfb860a8ef",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/3dmodelscc0/medievalpropspack/skeletonkey/skeletonkey.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "c6665c13-22d5-48f9-8b5a-49fb2d129864",
-      "Flags": 0,
-      "Name": "c_battalion_bugle",
-      "Position": "559.2321,-80.31906,847.3658",
-      "Rotation": "0.0197067,0.0288437,-0.5637827,0.825184",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "d5cfa197-4073-472e-ba1f-7c904a10dcce",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/weapons/c_models/c_battalion_bugle/c_battalion_bugle.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "accb6de6-25af-4daa-9357-c80060960b15",
-      "Flags": 0,
-      "Name": "tape",
-      "Position": "523.6415,-91.46877,846.6393",
-      "Rotation": "0.000002989844,0.0582656,-0.00005122687,0.9983011",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "4ac3904f-1fff-41ee-8c95-ec2785c27bac",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/unity stuff/1/brown-tape/tape.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "3eee7a59-6abc-44e9-967d-b566685a71c7",
-      "Flags": 0,
-      "Name": "molniya",
-      "Position": "-396.3286,-390.195,830.8782",
-      "Rotation": "-0.0766665,0.05819345,0.79283,0.6017942",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "bdf4386c-8137-41a8-a263-d01ed2a6d126",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/sigils/molniya.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "6de911f3-6e21-4db1-9536-5daf62d110ff",
-      "Flags": 0,
-      "Name": "untitled_6",
-      "Position": "543.2354,-70.49595,846.6393",
-      "Rotation": "0.000002567546,0.000003594811,-0.7749423,0.6320319",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "ada6fe12-f2c4-4751-9006-c8f85e53c689",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "model/model/untitled_6.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "08b2c3f7-4101-4ce1-8f02-d760d9ef5547",
-      "Flags": 0,
-      "Name": "fox",
-      "Position": "675.2095,-116.3451,805.3652",
-      "Rotation": "-0.03702091,0.03203333,0.7553023,0.6535455",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "4d24a344-b351-4702-9245-0762357b184a",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/fauna/fox/fox.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "28263580-61c8-4b1b-907e-d2a92e4a95e5",
-      "Flags": 0,
-      "Name": "Point Light",
-      "Position": "-175.725,-395.513,911.0159",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "5ccf8cd0-70b7-419f-9313-651437d101ce",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "Radius": 256,
-          "Shadows": true
-        }
-      ]
-    },
-    {
-      "__guid": "699603a7-ae39-4870-92b3-f10a7339bc45",
-      "Flags": 0,
-      "Name": "Object",
-      "Position": "-116.6527,-341.1913,882.2413",
+      "Name": "Hill!",
+      "Position": "-387.7769,-420.8252,828.0779",
+      "Rotation": "0.02747446,-0.02085429,0.7960541,0.6042415",
+      "Scale": "2,2,2",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Children": [
         {
-          "__guid": "8c3e1238-5494-46f2-8384-27f28acb63c3",
+          "__guid": "3eee7a59-6abc-44e9-967d-b566685a71c7",
           "Flags": 0,
-          "Name": "rock_scatter_03",
-          "Position": "-54.12519,-70.97659,-38.11029",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2,2,2",
+          "Name": "Light",
+          "Position": "0,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "39f73062-4606-4f3a-926f-18ca158faa8a",
+              "__type": "Sandbox.Prop",
+              "__guid": "bdf4386c-8137-41a8-a263-d01ed2a6d126",
               "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/sigils/molniya.vmdl",
               "Tint": "1,1,1,1"
             }
           ]
         },
         {
-          "__guid": "65b1a2df-94aa-4402-b476-bce4dfa68258",
+          "__guid": "28263580-61c8-4b1b-907e-d2a92e4a95e5",
           "Flags": 0,
-          "Name": "rock_scatter_03 (7)",
-          "Position": "-323.0948,-186.647,-49.56525",
-          "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
-          "Scale": "2,2,2",
+          "Name": "Point Light",
+          "Position": "-13.42416,-105.5238,42.49567",
+          "Rotation": "-0.02747447,0.0208543,-0.7960544,0.6042417",
+          "Scale": "0.5,0.5,0.5",
+          "Tags": "light_point,light",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "35fc2e38-fd57-47ec-8ae7-2ca63fbcfae7",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "__type": "Sandbox.PointLight",
+              "__guid": "5ccf8cd0-70b7-419f-9313-651437d101ce",
+              "Attenuation": 1,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 256,
+              "Shadows": true
             }
           ]
         },
         {
-          "__guid": "fbf9a236-56c7-4c39-bb65-19097d19106e",
+          "__guid": "699603a7-ae39-4870-92b3-f10a7339bc45",
           "Flags": 0,
-          "Name": "rock_scatter_03 (2)",
-          "Position": "-81.81203,-38.97208,-49.7525",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2.492856,2.492856,2.557837",
+          "Name": "Floating Rocks",
+          "Position": "3.758211,-141.276,26.88658",
+          "Rotation": "-0.02747447,0.0208543,-0.7960544,0.6042417",
+          "Scale": "0.5,0.5,0.5",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
-          "Components": [
+          "Children": [
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "c325d638-81a9-4db4-84d8-c7ae67eff527",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "ab77faa3-d16c-4ece-b493-3eeb99ed4181",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (5)",
-          "Position": "-350.7815,-155.1005,-32.16644",
-          "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
-          "Scale": "2.492856,2.492856,2.557837",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "8c3e1238-5494-46f2-8384-27f28acb63c3",
+              "Flags": 0,
+              "Name": "rock_scatter_03",
+              "Position": "-54.12519,-70.97659,-38.11029",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "39f73062-4606-4f3a-926f-18ca158faa8a",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "b210428f-5d5d-4c0a-a219-caa2ef687cab",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "500e25c0-322e-4dd0-9d58-86b1299ed029",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (3)",
-          "Position": "-100.4173,-0.9570923,-44.92694",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2.758328,2.758328,2.823309",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "65b1a2df-94aa-4402-b476-bce4dfa68258",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (7)",
+              "Position": "-323.0948,-186.647,-49.56525",
+              "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "35fc2e38-fd57-47ec-8ae7-2ca63fbcfae7",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "5c2b298e-7e60-4ee1-9741-8aa558aa16c5",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "f5200ee1-7270-4072-b327-a32975bef88e",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (3)",
-          "Position": "-214.302,46.87976,-40.81689",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2.758328,2.758328,2.823309",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "fbf9a236-56c7-4c39-bb65-19097d19106e",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (2)",
+              "Position": "-81.81203,-38.97208,-49.7525",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2.492856,2.492856,2.557837",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "c325d638-81a9-4db4-84d8-c7ae67eff527",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "d32c61e8-dbbe-4bf6-afed-62a3667ab91b",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "02a242d9-6d57-4f7c-bf1f-c77bf69eb977",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (3)",
-          "Position": "-334.2762,53.2233,-32.79175",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2.758328,2.758328,2.823309",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "ab77faa3-d16c-4ece-b493-3eeb99ed4181",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (5)",
+              "Position": "-350.7815,-155.1005,-32.16644",
+              "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
+              "Scale": "2.492856,2.492856,2.557837",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "b210428f-5d5d-4c0a-a219-caa2ef687cab",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "d7f9e929-e64c-44d2-9e8e-974284a50b29",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "9105f5af-d326-4cdc-a506-ee84e1da6513",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (3)",
-          "Position": "-334.2741,-10.66434,-42.81116",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2.758328,2.758328,2.823309",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "500e25c0-322e-4dd0-9d58-86b1299ed029",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (3)",
+              "Position": "-100.4173,-0.9570923,-44.92694",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2.758328,2.758328,2.823309",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5c2b298e-7e60-4ee1-9741-8aa558aa16c5",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "e32c4405-02b1-48fa-a5b8-d3357b7351e9",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "e9b884c3-1182-4778-be78-7883b535db3b",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (3)",
-          "Position": "-140.328,46.88217,-53.62598",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2.758328,2.758328,2.823309",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "f5200ee1-7270-4072-b327-a32975bef88e",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (3)",
+              "Position": "-214.302,46.87976,-40.81689",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2.758328,2.758328,2.823309",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "d32c61e8-dbbe-4bf6-afed-62a3667ab91b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "bb302c26-2075-4772-8138-5f7d4897795f",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "f53d189f-7163-415a-973f-6f7de672738b",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (6)",
-          "Position": "-369.3871,-106.5482,-27.34106",
-          "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
-          "Scale": "2.758328,2.758328,2.823309",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "02a242d9-6d57-4f7c-bf1f-c77bf69eb977",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (3)",
+              "Position": "-334.2762,53.2233,-32.79175",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2.758328,2.758328,2.823309",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "d7f9e929-e64c-44d2-9e8e-974284a50b29",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "082ec4ee-f263-4940-b3f7-bd096df07fbb",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "1e4e3fad-cc55-44c2-813b-a4d2733f0861",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (6)",
-          "Position": "-357.528,-52.63168,-37.74927",
-          "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
-          "Scale": "2.758328,2.758328,2.823309",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "9105f5af-d326-4cdc-a506-ee84e1da6513",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (3)",
+              "Position": "-334.2741,-10.66434,-42.81116",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2.758328,2.758328,2.823309",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "e32c4405-02b1-48fa-a5b8-d3357b7351e9",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "5b4f736e-87a8-4daa-b313-a596c2c0b7e6",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "60c87dce-6db5-421c-968e-854ac64bc6da",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (1)",
-          "Position": "-54.12405,-106.2986,-47.54498",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2,2,2",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "e9b884c3-1182-4778-be78-7883b535db3b",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (3)",
+              "Position": "-140.328,46.88217,-53.62598",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2.758328,2.758328,2.823309",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "bb302c26-2075-4772-8138-5f7d4897795f",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "b2a20591-6c3e-4aad-ab90-629596459d8c",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "4bae8f55-46b7-4b05-8a6d-28049bcc04d6",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (1)",
-          "Position": "-67.46157,-154.0681,-47.72827",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2,2,2",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "f53d189f-7163-415a-973f-6f7de672738b",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (6)",
+              "Position": "-369.3871,-106.5482,-27.34106",
+              "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
+              "Scale": "2.758328,2.758328,2.823309",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "082ec4ee-f263-4940-b3f7-bd096df07fbb",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "75fad056-0ebc-4633-8d4f-566952339ccf",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "213855b2-4256-4cf7-acd4-c315e510d51c",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (1)",
-          "Position": "-97.41387,-181.0154,-39.75696",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2,2,2",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "1e4e3fad-cc55-44c2-813b-a4d2733f0861",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (6)",
+              "Position": "-357.528,-52.63168,-37.74927",
+              "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
+              "Scale": "2.758328,2.758328,2.823309",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5b4f736e-87a8-4daa-b313-a596c2c0b7e6",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "d9b1ebcb-6e39-4957-9f6b-160a2b73879e",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "c5fee141-1b94-47bf-8e0c-d389e6cf5df6",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (1)",
-          "Position": "-152.209,-219.8622,-39.75629",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2,2,2",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "60c87dce-6db5-421c-968e-854ac64bc6da",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (1)",
+              "Position": "-54.12405,-106.2986,-47.54498",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "b2a20591-6c3e-4aad-ab90-629596459d8c",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "fa6708c7-22de-4144-9cf4-f4348eb92839",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "06a3cd15-ab8c-4e8e-9d43-dd2459a4f576",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (1)",
-          "Position": "-205.3125,-219.8639,-25.18311",
-          "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
-          "Scale": "2,2,2",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "4bae8f55-46b7-4b05-8a6d-28049bcc04d6",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (1)",
+              "Position": "-67.46157,-154.0681,-47.72827",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "75fad056-0ebc-4633-8d4f-566952339ccf",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "1173d478-2109-439c-9f13-071291ef40bc",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "2a962416-1fad-49b8-9335-a27bb208e7e2",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (4)",
-          "Position": "-323.0936,-221.051,-43.13116",
-          "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
-          "Scale": "2,2,2",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "213855b2-4256-4cf7-acd4-c315e510d51c",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (1)",
+              "Position": "-97.41387,-181.0154,-39.75696",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "d9b1ebcb-6e39-4957-9f6b-160a2b73879e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "8f20fba4-fa86-4fc5-9497-ca7d2ad4ff83",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "fa8469e1-8c09-45be-a060-de53627e4675",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (8)",
-          "Position": "-323.0936,-221.051,-43.13116",
-          "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
-          "Scale": "2,2,2",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "c5fee141-1b94-47bf-8e0c-d389e6cf5df6",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (1)",
+              "Position": "-152.209,-219.8622,-39.75629",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "fa6708c7-22de-4144-9cf4-f4348eb92839",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "1ea18bfb-ee7c-460a-833c-da8f3ffd152e",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "3dabafce-0ecb-4d68-a0dc-22c8fed40cb3",
-          "Flags": 0,
-          "Name": "rock_scatter_03 (8)",
-          "Position": "-221.6787,-260.8761,-31.9129",
-          "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
-          "Scale": "2,2,2",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
+              "__guid": "06a3cd15-ab8c-4e8e-9d43-dd2459a4f576",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (1)",
+              "Position": "-205.3125,-219.8639,-25.18311",
+              "Rotation": "-0.000005725256,0.000001996756,0.00001717577,0.9999999",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "1173d478-2109-439c-9f13-071291ef40bc",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
             {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "24b643bd-f22c-4542-b3a0-7d2ece31317b",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
+              "__guid": "2a962416-1fad-49b8-9335-a27bb208e7e2",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (4)",
+              "Position": "-323.0936,-221.051,-43.13116",
+              "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "8f20fba4-fa86-4fc5-9497-ca7d2ad4ff83",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "fa8469e1-8c09-45be-a060-de53627e4675",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (8)",
+              "Position": "-323.0936,-221.051,-43.13116",
+              "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "1ea18bfb-ee7c-460a-833c-da8f3ffd152e",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3dabafce-0ecb-4d68-a0dc-22c8fed40cb3",
+              "Flags": 0,
+              "Name": "rock_scatter_03 (8)",
+              "Position": "-221.6787,-260.8761,-31.9129",
+              "Rotation": "-0.000004869549,-0.000003612907,0.8270903,0.562069",
+              "Scale": "2,2,2",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "24b643bd-f22c-4542-b3a0-7d2ece31317b",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "__guid": "be9b2229-395f-47e1-8f25-04545e6e8e84",
+      "__guid": "bb4e3c08-8948-4a8d-a526-d89669167930",
       "Flags": 0,
-      "Name": "campfire",
+      "Name": "Camp fire!",
       "Position": "672.8644,-190.7725,805.7538",
       "Rotation": "0.000001887618,0.04895592,-0.00003851131,0.998801",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "4c91bb34-14b8-455d-bc8b-cb0d12e51b15",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/campfire/campfire.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ],
       "Children": [
         {
-          "__guid": "012d7ca1-9be9-438b-a999-c713042f63cf",
+          "__guid": "be9b2229-395f-47e1-8f25-04545e6e8e84",
           "Flags": 0,
-          "Name": "Burst",
+          "Name": "campfire",
           "Position": "0,0,0",
-          "Tags": "particles",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
             {
-              "__type": "Sandbox.ParticleEffect",
-              "__guid": "97855f9d-520b-4496-ab2a-7ec762d7400d",
-              "Alpha": {
-                "Type": "Curve",
-                "CurveA": [
-                  {
-                    "y": 1
-                  },
-                  {
-                    "x": 1
-                  }
-                ],
-                "Constants": "1,0,0,0"
-              },
-              "ApplyColor": false,
-              "ApplyRotation": false,
-              "ApplyShape": true,
-              "Bounce": {
-                "Constants": "1,0,0,0"
-              },
-              "Brightness": {
-                "Constants": "1,0,0,0"
-              },
-              "Bumpiness": {},
-              "Collision": false,
-              "CollisionRadius": 1,
-              "Damping": {},
-              "DieOnCollisionChance": {},
-              "Force": false,
-              "ForceDirection": "0,0,-800",
-              "ForceScale": {
-                "Constants": "1,0,0,0"
-              },
-              "Friction": {
-                "Constants": "1,0,0,0"
-              },
-              "Gradient": {
-                "Evaluation": "Particle",
-                "GradientA": {
-                  "color": [
-                    {
-                      "t": 0.5,
-                      "c": "1,1,1,1"
-                    }
-                  ],
-                  "alpha": []
-                },
-                "GradientB": {
-                  "color": [
-                    {
-                      "t": 0.5,
-                      "c": "1,1,1,1"
-                    }
-                  ],
-                  "alpha": []
-                },
-                "ConstantA": "1,1,1,1",
-                "ConstantB": "1,1,1,1"
-              },
-              "Lifetime": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "1,2,0,0"
-              },
-              "MaxParticles": 5000,
-              "PerParticleTimeScale": {
-                "Constants": "1,0.4,0,0"
-              },
-              "PreWarm": 0,
-              "PushStrength": {},
-              "Roll": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "0,360,0,0"
-              },
-              "Scale": {
-                "Type": "Curve",
-                "CurveA": [
-                  {
-                    "in": -9.333329,
-                    "out": 9.333329
-                  },
-                  {
-                    "x": 0.03325123,
-                    "y": 1,
-                    "in": -0.056075174,
-                    "out": 0.056075174
-                  },
-                  {
-                    "x": 1,
-                    "in": 2.9152544,
-                    "out": -2.9152544
-                  }
-                ],
-                "Constants": "1,0,0,0"
-              },
-              "SequenceId": {},
-              "SequenceSpeed": {
-                "Constants": "1,0,0,0"
-              },
-              "SequenceTime": {
-                "Constants": "1,0,0,0"
-              },
-              "SheetSequence": false,
-              "Space": "World",
-              "StartVelocity": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "10,70,0,0"
-              },
-              "Stretch": {},
-              "TimeScale": 1,
+              "__type": "Sandbox.Prop",
+              "__guid": "4c91bb34-14b8-455d-bc8b-cb0d12e51b15",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/campfire/campfire.vmdl",
               "Tint": "1,1,1,1"
-            },
+            }
+          ],
+          "Children": [
             {
-              "__type": "Sandbox.ParticleSpriteRenderer",
-              "__guid": "7541f3ae-f345-423c-8d47-40d5522b4e2b",
-              "Additive": false,
-              "BlurAmount": 0.5,
-              "BlurOpacity": 0.91,
-              "BlurSpacing": 0.73,
-              "DepthFeather": 0,
-              "FaceVelocity": false,
-              "FogStrength": 1,
-              "LeadingTrail": true,
-              "MotionBlur": false,
-              "Opaque": false,
-              "RotationOffset": 0,
-              "Scale": 1,
-              "Shadows": false,
-              "SortMode": "Unsorted",
-              "Texture": "materials/particles/shapes/circle1.vtex"
-            },
+              "__guid": "012d7ca1-9be9-438b-a999-c713042f63cf",
+              "Flags": 0,
+              "Name": "Burst",
+              "Position": "0,0,0",
+              "Tags": "particles",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ParticleEffect",
+                  "__guid": "97855f9d-520b-4496-ab2a-7ec762d7400d",
+                  "Alpha": {
+                    "Type": "Curve",
+                    "CurveA": [
+                      {
+                        "y": 1
+                      },
+                      {
+                        "x": 1
+                      }
+                    ],
+                    "Constants": "1,0,0,0"
+                  },
+                  "ApplyColor": true,
+                  "ApplyRotation": false,
+                  "ApplyShape": true,
+                  "Bounce": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Brightness": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Bumpiness": {},
+                  "Collision": false,
+                  "CollisionRadius": 1,
+                  "Damping": {},
+                  "DieOnCollisionChance": {},
+                  "Force": false,
+                  "ForceDirection": "0,0,-800",
+                  "ForceScale": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Friction": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "Gradient": {
+                    "Type": "Gradient",
+                    "Evaluation": "Particle",
+                    "GradientA": {
+                      "color": [
+                        {
+                          "t": 0.091880344,
+                          "c": "1,0.6,0,1"
+                        },
+                        {
+                          "t": 0.82905984,
+                          "c": "1,0,0,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "GradientB": {
+                      "color": [
+                        {
+                          "t": 0.5,
+                          "c": "1,1,1,1"
+                        }
+                      ],
+                      "alpha": []
+                    },
+                    "ConstantA": "1,0.56667,0,1",
+                    "ConstantB": "1,1,1,1"
+                  },
+                  "Lifetime": {
+                    "Type": "Range",
+                    "Evaluation": "Particle",
+                    "Constants": "1,2,0,0"
+                  },
+                  "MaxParticles": 5000,
+                  "PerParticleTimeScale": {
+                    "Constants": "1,0.4,0,0"
+                  },
+                  "PreWarm": 0,
+                  "PushStrength": {},
+                  "Roll": {
+                    "Type": "Range",
+                    "Evaluation": "Particle",
+                    "Constants": "0,360,0,0"
+                  },
+                  "Scale": {
+                    "Type": "Curve",
+                    "CurveA": [
+                      {
+                        "in": -9.333329,
+                        "out": 9.333329
+                      },
+                      {
+                        "x": 0.03325123,
+                        "y": 1,
+                        "in": -0.056075174,
+                        "out": 0.056075174
+                      },
+                      {
+                        "x": 1,
+                        "in": 2.9152544,
+                        "out": -2.9152544
+                      }
+                    ],
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceId": {},
+                  "SequenceSpeed": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SequenceTime": {
+                    "Constants": "1,0,0,0"
+                  },
+                  "SheetSequence": false,
+                  "Space": "World",
+                  "StartVelocity": {
+                    "Type": "Range",
+                    "Evaluation": "Particle",
+                    "Constants": "10,70,0,0"
+                  },
+                  "Stretch": {},
+                  "TimeScale": 1,
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.ParticleSpriteRenderer",
+                  "__guid": "7541f3ae-f345-423c-8d47-40d5522b4e2b",
+                  "Additive": false,
+                  "BlurAmount": 0.5,
+                  "BlurOpacity": 0.91,
+                  "BlurSpacing": 0.73,
+                  "DepthFeather": 0,
+                  "FaceVelocity": false,
+                  "FogStrength": 1,
+                  "LeadingTrail": true,
+                  "MotionBlur": false,
+                  "Opaque": false,
+                  "RotationOffset": 0,
+                  "Scale": 1,
+                  "Shadows": false,
+                  "SortMode": "Unsorted",
+                  "Texture": "materials/particles/shapes/circle1.vtex"
+                },
+                {
+                  "__type": "Sandbox.ParticleSphereEmitter",
+                  "__guid": "09fa539a-871e-4f7c-8c90-3df4316719d7",
+                  "Burst": 1000,
+                  "Delay": 0,
+                  "DestroyOnEnd": false,
+                  "Duration": 5,
+                  "Loop": true,
+                  "OnEdge": false,
+                  "Radius": 10,
+                  "Rate": 0,
+                  "Velocity": 100
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "18859ccd-d5b4-4c7c-b9aa-d6c5107d88fc",
+          "Flags": 0,
+          "Name": "fire_blanket",
+          "Position": "-53.68443,23.04644,7.103348",
+          "Rotation": "0.08710776,-0.001103679,-0.9123039,0.4001405",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
             {
-              "__type": "Sandbox.ParticleSphereEmitter",
-              "__guid": "09fa539a-871e-4f7c-8c90-3df4316719d7",
-              "Burst": 1000,
-              "Delay": 0,
-              "DestroyOnEnd": false,
-              "Duration": 5,
-              "Loop": true,
-              "OnEdge": false,
-              "Radius": 10,
-              "Rate": 0,
-              "Velocity": 100
+              "__type": "Sandbox.Prop",
+              "__guid": "455d45e4-d7d7-4907-bbd2-34ce3864ab8e",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/props/fire_blanket/fire_blanket.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "08b2c3f7-4101-4ce1-8f02-d760d9ef5547",
+          "Flags": 0,
+          "Name": "fox",
+          "Position": "2.366144,74.42759,-0.1579724",
+          "Rotation": "-0.0739555,0.000000003723812,0.7526093,0.6543009",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "4d24a344-b351-4702-9245-0762357b184a",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/fauna/fox/fox.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "88aaf8ed-65d2-4f51-a620-486e288fb846",
+          "Flags": 0,
+          "Name": "camping_chair",
+          "Position": "-23.145,37.2439,-4.292696",
+          "Rotation": "0.04246181,0.02438387,-0.8661782,-0.4973307",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "b38a70f5-eac8-4511-924f-e96db4d5a926",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/camping_chair/camping_chair.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "4b52081e-5fae-4280-b982-759ce56f6b95",
+          "Flags": 0,
+          "Name": "gnome",
+          "Position": "-27.17421,39.24275,17.76329",
+          "Rotation": "0.02106459,0.04419534,-0.4299102,0.9015433",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "3e0b46fb-66a8-4ce7-99ae-8c3327ef6fa8",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/gnome.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
             }
           ]
         }
       ]
     },
     {
-      "__guid": "9e03ce9e-a359-44d9-9859-94a8c52159ce",
+      "__guid": "8cf422d8-1b1c-4571-a765-b23db77d80b9",
       "Flags": 0,
-      "Name": "dm_battery",
-      "Position": "508.3907,-79.28905,846.4081",
-      "Rotation": "-0.0008134972,-0.005874158,-0.1371808,0.9905284",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "9a4262bc-479f-4204-b1c0-57a8663d23da",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/dm_battery.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "ea7d9521-650b-4dd5-b9be-0508f18e14a7",
-      "Flags": 0,
-      "Name": "v_he_grenade",
-      "Position": "-16.35841,-14.30364,-276.0139",
-      "Rotation": "0.1283606,0.7936484,-0.09494689,0.5870527",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "a8f837eb-16f0-497d-a552-ef16cdacec90",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/weapons/sbox_grenade_explosive/v_he_grenade.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "b299444a-ab2e-4f8c-91ec-14704d428262",
-      "Flags": 0,
-      "Name": "tape",
-      "Position": "-16.5199,-29.97569,-279.98",
-      "Rotation": "-0.000003814697,0.000001907313,1,0.000005721939",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "a7658130-db74-4ca1-a57c-77bead5d1806",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/unity stuff/1/brown-tape/tape.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "968bb056-a025-472f-ba24-af790f013094",
-      "Flags": 0,
-      "Name": "garfield",
-      "Position": "-7.511047,-6.909609,-279.8816",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "6639eb16-e7b3-471e-bf6e-d757182b41f4",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/garfield.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "76ca2278-2f9e-44dd-b887-4082150e2904",
-      "Flags": 0,
-      "Name": "8hu_kultiras_anchor02",
-      "Position": "85.89919,-2.746447,-303.1859",
-      "Rotation": "0.0930109,0.6868883,-0.09671839,0.7142681",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "a7724ece-8c2c-4978-aa3d-afc20f7300aa",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/8hu_kultiras_anchor02.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "d7fd71b8-89be-407d-895f-77df797ef343",
-      "Flags": 0,
-      "Name": "dogtreatbox_001",
-      "Position": "-17.88175,-18.18175,-268.6356",
-      "Rotation": "0.1283606,0.7936484,-0.09494689,0.5870527",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "a5d3444b-c4be-4b82-8d42-7cac161de625",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/postal2/dogtreatbox_001.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "76963882-abf3-4445-959d-23674d4fec6c",
-      "Flags": 0,
-      "Name": "smoke_detector_a",
-      "Position": "-43.82535,28.38463,-577.6186",
-      "Rotation": "0.08400761,0.3196717,-0.2398789,0.9128039",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "5a1604cc-f81a-4d62-ad20-e5842a1fefca",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/props/office_fixtures/smoke_detector_a.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "d4a6fe7f-7fee-40c5-8e5b-e20994af654b",
-      "Flags": 0,
-      "Name": "pot",
-      "Position": "-7.698578,-31.11961,-279.9999",
-      "Rotation": "0.000002860985,0.000004738569,-0.000008582956,0.9999999",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "0fa4b68c-4950-44d5-80d1-b8e6e86a1802",
-          "BodyGroups": 18446744073709551615,
-          "Health": 50,
-          "IsStatic": false,
-          "Model": "models/pot.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "2abaf1ab-21f2-48db-a0bb-adcdf98e7d7e",
-      "Flags": 0,
-      "Name": "untitled_184",
-      "Position": "-75.18496,57.84003,-231.2164",
-      "Rotation": "0.02352232,0.0553118,-0.390642,0.9185784",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "1ddc3fdf-d869-4329-b6cc-61819b05ad71",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "model/41/untitled_184.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "4b52081e-5fae-4280-b982-759ce56f6b95",
-      "Flags": 0,
-      "Name": "gnome",
-      "Position": "613.9694,-206.5619,805.7258",
-      "Rotation": "-0.000002712011,-0.00001874731,0.9999999,-0.00005624192",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "3e0b46fb-66a8-4ce7-99ae-8c3327ef6fa8",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/gnome.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "b0b06533-0958-43f0-87f5-451efeffdbf6",
-      "Flags": 0,
-      "Name": "lionstatue",
-      "Position": "-26.51572,25.04768,836.5024",
-      "Rotation": "0.0000005767051,0.00000306964,-0.000000000001770277,1",
-      "Scale": "0.25,0.25,0.25",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "fe10d1a4-79a9-40e5-a7bb-de0c6a86ff91",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/lionstatue/source/lionstatue.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "bf51c44e-4d0b-45fd-8a43-db644678f1ee",
-      "Flags": 0,
-      "Name": "lettuce_slice",
-      "Position": "686.7904,31.63892,805.1796",
-      "Rotation": "0.00001405226,0.01946771,-0.0007216648,0.9998102",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "7842947b-9272-417f-8a11-a1cd48e9aa94",
-          "BodyGroups": 1,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/ingredients/lettuce/lettuce_slice.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "b2bf9f6f-7cf2-488f-95b2-6245cd78fdeb",
-      "Flags": 0,
-      "Name": "gas_canister",
-      "Position": "674.4718,129.4303,805.6284",
-      "Rotation": "-0.000003518609,0.01160002,0.0003032956,0.9999326",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "f5c94f84-43b7-4acd-917c-1b765c8203f9",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/gas_canister/gas_canister.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "69133eab-b027-48fc-b489-39781d666aff",
-          "Flags": 0,
-          "Name": "Smoke",
-          "Position": "0,0,0",
-          "Tags": "particles",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ParticleEffect",
-              "__guid": "b060ad9d-9ddf-44df-a4dd-96b80a1bd278",
-              "Alpha": {
-                "Type": "Curve",
-                "CurveA": [
-                  {
-                    "in": -4.0000024,
-                    "out": 4.0000024
-                  },
-                  {
-                    "x": 0.20812808,
-                    "y": 0.475
-                  },
-                  {
-                    "x": 1
-                  }
-                ],
-                "Constants": "1,0,0,0"
-              },
-              "ApplyColor": true,
-              "ApplyRotation": true,
-              "ApplyShape": true,
-              "Bounce": {
-                "Constants": "1,0,0,0"
-              },
-              "Brightness": {
-                "Constants": "1,0,0,0"
-              },
-              "Bumpiness": {},
-              "Collision": false,
-              "CollisionRadius": 1,
-              "Damping": {
-                "Constants": "5,0,0,0"
-              },
-              "DieOnCollisionChance": {},
-              "Force": true,
-              "ForceDirection": "0,0,100",
-              "ForceScale": {
-                "Constants": "1,0,0,0"
-              },
-              "Friction": {
-                "Constants": "1,0,0,0"
-              },
-              "Gradient": {
-                "Type": "Range",
-                "GradientA": {
-                  "color": [
-                    {
-                      "t": 0.5,
-                      "c": "1,1,1,1"
-                    }
-                  ],
-                  "alpha": []
-                },
-                "GradientB": {
-                  "color": [
-                    {
-                      "t": 0.5,
-                      "c": "1,1,1,1"
-                    }
-                  ],
-                  "alpha": []
-                },
-                "ConstantA": "0.18317,0.18317,0.18317,1",
-                "ConstantB": "1,1,1,1"
-              },
-              "Lifetime": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "5,8,0,0"
-              },
-              "MaxParticles": 5000,
-              "PerParticleTimeScale": {
-                "Constants": "1,0.4,0,0"
-              },
-              "PreWarm": 0,
-              "PushStrength": {},
-              "Roll": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "0,360,0,0"
-              },
-              "Scale": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "CurveA": [
-                  {}
-                ],
-                "Constants": "50,60,0,0"
-              },
-              "SequenceId": {},
-              "SequenceSpeed": {
-                "Constants": "0.5,0,0,0"
-              },
-              "SequenceTime": {
-                "Constants": "1,0,0,0"
-              },
-              "SheetSequence": true,
-              "Space": "World",
-              "StartVelocity": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "10,70,0,0"
-              },
-              "Stretch": {},
-              "TimeScale": 1,
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ParticleSpriteRenderer",
-              "__guid": "2f0be09a-5549-4224-923b-c474ed76a1b8",
-              "Additive": false,
-              "BlurAmount": 0.5,
-              "BlurOpacity": 0.91,
-              "BlurSpacing": 0.73,
-              "DepthFeather": 0,
-              "FaceVelocity": false,
-              "FogStrength": 1,
-              "LeadingTrail": true,
-              "MotionBlur": false,
-              "Opaque": false,
-              "RotationOffset": 0,
-              "Scale": 1,
-              "Shadows": true,
-              "SortMode": "Unsorted",
-              "Texture": "materials/particles/smoke/render/smokeloop_g_1.vtex"
-            },
-            {
-              "__type": "Sandbox.ParticleSphereEmitter",
-              "__guid": "f5cc93c0-2975-4640-b167-c631b4419e68",
-              "Burst": 0,
-              "Delay": 0,
-              "DestroyOnEnd": false,
-              "Duration": 5,
-              "Loop": true,
-              "OnEdge": false,
-              "Radius": 23.6,
-              "Rate": 5,
-              "Velocity": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "__guid": "548a5140-fd24-4d9e-b1f4-eac6c75dad38",
-      "Flags": 0,
-      "Name": "doorframe002b",
-      "Position": "191.5677,11.14798,805.6835",
-      "Rotation": "0.000002851399,0.000002473593,-0.000008554197,0.9999999",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "3e00d971-14a4-42c8-936f-0cbaea0d89d1",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/props_farm/doorframe002b.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "b0028f87-36cb-4343-9084-668b2b44cacb",
-      "Flags": 0,
-      "Name": "f_light",
-      "Position": "502.72,-93.00593,847.5405",
-      "Rotation": "-0.08197958,-0.7164299,0.0787646,-0.688334",
-      "Scale": "0.01,0.01,0.01",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "1f69158b-0177-4ac8-9e6f-f726f3a828ab",
-          "BodyGroups": 18446744073709551615,
-          "Model": "vmdls/f_light.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "154b3a8b-3d9d-4175-9951-9446ed674af7",
-      "Flags": 0,
-      "Name": "table",
-      "Position": "532.9403,-83.5677,806.1318",
+      "Name": "Table...",
+      "Position": "532.9434,149.3661,806.1328",
       "Rotation": "0.0000021737,0.000001579523,-0.000006521101,1",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "df4f76ef-fc3d-4a8b-b879-427661610db9",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "table.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "9211cf8d-6461-4493-ba49-41487f4dfa7b",
-      "Flags": 0,
-      "Name": "Gasoline Tank",
-      "Position": "597.3441,129.3835,807.4183",
-      "Rotation": "-0.000003518609,0.01160002,0.0003032956,0.9999326",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "7f3498cd-2647-42d7-a7ee-a488a17c4b4d",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/gas_canister/gas_canister.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
       "Children": [
         {
-          "__guid": "e9fd1471-7cdb-45a5-9b5e-f7857911e7be",
+          "__guid": "154b3a8b-3d9d-4175-9951-9446ed674af7",
           "Flags": 0,
-          "Name": "Smoke",
+          "Name": "table",
           "Position": "0,0,0",
-          "Tags": "particles",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Components": [
             {
-              "__type": "Sandbox.ParticleEffect",
-              "__guid": "45a74443-d741-4af9-a3b3-27ef96e34836",
-              "Alpha": {
-                "Type": "Curve",
-                "CurveA": [
-                  {
-                    "in": -4.0000024,
-                    "out": 4.0000024
-                  },
-                  {
-                    "x": 0.20812808,
-                    "y": 0.475
-                  },
-                  {
-                    "x": 1
-                  }
-                ],
-                "Constants": "1,0,0,0"
-              },
-              "ApplyColor": true,
-              "ApplyRotation": true,
-              "ApplyShape": true,
-              "Bounce": {
-                "Constants": "1,0,0,0"
-              },
-              "Brightness": {
-                "Constants": "1,0,0,0"
-              },
-              "Bumpiness": {},
-              "Collision": false,
-              "CollisionRadius": 1,
-              "Damping": {
-                "Constants": "5,0,0,0"
-              },
-              "DieOnCollisionChance": {},
-              "Force": true,
-              "ForceDirection": "0,0,100",
-              "ForceScale": {
-                "Constants": "1,0,0,0"
-              },
-              "Friction": {
-                "Constants": "1,0,0,0"
-              },
-              "Gradient": {
-                "Type": "Range",
-                "GradientA": {
-                  "color": [
-                    {
-                      "t": 0.5,
-                      "c": "1,1,1,1"
-                    }
-                  ],
-                  "alpha": []
-                },
-                "GradientB": {
-                  "color": [
-                    {
-                      "t": 0.5,
-                      "c": "1,1,1,1"
-                    }
-                  ],
-                  "alpha": []
-                },
-                "ConstantA": "0.18317,0.18317,0.18317,1",
-                "ConstantB": "1,1,1,1"
-              },
-              "Lifetime": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "5,8,0,0"
-              },
-              "MaxParticles": 5000,
-              "PerParticleTimeScale": {
-                "Constants": "1,0.4,0,0"
-              },
-              "PreWarm": 0,
-              "PushStrength": {},
-              "Roll": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "0,360,0,0"
-              },
-              "Scale": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "CurveA": [
-                  {}
-                ],
-                "Constants": "50,60,0,0"
-              },
-              "SequenceId": {},
-              "SequenceSpeed": {
-                "Constants": "0.5,0,0,0"
-              },
-              "SequenceTime": {
-                "Constants": "1,0,0,0"
-              },
-              "SheetSequence": true,
-              "Space": "World",
-              "StartVelocity": {
-                "Type": "Range",
-                "Evaluation": "Particle",
-                "Constants": "10,70,0,0"
-              },
-              "Stretch": {},
-              "TimeScale": 1,
+              "__type": "Sandbox.Prop",
+              "__guid": "df4f76ef-fc3d-4a8b-b879-427661610db9",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "table.vmdl",
               "Tint": "1,1,1,1"
-            },
+            }
+          ]
+        },
+        {
+          "__guid": "b0028f87-36cb-4343-9084-668b2b44cacb",
+          "Flags": 0,
+          "Name": "light!",
+          "Position": "-30.22031,-9.438438,41.4087",
+          "Rotation": "-0.08197354,-0.7164292,0.07876155,-0.6883358",
+          "Scale": "0.01,0.01,0.01",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
             {
-              "__type": "Sandbox.ParticleSpriteRenderer",
-              "__guid": "c54a7b66-fa04-42b9-99d8-e2ee741b6293",
-              "Additive": false,
-              "BlurAmount": 0.5,
-              "BlurOpacity": 0.91,
-              "BlurSpacing": 0.73,
-              "DepthFeather": 0,
-              "FaceVelocity": false,
-              "FogStrength": 1,
-              "LeadingTrail": true,
-              "MotionBlur": false,
-              "Opaque": false,
-              "RotationOffset": 0,
-              "Scale": 1,
-              "Shadows": true,
-              "SortMode": "Unsorted",
-              "Texture": "materials/effects/fire_embers3_color_tga_2d9803fc.generated.vtex"
-            },
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "1f69158b-0177-4ac8-9e6f-f726f3a828ab",
+              "BodyGroups": 18446744073709551615,
+              "Model": "vmdls/f_light.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "3f9ad458-f918-4b1e-8d4f-232dc4fae229",
+          "Flags": 0,
+          "Name": "bible2.",
+          "Position": "13.2126,7.992688,40.50745",
+          "Rotation": "-0.000003369044,0.000001698732,0.00001010704,0.9999999",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
             {
-              "__type": "Sandbox.ParticleSphereEmitter",
-              "__guid": "81cea421-3095-4bac-9de8-f0151f514b9b",
-              "Burst": 0,
-              "Delay": 0,
-              "DestroyOnEnd": false,
-              "Duration": 5,
-              "Loop": true,
-              "OnEdge": false,
-              "Radius": 23.6,
-              "Rate": 5,
-              "Velocity": 0
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "40fa0d2b-458f-4d5c-b36e-030c34d295d9",
+              "BodyGroups": 18446744073709551615,
+              "Model": "bible2/bible2.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "6de911f3-6e21-4db1-9536-5daf62d110ff",
+          "Flags": 0,
+          "Name": "SKULL.",
+          "Position": "21.39643,13.07229,40.50746",
+          "Rotation": "0.000002417714,0.0000009120267,-0.7749382,0.632037",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "ada6fe12-f2c4-4751-9006-c8f85e53c689",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "model/model/untitled_6.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "accb6de6-25af-4daa-9357-c80060960b15",
+          "Flags": 0,
+          "Name": "tape.",
+          "Position": "10.73371,-5.335058,40.27093",
+          "Rotation": "0.000000439962,0.05826402,-0.0000448435,0.9983012",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "4ac3904f-1fff-41ee-8c95-ec2785c27bac",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/unity stuff/1/brown-tape/tape.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "9e03ce9e-a359-44d9-9859-94a8c52159ce",
+          "Flags": 0,
+          "Name": "battery!",
+          "Position": "-24.5498,4.278511,40.27621",
+          "Rotation": "-0.0008153953,-0.005876026,-0.1371743,0.9905293",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "9a4262bc-479f-4204-b1c0-57a8663d23da",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/dm_battery.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "c6665c13-22d5-48f9-8b5a-49fb2d129864",
+          "Flags": 0,
+          "Name": "DHORN.",
+          "Position": "37.39326,3.249385,41.23405",
+          "Rotation": "0.01970561,0.0288413,-0.5637774,0.8251877",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "d5cfa197-4073-472e-ba1f-7c904a10dcce",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/weapons/c_models/c_battalion_bugle/c_battalion_bugle.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "c5ae816e-86db-49de-8d3c-454a50feca99",
+          "Flags": 0,
+          "Name": "KEY.",
+          "Position": "-4.041103,-4.171336,44.8476",
+          "Rotation": "-0.00000309954,0.000009803012,0.9999999,0.00001636698",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "a02f797d-4c8f-42f7-b02c-fbcfb860a8ef",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/3dmodelscc0/medievalpropspack/skeletonkey/skeletonkey.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "c09ddb74-1cc5-4f3c-a3de-aa7644fc77b7",
+          "Flags": 0,
+          "Name": "paint Roller.",
+          "Position": "25.49008,-13.02534,44.34346",
+          "Rotation": "-0.000006702704,0.1262864,0.0000354372,0.9919939",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "5b9d71b6-f3b8-4ccd-981e-0fa474937f40",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/props/paintsuplies/paint_roller.vmdl",
+              "Tint": "1,1,1,1"
             }
           ]
         }
       ]
     },
     {
-      "__guid": "3f9ad458-f918-4b1e-8d4f-232dc4fae229",
+      "__guid": "3ec0c720-695e-4ba9-b1da-250e9f982939",
       "Flags": 0,
-      "Name": "bible2",
-      "Position": "535.0515,-75.57544,846.6393",
-      "Rotation": "-0.000001195317,0.000003278255,0.000003585952,0.9999999",
+      "Name": "HELL.",
+      "Position": "0,0,-320",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
-      "Components": [
+      "Children": [
         {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "40fa0d2b-458f-4d5c-b36e-030c34d295d9",
-          "BodyGroups": 18446744073709551615,
-          "Model": "bible2/bible2.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "__guid": "d4a6fe7f-7fee-40c5-8e5b-e20994af654b",
+          "Flags": 0,
+          "Name": "pot",
+          "Position": "-7.698578,-31.11961,40.00009",
+          "Rotation": "0.000002860985,0.000004738569,-0.000008582956,0.9999999",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "0fa4b68c-4950-44d5-80d1-b8e6e86a1802",
+              "BodyGroups": 18446744073709551615,
+              "Health": 50,
+              "IsStatic": false,
+              "Model": "models/pot.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "2abaf1ab-21f2-48db-a0bb-adcdf98e7d7e",
+          "Flags": 0,
+          "Name": "untitled_184",
+          "Position": "-75.18496,57.84003,88.7836",
+          "Rotation": "0.02352232,0.0553118,-0.390642,0.9185784",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "1ddc3fdf-d869-4329-b6cc-61819b05ad71",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "model/41/untitled_184.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "968bb056-a025-472f-ba24-af790f013094",
+          "Flags": 0,
+          "Name": "garfield",
+          "Position": "-7.511047,-6.909609,40.11841",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "6639eb16-e7b3-471e-bf6e-d757182b41f4",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/garfield.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "d7fd71b8-89be-407d-895f-77df797ef343",
+          "Flags": 0,
+          "Name": "dogtreatbox_001",
+          "Position": "-17.88175,-18.18175,51.36441",
+          "Rotation": "0.1283606,0.7936484,-0.09494689,0.5870527",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "a5d3444b-c4be-4b82-8d42-7cac161de625",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/postal2/dogtreatbox_001.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "76963882-abf3-4445-959d-23674d4fec6c",
+          "Flags": 0,
+          "Name": "smoke_detector_a",
+          "Position": "46.44142,-22.57798,77.06894",
+          "Rotation": "0.08400761,0.3196717,-0.2398789,0.9128039",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "5a1604cc-f81a-4d62-ad20-e5842a1fefca",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/props/office_fixtures/smoke_detector_a.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "76ca2278-2f9e-44dd-b887-4082150e2904",
+          "Flags": 0,
+          "Name": "8hu_kultiras_anchor02",
+          "Position": "85.89919,-2.746447,16.81409",
+          "Rotation": "0.0930109,0.6868883,-0.09671839,0.7142681",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "a7724ece-8c2c-4978-aa3d-afc20f7300aa",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/8hu_kultiras_anchor02.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "b299444a-ab2e-4f8c-91ec-14704d428262",
+          "Flags": 0,
+          "Name": "tape",
+          "Position": "-16.5199,-29.97569,40.01999",
+          "Rotation": "-0.000003814697,0.000001907313,1,0.000005721939",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "a7658130-db74-4ca1-a57c-77bead5d1806",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/unity stuff/1/brown-tape/tape.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "ea7d9521-650b-4dd5-b9be-0508f18e14a7",
+          "Flags": 0,
+          "Name": "v_he_grenade",
+          "Position": "-16.35841,-14.30364,43.98611",
+          "Rotation": "0.1283606,0.7936484,-0.09494689,0.5870527",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "a8f837eb-16f0-497d-a552-ef16cdacec90",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/weapons/sbox_grenade_explosive/v_he_grenade.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
         }
       ]
     }
@@ -2265,7 +1730,7 @@
   },
   "Title": "main",
   "Description": "",
-  "LastSaved": "2024-06-13T09:27:01.8927999-05:00",
+  "LastSaved": "2024-06-13T10:29:38.809005-05:00",
   "ResourceVersion": 1,
   "__references": [
     "additionproject.alarm_clock_01",
@@ -2283,9 +1748,8 @@
     "facepunch.smoke_detector_a",
     "facepunch.v_he_grenade",
     "fdd.campfire",
+    "fish.camping_chair",
     "fish.fox",
-    "fish.gas_canister",
-    "fish.hs_lettuce_slice",
     "fpopium.fire_blanket",
     "fpopium.paint_roller",
     "greg.dogtreatbox_p2",
@@ -2307,7 +1771,6 @@
     "tesssssssssst.untitled_336",
     "tesssssssssst.untitled_623",
     "testchamber.gnome",
-    "tfassets.doorframe002b",
     "titanovsky.dagger",
     "titanovsky.hammer",
     "titanovsky.skeletonkey"
