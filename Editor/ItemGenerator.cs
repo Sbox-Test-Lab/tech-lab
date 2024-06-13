@@ -1,5 +1,4 @@
 ﻿using Editor;
-using Microsoft.CodeAnalysis.Operations;
 using Sandbox;
 using System;
 using System.Collections.Generic;
@@ -63,13 +62,23 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 
 		gameObject.Transform.World = GetSelectedComponent<ModelRenderer>().GameObject.Transform.World;
 		gameObject.Components.GetOrCreate<ModelRenderer>().Model = GetSelectedComponent<ModelRenderer>().Model;
-
+		
 		foreach(var itemType in ItemTypes)
 		{
+			if ( itemType.Value.Value is false )
+				continue;
+
 			var typeDescription = TypeLibrary.GetType( itemType.Key );
 
 			gameObject.Components.Create( typeDescription );
 		}
+
+		var item = gameObject.Components.GetOrCreate<Item>();
+		item.Name = ItemName.Text;
+		item.Description = ItemDescription.Text;
+
+		gameObject.Components.GetOrCreate<ModelCollider>();
+		gameObject.Components.Create<Rigidbody>();
 	}
 
 	public override void OnSelectionChanged()
