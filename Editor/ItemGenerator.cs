@@ -63,6 +63,8 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		gameObject.Transform.World = GetSelectedComponent<ModelRenderer>().GameObject.Transform.World;
 
 		var model = gameObject.Components.GetOrCreate<ModelRenderer>().Model = GetSelectedComponent<ModelRenderer>().Model;
+
+		gameObject.Components.GetOrCreate<Interactable>();
 		
 		foreach(var itemType in ItemTypes)
 		{
