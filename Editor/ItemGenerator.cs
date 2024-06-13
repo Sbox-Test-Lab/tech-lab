@@ -8,10 +8,10 @@ namespace ItemBuilder;
 
 public class ItemBuilder : EditorTool<ModelRenderer>
 {
-	public StringProperty ItemName {  get; set; }
-	public StringProperty ItemDescription { get; set; }
 	public Dictionary<Type, BoolProperty> ItemTypes { get; set; } = new Dictionary<Type, BoolProperty>();
-	
+
+	public StringProperty ItemName { get; set; }
+	public StringProperty ItemDescription { get; set; }
 	public Button GenerateButton { get; set; }
 
 	public override void OnEnabled()
@@ -61,7 +61,8 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		gameObject.Name = ItemName.Text;
 
 		gameObject.Transform.World = GetSelectedComponent<ModelRenderer>().GameObject.Transform.World;
-		gameObject.Components.GetOrCreate<ModelRenderer>().Model = GetSelectedComponent<ModelRenderer>().Model;
+
+		var model = gameObject.Components.GetOrCreate<ModelRenderer>().Model = GetSelectedComponent<ModelRenderer>().Model;
 		
 		foreach(var itemType in ItemTypes)
 		{
@@ -77,13 +78,10 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		item.Name = ItemName.Text;
 		item.Description = ItemDescription.Text;
 
-		gameObject.Components.GetOrCreate<ModelCollider>();
-		gameObject.Components.Create<Rigidbody>();
-	}
+		var collider = gameObject.Components.GetOrCreate<ModelCollider>();
+		collider.Model = model;
 
-	public override void OnSelectionChanged()
-	{
-		var target = GetSelectedComponent<ModelRenderer>();
+		gameObject.Components.Create<Rigidbody>();
 	}
 
 	public IEnumerable<Type> GetDerivedClasses(Type type)
