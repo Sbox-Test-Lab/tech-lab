@@ -25,7 +25,7 @@
               "__guid": "0c4009a2-8872-4f50-8165-7e30f409fae2",
               "FogMode": "Enabled",
               "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
+              "LightColor": "1,0.92512,0.78605,1",
               "Shadows": true,
               "SkyColor": "0.05882,0.07451,0.08235,1"
             }
@@ -87,72 +87,13 @@
               "FrameInterval": 5,
               "MaxDistance": 512,
               "Projection": "Box",
-              "RenderDynamically": false,
+              "RenderDynamically": true,
               "TintColor": "1,1,1,1",
               "UpdateStrategy": "OnEnabled",
               "ZFar": 4096,
               "ZNear": 16
             }
           ]
-        }
-      ]
-    },
-    {
-      "__guid": "7e993896-a142-4214-9851-0636b30cfeac",
-      "Flags": 0,
-      "Name": "Camera",
-      "Position": "98.14983,-0.1299342,859.0427",
-      "Rotation": "-0.0669984,-0.00004638514,0.9977528,-0.0006907763",
-      "Tags": "maincamera",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.CameraComponent",
-          "__guid": "79dca78b-dd37-48c2-9e20-f2d55c0bce2d",
-          "BackgroundColor": "0.33333,0.46275,0.52157,1",
-          "ClearFlags": "All",
-          "FieldOfView": 60,
-          "IsMainCamera": true,
-          "Orthographic": false,
-          "OrthographicHeight": 1204,
-          "Priority": 1,
-          "RenderExcludeTags": "",
-          "RenderTags": "",
-          "TargetEye": "None",
-          "Viewport": "0,0,1,1",
-          "ZFar": 10000,
-          "ZNear": 1
-        },
-        {
-          "__type": "Sandbox.Bloom",
-          "__guid": "8b685577-d53b-4c78-b450-092e7c901eb5",
-          "BloomColor": {
-            "color": [
-              {
-                "c": "1,1,1,1"
-              },
-              {
-                "t": 1,
-                "c": "1,1,1,1"
-              }
-            ],
-            "alpha": []
-          },
-          "BloomCurve": [
-            {
-              "y": 0.5
-            },
-            {
-              "x": 1,
-              "y": 1
-            }
-          ],
-          "Mode": "Additive",
-          "Strength": 1,
-          "Threshold": 0.5,
-          "ThresholdWidth": 0
         }
       ]
     },
@@ -177,7 +118,16 @@
             {
               "__type": "Sandbox.NetworkHelper",
               "__guid": "1185256a-857c-432c-a6c2-f31a85207db5",
-              "SpawnPoints": [],
+              "PlayerPrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/player/player_citizen.prefab"
+              },
+              "SpawnPoints": [
+                {
+                  "_type": "gameobject",
+                  "go": "326f5fea-b665-4c6a-bf66-72b89c2eff7e"
+                }
+              ],
               "StartServer": true
             }
           ]
@@ -467,17 +417,17 @@
           "__type": "Sandbox.Prop",
           "__guid": "f699b18c-5373-4f3f-8a32-4d7b44acfd5a",
           "BodyGroups": 18446744073709551615,
-          "Health": 0,
+          "Health": 100,
           "IsStatic": false,
           "Model": "models/enhanced_speaker.vmdl",
-          "Tint": "1,1,1,1"
+          "Tint": "0.06667,1,0,1"
         }
       ]
     },
     {
       "__guid": "2a9511f0-c97c-4b35-973c-61937a73dc2d",
       "Flags": 0,
-      "Name": "enhanced_speaker (1)",
+      "Name": "enhanced_speaker",
       "Position": "-224,-64,805",
       "Enabled": true,
       "NetworkMode": 2,
@@ -487,9 +437,30 @@
           "__type": "Sandbox.Prop",
           "__guid": "ea8060e1-8dc8-4c62-bcc0-25a09fa1a6e8",
           "BodyGroups": 18446744073709551615,
-          "Health": 0,
+          "Health": 100,
           "IsStatic": false,
           "Model": "models/enhanced_speaker.vmdl",
+          "Tint": "0.06667,1,0,1"
+        }
+      ]
+    },
+    {
+      "__guid": "432c9505-ef19-4a51-b882-370ef3df1d9e",
+      "Flags": 0,
+      "Name": "discoball",
+      "Position": "0,0,1024",
+      "Rotation": "0.000003106724,0,0,1",
+      "Scale": "0.5,0.5,0.5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "52e12206-76f7-4f13-aca8-4533d9be4e9f",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/mapspecific/discoball.vmdl",
+          "RenderType": "On",
           "Tint": "1,1,1,1"
         }
       ]
@@ -512,27 +483,6 @@
           "Health": 0,
           "IsStatic": false,
           "Model": "models/props/furniture/dev_furniture_couch.vmdl",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "6c3865df-e338-4dd8-98cd-0d9180e02a1c",
-      "Flags": 0,
-      "Name": "tick! TOCK.",
-      "Position": "515.2185,134.7989,846.6404",
-      "Rotation": "0,0,0.6755904,-0.7372773",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "90f2f94b-27d9-4b9e-bc05-6487f4f9ef56",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/furniture/alarm_clock_01.vmdl",
           "Tint": "1,1,1,1"
         }
       ]
@@ -1053,7 +1003,7 @@
       "__guid": "bb4e3c08-8948-4a8d-a526-d89669167930",
       "Flags": 0,
       "Name": "Camp fire!",
-      "Position": "672.8644,-190.7725,805.7538",
+      "Position": "483.5483,-190.7579,805.6875",
       "Rotation": "0.000001887618,0.04895592,-0.00003851131,0.998801",
       "Enabled": true,
       "NetworkMode": 2,
@@ -1063,7 +1013,7 @@
           "__guid": "be9b2229-395f-47e1-8f25-04545e6e8e84",
           "Flags": 0,
           "Name": "campfire",
-          "Position": "0,0,0",
+          "Position": "0.000034675,0.00000105473,2.162837",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
@@ -1083,7 +1033,7 @@
               "__guid": "012d7ca1-9be9-438b-a999-c713042f63cf",
               "Flags": 0,
               "Name": "Burst",
-              "Position": "0,0,0",
+              "Position": "0.0000256598,-0.000004784811,-2.658063",
               "Tags": "particles",
               "Enabled": true,
               "NetworkMode": 2,
@@ -1249,8 +1199,8 @@
           "__guid": "18859ccd-d5b4-4c7c-b9aa-d6c5107d88fc",
           "Flags": 0,
           "Name": "fire_blanket",
-          "Position": "-53.68443,23.04644,7.103348",
-          "Rotation": "0.08710776,-0.001103679,-0.9123039,0.4001405",
+          "Position": "-69.30476,6.982029,13.81859",
+          "Rotation": "-0.5835018,-0.2837225,-0.7066908,0.2821617",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
@@ -1270,8 +1220,8 @@
           "__guid": "08b2c3f7-4101-4ce1-8f02-d760d9ef5547",
           "Flags": 0,
           "Name": "fox",
-          "Position": "2.366144,74.42759,-0.1579724",
-          "Rotation": "-0.0739555,0.000000003723812,0.7526093,0.6543009",
+          "Position": "2.595398,53.36729,1.890073",
+          "Rotation": "-0.0737894,0.004954044,-0.7032459,0.7070894",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
@@ -1327,382 +1277,362 @@
               "Tint": "1,1,1,1"
             }
           ]
+        },
+        {
+          "__guid": "6a733025-5441-46b7-a824-9346de4dabcd",
+          "Flags": 0,
+          "Name": "log_bench",
+          "Position": "-68.84338,-11.29375,-9.865971",
+          "Rotation": "0.00000169624,-0.04895347,0.00002929091,0.9988009",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "b93c6bce-c3f8-4e71-bf90-ea9f91846942",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/randommodels/log_bench.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "20435158-fc4b-4cc8-9a58-450c3b4b5398",
+          "Flags": 0,
+          "Name": "canned_food_beans",
+          "Position": "-69.1548,-33.26031,13.06168",
+          "Rotation": "0.00000169624,-0.04895347,0.00002929091,0.9988009",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "a6fafcc4-7184-45e4-8485-76aaa1fe4f58",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/3dmodelscc0/food\u0026drinkspack/canned_food/canned_food_beans.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "71c978fa-1f53-4a40-9dfd-31f9173de676",
+          "Flags": 0,
+          "Name": "grass_billboard",
+          "Position": "-70.35857,-39.50945,-6.920072",
+          "Rotation": "0.00000169624,-0.04895347,0.00002929091,0.9988009",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "24727b0b-0593-49d7-9947-4345dbde223b",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/nature/grass/grass_billboard.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "80d71913-e589-4d44-9a9d-b7a130bb30ec",
+          "Flags": 0,
+          "Name": "grass_billboard (1)",
+          "Position": "-62.37955,8.915073,-6.135765",
+          "Rotation": "-0.01266845,-0.04728585,0.2585369,0.9647599",
+          "Scale": "0.7613001,0.7613001,0.7613001",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "0a822f80-aa4d-4d3b-ab09-a182b66fb126",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/nature/grass/grass_billboard.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "0a9eaccf-2de2-46b9-9352-ac0ab83da2c1",
+          "Flags": 0,
+          "Name": "log",
+          "Position": "0.5299549,-6.966604,6.06276",
+          "Rotation": "0.001053319,-0.0811655,-0.06371461,0.9946615",
+          "Scale": "0.75,0.5,0.5",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "1cc822c8-efdb-4553-aa5f-39045bfb1784",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/log/saunalog.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "4d56d1b6-38e0-43d7-9bd3-3a1c29899d0e",
+          "Flags": 0,
+          "Name": "log",
+          "Position": "-0.4482737,-6.916707,12.03644",
+          "Rotation": "0.001053319,-0.0811655,-0.06371461,0.9946615",
+          "Scale": "0.75,0.5,0.5",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "d0333a79-b0ed-4e10-96a0-737f23a51f5a",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/log/saunalog.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "657c7052-56de-435c-bead-ae59e0337803",
+          "Flags": 0,
+          "Name": "log",
+          "Position": "2.009621,-7.042166,-2.97324",
+          "Rotation": "0.001053319,-0.0811655,-0.06371461,0.9946615",
+          "Scale": "0.75,0.5,0.5",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "610f55fa-d64e-4cbb-9091-b15e9d6cd52a",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/log/saunalog.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "5ef9df6f-ccd0-4e6f-bcad-217666c63872",
+          "Flags": 0,
+          "Name": "log",
+          "Position": "0.962275,6.86572,6.017726",
+          "Rotation": "0.001053319,-0.0811655,-0.06371461,0.9946615",
+          "Scale": "0.75,0.5,0.5",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "a7e7efe2-fd2e-4bc9-a65b-9179b6c97500",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/log/saunalog.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "6ae5af4e-33d3-4179-9fe8-b02729454a6e",
+          "Flags": 0,
+          "Name": "log",
+          "Position": "-0.01595354,6.915617,11.9914",
+          "Rotation": "0.001053319,-0.0811655,-0.06371461,0.9946615",
+          "Scale": "0.75,0.5,0.5",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "69d29019-2b32-450d-83d6-480fb1be082d",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/log/saunalog.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "bffa1dcf-5146-42f9-8d88-c97d0c60c442",
+          "Flags": 0,
+          "Name": "log",
+          "Position": "0.1081961,-0.01163628,5.788265",
+          "Rotation": "0.001053319,-0.0811655,-0.06371461,0.9946615",
+          "Scale": "0.75,0.5,0.5",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "213ed6c2-e569-48f7-92cc-fd20cb94f477",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/log/saunalog.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "0d73f1ca-4ffa-4bb8-8d90-f2da4e03e67a",
+          "Flags": 0,
+          "Name": "log",
+          "Position": "2.441941,6.790173,-3.018274",
+          "Rotation": "0.001053319,-0.0811655,-0.06371461,0.9946615",
+          "Scale": "0.75,0.5,0.5",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "2e13fa72-e622-4ebe-8a48-f63144f96955",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/log/saunalog.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "d8256902-22a3-42fc-b09a-1d6f4925d9ce",
+          "Flags": 0,
+          "Name": "log",
+          "Position": "-4.733782,0.5406106,8.619578",
+          "Rotation": "-0.05751,-0.0575091,0.7047915,0.7047369",
+          "Scale": "1.15,0.5,0.5",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "bb095e6c-ac89-4ea0-b07a-c832caa7e61a",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/log/saunalog.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "b1f447dd-0682-44c6-bcb5-0614e4eee0c8",
+          "Flags": 0,
+          "Name": "log",
+          "Position": "5.116606,-0.8573386,9.552389",
+          "Rotation": "-0.05751,-0.0575091,0.7047915,0.7047369",
+          "Scale": "1.15,0.5,0.5",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "80406d11-e1dd-40d9-b958-72464ad43883",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "Model": "models/log/saunalog.vmdl",
+              "Tint": "1,1,1,1"
+            }
+          ]
         }
       ]
     },
     {
-      "__guid": "8cf422d8-1b1c-4571-a765-b23db77d80b9",
+      "__guid": "b6bb9b57-77f2-482c-8780-26c5f36118ad",
       "Flags": 0,
-      "Name": "Table...",
-      "Position": "532.9434,149.3661,806.1328",
-      "Rotation": "0.0000021737,0.000001579523,-0.000006521101,1",
+      "Name": "Spawn Points",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Children": [
         {
-          "__guid": "154b3a8b-3d9d-4175-9951-9446ed674af7",
+          "__guid": "326f5fea-b665-4c6a-bf66-72b89c2eff7e",
           "Flags": 0,
-          "Name": "table",
-          "Position": "0,0,0",
+          "Name": "Spawn Point",
+          "Position": "256,0,805",
+          "Rotation": "0,0,1,-0.00000004371139",
           "Enabled": true,
           "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "df4f76ef-fc3d-4a8b-b879-427661610db9",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "table.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "b0028f87-36cb-4343-9084-668b2b44cacb",
-          "Flags": 0,
-          "Name": "light!",
-          "Position": "-30.22031,-9.438438,41.4087",
-          "Rotation": "-0.08197354,-0.7164292,0.07876155,-0.6883358",
-          "Scale": "0.01,0.01,0.01",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "1f69158b-0177-4ac8-9e6f-f726f3a828ab",
-              "BodyGroups": 18446744073709551615,
-              "Model": "vmdls/f_light.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "3f9ad458-f918-4b1e-8d4f-232dc4fae229",
-          "Flags": 0,
-          "Name": "bible2.",
-          "Position": "13.2126,7.992688,40.50745",
-          "Rotation": "-0.000003369044,0.000001698732,0.00001010704,0.9999999",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "40fa0d2b-458f-4d5c-b36e-030c34d295d9",
-              "BodyGroups": 18446744073709551615,
-              "Model": "bible2/bible2.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "6de911f3-6e21-4db1-9536-5daf62d110ff",
-          "Flags": 0,
-          "Name": "SKULL.",
-          "Position": "21.39643,13.07229,40.50746",
-          "Rotation": "0.000002417714,0.0000009120267,-0.7749382,0.632037",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "ada6fe12-f2c4-4751-9006-c8f85e53c689",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "model/model/untitled_6.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "accb6de6-25af-4daa-9357-c80060960b15",
-          "Flags": 0,
-          "Name": "tape.",
-          "Position": "10.73371,-5.335058,40.27093",
-          "Rotation": "0.000000439962,0.05826402,-0.0000448435,0.9983012",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "4ac3904f-1fff-41ee-8c95-ec2785c27bac",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/unity stuff/1/brown-tape/tape.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "9e03ce9e-a359-44d9-9859-94a8c52159ce",
-          "Flags": 0,
-          "Name": "battery!",
-          "Position": "-24.5498,4.278511,40.27621",
-          "Rotation": "-0.0008153953,-0.005876026,-0.1371743,0.9905293",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "9a4262bc-479f-4204-b1c0-57a8663d23da",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/dm_battery.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "c6665c13-22d5-48f9-8b5a-49fb2d129864",
-          "Flags": 0,
-          "Name": "DHORN.",
-          "Position": "37.39326,3.249385,41.23405",
-          "Rotation": "0.01970561,0.0288413,-0.5637774,0.8251877",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "d5cfa197-4073-472e-ba1f-7c904a10dcce",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/weapons/c_models/c_battalion_bugle/c_battalion_bugle.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "c5ae816e-86db-49de-8d3c-454a50feca99",
-          "Flags": 0,
-          "Name": "KEY.",
-          "Position": "-4.041103,-4.171336,44.8476",
-          "Rotation": "-0.00000309954,0.000009803012,0.9999999,0.00001636698",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "a02f797d-4c8f-42f7-b02c-fbcfb860a8ef",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/3dmodelscc0/medievalpropspack/skeletonkey/skeletonkey.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "c09ddb74-1cc5-4f3c-a3de-aa7644fc77b7",
-          "Flags": 0,
-          "Name": "paint Roller.",
-          "Position": "25.49008,-13.02534,44.34346",
-          "Rotation": "-0.000006702704,0.1262864,0.0000354372,0.9919939",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "5b9d71b6-f3b8-4ccd-981e-0fa474937f40",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/props/paintsuplies/paint_roller.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
+          "NetworkInterpolation": true
         }
       ]
     },
     {
-      "__guid": "3ec0c720-695e-4ba9-b1da-250e9f982939",
+      "__guid": "fbf4a9f1-dc4c-4ab7-b164-82947dd96966",
       "Flags": 0,
-      "Name": "HELL.",
-      "Position": "0,0,-320",
+      "Name": "cloud",
+      "Position": "0,0,1376",
+      "Scale": "2,2,1.5",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
-      "Children": [
+      "Components": [
         {
-          "__guid": "d4a6fe7f-7fee-40c5-8e5b-e20994af654b",
-          "Flags": 0,
-          "Name": "pot",
-          "Position": "-7.698578,-31.11961,40.00009",
-          "Rotation": "0.000002860985,0.000004738569,-0.000008582956,0.9999999",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "0fa4b68c-4950-44d5-80d1-b8e6e86a1802",
-              "BodyGroups": 18446744073709551615,
-              "Health": 50,
-              "IsStatic": false,
-              "Model": "models/pot.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
+          "__type": "Sandbox.Prop",
+          "__guid": "9c2bfb42-2c8e-41e7-9438-217a3e8feb88",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/sand_valley/fly_island/cloud.vmdl",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "16a387ae-c853-45fb-b530-e229f3a410b0",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "497.4105,21.51705,870.7473",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "500f6ff8-a280-43d8-a1f9-d472596ca541",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
         },
         {
-          "__guid": "2abaf1ab-21f2-48db-a0bb-adcdf98e7d7e",
-          "Flags": 0,
-          "Name": "untitled_184",
-          "Position": "-75.18496,57.84003,88.7836",
-          "Rotation": "0.02352232,0.0553118,-0.390642,0.9185784",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "1ddc3fdf-d869-4329-b6cc-61819b05ad71",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "model/41/untitled_184.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "968bb056-a025-472f-ba24-af790f013094",
-          "Flags": 0,
-          "Name": "garfield",
-          "Position": "-7.511047,-6.909609,40.11841",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "6639eb16-e7b3-471e-bf6e-d757182b41f4",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/garfield.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "d7fd71b8-89be-407d-895f-77df797ef343",
-          "Flags": 0,
-          "Name": "dogtreatbox_001",
-          "Position": "-17.88175,-18.18175,51.36441",
-          "Rotation": "0.1283606,0.7936484,-0.09494689,0.5870527",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "a5d3444b-c4be-4b82-8d42-7cac161de625",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/postal2/dogtreatbox_001.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "76963882-abf3-4445-959d-23674d4fec6c",
-          "Flags": 0,
-          "Name": "smoke_detector_a",
-          "Position": "46.44142,-22.57798,77.06894",
-          "Rotation": "0.08400761,0.3196717,-0.2398789,0.9128039",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "5a1604cc-f81a-4d62-ad20-e5842a1fefca",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/props/office_fixtures/smoke_detector_a.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "76ca2278-2f9e-44dd-b887-4082150e2904",
-          "Flags": 0,
-          "Name": "8hu_kultiras_anchor02",
-          "Position": "85.89919,-2.746447,16.81409",
-          "Rotation": "0.0930109,0.6868883,-0.09671839,0.7142681",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "a7724ece-8c2c-4978-aa3d-afc20f7300aa",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/8hu_kultiras_anchor02.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "b299444a-ab2e-4f8c-91ec-14704d428262",
-          "Flags": 0,
-          "Name": "tape",
-          "Position": "-16.5199,-29.97569,40.01999",
-          "Rotation": "-0.000003814697,0.000001907313,1,0.000005721939",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "a7658130-db74-4ca1-a57c-77bead5d1806",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
-              "Model": "models/unity stuff/1/brown-tape/tape.vmdl",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "ea7d9521-650b-4dd5-b9be-0508f18e14a7",
-          "Flags": 0,
-          "Name": "v_he_grenade",
-          "Position": "-16.35841,-14.30364,43.98611",
-          "Rotation": "0.1283606,0.7936484,-0.09494689,0.5870527",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "a8f837eb-16f0-497d-a552-ef16cdacec90",
-              "BodyGroups": 18446744073709551615,
-              "Model": "models/weapons/sbox_grenade_explosive/v_he_grenade.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
+          "__type": "ItemBuilder.PlayerCamera",
+          "__guid": "5bb66951-ccd9-4fb7-bda1-a55550a03f10"
         }
       ]
     }
@@ -1730,50 +1660,39 @@
   },
   "Title": "main",
   "Description": "",
-  "LastSaved": "2024-06-13T10:42:37.7675558-05:00",
+  "LastSaved": "2024-06-21T09:55:50.5999556-05:00",
   "ResourceVersion": 1,
   "__references": [
-    "additionproject.alarm_clock_01",
+    "ambi.cloud",
     "ambi.lightning_figurine",
     "ambi.maniken",
-    "baik.dm_battery",
     "blmndy.vinyl_player",
     "caro.bluecloudysky",
     "caro.retrotv",
-    "caro.tape",
-    "darsuk.table",
+    "dingusgames.discoball",
     "duccsoft.duck_decoration",
     "facepunch.mug_01",
     "facepunch.rock_scatter_03",
-    "facepunch.smoke_detector_a",
-    "facepunch.v_he_grenade",
     "fdd.campfire",
     "fish.camping_chair",
     "fish.fox",
+    "fish.grass_billboard",
+    "fish.log_bench",
+    "fish.saunalog",
     "fpopium.fire_blanket",
-    "fpopium.paint_roller",
-    "greg.dogtreatbox_p2",
     "jodiscontent.enhanced_speaker",
     "jodiscontent.red_table",
-    "joseyuyua.pot",
     "kapidranik.fish_anton",
     "kirill.vaz2105",
     "marsgames.lionstatue",
     "mdlresrc.devcouch",
-    "mingoelgato.c_battalion_bugle",
-    "mungus.bible2",
-    "orus.8hu_kultiras_anchor02",
-    "pui.f_light",
     "reizer.ship_cannon_01",
-    "shiny.garfield",
     "smlp.moyai",
-    "tesssssssssst.untitled_1840210540",
     "tesssssssssst.untitled_336",
-    "tesssssssssst.untitled_623",
     "testchamber.gnome",
+    "titanovsky.canned_food_beans",
     "titanovsky.dagger",
-    "titanovsky.hammer",
-    "titanovsky.skeletonkey"
+    "titanovsky.hammer"
   ],
   "__version": 1
 }
