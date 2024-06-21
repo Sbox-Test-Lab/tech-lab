@@ -6,51 +6,65 @@ using System.Linq;
 
 namespace ItemBuilder;
 
+public class ItemInfo
+{
+	[Property] public string Name { get; set; }
+	[Property, TextArea] public string Description { get; set; }
+}
+
 public class ItemBuilder : EditorTool<ModelRenderer>
 {
-	public Dictionary<Type, BoolProperty> ItemTypes { get; set; } = new Dictionary<Type, BoolProperty>();
-
-	public StringProperty ItemName { get; set; }
-	public StringProperty ItemDescription { get; set; }
-	public Button GenerateButton { get; set; }
+	public ItemInfo ItemInfo { get; set; } = new();
+	public Dictionary<Type, BoolProperty> ItemAbilities { get; set; } = new Dictionary<Type, BoolProperty>();
 
 	public override void OnEnabled()
 	{
-		ItemName = new StringProperty( null );
-		ItemDescription = new StringProperty( null );
-
-		GenerateButton = new Button();
-		GenerateButton.Text = "Generate";
-		GenerateButton.Clicked = GenerateItem;
-
 		var window = new WidgetWindow( SceneOverlay );
 
 		window.WindowTitle = "Item Builder";
-
 		window.Layout = Layout.Column();
-		window.Layout.Margin = 4;
-		window.MinimumSize = new Vector2( 192, 480 );
-
-		ItemName.PlaceholderText = "Item Name";
-		ItemDescription.PlaceholderText = "Item Type";
-
-		window.Layout.Add( ItemName );
-		window.Layout.Add( ItemDescription );
-
 		
-		foreach(var item in GetDerivedClasses(typeof(BaseItemType)))
+		window.MinimumSize = new Vector2( 128, 240 );
+		window.MinimumHeight = 128.0f;
+		window.MaximumWidth = 480.0f;
+
+		var controlSheet = new ControlSheet();
+
+		controlSheet.AddRow( EditorUtility.GetSerializedObject( ItemInfo ).GetProperty(nameof(ItemInfo.Name)) );
+		controlSheet.AddRow( EditorUtility.GetSerializedObject( ItemInfo ).GetProperty(nameof(ItemInfo.Description)));
+
+		controlSheet.Margin = new Sandbox.UI.Margin( 8 );
+
+		controlSheet.SetMinimumColumnWidth( 0, 4 );
+		
+		window.Layout.Add(controlSheet);
+
+		window.Layout.AddSeparator();
+
+		var componentSheet = new ControlSheet();
+
+		foreach(var item in GetDerivedClasses(typeof(BaseItemAbility)))
 		{
 			var boolProperty = new BoolProperty( null );
+			
 			boolProperty.Text = item.Name;
-			window.Layout.Add( boolProperty );
+			boolProperty.Layout = Layout.Row();
+			
+			componentSheet.Add( boolProperty );
 
-			ItemTypes.Add(item, boolProperty);
+			ItemAbilities.Add(item, boolProperty);
 		}
-		
 
-		window.Layout.Add( GenerateButton );
-		
+		window.Layout.Add( componentSheet );
+
+		var generateButton = new Button.Primary( "Generate" );
 	
+		generateButton.Clicked = GenerateItem;
+		generateButton.MaximumWidth = 96f;
+		generateButton.Layout = Layout.Row();
+		
+		window.Layout.Add( generateButton );
+		
 		AddOverlay( window, TextFlag.Top, 16 );
 	}
 
@@ -58,7 +72,7 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 	{
 		var gameObject = Scene.CreateObject();
 
-		gameObject.Name = ItemName.Text;
+		gameObject.Name = ItemInfo.Name;
 
 		gameObject.Transform.World = GetSelectedComponent<ModelRenderer>().GameObject.Transform.World;
 
@@ -66,7 +80,7 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 
 		gameObject.Components.GetOrCreate<Interactable>();
 		
-		foreach(var itemType in ItemTypes)
+		foreach(var itemType in ItemAbilities)
 		{
 			if ( itemType.Value.Value is false )
 				continue;
@@ -77,10 +91,11 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		}
 
 		var item = gameObject.Components.GetOrCreate<Item>();
-		item.Name = ItemName.Text;
-		item.Description = ItemDescription.Text;
+		item.Name = ItemInfo.Name;
+		item.Description = ItemInfo.Description;
 
-		var collider = gameObject.Components.GetOrCreate<ModelCollider>();
+		var collider = gameObject.Components.Get<ModelCollider>();
+
 		collider.Model = model;
 
 		gameObject.Components.Create<Rigidbody>();
