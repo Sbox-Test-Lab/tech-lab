@@ -1,0 +1,70 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.Razor;
+
+@inherits Panel
+
+@namespace ItemBuilder.UI
+
+<style>
+    Hud 
+    {
+        .container {
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+    }
+</style>
+
+<root>
+    <div class="container">
+        <div class="top">
+            <div class="left">
+                @TopLeft
+            </div>
+
+            <div class="middle">
+                @TopCenter
+            </div>
+
+            <div class="right">
+                @TopRight
+            </div>
+        </div>
+
+        <div class="middle">
+            <div class="middle">
+                @Center
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="left">
+                @BottomLeft
+            </div>
+
+            <div class="middle">
+                @BottomCenter
+            </div>
+
+            <div class="right">
+                @BottomRight
+            </div>
+        </div>
+    </div>
+
+</root>
+
+@code
+{
+    public RenderFragment TopLeft { get; set; }
+    public RenderFragment TopCenter { get; set; }
+    public RenderFragment TopRight { get; set; }
+
+    public RenderFragment Center { get; set; }
+
+    public RenderFragment BottomLeft { get; set; }
+    public RenderFragment BottomCenter { get; set; }
+    public RenderFragment BottomRight { get; set; }
+}

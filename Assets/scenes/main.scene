@@ -1635,6 +1635,29 @@
           "__guid": "5bb66951-ccd9-4fb7-bda1-a55550a03f10"
         }
       ]
+    },
+    {
+      "__guid": "069de33b-a223-4aca-8cfe-6697e9ebfff0",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "96.92672,114.4984,-31.09617",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "6ce4b353-c619-4bbf-aadd-2ea454efc35f",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "ItemBuilder.UI.PlayerHud",
+          "__guid": "b9784a1f-42a1-43f8-b195-164c7aa25685"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -1660,7 +1683,7 @@
   },
   "Title": "main",
   "Description": "",
-  "LastSaved": "2024-06-21T09:55:50.5999556-05:00",
+  "LastSaved": "2024-06-21T10:24:23.7290644-05:00",
   "ResourceVersion": 1,
   "__references": [
     "ambi.cloud",
