@@ -70,11 +70,15 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 
 	public void GenerateItem()
 	{
+		var selectedGameObject = GetSelectedComponent<ModelRenderer>().GameObject;
+
 		var gameObject = Scene.CreateObject();
+
+		gameObject.Tags.Add( "interactable" );
 
 		gameObject.Name = ItemInfo.Name;
 
-		gameObject.Transform.World = GetSelectedComponent<ModelRenderer>().GameObject.Transform.World;
+		gameObject.Transform.World = selectedGameObject.Transform.World;
 
 		var model = gameObject.Components.GetOrCreate<ModelRenderer>().Model = GetSelectedComponent<ModelRenderer>().Model;
 
@@ -94,11 +98,15 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		item.Name = ItemInfo.Name;
 		item.Description = ItemInfo.Description;
 
-		var collider = gameObject.Components.Get<ModelCollider>();
+		var collider = gameObject.Components.GetOrCreate<ModelCollider>();
 
 		collider.Model = model;
 
 		gameObject.Components.Create<Rigidbody>();
+
+		gameObject.SetParent( selectedGameObject.Parent );
+
+		selectedGameObject.Destroy();
 	}
 
 	public IEnumerable<Type> GetDerivedClasses(Type type)
