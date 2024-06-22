@@ -64,6 +64,19 @@
         "MinCameraDistance": 32,
         "RotationSpeed": 8,
         "WishSpeed": 128
+      },
+      {
+        "__type": "ItemBuilder.PlayerInteraction",
+        "__guid": "c7901e0b-df8f-4fea-810f-6587bfb55425",
+        "Action": "use",
+        "InteractRadius": 4,
+        "InteractRange": 1024,
+        "State": "Released"
+      },
+      {
+        "__type": "ItemBuilder.PlayerInventory",
+        "__guid": "210d3afc-e2f1-481c-abdd-bfd50942c4be",
+        "MaxItems": 32
       }
     ],
     "Children": [
