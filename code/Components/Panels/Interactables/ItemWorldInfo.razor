@@ -1,0 +1,41 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.Razor;
+@using System;
+
+@inherits PanelComponent
+
+@namespace ItemBuilder.UI
+
+<style>
+    ItemWorldInfo 
+    {
+        .container {
+            width: 100%;
+            background-color: rgba(0.4,0.4,0.4, 0.8);
+
+            align-items: center;
+            justify-content: center;
+
+            >.item-name {
+                margin: 4px;
+                color: white;
+                font-size: 32px;
+            }
+        }
+    }
+</style>
+
+<root>
+    <div class="container">
+        <div class="item-name">@ItemName</div>
+    </div>
+</root>
+
+@code
+{
+
+    protected override int BuildHash() => 33 + System.HashCode.Combine(ItemName);
+
+    public string ItemName { get; set; } = "Item Name";
+}

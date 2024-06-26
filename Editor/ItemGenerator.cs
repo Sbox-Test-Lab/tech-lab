@@ -1,4 +1,5 @@
 ﻿using Editor;
+using ItemBuilder.UI;
 using Sandbox;
 using System;
 using System.Collections.Generic;
@@ -68,6 +69,20 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		AddOverlay( window, TextFlag.Top, 16 );
 	}
 
+	public override void OnUpdate()
+	{
+		base.OnUpdate();
+
+		var model = GetSelectedComponent<ModelRenderer>();
+
+		if(model.IsValid())
+		{
+			var position = model.Bounds.Center.WithZ( model.Bounds.Maxs.z + 4) ;
+
+			Gizmo.Draw.SolidSphere( position, 0.25f);
+		}
+	}
+
 	public void GenerateItem()
 	{
 		var selectedGameObject = GetSelectedComponent<ModelRenderer>().GameObject;
@@ -75,7 +90,7 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		var gameObject = Scene.CreateObject();
 
 		gameObject.Tags.Add( "interactable" );
-
+	
 		gameObject.Name = ItemInfo.Name;
 
 		gameObject.Transform.World = selectedGameObject.Transform.World;
@@ -99,11 +114,26 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		item.Description = ItemInfo.Description;
 
 		var collider = gameObject.Components.GetOrCreate<ModelCollider>();
-
 		collider.Model = model;
 
 		gameObject.Components.Create<Rigidbody>();
 
+		var uiGameObject = Scene.CreateObject();
+		uiGameObject.Name = "UI";
+		uiGameObject.SetParent( gameObject );
+
+		var worldPanel = uiGameObject.Components.Create<WorldPanel>();
+
+		worldPanel.Transform.Position = gameObject.GetBounds().Center;
+		worldPanel.Transform.Position += new Vector3(0, 0, 8.0f);
+
+		worldPanel.PanelSize = new Vector2( 512f, 128f );
+		
+		worldPanel.LookAtCamera = true;
+
+		var itemInfoPanel = uiGameObject.Components.Create<ItemWorldInfo>();
+		itemInfoPanel.ItemName = ItemInfo.Name;
+		
 		gameObject.SetParent( selectedGameObject.Parent );
 
 		selectedGameObject.Destroy();
