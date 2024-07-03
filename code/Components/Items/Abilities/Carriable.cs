@@ -2,24 +2,25 @@
 
 public class Carriable : BaseItemAbility
 {
-	public delegate void PickupDelegate( GameObject user, Item item );
-	public static PickupDelegate OnItemPickup { get; set; }
+	protected override void OnAwake()
+	{
+		base.OnStart();
 
-	[RequireComponent] public Interactable Interaction { get; set; }
-	[RequireComponent] public Item Item { get; set; }
+		EnableOnSpawn = true;
+	}
 
 	protected override void OnStart()
 	{
 		base.OnStart();
 
-		Interaction.OnInteraction += OnInteraction;
+		Interaction.OnInteraction += OnItemInteraction;
 	}
 
-	public void OnInteraction(GameObject user, GameObject gameObject)
+	public override void OnItemInteraction( GameObject user )
 	{
-		if ( gameObject != GameObject )
-			return;
+		base.OnItemInteraction( user );
 
-		OnItemPickup?.Invoke( user, Item );
+		var inventory = user.Components.Get<PlayerInventory>();
+		inventory?.AddItem( Item );
 	}
 }
