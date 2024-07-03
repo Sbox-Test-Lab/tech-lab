@@ -1,4 +1,6 @@
-﻿namespace ItemBuilder;
+﻿using Sandbox;
+
+namespace TestLab;
 
 public partial class PlayerCamera : Component
 {

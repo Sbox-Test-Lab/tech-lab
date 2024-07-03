@@ -1,6 +1,7 @@
-﻿using Sandbox.Citizen;
+﻿using Sandbox;
+using Sandbox.Citizen;
 
-namespace ItemBuilder;
+namespace TestLab;
 
 public class PlayerController : Component
 {
@@ -171,6 +172,4 @@ public class PlayerController : Component
 	{
 		AnimationHelper.TriggerJump();
 	}
-
-
 }

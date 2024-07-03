@@ -39,12 +39,12 @@
         }
       },
       {
-        "__type": "ItemBuilder.Player",
-        "__guid": "6add1d3d-c0e8-46bd-b80e-6480d2ad8d49"
+        "__type": "TestLab.Player",
+        "__guid": "329175ec-d67c-4f26-96b5-40b1d35c8ecb"
       },
       {
-        "__type": "ItemBuilder.PlayerController",
-        "__guid": "3da6f0c3-b91c-4d74-9277-e6e989e4b070",
+        "__type": "TestLab.PlayerController",
+        "__guid": "abf83dc5-577c-4610-b6d5-4c55caa2ae8b",
         "AirControl": 0.1,
         "Body": {
           "_type": "gameobject",
@@ -72,6 +72,12 @@
         "InteractRadius": 4,
         "InteractRange": 1024,
         "State": "Released"
+      },
+      {
+        "__type": "ItemBuilder.PlayerItemDrop",
+        "__guid": "bb5dd6c2-ef6f-4d63-84ef-dc300d179509",
+        "Action": "Drop",
+        "State": "Pressed"
       },
       {
         "__type": "ItemBuilder.PlayerInventory",

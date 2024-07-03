@@ -1,6 +1,10 @@
-﻿namespace ItemBuilder;
+﻿using Sandbox;
+using System.Linq;
 
-public partial class Player : Component
+namespace TestLab;
+
+[Title( "Citizen Player" )]
+public sealed class Player : Component
 {
 	[RequireComponent] public PlayerController Controller { get; set; }
 

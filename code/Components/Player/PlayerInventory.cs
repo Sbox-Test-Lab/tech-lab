@@ -1,6 +1,6 @@
 ﻿namespace ItemBuilder;
 
-public partial class PlayerInventory : Component
+public partial class PlayerInventory : ItemContainer
 {
-	[RequireComponent] public Player Player { get; set; }
+	
 }
