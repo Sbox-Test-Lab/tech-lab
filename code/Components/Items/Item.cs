@@ -1,4 +1,5 @@
 ﻿using ItemBuilder.UI;
+using Sandbox;
 
 namespace ItemBuilder;
 
@@ -17,5 +18,18 @@ public class Item : Component
 		{
 			info.ItemName = GameObject.Name;
 		}
+	}
+
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+
+		var worldPanel = GameObject.Components.Get<ItemWorldInfo>( FindMode.EverythingInChildren );
+
+		if ( !worldPanel.IsValid() )
+			return;
+
+		worldPanel.Transform.Position = GameObject.GetBounds().Center;
+		worldPanel.Transform.Position += new Vector3( 0, 0, 8.0f );
 	}
 }
