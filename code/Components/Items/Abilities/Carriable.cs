@@ -9,16 +9,14 @@ public class Carriable : BaseItemAbility
 		EnableOnSpawn = true;
 	}
 
-	protected override void OnStart()
+	public override bool CanActivate( GameObject user )
 	{
-		base.OnStart();
-
-		Interaction.OnInteraction += OnItemInteraction;
+		return true;
 	}
 
-	public override void OnItemInteraction( GameObject user )
+	public override void OnActive(GameObject user)
 	{
-		base.OnItemInteraction( user );
+		base.OnActive(user);
 
 		var inventory = user.Components.Get<PlayerInventory>();
 		inventory?.AddItem( Item );

@@ -83,6 +83,12 @@
         "__type": "ItemBuilder.PlayerInventory",
         "__guid": "210d3afc-e2f1-481c-abdd-bfd50942c4be",
         "MaxItems": 32
+      },
+      {
+        "__type": "ItemBuilder.PlayerMoney",
+        "__guid": "13622959-4e35-4f1d-b0e3-a6198cf58f60",
+        "MaxAmount": 1000000000,
+        "StartingAmount": 1500
       }
     ],
     "Children": [

@@ -3,11 +3,15 @@
 public abstract class BaseItemAbility : Component
 {
 	[Property] public bool EnableOnSpawn { get; set; } = false;
-	[RequireComponent] public Interactable Interaction { get; set; }
 	[RequireComponent] public Item Item { get; set; }
 
-	public virtual void OnItemInteraction( GameObject user )
+	public virtual bool CanActivate(GameObject user)
 	{
-	
+		return false;
+	}
+
+	public virtual void OnActive(GameObject user)
+	{
+
 	}
 }
