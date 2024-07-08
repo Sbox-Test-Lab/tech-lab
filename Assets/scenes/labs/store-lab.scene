@@ -1,11 +1,644 @@
 {
-  "__guid": "00000000-0000-0000-0000-000000000000",
-  "GameObjects": null,
-  "SceneProperties": null,
-  "Title": null,
-  "Description": null,
-  "LastSaved": "0001-01-01T00:00:00\u002B00:00",
+  "__guid": "ce2d0646-3926-4b8b-b245-8eb1b4872b34",
+  "GameObjects": [
+    {
+      "__guid": "4a3148ed-380a-4999-a585-47a4fca3248c",
+      "Flags": 0,
+      "Name": "Environment",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
+        {
+          "__guid": "31c15f75-095b-465a-9a5f-3da8dc2d02ed",
+          "Flags": 0,
+          "Name": "Map",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.MapInstance",
+              "__guid": "2af80632-2a86-4009-b758-10d78fbca5e2",
+              "__version": 1,
+              "MapName": "maps/lab_store.vmap",
+              "NoOrigin": true,
+              "UseMapFromLaunch": false
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "c8384fa3-9a62-44bd-b0f5-7d88e72aa685",
+          "Flags": 0,
+          "Name": "Envmap Probe",
+          "Position": "0,0,640",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "e5ecca1e-bec7-4515-aa99-cf3224a4ceaf",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-2048,-2048,-2048",
+                "Maxs": "2048,2048,2048"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "dff1d209-3f35-44e7-b428-e883b6d84c90",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "96.92672,114.4984,-31.09617",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "fbc52427-4476-4df1-b5c0-ea072cbea2a4",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "ItemBuilder.UI.PlayerHud",
+          "__guid": "83265cec-4e08-4fa1-975a-ca462e76ce6d"
+        }
+      ]
+    },
+    {
+      "__guid": "b3410ad4-8ca7-4770-b906-35eb0c709ac4",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "441.5489,-51.01322,870.7473",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "90d453b5-b33b-4435-a6e3-e889b7298540",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "TestLab.PlayerCamera",
+          "__guid": "0d27e063-d908-4b63-a4e5-10af431b6ff6"
+        },
+        {
+          "__type": "Sandbox.AmbientOcclusion",
+          "__guid": "cb5989a0-8797-4ce5-ae78-b40ccee1cc64",
+          "Intensity": 8,
+          "Quality": "High",
+          "Radius": 32
+        },
+        {
+          "__type": "Sandbox.Tonemapping",
+          "__guid": "cc0053ad-fce9-4185-9772-213dd098cd6c",
+          "__version": 1,
+          "ExposureBias": 2,
+          "ExposureCompensation": 0.9,
+          "ExposureMethod": "RGB",
+          "MaximumExposure": 2,
+          "MinimumExposure": 1,
+          "Mode": "Legacy",
+          "Rate": 1
+        }
+      ]
+    },
+    {
+      "__guid": "bfe7a9c7-1205-4326-84bd-1dac4203367f",
+      "Flags": 0,
+      "Name": "Network",
+      "Position": "85.91736,-42.5718,844.9589",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
+        {
+          "__guid": "6da6f5cf-18c5-4255-88a8-e8c42193763b",
+          "Flags": 0,
+          "Name": "Network Helper",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.NetworkHelper",
+              "__guid": "5b78bc54-8bd5-476c-a75d-9511d53f321a",
+              "PlayerPrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/player/player_citizen.prefab"
+              },
+              "SpawnPoints": [
+                {
+                  "_type": "gameobject",
+                  "go": "c5e53ac3-2842-4ec7-86ae-43f6c3962a32"
+                }
+              ],
+              "StartServer": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "3af49a86-67eb-4d7d-a5dd-de87acb4531a",
+      "Flags": 0,
+      "Name": "Spawn Points",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
+        {
+          "__guid": "c5e53ac3-2842-4ec7-86ae-43f6c3962a32",
+          "Flags": 0,
+          "Name": "Spawn Point",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        }
+      ]
+    },
+    {
+      "__guid": "5c1f932d-56ba-4878-b5a8-b182e8230439",
+      "Flags": 0,
+      "Name": "Lighting",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Children": [
+        {
+          "__guid": "74356f68-3cc4-43f5-a6e8-13f294f998ef",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "0.00005986216,0,192",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "f6857f72-cd8c-4233-ba5c-41813020e84d",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "0.00009419444,384,192",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "14dd417e-035f-4571-8f6d-f7ce4fe1fc7f",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "0.0001285267,-1152,192",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "08b49acf-1934-4b66-a47b-19d2fa608c0b",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "320.0001,-1152,191.9999",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "fb12e3fa-b774-4c78-9703-84f3b9037a24",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "0.0001743031,-1408,192",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "ee3d5fc9-a850-4793-870f-80ba99b3096e",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "704,-1152,191.9998",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "9f87aaee-1ef4-4200-8634-bade61e9087a",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "384.0001,-1408,191.9998",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "fd74fa4e-45c0-412f-932b-3e7861ede12b",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "0.0001285267,768,192",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "4a4ab63b-7072-45b2-bd3e-9213362ac47c",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-384,768,192.0001",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "429384e6-0b39-4313-bbb4-ecdde1f129a8",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-384.0001,384,192.0003",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "331e517b-3153-448f-aafe-a5652ea8723a",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-384.0002,0,192.0005",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "43497473-fa2c-4a5d-9649-15e3d82ae3bf",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-384.0003,-384,192.0007",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "3cf428be-4b77-4412-a253-233cf1b57dae",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-384.0004,1024,192.0009",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "5f61a48f-e578-4589-9cde-09cb3c4ce1ed",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-768.0001,768,192.0003",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "103c2f06-1c9e-43b2-86d0-56387516da70",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-768.0002,384,192.0005",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "e7e12023-1a1d-4b26-832c-b2cc0071d91a",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-768.0002,0,192.0007",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "d0e07bfd-000e-4b4b-aa39-b686b6f06633",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-768.0002,-384,192.0009",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "3c6462ff-24f4-4e9a-91b1-7075cd24dfa5",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-768.0002,1024,192.0011",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "fc441872-f374-4156-b116-30e0ad04e4a9",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-1152,768,192.0006",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "44643f90-ed5b-41b8-b017-82795e152c39",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-1152,384,192.0007",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "5d8ca460-fda4-4e57-aa5a-692113efa0dd",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-1152,0,192.0009",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "bf2ce8b6-e662-424b-8832-ea16d67d14e9",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-1152,-384,192.001",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "b8af7928-43fd-4d9f-967f-61d4fc874a84",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-1152,1024,192.0012",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "164169ed-9abb-49f4-aa31-2ac4043d2c5d",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "0.000162859,-768,192",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "4ae9cecf-3385-41c4-a892-02b8db5c43fc",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "384.0001,-768,191.9999",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "4c82383d-481c-45b2-b363-783d9a760df9",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "0.000162859,1152,192",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "9a1357bc-18c1-4146-927b-b176af25dafb",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "-256,1280,192.0002",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2a44feb7-a965-4b45-bc20-3745e6687385",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "384.0001,1152,191.9999",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "5054bd02-07af-4d49-9e7d-ec48fe017435",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "640.0001,1152,191.9996",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "4c791f79-9cd0-47af-85b3-490a15338199",
+          "Flags": 0,
+          "Name": "Interior Light",
+          "Position": "0.0001971913,-384,192",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "__Prefab": "prefabs/environment/lights/interior_light_01.prefab",
+          "__PrefabVariables": {}
+        }
+      ]
+    },
+    {
+      "__guid": "8eca2212-fe4f-478f-96b2-1b9ce933d17e",
+      "Flags": 0,
+      "Name": "computer_monitor",
+      "Position": "237.2461,1409.657,34.946",
+      "Rotation": "-0.00000004214687,0.00000004214682,0.7071067,-0.7071066",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "973cabc2-0694-4953-a9f7-51becc5fc990",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/game_room/computer_monitor.vmdl",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "store-lab",
+  "Description": "",
   "ResourceVersion": 1,
-  "__references": [],
+  "__references": [
+    "ambi.computer_monitor"
+  ],
   "__version": 1
 }

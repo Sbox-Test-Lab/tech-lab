@@ -1,0 +1,58 @@
+{
+  "RootObject": {
+    "__guid": "74356f68-3cc4-43f5-a6e8-13f294f998ef",
+    "Flags": 0,
+    "Name": "interior_light_01",
+    "Rotation": "0,0.7071068,0,0.7071068",
+    "Tags": "light_spot,light",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SpotLight",
+        "__guid": "2a220477-c5d4-4cc9-a671-0475efdb3891",
+        "Attenuation": 0.5,
+        "ConeInner": 15,
+        "ConeOuter": 45,
+        "FogMode": "Enabled",
+        "FogStrength": 1,
+        "LightColor": "0.91373,0.98039,1,1",
+        "Radius": 500,
+        "Shadows": true
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "dba3dca0-e6f3-4bbe-82fb-da102823e98b",
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "96.00001,0,-0.0000028396",
+        "Rotation": "0,0.7071068,0,0.7071068",
+        "Tags": "light_point",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "d80fe9d9-e1a9-4530-8227-c00a75895b96",
+            "Attenuation": 1,
+            "FogMode": "Enabled",
+            "FogStrength": 0.18,
+            "LightColor": "0.91373,0.98039,1,1",
+            "Radius": 512,
+            "Shadows": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

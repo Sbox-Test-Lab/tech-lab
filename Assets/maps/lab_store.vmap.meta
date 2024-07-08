@@ -1,17 +1,23 @@
 {
   "publish": {
-    "Allowed": true,
     "Enabled": false,
     "ProjectConfig": {
       "Title": "lab_store",
       "Type": "map",
       "Org": "local",
       "Ident": "lab_store",
-      "Tags": null,
       "Schema": 0,
+      "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": [],
-      "EditorReferences": [],
+      "EditorReferences": [
+        "frogpond.twosidedshelf#12974",
+        "infitex.metal-shelf#32372",
+        "tesssssssssst.untitled_1556102#32881",
+        "fpopium.foldabletable_a#55032",
+        "mdlresrc.devcouch#1408",
+        "facepunch.concrete_glossy_used#18630"
+      ],
       "Metadata": {
         "SingleAssetSource": "maps/lab_store.vmap"
       }
