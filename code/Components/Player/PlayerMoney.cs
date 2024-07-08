@@ -16,9 +16,7 @@ public class PlayerMoney : Component
 
 	public bool Give(int amount)
 	{
-		var money = CurrentMoney + amount;
-
-		if ( money > MaxAmount )
+		if(!CanGive(amount)) 
 			return false;
 
 		CurrentMoney += amount;
@@ -28,12 +26,30 @@ public class PlayerMoney : Component
 
 	public bool Take(int amount)
 	{
-		var money = CurrentMoney - amount;
-
-		if(money < 0)
+		if(!HasAmount(amount))
 			return false;
 
-		CurrentMoney = money;
+		CurrentMoney -= amount;
+
+		return true;
+	}
+
+	public bool CanGive(int amount)
+	{
+		var money = CurrentMoney + amount;
+
+		if ( money > MaxAmount )
+			return false;
+
+		return true;
+	}
+
+	public bool HasAmount(int amount)
+	{
+		var money = CurrentMoney - amount;
+
+		if ( money < 0 )
+			return false;
 
 		return true;
 	}

@@ -1,5 +1,4 @@
 ﻿using ItemBuilder.UI;
-using Microsoft.VisualBasic;
 
 namespace ItemBuilder;
 
@@ -12,40 +11,40 @@ public class Item : Component
 
 	public IEnumerable<BaseItemAbility> Abilities => Components.GetAll<BaseItemAbility>();
 
+	public ItemWorldInfo ItemInfo { get; set; }
+
 	protected override void OnStart()
 	{
 		Interaction.OnInteraction += OnItemInteraction;
 
-		// TODO: Figure out a better way to update the ui when item name is generated
-		var info = GameObject.Components.Get<ItemWorldInfo>( FindMode.EverythingInChildren );
-
-		if ( info.IsValid() )
-		{
-			info.ItemName = GameObject.Name;
-		}
+		ItemInfo = GameObject.Components.Get<ItemWorldInfo>( FindMode.InChildren );
 	}
 
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
 
-		var worldPanel = GameObject.Components.Get<ItemWorldInfo>( FindMode.EverythingInChildren );
+		if ( ItemInfo.IsValid() )
+		{
+			var position = new Vector3( GameObject.GetBounds().Center.x, GameObject.GetBounds().Center.y, GameObject.GetBounds().Center.z + (GameObject.GetBounds().Extents.z + 8.0f));
 
-		if ( !worldPanel.IsValid() )
-			return;
+			ItemInfo.Transform.Position = position;
+		}
+	}
 
-		worldPanel.Transform.Position = GameObject.GetBounds().Center;
-		worldPanel.Transform.Position += new Vector3( 0, 0, 8.0f );
+	private bool CanActivate( GameObject user )
+	{
+		//If any item ability cannot be used, don't use any of the item's abilities
+		if(Abilities.Any( x => !x.CanActivate( user )))
+			return false;
+		
+		return true;
 	}
 
 	public void OnItemInteraction( GameObject user )
-	{
-		//If any item ability cannot be used, don't use any of the item's abilities
-		foreach( var ability in Abilities )
-		{
-			if ( !ability.CanActivate(user) )
-				return;
-		}
+	{	
+		if(!CanActivate( user)) 
+			return;
 
 		foreach(var ability in Abilities )
 		{

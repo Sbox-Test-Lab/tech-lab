@@ -16,8 +16,6 @@ public class Carriable : BaseItemAbility
 
 	public override void OnActive(GameObject user)
 	{
-		base.OnActive(user);
-
 		var inventory = user.Components.Get<PlayerInventory>();
 		inventory?.AddItem( Item );
 	}

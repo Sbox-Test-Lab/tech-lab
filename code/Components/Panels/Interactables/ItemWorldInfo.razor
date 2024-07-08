@@ -26,16 +26,13 @@
     }
 </style>
 
-<root>
+<root class="hidden">
     <div class="container">
-        <div class="item-name">@ItemName</div>
+        <div class="item-name">@GameObject.Parent.Name</div>
     </div>
 </root>
 
 @code
 {
-
-    protected override int BuildHash() => 33 + System.HashCode.Combine(ItemName);
-
-    public string ItemName { get; set; } = "Item Name";
+    protected override int BuildHash() => 33 + System.HashCode.Combine(GameObject.Parent.Name);
 }

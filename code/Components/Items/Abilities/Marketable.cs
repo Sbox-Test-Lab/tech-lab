@@ -14,12 +14,10 @@ public class Marketable : BaseItemAbility
 	{
 		var playerMoney = user.Components.Get<PlayerMoney>();
 
-		Log.Info( $"{playerMoney}" );
-
 		if ( !playerMoney.IsValid() )
 			return false;
 
-		if ( !playerMoney.Take( Price ) )
+		if ( !playerMoney.HasAmount(Price) )
 		{
 			Log.Info( $"{user} cannot purchase this item" );
 
@@ -32,6 +30,8 @@ public class Marketable : BaseItemAbility
 	public override void OnActive( GameObject user )
 	{
 		var playerMoney = user.Components.Get<PlayerMoney>();
+		
+		playerMoney.Take( Price );
 
 		Log.Info( $"{user} purchased {Item.Name} {user} money: {playerMoney.CurrentMoney}" );
 	}
