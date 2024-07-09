@@ -10,6 +10,8 @@
 <style>
     ItemWorldInfo 
     {
+        opacity: 0;
+
         .container {
             width: 100%;
             background-color: rgba(0.4,0.4,0.4, 0.8);
@@ -23,10 +25,14 @@
                 font-size: 32px;
             }
         }
+
+        &.hover {
+            opacity: 1;
+        }
     }
 </style>
 
-<root class="hidden">
+<root class="@VisibleClass">
     <div class="container">
         <div class="item-name">@GameObject.Parent.Name</div>
     </div>
@@ -34,5 +40,22 @@
 
 @code
 {
-    protected override int BuildHash() => 33 + System.HashCode.Combine(GameObject.Parent.Name);
+    public bool Hovered = false;
+    public string VisibleClass => Hovered ? "hover" : "";
+
+    protected override int BuildHash() => 33 + System.HashCode.Combine(GameObject.Parent.Name, Hovered);
+
+    protected override void OnUpdate()
+    {
+        base.OnUpdate();
+
+        var ray = Scene.Camera.ScreenPixelToRay(Screen.Size / 2);
+
+        var traceResult = Game.ActiveScene.Trace.Ray(ray, 512)
+            .WithoutTags("player")
+            .Run();
+
+        Hovered = traceResult.GameObject == GameObject.Parent;
+    }
+
 }
