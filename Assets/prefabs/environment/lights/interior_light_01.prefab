@@ -3,7 +3,7 @@
     "__guid": "74356f68-3cc4-43f5-a6e8-13f294f998ef",
     "Flags": 0,
     "Name": "interior_light_01",
-    "Rotation": "0,0.7071068,0,0.7071068",
+    "Rotation": "-0,0.7071068,-0,-0.7071068",
     "Tags": "light_spot,light",
     "Enabled": true,
     "NetworkMode": 2,
@@ -45,6 +45,25 @@
             "Shadows": true
           }
         ]
+      },
+      {
+        "__guid": "6c4f3ec2-a821-4ee8-8549-83dbfca37021",
+        "Flags": 0,
+        "Name": "Model",
+        "Rotation": "-0,0.7071068,-0,-0.7071068",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "8f485769-1c38-4624-ab37-b5d2c4655eac",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/props_2fort/lightbulb001.vmdl",
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          }
+        ]
       }
     ],
     "__variables": []
@@ -53,6 +72,8 @@
   "MenuPath": null,
   "MenuIcon": null,
   "ResourceVersion": 1,
-  "__references": [],
+  "__references": [
+    "tfassets.lightbulb001"
+  ],
   "__version": 1
 }
