@@ -69,7 +69,7 @@ public class ItemContainer : Component
 		gameObject.NetworkSpawn( Connection.Host );
 	}
 
-	[Broadcast(NetPermission.HostOnly)] 
+	[Broadcast] 
 	public void DestroyItem(Guid guid)
 	{
 		Game.ActiveScene.Directory.FindByGuid( guid )?.Destroy();
