@@ -1,23 +1,29 @@
 ﻿using Editor;
-using ItemBuilder.UI;
 using Sandbox;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using ItemBuilder.UI;
+
 namespace ItemBuilder;
 
-public class ItemInfo
+public class ItemData
 {
-	[Property] public string Name { get; set; }
-	[Property, TextArea] public string Description { get; set; }
+	public string Name { get; set; }
+	public string Description { get; set; }
 }
 
-public class ItemBuilder : EditorTool<ModelRenderer>
+[EditorTool]
+[Title( "Item Builder" )]
+[Icon("engineering")]
+[Shortcut("editortool.itembuilder", "i")]
+[Alias( "item" )]
+[Group( "0" )]
+public class ItemBuilder : EditorTool
 {
-	public ItemInfo ItemInfo { get; set; } = new();
-	public Dictionary<Type, BoolProperty> ItemAbilities { get; set; } = new Dictionary<Type, BoolProperty>();
+	public ItemData ItemData { get; set; } = new ItemData();
 
+	public List<TypeDescription> Components { get; set; } = new List<TypeDescription>();
 	public override void OnEnabled()
 	{
 		var window = new WidgetWindow( SceneOverlay );
@@ -31,41 +37,53 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 
 		var controlSheet = new ControlSheet();
 
-		controlSheet.AddRow( EditorUtility.GetSerializedObject( ItemInfo ).GetProperty(nameof(ItemInfo.Name)) );
-		controlSheet.AddRow( EditorUtility.GetSerializedObject( ItemInfo ).GetProperty(nameof(ItemInfo.Description)));
-
-		controlSheet.Margin = new Sandbox.UI.Margin( 8 );
-
-		controlSheet.SetMinimumColumnWidth( 0, 4 );
+		controlSheet.AddObject( ItemData.GetSerialized() );
 		
-		window.Layout.Add(controlSheet);
+		window.Layout.Add( controlSheet );
 
-		window.Layout.AddSeparator();
-
-		var componentSheet = new ControlSheet();
-
-		foreach(var item in GetDerivedClasses(typeof(BaseItemAbility)))
+	
+		foreach ( var typeDescription in TypeLibrary.GetTypes<BaseItemAbility>() )
 		{
-			var boolProperty = new BoolProperty( null );
-			
-			boolProperty.Text = item.Name;
-			boolProperty.Layout = Layout.Row();
-			
-			componentSheet.Add( boolProperty );
+			if ( typeDescription.IsAbstract )
+				continue;
 
-			ItemAbilities.Add(item, boolProperty);
+			var component = typeDescription.Create<Component>();
+
+			var serialized = component.GetSerialized();
+			var properties = serialized.Where( x => x.HasAttribute<ItemAbilityPropertyAttribute>() ).ToArray();
+
+			serialized.OnPropertyChanged += property =>
+			{
+				if ( property.Name == "GenerateComponent" )
+				{
+					if ( property.GetValue<bool>() == true && !Components.Contains( typeDescription ) )
+					{
+						Components.Add( typeDescription );
+					}
+					else if ( Components.Contains( typeDescription ) )
+					{
+						Components.Remove( typeDescription );
+					}
+				}
+			};
+
+			var componentSheet = new ControlSheet { Margin = new Sandbox.UI.Margin( 0, 0, 0, 0 ) };
+
+			componentSheet.AddGroup( typeDescription.Title, properties );
+			
+			window.Layout.Add( componentSheet );
 		}
-
-		window.Layout.Add( componentSheet );
 
 		var generateButton = new Button.Primary( "Generate" );
 	
 		generateButton.Clicked = GenerateItem;
+		
 		generateButton.MaximumWidth = 96f;
 		generateButton.Layout = Layout.Row();
-		
+		generateButton.Layout.Margin = 8f;
+
 		window.Layout.Add( generateButton );
-		
+
 		AddOverlay( window, TextFlag.Top, 16 );
 	}
 
@@ -73,13 +91,18 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 	{
 		base.OnUpdate();
 
-		var model = GetSelectedComponent<ModelRenderer>();
+		var traceResult = Scene.Trace.Ray( Gizmo.CurrentRay, 4096 )
+			.UseRenderMeshes( true )
+			.UsePhysicsWorld( false )
+			.Run();
 
-		if(model.IsValid())
+		if ( traceResult.Hit )
 		{
-			var position = model.Bounds.Center.WithZ( model.Bounds.Maxs.z + 4) ;
-
-			Gizmo.Draw.SolidSphere( position, 0.25f);
+			using ( Gizmo.Scope( "cursor" ) )
+			{
+				//Gizmo.Transform = new Transform( traceResult.HitPosition.SnapToGrid(4.0f), Rotation.LookAt( traceResult.Normal ) );
+				//Gizmo.Draw.SolidSphere(Vector3.Zero, 8.0f);
+			}
 		}
 	}
 
@@ -90,28 +113,23 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		var gameObject = Scene.CreateObject();
 
 		gameObject.Tags.Add( "interactable" );
-	
-		gameObject.Name = ItemInfo.Name;
+
+		gameObject.Name = ItemData.Name;
 
 		gameObject.Transform.World = selectedGameObject.Transform.World;
 
 		var model = gameObject.Components.GetOrCreate<ModelRenderer>().Model = GetSelectedComponent<ModelRenderer>().Model;
 
 		gameObject.Components.GetOrCreate<Interactable>();
-		
-		foreach(var itemType in ItemAbilities)
+
+		foreach ( var component in Components )
 		{
-			if ( itemType.Value.Value is false )
-				continue;
-
-			var typeDescription = TypeLibrary.GetType( itemType.Key );
-
-			gameObject.Components.Create( typeDescription );
+			gameObject.Components.Create( component );
 		}
 
 		var item = gameObject.Components.GetOrCreate<Item>();
-		item.Name = ItemInfo.Name;
-		item.Description = ItemInfo.Description;
+		item.Name = ItemData.Name;
+		item.Description = ItemData.Description;
 
 		var collider = gameObject.Components.GetOrCreate<ModelCollider>();
 		collider.Model = model;
@@ -125,24 +143,17 @@ public class ItemBuilder : EditorTool<ModelRenderer>
 		var worldPanel = uiGameObject.Components.Create<WorldPanel>();
 
 		worldPanel.Transform.Position = gameObject.GetBounds().Center;
-		worldPanel.Transform.Position += new Vector3(0, 0, 8.0f);
+		worldPanel.Transform.Position += new Vector3( 0, 0, 8.0f );
 
 		worldPanel.PanelSize = new Vector2( 512f, 128f );
-		
+
 		worldPanel.LookAtCamera = true;
 
 		var itemInfoPanel = uiGameObject.Components.Create<ItemWorldInfo>();
-		itemInfoPanel.ItemName = ItemInfo.Name;
-		
+
 		gameObject.SetParent( selectedGameObject.Parent );
 
 		selectedGameObject.Destroy();
-	}
 
-	public IEnumerable<Type> GetDerivedClasses(Type type)
-    {
-        return AppDomain.CurrentDomain.GetAssemblies()
-            .SelectMany(x => x.GetTypes())
-            .Where(x => x.IsSubclassOf(type));
-    }
+	}
 }

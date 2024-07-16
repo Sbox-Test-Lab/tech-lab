@@ -2,7 +2,7 @@
 
 public class Marketable : BaseItemAbility
 {
-	[Property] public int Price { get; set; } = 0;
+	[Property, ItemAbilityProperty] public int Price { get; set; } = 0;
 	protected override void OnAwake()
 	{
 		base.OnAwake();
