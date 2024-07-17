@@ -1,4 +1,6 @@
-﻿namespace ItemBuilder;
+﻿using ItemBuilder.UI;
+
+namespace ItemBuilder;
 
 public class Marketable : BaseItemAbility
 {
@@ -19,6 +21,8 @@ public class Marketable : BaseItemAbility
 
 		if ( !playerMoney.HasAmount(Price) )
 		{
+			GameEventFeed.BroadcastGameFeedEvent( "payment", $"Not have enough money to purchase {Item.Name}" );
+
 			Log.Info( $"{user} cannot purchase this item" );
 
 			return false;
@@ -33,6 +37,6 @@ public class Marketable : BaseItemAbility
 		
 		playerMoney.Take( Price );
 
-		Log.Info( $"{user} purchased {Item.Name} {user} money: {playerMoney.CurrentMoney}" );
+		GameEventFeed.BroadcastGameFeedEvent( "payment", $"Purchased {Item.Name}" );
 	}
 }

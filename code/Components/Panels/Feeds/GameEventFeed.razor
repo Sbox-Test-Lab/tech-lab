@@ -1,0 +1,91 @@
+﻿@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.Razor;
+@using System;
+
+@inherits Panel
+
+@namespace ItemBuilder.UI
+
+<style>
+    GameEventFeed
+    {
+        flex-direction: column;
+        align-items: flex-end;
+             
+        gap: 4px;
+        margin: 8px;
+
+        .entry 
+        {
+           
+            margin: 4px;
+            background-color: rgba(0,0,0,0.5);
+            flex-direction: row;
+            align-items: center;
+            padding: 16px;
+
+            >i 
+            {
+                font-family: 'Material Icons';
+                color: white;
+                font-size: 24px;
+            }
+            >label 
+            {
+                font-family: 'PT Root UI';
+                color: white;
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+    }
+</style>
+
+<root>
+    
+    @foreach (var entry in Entries)
+    {
+        <div class="entry">
+            <i>@entry.MaterialIcon</i>
+            <label>@entry.EventText</label>
+        </div>
+        
+    }
+</root>
+
+
+@code 
+{
+    public record GameEventEntry(string MaterialIcon, string EventText, RealTimeSince TimeSinceAdded)
+    {
+
+    }
+
+    private static GameEventFeed Instance { get; set; } = null;
+    private List<GameEventEntry> Entries { get; set; } = new();
+
+    private float Lifetime => 8.0f;
+
+    public GameEventFeed()
+    {
+        Instance = this;
+    }
+
+    [Broadcast]
+    public static void BroadcastGameFeedEvent(string materialIcon, string eventText)
+	{
+		Instance.Entries.Add(new GameEventEntry(materialIcon, eventText, 0));
+		Instance.StateHasChanged();
+	}
+
+    public override void Tick()
+    {
+        Entries = Entries.TakeLast(4).ToList();
+
+        if(Entries.RemoveAll(x => x.TimeSinceAdded > Lifetime) > 0)
+        {
+            StateHasChanged();
+        }
+    }
+}

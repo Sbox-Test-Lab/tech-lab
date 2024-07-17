@@ -2,6 +2,8 @@
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
+using ItemBuilder.UI;
+
 namespace ItemBuilder;
 
 public class ItemContainer : Component
@@ -18,6 +20,8 @@ public class ItemContainer : Component
 
 		Items.Add(json);
 
+		GameEventFeed.BroadcastGameFeedEvent( "info",  $"Added {item.Name} to inventory" );
+
 		DestroyItem( item.GameObject.Id );
 		
 		return true;
@@ -28,7 +32,10 @@ public class ItemContainer : Component
 		if(Items.Count < 1)
 			return false;
 
+
 		Items.RemoveAt( index );
+
+		
 
 		return true;
 	}
@@ -42,6 +49,8 @@ public class ItemContainer : Component
 
 		Items.RemoveAt( index );
 
+		GameEventFeed.BroadcastGameFeedEvent( "info", $"Removed an item from inventory: {Items.Count}" );
+		
 		return true;
 	}
 
