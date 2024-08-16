@@ -20,8 +20,6 @@ public class ItemContainer : Component
 
 		Items.Add(json);
 
-		GameEventFeed.BroadcastGameFeedEvent( "info",  $"Added {item.Name} to inventory" );
-
 		DestroyItem( item.GameObject.Id );
 		
 		return true;
@@ -32,10 +30,7 @@ public class ItemContainer : Component
 		if(Items.Count < 1)
 			return false;
 
-
 		Items.RemoveAt( index );
-
-		
 
 		return true;
 	}
@@ -47,10 +42,12 @@ public class ItemContainer : Component
 
 		SpawnItem( index, position );
 
+		var json = JsonSerializer.Deserialize<JsonObject>( Items[index] );
+
+		GameEventFeed.BroadcastGameFeedEvent( "info", $"Removed {json["Name"]} from inventory: {Items.Count}" );
+
 		Items.RemoveAt( index );
 
-		GameEventFeed.BroadcastGameFeedEvent( "info", $"Removed an item from inventory: {Items.Count}" );
-		
 		return true;
 	}
 
@@ -61,10 +58,7 @@ public class ItemContainer : Component
 
 	private void SpawnItem(int index, Vector3 position)
 	{
-		var jsonObject = JsonSerializer.Deserialize<JsonObject>( Items[index] );
-
-		var gameObject = new GameObject();
-		gameObject.Deserialize( jsonObject );
+		var gameObject = GetItemGameObject( index );
 
 		gameObject.Components.GetOrCreate<Rigidbody>().Gravity = true;
 
@@ -76,6 +70,21 @@ public class ItemContainer : Component
 		gameObject.Transform.Position = position;
 
 		gameObject.NetworkSpawn( Connection.Host );
+	}
+
+	public string GetItemName(int index)
+	{
+		return JsonSerializer.Deserialize<JsonObject>( Items[index] )["Name"].ToString();
+	}
+
+	public GameObject GetItemGameObject(int index)
+	{
+		var json = JsonSerializer.Deserialize<JsonObject>( Items[index] );
+
+		var gameObject = new GameObject();
+		gameObject.Deserialize( json);
+
+		return gameObject;
 	}
 
 	[Broadcast] 
