@@ -48,7 +48,7 @@
               "__guid": "fc2d4c13-2958-4625-989e-fe5eb13ab775",
               "FogMode": "Enabled",
               "FogStrength": 1,
-              "LightColor": "1,0.92512,0.78605,1",
+              "LightColor": "0.47907,0.4393,0.36543,1",
               "Shadows": true,
               "SkyColor": "0.05882,0.07451,0.08235,1"
             }
@@ -329,8 +329,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "13928a38-bbe8-4020-8e25-0c853e2a7727",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -382,8 +381,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "32c0d445-012b-44e4-bee5-213ba9b2da36",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -482,8 +480,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "05e04259-18e8-4763-9ec6-4d617d43e906",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -564,8 +561,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "8ea28804-295d-477c-9b89-6fddee4afbdc",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -644,8 +640,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "2cf6ad5d-38f4-41c2-8fa6-2399eaa2dc63",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -724,8 +719,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "8ec89779-5d25-45ad-bcdc-554e3a4432cf",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -1029,8 +1023,7 @@
             {
               "__type": "ItemBuilder.Carriable",
               "__guid": "c979c369-b93d-42a8-8d3f-326ac550b863",
-              "EnableOnSpawn": false,
-              "GenerateComponent": false
+              "EnableOnSpawn": false
             },
             {
               "__type": "ItemBuilder.Item",
@@ -1639,8 +1632,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "8d3b72ab-a33d-4509-98f4-e51053576616",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -1720,8 +1712,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "408a1df5-26af-4a45-9223-92641479802a",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -1801,8 +1792,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "e87cb8bd-e84b-4fcc-af65-f8f8a1848ddb",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -1882,8 +1872,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "8e6ff069-626f-4647-ab4f-feec097129db",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -1962,8 +1951,7 @@
                 {
                   "__type": "ItemBuilder.Carriable",
                   "__guid": "05b6b760-ccb1-4dea-845b-08aacce2787c",
-                  "EnableOnSpawn": false,
-                  "GenerateComponent": false
+                  "EnableOnSpawn": false
                 },
                 {
                   "__type": "ItemBuilder.Item",
@@ -4485,7 +4473,7 @@
                   "__guid": "508413ce-36ba-417a-9b5e-9c2275a00e57",
                   "Flags": 0,
                   "Name": "wooden_planks_01",
-                  "Position": "-320.0655,397.1161,49.12651",
+                  "Position": "-320.0656,397.1159,49.12654",
                   "Rotation": "0.2702898,0.5896818,-0.383358,0.6574613",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4505,7 +4493,7 @@
                   "__guid": "4585d2bf-6e47-4d3c-bec6-3aaa7441d506",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (4)",
-                  "Position": "1.315466,469.2333,9.728301",
+                  "Position": "1.315252,469.2333,9.728316",
                   "Rotation": "0.5066945,0.4955327,-0.5027555,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4565,7 +4553,7 @@
                   "__guid": "7b5da4e1-b97f-450d-a621-fdc9165a8ca7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (12)",
-                  "Position": "-14.48053,-362.621,5.914096",
+                  "Position": "-14.48035,-362.621,5.914043",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4585,7 +4573,7 @@
                   "__guid": "88e86c73-3d5f-4467-92be-93becc76b63e",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (8)",
-                  "Position": "-1.317516,330.5751,9.092391",
+                  "Position": "-1.317683,330.5751,9.092391",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4645,7 +4633,7 @@
                   "__guid": "0b627483-9c13-4367-8eb5-9ba83d861021",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (16)",
-                  "Position": "-17.11365,-501.2789,5.277999",
+                  "Position": "-17.11342,-501.2789,5.277938",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4665,7 +4653,7 @@
                   "__guid": "4fe10399-f8e3-43ed-ab28-cc40d50e10bb",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (7)",
-                  "Position": "-0.001535952,399.8772,9.410163",
+                  "Position": "-0.001749575,399.8772,9.410186",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4725,7 +4713,7 @@
                   "__guid": "7d082510-adad-4219-bbab-2b00776722f3",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (14)",
-                  "Position": "-15.79744,-431.9767,5.59597",
+                  "Position": "-15.79721,-431.9767,5.59597",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4745,7 +4733,7 @@
                   "__guid": "32f23617-dc54-482d-8fcf-ebe23e3d6a99",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (10)",
-                  "Position": "-2.634609,261.2197,8.774253",
+                  "Position": "-2.634747,261.2197,8.774257",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4765,7 +4753,7 @@
                   "__guid": "e55908e3-c690-4bb3-bd04-52d2af69873e",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (10)",
-                  "Position": "-13.16536,-293.3456,6.231616",
+                  "Position": "-13.16524,-293.3456,6.231612",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4805,7 +4793,7 @@
                   "__guid": "dce2fef8-0661-4444-b558-1a9b1fae492d",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (10)",
-                  "Position": "-18.43082,-570.6342,4.95996",
+                  "Position": "-18.43055,-570.6343,4.959922",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4825,7 +4813,7 @@
                   "__guid": "6ed84c3d-b205-4801-a511-3db66db3780a",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (5)",
-                  "Position": "0.6558893,434.5017,9.568961",
+                  "Position": "0.6556757,434.5016,9.568961",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4885,7 +4873,7 @@
                   "__guid": "895476d3-173d-4145-b2e0-71f7712c2fbd",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (13)",
-                  "Position": "-15.13999,-397.3526,5.75481",
+                  "Position": "-15.13977,-397.3526,5.75481",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4905,7 +4893,7 @@
                   "__guid": "a5db7797-9e80-4d8d-b1cb-eadbf9b75181",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (9)",
-                  "Position": "-1.977138,295.8436,8.933059",
+                  "Position": "-1.977291,295.8435,8.933078",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4965,7 +4953,7 @@
                   "__guid": "e874b072-62c1-43d2-b48a-ae9acab49021",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (9)",
-                  "Position": "-17.77321,-536.0103,5.118659",
+                  "Position": "-17.773,-536.0103,5.118598",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4985,7 +4973,7 @@
                   "__guid": "13992706-1a63-4464-a78b-47d3f1aab401",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (6)",
-                  "Position": "-0.6612043,365.1462,9.25072",
+                  "Position": "-0.6613721,365.1462,9.25072",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5045,7 +5033,7 @@
                   "__guid": "b8efb169-a91e-494d-8a33-ce11246b27c9",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (15)",
-                  "Position": "-16.45728,-466.7083,5.436424",
+                  "Position": "-16.4571,-466.7083,5.43637",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5085,7 +5073,7 @@
                   "__guid": "26590b36-2e09-4be9-bb07-541538558d84",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (11)",
-                  "Position": "-13.82486,-328.0771,6.07244",
+                  "Position": "-13.82471,-328.0771,6.072425",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5125,7 +5113,7 @@
                   "__guid": "7248652e-38e2-4e80-8781-264178b502be",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (11)",
-                  "Position": "-19.09012,-605.3656,4.800636",
+                  "Position": "-19.08985,-605.3656,4.800575",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5145,7 +5133,7 @@
                   "__guid": "3ff983cb-2de4-40f9-8b04-7cb3452916f4",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (1)",
-                  "Position": "-345.682,170.6417,91.56089",
+                  "Position": "-345.682,170.6415,91.56093",
                   "Rotation": "0.5288243,0.3756675,-0.003458522,0.7610564",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5165,7 +5153,7 @@
                   "__guid": "c9d0bb9b-fa64-4ca3-805a-c447b7cfc894",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (2)",
-                  "Position": "145.97,439.2122,-302.6438",
+                  "Position": "145.9698,439.2122,-302.6438",
                   "Rotation": "0.09873718,0.641118,-0.5485317,0.5275717",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5185,7 +5173,7 @@
                   "__guid": "22975448-4b82-491c-9358-1eb5acd098a7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "333.3521,-297.6132,157.4501",
+                  "Position": "333.3523,-297.613,157.4501",
                   "Rotation": "0.09873718,0.641118,-0.5485317,0.5275717",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5225,7 +5213,7 @@
                   "__guid": "67361b3f-e99c-4167-a396-6a3762cb0ca7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "-267.3149,-509.2695,-108.6373",
+                  "Position": "-267.3147,-509.2696,-108.6373",
                   "Rotation": "-0.449634,0.467558,-0.7522037,-0.1157956",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5807,7 +5795,7 @@
               "__guid": "e1b8d91b-7727-4e98-9c93-9c5acfccdf82",
               "Flags": 0,
               "Name": "rock_cliff_c (6)",
-              "Position": "-684.1108,961.6752,-910.0311",
+              "Position": "-684.1108,961.6752,-910.031",
               "Rotation": "-0.2056988,0.2350976,0.8307174,-0.4607883",
               "Scale": "2.290722,2.290722,2.290722",
               "Enabled": true,
@@ -6185,8 +6173,7 @@
                     {
                       "__type": "ItemBuilder.Carriable",
                       "__guid": "aecce8a2-b579-40f7-becc-9836f164f0c0",
-                      "EnableOnSpawn": false,
-                      "GenerateComponent": false
+                      "EnableOnSpawn": false
                     },
                     {
                       "__type": "ItemBuilder.Item",
@@ -6198,7 +6185,6 @@
                       "__type": "ItemBuilder.Marketable",
                       "__guid": "2f988007-ba79-4b1c-8480-83298fc23a07",
                       "EnableOnSpawn": false,
-                      "GenerateComponent": false,
                       "Price": 1600
                     },
                     {
@@ -6274,8 +6260,7 @@
                     {
                       "__type": "ItemBuilder.Carriable",
                       "__guid": "762b47f8-b681-46ef-809e-8ef357d423c2",
-                      "EnableOnSpawn": false,
-                      "GenerateComponent": false
+                      "EnableOnSpawn": false
                     },
                     {
                       "__type": "ItemBuilder.Item",
@@ -6287,7 +6272,6 @@
                       "__type": "ItemBuilder.Marketable",
                       "__guid": "da3236f3-4dd3-4d4e-bdbe-c836041fa9ed",
                       "EnableOnSpawn": false,
-                      "GenerateComponent": false,
                       "Price": 100
                     },
                     {
@@ -6362,8 +6346,7 @@
                     {
                       "__type": "ItemBuilder.Carriable",
                       "__guid": "e08db5f6-a756-4179-8c98-88d5a059aeac",
-                      "EnableOnSpawn": false,
-                      "GenerateComponent": false
+                      "EnableOnSpawn": false
                     },
                     {
                       "__type": "ItemBuilder.Item",
@@ -6375,7 +6358,6 @@
                       "__type": "ItemBuilder.Marketable",
                       "__guid": "2dfe9ec1-125d-43f1-b6be-8a1304a8e704",
                       "EnableOnSpawn": false,
-                      "GenerateComponent": false,
                       "Price": 10
                     },
                     {
