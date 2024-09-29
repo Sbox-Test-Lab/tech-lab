@@ -11,31 +11,27 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
-        "sausages.simplegrass1#57045",
-        "fish.spruce_tree_c#57854",
-        "bea.tree_1a#11287",
         "rust.rock_cliff_c#25119",
-        "sapodilla.rabbit#11121",
-        "jodiscontent.record_blue#24292",
-        "jodiscontent.enhanced_speaker#24257",
-        "oleshkus.ground_3#57401",
-        "pui.f_light#15300",
-        "tiowevolve.dev_orange_06#52994",
-        "quack.devgen01#11247",
-        "tiowevolve.dev_red_06#53022",
-        "matek.dev_grid_green#46457",
+        "facepunch.floor_grass_dirt_cliff_blend_a#18754",
+        "facepunch.floor_grass_wet_cliff_a#18757",
+        "rust.rock_quarry_small_b#25126",
         "facepunch.floor_grass_dirt_blend_a#18649",
         "rust.rock_cliff_a#25118",
-        "fish.rock_c#57876",
         "fish.rock_a#57877",
+        "bea.tree_1a#11287",
         "rust.rock_ledge_a#25122",
-        "rust.rock_quarry_small_b#25126",
-        "rust.rock_quarry_a#25121",
         "fish.rock_e#57873",
-        "blmndy.vinyl_player#30440"
+        "fish.spruce_tree_c#57854",
+        "garry.wall_125x300#21871",
+        "rust.rock_quarry_a#25121",
+        "duccsoft.forest_needles_tmat#60685",
+        "fish.rock_c#57876",
+        "facepunch.floor_grass_dirt_leaves_blend_a#18755"
       ],
+      "IsWhitelistDisabled": false,
       "Metadata": {
-        "SingleAssetSource": "maps/scenery.vmap"
+        "SingleAssetSource": "maps/scenery.vmap",
+        "ParentPackage": "testlab.tech-lab"
       }
     }
   }
