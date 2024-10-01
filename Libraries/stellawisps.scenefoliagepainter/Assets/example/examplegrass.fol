@@ -1,0 +1,12 @@
+{
+  "Model": "example/grass.vmdl",
+  "Scale": "0.2 0.3",
+  "AlignToNormal": true,
+  "MaxNormal": 35,
+  "RandomRoll": true,
+  "RandomRotation": false,
+  "ZOffset": -2.5,
+  "ZOffsetRandom": 2.5,
+  "__references": [],
+  "__version": 0
+}

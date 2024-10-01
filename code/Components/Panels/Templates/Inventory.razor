@@ -21,7 +21,8 @@
         flex-direction: row;
         gap: 8px;
         flex-wrap: wrap;
-        
+        pointer-events: all;
+
         .item 
         {
             max-width: 128px;
@@ -61,10 +62,17 @@
                 justify-content: center;
                 text-align: center;
             }
+
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: rgba(0.5,0.5,0.5, 0.8);
+            }
         }
 
         &.visible {
             opacity: 1;
+            background-color: rgba(0.5,0.5,0.5, 0.8);
         }
     }
 </style>

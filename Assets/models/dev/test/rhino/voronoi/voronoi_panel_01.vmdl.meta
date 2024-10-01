@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Voronoi Panel 1",
+      "Type": "model",
+      "Org": "testlab",
+      "Ident": "voronoi_panel_01",
+      "Schema": 0,
+      "IncludeSourceFiles": true,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/dev/test/rhino/voronoi/voronoi_panel_01.vmdl"
+      }
+    }
+  }
+}

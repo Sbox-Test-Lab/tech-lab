@@ -11,16 +11,18 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
+        "creation.rollerdoorsmall2#19545",
+        "facepunch.concrete_glossy_used#18630",
+        "fpopium.foldabletable_a#55032",
         "frogpond.twosidedshelf#12974",
         "infitex.metal-shelf#32372",
-        "tesssssssssst.untitled_1556102#32881",
-        "fpopium.foldabletable_a#55032",
         "mdlresrc.devcouch#1408",
-        "facepunch.concrete_glossy_used#18630",
-        "creation.rollerdoorsmall2#19545"
+        "tesssssssssst.untitled_1556102#32881"
       ],
+      "IsWhitelistDisabled": false,
       "Metadata": {
-        "SingleAssetSource": "maps/lab_store.vmap"
+        "SingleAssetSource": "maps/lab_store.vmap",
+        "ParentPackage": "testlab.tech-lab"
       }
     }
   }

@@ -4,6 +4,7 @@ namespace ItemBuilder;
 
 public class Marketable : BaseItemAbility
 {
+	[Property, ItemAbilityProperty] public SoundEvent PurchaseSound { get; set; } 
 	[Property, ItemAbilityProperty] public int Price { get; set; } = 0;
 	protected override void OnAwake()
 	{
@@ -23,8 +24,6 @@ public class Marketable : BaseItemAbility
 		{
 			GameEventFeed.BroadcastGameFeedEvent( "payment", $"Not have enough money to purchase {Item.Name}" );
 
-			Log.Info( $"{user} cannot purchase this item" );
-
 			return false;
 		}
 
@@ -37,6 +36,8 @@ public class Marketable : BaseItemAbility
 		
 		playerMoney.Take( Price );
 
-		GameEventFeed.BroadcastGameFeedEvent( "payment", $"Purchased {Item.Name}" );
+		Sound.Play( PurchaseSound );
+
+		GameEventFeed.BroadcastGameFeedEvent( "payment", $"Purchased {Item.Name}: {playerMoney.CurrentMoney}" );
 	}
 }

@@ -638,7 +638,7 @@
   "Description": "",
   "ResourceVersion": 1,
   "__references": [
-    "ambi.computer_monitor"
+    "ambi.computer_monitor#49612"
   ],
   "__version": 1
 }

@@ -2,6 +2,7 @@
 using Sandbox;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Nodes;
 
 using ItemBuilder.UI;
 
@@ -16,16 +17,17 @@ public class ItemData
 [EditorTool]
 [Title( "Item Builder" )]
 [Icon("engineering")]
-[Shortcut("editortool.itembuilder", "i")]
+//[Shortcut("editortool.itembuilder", "i")]
 [Alias( "item" )]
 [Group( "0" )]
 public class ItemBuilder : EditorTool
 {
 	public ItemData ItemData { get; set; } = new ItemData();
 
-	public List<TypeDescription> Components { get; set; } = new List<TypeDescription>();
+	public Dictionary<TypeDescription, JsonObject> Components { get; set; } = new Dictionary<TypeDescription, JsonObject>();
 	public override void OnEnabled()
 	{
+		
 		var window = new WidgetWindow( SceneOverlay );
 
 		window.WindowTitle = "Item Builder";
@@ -40,7 +42,7 @@ public class ItemBuilder : EditorTool
 		controlSheet.AddObject( ItemData.GetSerialized() );
 		
 		window.Layout.Add( controlSheet );
-
+		
 	
 		foreach ( var typeDescription in TypeLibrary.GetTypes<BaseItemAbility>() )
 		{
@@ -48,31 +50,45 @@ public class ItemBuilder : EditorTool
 				continue;
 
 			var component = typeDescription.Create<Component>();
+			component.Enabled = true;
 
 			var serialized = component.GetSerialized();
 			var properties = serialized.Where( x => x.HasAttribute<ItemAbilityPropertyAttribute>() ).ToArray();
-
+			
 			serialized.OnPropertyChanged += property =>
 			{
-				if ( property.Name == "GenerateComponent" )
+				if ( property.Name == "GenerateComponentEditor" )
 				{
-					if ( property.GetValue<bool>() == true && !Components.Contains( typeDescription ) )
+					if ( property.GetValue<bool>() == true && !Components.ContainsKey(typeDescription) )
 					{
-						Components.Add( typeDescription );
+						var json = component.Serialize().AsObject();
+						json.Remove( "__guid" );
+						Log.Info( $"{json}" );
+						Components.Add( typeDescription, json );
 					}
-					else if ( Components.Contains( typeDescription ) )
-					{
-						Components.Remove( typeDescription );
+					else if ( Components.ContainsKey( typeDescription ) )
+					{	
+						Components.Remove(typeDescription);
+
+						return;
 					}
+
+					Log.Info( $"{Components.Count}" );
 				}
 			};
 
 			var componentSheet = new ControlSheet { Margin = new Sandbox.UI.Margin( 0, 0, 0, 0 ) };
 
 			componentSheet.AddGroup( typeDescription.Title, properties );
-			
+
 			window.Layout.Add( componentSheet );
 		}
+
+		var componentsSheet = new ControlSheet();
+
+		componentsSheet.AddObject( Components.GetSerialized() );
+		
+		window.Layout.Add( componentsSheet );
 
 		var generateButton = new Button.Primary( "Generate" );
 	
@@ -83,8 +99,9 @@ public class ItemBuilder : EditorTool
 		generateButton.Layout.Margin = 8f;
 
 		window.Layout.Add( generateButton );
-
+		
 		AddOverlay( window, TextFlag.Top, 16 );
+		
 	}
 
 	public override void OnUpdate()
@@ -122,11 +139,13 @@ public class ItemBuilder : EditorTool
 
 		gameObject.Components.GetOrCreate<Interactable>();
 
-		foreach ( var component in Components )
+		foreach(var componentData in Components)
 		{
-			gameObject.Components.Create( component );
+			var component = gameObject.Components.Create(componentData.Key );
+			component.DeserializeImmediately( componentData.Value );
 		}
 
+		
 		var item = gameObject.Components.GetOrCreate<Item>();
 		item.Name = ItemData.Name;
 		item.Description = ItemData.Description;

@@ -1,4 +1,6 @@
-﻿namespace ItemBuilder;
+﻿using ItemBuilder.UI;
+
+namespace ItemBuilder;
 
 public class Carriable : BaseItemAbility
 {
@@ -18,5 +20,7 @@ public class Carriable : BaseItemAbility
 	{
 		var inventory = user.Components.Get<PlayerInventory>();
 		inventory?.AddItem( Item );
+
+		GameEventFeed.BroadcastGameFeedEvent( "info", $"Added {Item.Name} to inventory" );
 	}
 }

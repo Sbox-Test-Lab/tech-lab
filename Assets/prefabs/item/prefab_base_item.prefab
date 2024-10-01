@@ -1,0 +1,128 @@
+{
+  "RootObject": {
+    "__guid": "98694ad4-e0fe-4a96-9c49-673636d03b5c",
+    "Flags": 0,
+    "Name": "prefab_base_item",
+    "Tags": "interactable",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "1620694a-d817-4c33-9f94-8eaa8750a858",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/props/packaged_food/can_standard.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "6f227bb9-300e-41bb-b662-d6ba2bfd5deb",
+        "IsTrigger": false,
+        "Model": "models/props/packaged_food/can_standard.vmdl",
+        "Static": false
+      },
+      {
+        "__type": "ItemBuilder.Interactable",
+        "__guid": "3d042155-19c5-44b6-9e4b-04dcfdd397d9"
+      },
+      {
+        "__type": "ItemBuilder.Item",
+        "__guid": "1a75ae33-fb03-4978-92ae-1977b32f4b7f",
+        "Description": "A default item",
+        "Name": "Default Item"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "c0fa6a04-555c-45e6-be5d-9ff100a3b8b8",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "ItemBuilder.Carriable",
+        "__guid": "48c5402c-c446-4b9f-ab36-27cf02d7ea55",
+        "EnableOnSpawn": false,
+        "GenerateComponent": false
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "3a328be4-7b8c-452a-8725-7ee8f3318752",
+        "Flags": 0,
+        "Name": "UI",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "940c603e-4c0c-4529-aada-1836a85beda6",
+            "Flags": 0,
+            "Name": "World",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.WorldPanel",
+                "__guid": "b9206b21-3a3d-494a-8af8-a6295089bcc2",
+                "HorizontalAlign": "Center",
+                "InteractionRange": 1000,
+                "LookAtCamera": false,
+                "PanelSize": "512,512",
+                "RenderScale": 1,
+                "VerticalAlign": "Center"
+              },
+              {
+                "__type": "ItemBuilder.UI.ItemWorldInfo",
+                "__guid": "b5e54050-1fea-4cfc-b719-02081447a12c"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "__variables": [
+      {
+        "Id": "Name",
+        "Title": "Name",
+        "Targets": [
+          {
+            "Id": "1a75ae33-fb03-4978-92ae-1977b32f4b7f",
+            "Property": "Name"
+          }
+        ]
+      },
+      {
+        "Id": "Description",
+        "Title": "Description",
+        "Targets": [
+          {
+            "Id": "1a75ae33-fb03-4978-92ae-1977b32f4b7f",
+            "Property": "Description"
+          }
+        ]
+      },
+      {
+        "Id": "Model",
+        "Title": "Model",
+        "Targets": [
+          {
+            "Id": "1620694a-d817-4c33-9f94-8eaa8750a858",
+            "Property": "Model"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.can_standard#54511"
+  ],
+  "__version": 1
+}

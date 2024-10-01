@@ -1,8 +1,6 @@
 ﻿using Sandbox;
 using Sandbox.Citizen;
 
-namespace TestLab;
-
 public class PlayerController : Component
 {
 	[RequireComponent] public CharacterController CharacterController { get; set; }

@@ -1,0 +1,239 @@
+{
+  "__guid": "ce2d0646-3926-4b8b-b245-8eb1b4872b34",
+  "GameObjects": [
+    {
+      "__guid": "4a3148ed-380a-4999-a585-47a4fca3248c",
+      "Flags": 0,
+      "Name": "Environment",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "c8384fa3-9a62-44bd-b0f5-7d88e72aa685",
+          "Flags": 0,
+          "Name": "Envmap Probe",
+          "Position": "0,0,640",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "e5ecca1e-bec7-4515-aa99-cf3224a4ceaf",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-2048,-2048,-2048",
+                "Maxs": "2048,2048,2048"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": false,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "05dc0222-71a5-4d6c-95e8-47fcdd5093b8",
+          "Flags": 0,
+          "Name": "Sun",
+          "Position": "0,0,1440",
+          "Rotation": "0,0.2419221,0,0.9702957",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "cb93f7a8-fda6-446d-8a98-c5f5e3efdd3b",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Shadows": true,
+              "SkyColor": "0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "dff1d209-3f35-44e7-b428-e883b6d84c90",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "96.92672,114.4984,-31.09617",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "fbc52427-4476-4df1-b5c0-ea072cbea2a4",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "ZIndex": 100
+        },
+        {
+          "__type": "ItemBuilder.UI.PlayerHud",
+          "__guid": "83265cec-4e08-4fa1-975a-ca462e76ce6d"
+        }
+      ]
+    },
+    {
+      "__guid": "b3410ad4-8ca7-4770-b906-35eb0c709ac4",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "441.5489,-51.01322,870.7473",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "90d453b5-b33b-4435-a6e3-e889b7298540",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "TestLab.PlayerCamera",
+          "__guid": "0d27e063-d908-4b63-a4e5-10af431b6ff6"
+        },
+        {
+          "__type": "Sandbox.AmbientOcclusion",
+          "__guid": "cb5989a0-8797-4ce5-ae78-b40ccee1cc64",
+          "FalloffDistance": 1,
+          "Intensity": 8,
+          "Quality": "High",
+          "Radius": 32
+        },
+        {
+          "__type": "Sandbox.Tonemapping",
+          "__guid": "cc0053ad-fce9-4185-9772-213dd098cd6c",
+          "__version": 1,
+          "AutoExposureEnabled": true,
+          "ExposureBias": 2,
+          "ExposureCompensation": 0.9,
+          "ExposureMethod": "RGB",
+          "MaximumExposure": 2,
+          "MinimumExposure": 1,
+          "Mode": "Legacy",
+          "Rate": 1
+        }
+      ]
+    },
+    {
+      "__guid": "bfe7a9c7-1205-4326-84bd-1dac4203367f",
+      "Flags": 0,
+      "Name": "Network",
+      "Position": "85.91736,-42.5718,844.9589",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "6da6f5cf-18c5-4255-88a8-e8c42193763b",
+          "Flags": 0,
+          "Name": "Network Helper",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.NetworkHelper",
+              "__guid": "5b78bc54-8bd5-476c-a75d-9511d53f321a",
+              "PlayerPrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/player/player_citizen.prefab"
+              },
+              "SpawnPoints": [
+                {
+                  "_type": "gameobject",
+                  "go": "c5e53ac3-2842-4ec7-86ae-43f6c3962a32"
+                }
+              ],
+              "StartServer": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "3af49a86-67eb-4d7d-a5dd-de87acb4531a",
+      "Flags": 0,
+      "Name": "Spawn Points",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "c5e53ac3-2842-4ec7-86ae-43f6c3962a32",
+          "Flags": 0,
+          "Name": "Spawn Point",
+          "Position": "682.3358,1273.304,342.2181",
+          "Enabled": true
+        }
+      ]
+    },
+    {
+      "__guid": "7d0f9d21-882b-4218-9d58-a212c6853086",
+      "Flags": 0,
+      "Name": "Terrain",
+      "Position": "-78.50221,207.4224,-129.4466",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Terrain",
+          "__guid": "10bc8611-518e-43bf-bebf-5a1bbb3ac737",
+          "__version": 1,
+          "ClipMapLodExtentTexels": 256,
+          "ClipMapLodLevels": 6,
+          "DebugView": "None",
+          "EnableCollision": true,
+          "IsTrigger": false,
+          "MaterialOverride": "materials/grassfloor001a.vmat",
+          "RenderType": "Off",
+          "Static": true,
+          "Storage": "terrain/snow_peak_01/snow_peak_01.terrain",
+          "TerrainHeight": 2600,
+          "TerrainSize": 5000
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "store-lab",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [
+    "hyperscroll.grassfloor001a#64264"
+  ],
+  "IsValid": true,
+  "__version": 1
+}

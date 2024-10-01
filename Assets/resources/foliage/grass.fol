@@ -1,0 +1,14 @@
+{
+  "Model": "models/sbox_props/nature/grass_clumps/grass_clump_b.vmdl",
+  "Scale": "1",
+  "AlignToNormal": true,
+  "MaxNormal": 180,
+  "RandomRoll": false,
+  "RandomRotation": false,
+  "ZOffset": "0",
+  "__references": [
+    "facepunch.grass_clump_b#29063"
+  ],
+  "IsValid": true,
+  "__version": 0
+}
