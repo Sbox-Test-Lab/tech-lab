@@ -1,0 +1,31 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "menu_scenery",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "menu_scenery",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "caro.banana#26787",
+        "facepunch.office_chair#33620",
+        "facepunch.toilet_a#33626",
+        "flepy.balloonsword#36323",
+        "igrium.bathtub_01a#30965",
+        "luke.cornerdesk_better#22936",
+        "randkassets.r_k_monitor#26746",
+        "randkassets.wetfloor_sign#8439",
+        "shadb.arcade_cabinet#24673"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/menu_scenery.vmap",
+        "ParentPackage": "testlab.tech-lab"
+      }
+    }
+  }
+}

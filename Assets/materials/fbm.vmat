@@ -1,0 +1,19 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/noise/fbm.shader"
+
+	g_Gain "0.5"
+	g_Lacunarity "3"
+	g_Octaves "4"
+	g_Scale "0.9"
+	g_vColor1 "[0.101961 0.619608 0.666667 0.000000]"
+	g_vColor2 "[0.666667 0.666667 0.498039 0.000000]"
+	g_vColor3 "[0.000000 0.000000 0.164706 0.000000]"
+	g_vColor4 "[0.666667 1.000000 1.000000 0.000000]"
+
+	//---- Material ----
+	TextureColor "materials/default/default_color.tga"
+	TextureTranslucency "materials/default/default_trans.tga"
+}

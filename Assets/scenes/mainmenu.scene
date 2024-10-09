@@ -13,6 +13,7 @@
           "AutoScreenScale": true,
           "Opacity": 1,
           "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
           "ZIndex": 100
         },
         {
@@ -64,8 +65,11 @@
               "__type": "Sandbox.MapInstance",
               "__guid": "2ae4a0ab-7858-45c5-90b1-49489584eacf",
               "__version": 1,
+              "EnableCollision": true,
               "MapName": "maps/scenery.vmap",
               "NoOrigin": true,
+              "OnMapLoaded": null,
+              "OnMapUnloaded": null,
               "UseMapFromLaunch": false
             }
           ],
@@ -81,6 +85,7 @@
             {
               "__type": "Sandbox.SkyBox2D",
               "__guid": "fb477944-2f1e-4a7a-b643-1aaf52a9339d",
+              "SkyIndirectLighting": true,
               "SkyMaterial": "materials/sky/sky_002.vmat",
               "Tint": "1,1,1,1"
             }
@@ -105,6 +110,7 @@
               "Feathering": 0.02,
               "FrameInterval": 5,
               "MaxDistance": 512,
+              "MultiBounce": false,
               "Projection": "Box",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -165,6 +171,7 @@
               "Health": 0,
               "IsStatic": false,
               "Model": "model/model/untitled_2.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -185,6 +192,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/props/furniture/dev_furniture_couch.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -204,6 +212,7 @@
               "Health": 0,
               "IsStatic": false,
               "Model": "moyai/moyai.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -240,6 +249,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/duck_decoration/duck_decoration.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -260,6 +270,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/reizer_props/srsp/random_stuff/pirate_cannon_01/01/pirate_cannon_01.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -280,6 +291,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "vaz2105.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -300,6 +312,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/theatr/maniken.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -319,6 +332,12 @@
                   "__guid": "fe588eb3-eb2b-4332-9dd2-835622737381",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/retrotv.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -351,8 +370,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -371,6 +392,12 @@
                   "__guid": "9a08e139-cffb-49b8-86bc-b1809573ace6",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/mugs/mug_01.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -403,8 +430,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -425,6 +454,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/3dmodelscc0/meleeweaponspack/dagger/dagger.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -444,6 +474,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -470,6 +506,12 @@
                   "__guid": "5099ccc0-f1dd-42e8-b6c4-6092928223d7",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/fishing/fishing.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -502,8 +544,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -525,6 +569,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -551,6 +601,12 @@
                   "__guid": "8c6e61f6-81fc-4a1a-9041-7d0ea9cce859",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/lionstatue/source/lionstatue.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -583,8 +639,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -606,6 +664,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -630,6 +694,12 @@
                   "__guid": "24feef5b-1886-4669-b144-56ca4e8f39f1",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/vinyl_player/vinyl_player.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -662,8 +732,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -684,6 +756,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -709,6 +787,12 @@
                   "__guid": "15fc76e8-4625-48c5-ba24-5e96863ffb24",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/3dmodelscc0/meleeweaponspack/hammer/hammer.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -741,8 +825,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -763,6 +849,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -789,6 +881,7 @@
               "Health": 100,
               "IsStatic": false,
               "Model": "models/enhanced_speaker.vmdl",
+              "StartAsleep": false,
               "Tint": "0.06667,1,0,1"
             }
           ]
@@ -806,6 +899,7 @@
               "Health": 100,
               "IsStatic": false,
               "Model": "models/enhanced_speaker.vmdl",
+              "StartAsleep": false,
               "Tint": "0.06667,1,0,1"
             }
           ]
@@ -823,6 +917,12 @@
               "__guid": "68c92ef0-5961-42fa-bd38-627bbcc101f0",
               "BodyGroups": 18446744073709551615,
               "Model": "models/mapspecific/discoball.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             }
@@ -843,6 +943,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/sand_valley/fly_island/cloud.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -863,6 +964,7 @@
               "Health": 0,
               "IsStatic": false,
               "Model": "models/blue_table.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -882,6 +984,7 @@
               "Health": 40,
               "IsStatic": false,
               "Model": "models/props/plastic_chair/plastic_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -901,6 +1004,7 @@
               "Health": 40,
               "IsStatic": false,
               "Model": "models/props/plastic_chair/plastic_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -920,6 +1024,7 @@
               "Health": 40,
               "IsStatic": false,
               "Model": "models/props/plastic_chair/plastic_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -939,6 +1044,7 @@
               "Health": 40,
               "IsStatic": false,
               "Model": "models/props/plastic_chair/plastic_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -958,6 +1064,7 @@
               "Health": 40,
               "IsStatic": false,
               "Model": "models/props/plastic_chair/plastic_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -977,6 +1084,7 @@
               "Health": 40,
               "IsStatic": false,
               "Model": "models/props/plastic_chair/plastic_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -995,6 +1103,7 @@
               "Health": 0,
               "IsStatic": false,
               "Model": "models/neon_green.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -1013,6 +1122,12 @@
               "__guid": "e56e7185-7aa0-40f7-a314-97f86908ae07",
               "BodyGroups": 18446744073709551615,
               "Model": "models/citizen_props/beachball.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
@@ -1045,8 +1160,10 @@
               "Gravity": true,
               "LinearDamping": 0,
               "Locking": {},
+              "MassCenterOverride": "0,0,0",
               "MassOverride": 0,
               "MotionEnabled": true,
+              "OverrideMassCenter": false,
               "RigidbodyFlags": 0,
               "StartAsleep": false
             }
@@ -1067,6 +1184,12 @@
                   "InteractionRange": 1000,
                   "LookAtCamera": true,
                   "PanelSize": "512,128",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderScale": 1,
                   "VerticalAlign": "Center"
                 },
@@ -1092,6 +1215,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/white_umbrella.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -1110,7 +1234,6 @@
           "__guid": "32880d9d-4731-4433-b958-4c2632fb1724",
           "Flags": 0,
           "Name": "Light",
-          "Position": "0,0,0",
           "Enabled": true,
           "Components": [
             {
@@ -1120,6 +1243,7 @@
               "Health": 0,
               "IsStatic": false,
               "Model": "models/sigils/molniya.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -1147,6 +1271,12 @@
                   "__guid": "12b24a0c-67b1-4f58-a8d0-a1264faa9528",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1171,6 +1301,12 @@
                   "__guid": "ef1aacbb-8c9a-462a-9596-e34b363b4a69",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1195,6 +1331,12 @@
                   "__guid": "324f5585-b188-486d-8830-1debd8bcb79d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1219,6 +1361,12 @@
                   "__guid": "84554219-dfa2-4960-b4e5-ac86355d1a42",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1243,6 +1391,12 @@
                   "__guid": "dc249b02-c9da-4246-a9d5-541b11eebca2",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1267,6 +1421,12 @@
                   "__guid": "8964d280-70d8-469d-8c5e-5e309fed8450",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1291,6 +1451,12 @@
                   "__guid": "f4f671cf-1094-4def-ba67-5c8407d21b45",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1315,6 +1481,12 @@
                   "__guid": "267b3c0f-2f84-4f9a-8866-c414945fdc9d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1339,6 +1511,12 @@
                   "__guid": "7e731839-b55b-43e0-91c3-8e7ad94a76e5",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1363,6 +1541,12 @@
                   "__guid": "c6556ca8-edc9-4a05-ac7f-2b3826a5d2c5",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1387,6 +1571,12 @@
                   "__guid": "da5034e0-f45e-4234-be80-b57a3b7bd19d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1411,6 +1601,12 @@
                   "__guid": "84d51c97-2581-4909-8f9f-1ba48878e970",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1435,6 +1631,12 @@
                   "__guid": "7dc96136-97b0-4df7-b6ae-5ef4921b6dd0",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1459,6 +1661,12 @@
                   "__guid": "a2a7619e-ef99-4a26-b738-1046773d8774",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1483,6 +1691,12 @@
                   "__guid": "912bd258-61f7-4bb5-a16c-f4a750fb213c",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1507,6 +1721,12 @@
                   "__guid": "b0f27dc0-f5b4-44cd-9141-f3293a20491d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1531,6 +1751,12 @@
                   "__guid": "7b2a9e2b-de5a-46a5-a015-7447fadca2f2",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1555,6 +1781,12 @@
                   "__guid": "8eddd721-fe3e-4986-ab23-3ed9ce26405c",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1579,6 +1811,12 @@
                   "__guid": "e897526d-33f9-4e05-97cd-354938e6532b",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/rock_scatter/rock_scatter_03.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1604,7 +1842,6 @@
           "__guid": "254316d0-80c8-484a-85e9-0ba1a0a57c59",
           "Flags": 0,
           "Name": "Items",
-          "Position": "0,0,0",
           "Enabled": true,
           "Children": [
             {
@@ -1622,6 +1859,12 @@
                   "__guid": "ea6dfd34-f665-4871-8529-a1a08db7bb3d",
                   "BodyGroups": 18446744073709551615,
                   "Model": "props/models/food/item_canned_herring_lod0_merge_.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1654,8 +1897,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -1677,6 +1922,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -1702,6 +1953,12 @@
                   "__guid": "7a5673fa-dc9a-470d-abdc-60fdf296e81e",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/packaged_food/can_long.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1734,8 +1991,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -1756,6 +2015,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -1782,6 +2047,12 @@
                   "__guid": "77236f52-9c0a-45c6-b8bf-3ef512b0fab1",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/canteen/canteen.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1814,8 +2085,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -1837,6 +2110,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -1862,6 +2141,12 @@
                   "__guid": "941e2e8d-4200-470a-9ea9-7e31e5358e8c",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/fire_blanket/fire_blanket.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1894,8 +2179,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -1916,6 +2203,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -1941,6 +2234,12 @@
                   "__guid": "f4eba91b-831d-4f7e-8ff4-bc8b9e0a4f64",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/props/packaged_food/crispcylinder_body.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 },
@@ -1973,8 +2272,10 @@
                   "Gravity": true,
                   "LinearDamping": 0,
                   "Locking": {},
+                  "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
                   "MotionEnabled": true,
+                  "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
                 }
@@ -1995,6 +2296,12 @@
                       "InteractionRange": 1000,
                       "LookAtCamera": true,
                       "PanelSize": "512,128",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderScale": 1,
                       "VerticalAlign": "Center"
                     },
@@ -2030,6 +2337,12 @@
                   "__guid": "e7c8aaa2-2c3f-4678-8af4-eacb9647922b",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/nature/grass/grass_billboard.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -2048,6 +2361,12 @@
                   "__guid": "353ab722-dad4-4504-80b0-848f5465aed7",
                   "BodyGroups": 18446744073709551615,
                   "Model": "models/nature/grass/grass_billboard.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -2069,6 +2388,7 @@
               "Health": 0,
               "IsStatic": false,
               "Model": "models/campfire/campfire.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ],
@@ -2085,6 +2405,7 @@
                 {
                   "__type": "Sandbox.ParticleEffect",
                   "__guid": "11f037c3-33ae-4948-ab64-811849c94c0f",
+                  "__version": 1,
                   "Alpha": {
                     "Type": "Curve",
                     "CurveA": [
@@ -2097,6 +2418,7 @@
                     ],
                     "Constants": "1,0,0,0"
                   },
+                  "ApplyAlpha": true,
                   "ApplyColor": true,
                   "ApplyRotation": false,
                   "ApplyShape": true,
@@ -2153,9 +2475,12 @@
                     "Constants": "1,2,0,0"
                   },
                   "MaxParticles": 75000,
+                  "OrbitalForce": {},
+                  "OrbitalPull": {},
                   "PerParticleTimeScale": {
                     "Constants": "1,0.4,0,0"
                   },
+                  "Pitch": {},
                   "PreWarm": 0,
                   "PushStrength": {},
                   "Roll": {
@@ -2193,6 +2518,7 @@
                   },
                   "SheetSequence": false,
                   "Space": "World",
+                  "StartDelay": {},
                   "StartVelocity": {
                     "Type": "Range",
                     "Evaluation": "Particle",
@@ -2200,12 +2526,14 @@
                   },
                   "Stretch": {},
                   "TimeScale": 1,
-                  "Tint": "1,1,1,1"
+                  "Tint": "1,1,1,1",
+                  "Yaw": {}
                 },
                 {
                   "__type": "Sandbox.ParticleSpriteRenderer",
                   "__guid": "1783a6e0-4f40-4fb4-8b86-271c383f7464",
                   "Additive": true,
+                  "Alignment": "LookAtCamera",
                   "BlurAmount": 0.42,
                   "BlurOpacity": 0.91,
                   "BlurSpacing": 0.73,
@@ -2213,8 +2541,15 @@
                   "FaceVelocity": false,
                   "FogStrength": 1,
                   "LeadingTrail": true,
+                  "Lighting": false,
                   "MotionBlur": true,
                   "Opaque": false,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RotationOffset": 0,
                   "Scale": 0.61,
                   "Shadows": false,
@@ -2233,6 +2568,7 @@
                   "OnEdge": false,
                   "Radius": 6.43,
                   "Rate": 691.22,
+                  "RateOverDistance": 0,
                   "Velocity": 31.35
                 },
                 {
@@ -2248,7 +2584,8 @@
                   "InVolume": false,
                   "Loop": true,
                   "OnEdge": false,
-                  "Rate": 368.34
+                  "Rate": 368.34,
+                  "RateOverDistance": 0
                 }
               ]
             },
@@ -2268,6 +2605,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/log/saunalog.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2288,6 +2626,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/log/saunalog.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2308,6 +2647,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/log/saunalog.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2328,6 +2668,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/log/saunalog.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2348,6 +2689,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/log/saunalog.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2368,6 +2710,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/log/saunalog.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2388,6 +2731,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/log/saunalog.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2408,6 +2752,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/log/saunalog.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2428,6 +2773,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/log/saunalog.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2449,6 +2795,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/fauna/fox/fox.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -2466,6 +2813,12 @@
               "__guid": "409b3bf9-770c-4cf7-845f-c8b2de51bd38",
               "BodyGroups": 18446744073709551615,
               "Model": "models/gnome.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
               "RenderType": "On",
               "Tint": "1,1,1,1"
             }
@@ -2486,6 +2839,7 @@
               "Health": 0,
               "IsStatic": false,
               "Model": "models/camping_chair/camping_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -2505,6 +2859,7 @@
               "Health": 0,
               "IsStatic": false,
               "Model": "models/camping_chair/camping_chair.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -2525,6 +2880,7 @@
               "Health": 0,
               "IsStatic": false,
               "Model": "models/city_props/cafe/cafe_table.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -2544,6 +2900,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/randommodels/log_bench.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -2564,6 +2921,7 @@
               "Health": 0,
               "IsStatic": true,
               "Model": "models/rust_nature/rocks/rock_quarry_small_a.vmdl",
+              "StartAsleep": false,
               "Tint": "1,1,1,1"
             }
           ]
@@ -2572,7 +2930,6 @@
           "__guid": "53b0615e-ab60-4d76-a544-06fcac05f3cd",
           "Flags": 0,
           "Name": "Rocks",
-          "Position": "0,0,0",
           "Enabled": true,
           "Children": [
             {
@@ -2591,6 +2948,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2611,6 +2969,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2631,6 +2990,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2651,6 +3011,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2671,6 +3032,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2691,6 +3053,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2711,6 +3074,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2731,6 +3095,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2751,6 +3116,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2771,6 +3137,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2791,6 +3158,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2811,6 +3179,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2831,6 +3200,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2851,6 +3221,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2871,6 +3242,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "rock kit/rock_1.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2890,7 +3262,6 @@
           "__guid": "07b7cbbb-6557-4717-ae1d-5c16a485719e",
           "Flags": 0,
           "Name": "An Island (1)",
-          "Position": "0,0,0",
           "Enabled": true,
           "Children": [
             {
@@ -2907,6 +3278,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2926,6 +3298,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2945,6 +3318,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2964,6 +3338,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -2983,6 +3358,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3002,6 +3378,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3021,6 +3398,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3040,6 +3418,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3060,6 +3439,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3080,6 +3460,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3109,6 +3490,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/props/bus_stop/bus_stop.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3129,6 +3511,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/props/oven/oven.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3149,6 +3532,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/flashlight/flashlight.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3157,7 +3541,6 @@
               "__guid": "bc80f882-ecd5-4d61-984c-b7548391da69",
               "Flags": 0,
               "Name": "Foundation",
-              "Position": "0,0,0",
               "Enabled": true,
               "Children": [
                 {
@@ -3175,6 +3558,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_c/rock_c.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3194,6 +3578,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_c/rock_c.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3213,6 +3598,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_c/rock_c.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3233,6 +3619,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_c/rock_c.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3253,6 +3640,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_c/rock_c.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3273,6 +3661,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_c/rock_c.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3293,6 +3682,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_c/rock_c.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3313,6 +3703,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_c/rock_c.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3332,6 +3723,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3351,6 +3743,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3370,6 +3763,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3389,6 +3783,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3408,6 +3803,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3427,6 +3823,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3446,6 +3843,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3465,6 +3863,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3484,6 +3883,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3503,6 +3903,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3522,6 +3923,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3541,6 +3943,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3560,6 +3963,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3579,6 +3983,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3598,6 +4003,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3617,6 +4023,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/nature/rock_b/rock_b.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -3629,7 +4036,6 @@
           "__guid": "4d70838b-e5c3-4383-93e8-a14a7bb314e3",
           "Flags": 0,
           "Name": "Another Island (t)",
-          "Position": "0,0,0",
           "Enabled": true,
           "Children": [
             {
@@ -3648,6 +4054,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3668,6 +4075,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3688,6 +4096,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3708,6 +4117,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3728,6 +4138,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3748,6 +4159,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3768,6 +4180,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3788,6 +4201,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3808,6 +4222,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3828,6 +4243,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3848,6 +4264,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3866,6 +4283,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3884,6 +4302,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3902,6 +4321,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3920,6 +4340,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3938,6 +4359,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3956,6 +4378,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3974,6 +4397,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -3992,6 +4416,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4010,6 +4435,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4028,6 +4454,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4046,6 +4473,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4064,6 +4492,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4082,6 +4511,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_quarry_small_b.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4102,6 +4532,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/carsonhome/ddrmachine.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4122,6 +4553,7 @@
                   "Health": 20,
                   "IsStatic": true,
                   "Model": "models/sbox_props/tv/tv.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4142,6 +4574,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fruity_maze.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4162,6 +4595,7 @@
                   "Health": 0,
                   "IsStatic": false,
                   "Model": "models/pin.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4172,7 +4606,6 @@
           "__guid": "e441cfba-98da-4195-a5d6-875cf434c627",
           "Flags": 0,
           "Name": "An Island (2)",
-          "Position": "0,0,0",
           "Enabled": true,
           "Children": [
             {
@@ -4190,6 +4623,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "semaforo3.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4209,6 +4643,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/sbox_props/ticket_machine/ticket_machine.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4240,6 +4675,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4260,6 +4696,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4280,6 +4717,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4300,6 +4738,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4320,6 +4759,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4340,6 +4780,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4360,6 +4801,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4380,6 +4822,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4400,6 +4843,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4420,6 +4864,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/fishes/salmon/salmon.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4428,7 +4873,6 @@
               "__guid": "63063b82-c303-4636-afc0-010ffcf80436",
               "Flags": 0,
               "Name": "toyboat",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -4438,6 +4882,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/props_selbyen/toyboat.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -4455,7 +4900,6 @@
                   "__guid": "bf0b8d69-16d7-4d19-9096-4c4f56c7ac3a",
                   "Flags": 0,
                   "Name": "bridge_cover001",
-                  "Position": "0,0,0",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4465,6 +4909,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/props_2fort/bridge_cover001.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4473,7 +4918,7 @@
                   "__guid": "508413ce-36ba-417a-9b5e-9c2275a00e57",
                   "Flags": 0,
                   "Name": "wooden_planks_01",
-                  "Position": "-320.0656,397.1159,49.12654",
+                  "Position": "-320.0658,397.1157,49.12658",
                   "Rotation": "0.2702898,0.5896818,-0.383358,0.6574613",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4485,6 +4930,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4493,7 +4939,7 @@
                   "__guid": "4585d2bf-6e47-4d3c-bec6-3aaa7441d506",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (4)",
-                  "Position": "1.315252,469.2333,9.728316",
+                  "Position": "1.315054,469.2333,9.728316",
                   "Rotation": "0.5066945,0.4955327,-0.5027555,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4505,6 +4951,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4525,6 +4972,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4545,6 +4993,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4553,7 +5002,7 @@
                   "__guid": "7b5da4e1-b97f-450d-a621-fdc9165a8ca7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (12)",
-                  "Position": "-14.48035,-362.621,5.914043",
+                  "Position": "-14.48017,-362.621,5.914035",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4565,6 +5014,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4573,7 +5023,7 @@
                   "__guid": "88e86c73-3d5f-4467-92be-93becc76b63e",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (8)",
-                  "Position": "-1.317683,330.5751,9.092391",
+                  "Position": "-1.317821,330.5751,9.092383",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4585,6 +5035,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4605,6 +5056,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4625,6 +5077,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4633,7 +5086,7 @@
                   "__guid": "0b627483-9c13-4367-8eb5-9ba83d861021",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (16)",
-                  "Position": "-17.11342,-501.2789,5.277938",
+                  "Position": "-17.11316,-501.2788,5.277931",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4645,6 +5098,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4653,7 +5107,7 @@
                   "__guid": "4fe10399-f8e3-43ed-ab28-cc40d50e10bb",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (7)",
-                  "Position": "-0.001749575,399.8772,9.410186",
+                  "Position": "-0.001963198,399.8771,9.410178",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4665,6 +5119,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4685,6 +5140,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4705,6 +5161,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4713,7 +5170,7 @@
                   "__guid": "7d082510-adad-4219-bbab-2b00776722f3",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (14)",
-                  "Position": "-15.79721,-431.9767,5.59597",
+                  "Position": "-15.797,-431.9767,5.59597",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4725,6 +5182,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4733,7 +5191,7 @@
                   "__guid": "32f23617-dc54-482d-8fcf-ebe23e3d6a99",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (10)",
-                  "Position": "-2.634747,261.2197,8.774257",
+                  "Position": "-2.634853,261.2197,8.774257",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4745,6 +5203,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4753,7 +5212,7 @@
                   "__guid": "e55908e3-c690-4bb3-bd04-52d2af69873e",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (10)",
-                  "Position": "-13.16524,-293.3456,6.231612",
+                  "Position": "-13.16509,-293.3456,6.231605",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4765,6 +5224,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4785,6 +5245,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4793,7 +5254,7 @@
                   "__guid": "dce2fef8-0661-4444-b558-1a9b1fae492d",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (10)",
-                  "Position": "-18.43055,-570.6343,4.959922",
+                  "Position": "-18.4303,-570.6342,4.959861",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4805,6 +5266,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4813,7 +5275,7 @@
                   "__guid": "6ed84c3d-b205-4801-a511-3db66db3780a",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (5)",
-                  "Position": "0.6556757,434.5016,9.568961",
+                  "Position": "0.6554621,434.5016,9.568984",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4825,6 +5287,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4845,6 +5308,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4865,6 +5329,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4873,7 +5338,7 @@
                   "__guid": "895476d3-173d-4145-b2e0-71f7712c2fbd",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (13)",
-                  "Position": "-15.13977,-397.3526,5.75481",
+                  "Position": "-15.13954,-397.3526,5.75481",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4885,6 +5350,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4893,7 +5359,7 @@
                   "__guid": "a5db7797-9e80-4d8d-b1cb-eadbf9b75181",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (9)",
-                  "Position": "-1.977291,295.8435,8.933078",
+                  "Position": "-1.977459,295.8435,8.933089",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4905,6 +5371,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4925,6 +5392,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4945,6 +5413,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4953,7 +5422,7 @@
                   "__guid": "e874b072-62c1-43d2-b48a-ae9acab49021",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (9)",
-                  "Position": "-17.773,-536.0103,5.118598",
+                  "Position": "-17.77277,-536.0103,5.118537",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4965,6 +5434,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -4973,7 +5443,7 @@
                   "__guid": "13992706-1a63-4464-a78b-47d3f1aab401",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (6)",
-                  "Position": "-0.6613721,365.1462,9.25072",
+                  "Position": "-0.66154,365.1462,9.25072",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4985,6 +5455,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5005,6 +5476,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5025,6 +5497,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5033,7 +5506,7 @@
                   "__guid": "b8efb169-a91e-494d-8a33-ce11246b27c9",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (15)",
-                  "Position": "-16.4571,-466.7083,5.43637",
+                  "Position": "-16.45691,-466.7083,5.436363",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5045,6 +5518,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5065,6 +5539,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5073,7 +5548,7 @@
                   "__guid": "26590b36-2e09-4be9-bb07-541538558d84",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (11)",
-                  "Position": "-13.82471,-328.0771,6.072425",
+                  "Position": "-13.82454,-328.0771,6.072429",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5085,6 +5560,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5105,6 +5581,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5113,7 +5590,7 @@
                   "__guid": "7248652e-38e2-4e80-8781-264178b502be",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (11)",
-                  "Position": "-19.08985,-605.3656,4.800575",
+                  "Position": "-19.08954,-605.3656,4.800514",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5125,6 +5602,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5133,7 +5611,7 @@
                   "__guid": "3ff983cb-2de4-40f9-8b04-7cb3452916f4",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (1)",
-                  "Position": "-345.682,170.6415,91.56093",
+                  "Position": "-345.6821,170.6413,91.56096",
                   "Rotation": "0.5288243,0.3756675,-0.003458522,0.7610564",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5145,6 +5623,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5153,7 +5632,7 @@
                   "__guid": "c9d0bb9b-fa64-4ca3-805a-c447b7cfc894",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (2)",
-                  "Position": "145.9698,439.2122,-302.6438",
+                  "Position": "145.9696,439.2122,-302.6438",
                   "Rotation": "0.09873718,0.641118,-0.5485317,0.5275717",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5165,6 +5644,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5173,7 +5653,7 @@
                   "__guid": "22975448-4b82-491c-9358-1eb5acd098a7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "333.3523,-297.613,157.4501",
+                  "Position": "333.3524,-297.6128,157.4501",
                   "Rotation": "0.09873718,0.641118,-0.5485317,0.5275717",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5185,6 +5665,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5205,6 +5686,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5213,7 +5695,7 @@
                   "__guid": "67361b3f-e99c-4167-a396-6a3762cb0ca7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "-267.3147,-509.2696,-108.6373",
+                  "Position": "-267.3145,-509.2697,-108.6373",
                   "Rotation": "-0.449634,0.467558,-0.7522037,-0.1157956",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5225,6 +5707,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/enviroment/planks/wooden_planks_01.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -5246,7 +5729,6 @@
               "__guid": "7be9d556-9c77-4525-852c-1a053788d837",
               "Flags": 0,
               "Name": "kangaroo_test_01",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -5255,6 +5737,12 @@
                   "BodyGroups": 18446744073709551615,
                   "MaterialOverride": "materials/generic/concrete_glossy.vmat",
                   "Model": "models/dev/test/rhino/kangaroo/kangaroo_test_01.vmdl",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -5287,6 +5775,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5307,6 +5796,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5327,6 +5817,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5347,6 +5838,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5367,6 +5859,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5387,6 +5880,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5407,6 +5901,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5427,6 +5922,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5447,6 +5943,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5467,6 +5964,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5487,6 +5985,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5507,6 +6006,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5527,6 +6027,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5547,6 +6048,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5567,6 +6069,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5587,6 +6090,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5607,6 +6111,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5627,6 +6132,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5647,6 +6153,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5667,6 +6174,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5687,6 +6195,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5707,6 +6216,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5727,6 +6237,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5747,6 +6258,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5767,6 +6279,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5787,6 +6300,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5795,7 +6309,7 @@
               "__guid": "e1b8d91b-7727-4e98-9c93-9c5acfccdf82",
               "Flags": 0,
               "Name": "rock_cliff_c (6)",
-              "Position": "-684.1108,961.6752,-910.031",
+              "Position": "-684.1109,961.6753,-910.0309",
               "Rotation": "-0.2056988,0.2350976,0.8307174,-0.4607883",
               "Scale": "2.290722,2.290722,2.290722",
               "Enabled": true,
@@ -5807,6 +6321,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5827,6 +6342,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5847,6 +6363,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5867,6 +6384,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5887,6 +6405,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_cliff_c.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5895,7 +6414,6 @@
               "__guid": "d3d52023-6cdc-40b8-a925-1920227d5304",
               "Flags": 0,
               "Name": "rock_med_a (33)",
-              "Position": "0,0,0",
               "Enabled": true,
               "Components": [
                 {
@@ -5905,6 +6423,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/rust_nature/rocks/rock_med_a.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ]
@@ -5925,6 +6444,7 @@
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "models/candle/candle.vmdl",
+                  "StartAsleep": false,
                   "Tint": "1,1,1,1"
                 }
               ],
@@ -6105,6 +6625,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/sciscreen.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -6125,6 +6646,7 @@
                       "Health": 0,
                       "IsStatic": true,
                       "Model": "models/3dmodelscc0/medievalpropspack/marketstall/marketstall.vmdl",
+                      "StartAsleep": false,
                       "Tint": "1,1,1,1"
                     }
                   ]
@@ -6143,6 +6665,12 @@
                       "__guid": "b6e582bd-f555-49fb-9631-9c464055668d",
                       "BodyGroups": 18446744073709551615,
                       "Model": "models/infoterryfinal/terrystart.vmdl",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1"
                     }
@@ -6163,6 +6691,12 @@
                       "__guid": "2962fb1f-e0bb-4091-955d-95e642c17202",
                       "BodyGroups": 18446744073709551615,
                       "Model": "models/citizen_props/beachball.vmdl",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1"
                     },
@@ -6201,8 +6735,10 @@
                       "Gravity": true,
                       "LinearDamping": 0,
                       "Locking": {},
+                      "MassCenterOverride": "0,0,0",
                       "MassOverride": 0,
                       "MotionEnabled": true,
+                      "OverrideMassCenter": false,
                       "RigidbodyFlags": 0,
                       "StartAsleep": false
                     }
@@ -6224,6 +6760,12 @@
                           "InteractionRange": 1000,
                           "LookAtCamera": true,
                           "PanelSize": "512,128",
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
                           "RenderScale": 1,
                           "VerticalAlign": "Center"
                         },
@@ -6250,6 +6792,12 @@
                       "__guid": "2c76373d-7b43-42bc-886b-7cf0e5617b0a",
                       "BodyGroups": 18446744073709551615,
                       "Model": "models/furniture/lamp/lamp.vmdl",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1"
                     },
@@ -6288,8 +6836,10 @@
                       "Gravity": true,
                       "LinearDamping": 0,
                       "Locking": {},
+                      "MassCenterOverride": "0,0,0",
                       "MassOverride": 0,
                       "MotionEnabled": true,
+                      "OverrideMassCenter": false,
                       "RigidbodyFlags": 0,
                       "StartAsleep": false
                     }
@@ -6311,6 +6861,12 @@
                           "InteractionRange": 1000,
                           "LookAtCamera": true,
                           "PanelSize": "512,128",
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
                           "RenderScale": 1,
                           "VerticalAlign": "Center"
                         },
@@ -6336,6 +6892,12 @@
                       "__guid": "41921b7c-6744-4960-adb0-ad7f8753056b",
                       "BodyGroups": 18446744073709551615,
                       "Model": "models/props/packaged_food/can_standard.vmdl",
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
                       "RenderType": "On",
                       "Tint": "1,1,1,1"
                     },
@@ -6374,8 +6936,10 @@
                       "Gravity": true,
                       "LinearDamping": 0,
                       "Locking": {},
+                      "MassCenterOverride": "0,0,0",
                       "MassOverride": 0,
                       "MotionEnabled": true,
+                      "OverrideMassCenter": false,
                       "RigidbodyFlags": 0,
                       "StartAsleep": false
                     }
@@ -6396,6 +6960,12 @@
                           "InteractionRange": 1000,
                           "LookAtCamera": true,
                           "PanelSize": "512,128",
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
                           "RenderScale": 1,
                           "VerticalAlign": "Center"
                         },
@@ -6442,6 +7012,7 @@
         {
           "__type": "Sandbox.AmbientOcclusion",
           "__guid": "c38e5a5d-cce2-4d81-aeb0-86f203c65f6b",
+          "FalloffDistance": 1,
           "Intensity": 8,
           "Quality": "High",
           "Radius": 32
@@ -6450,6 +7021,7 @@
           "__type": "Sandbox.Tonemapping",
           "__guid": "57e1450a-d404-4c4c-8be6-088f47eea3e2",
           "__version": 1,
+          "AutoExposureEnabled": true,
           "ExposureBias": 2,
           "ExposureCompensation": 0.9,
           "ExposureMethod": "RGB",
@@ -6468,7 +7040,8 @@
           "HeightStart": 2000,
           "HeightWidth": 0,
           "Sky": "materials/sky/sky_002.vmat",
-          "StartDistance": 10
+          "StartDistance": 10,
+          "Tint": "1,1,1,1"
         },
         {
           "__type": "Sandbox.ColorAdjustments",
@@ -6479,6 +7052,13 @@
           "Saturation": 1
         }
       ]
+    },
+    {
+      "__guid": "5476b361-0934-4d1a-bf86-7e715b2a2d65",
+      "Flags": 0,
+      "Name": "Game Manager",
+      "Position": "3649.631,384.0004,797.218",
+      "Enabled": true
     }
   ],
   "SceneProperties": {
@@ -6486,6 +7066,7 @@
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 30,
     "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
@@ -6516,6 +7097,7 @@
     "duccsoft.duck_decoration#16326",
     "facepunch.can_long#54509",
     "facepunch.can_standard#54511",
+    "facepunch.concrete_glossy#18629",
     "facepunch.crispcylinder_body#55839",
     "facepunch.mug_01#43698",
     "facepunch.plastic_chair#35767",
@@ -6539,7 +7121,6 @@
     "gkaf.bowlingpin#2003",
     "gkaf.rock_1#53538",
     "gnomefig.lamp#58878",
-    "halfpeeps.gasstation_canopy#25612",
     "jodiscontent.enhanced_speaker#24257",
     "jodiscontent.fruity_maze#24259",
     "jodiscontent.neon_green#24263",
@@ -6574,5 +7155,6 @@
     "titanovsky.hammer#53815",
     "titanovsky.marketstall#53840"
   ],
+  "IsValid": true,
   "__version": 1
 }

@@ -2320,6 +2320,7 @@
             {
               "__type": "Sandbox.SkyBox2D",
               "__guid": "fb477944-2f1e-4a7a-b643-1aaf52a9339d",
+              "SkyIndirectLighting": true,
               "SkyMaterial": "materials/sky/sky_002.vmat",
               "Tint": "1,1,1,1"
             }
@@ -2959,6 +2960,7 @@
               "Name": "Hammer",
               "Position": "-27.00035,-22.99986,31.06882",
               "Rotation": "0.000000000000682121,0.7071058,-0.000001648277,0.7071079",
+              "Scale": "2,2,2",
               "Tags": "interactable",
               "Enabled": true,
               "Components": [
@@ -3020,6 +3022,7 @@
                   "Name": "UI",
                   "Position": "-9.126649,-0.0002191318,3.500415",
                   "Rotation": "-0.000003296567,-0.7071068,0.000003296567,0.7071068",
+                  "Scale": "0.5,0.5,0.5",
                   "Enabled": true,
                   "Components": [
                     {
@@ -4025,7 +4028,7 @@
               "__guid": "f94d7e12-f01c-423f-9f8b-dd68f72e1792",
               "Flags": 0,
               "Name": "Rock (12)",
-              "Position": "-166.2729,-5548.306,-321.6061",
+              "Position": "-166.2729,-5548.31,-321.6061",
               "Scale": "2.257718,2.257718,2.257718",
               "Enabled": true,
               "Components": [
@@ -4045,7 +4048,7 @@
               "__guid": "4422d198-49f9-42ec-b46f-412817ba1131",
               "Flags": 0,
               "Name": "Rock (13)",
-              "Position": "185.7271,-5548.306,-185.6541",
+              "Position": "185.7271,-5548.31,-185.6541",
               "Scale": "1.995505,1.995505,1.995505",
               "Enabled": true,
               "Components": [
@@ -4065,7 +4068,7 @@
               "__guid": "72600179-42a3-42ac-9f7d-601f0ce46792",
               "Flags": 0,
               "Name": "Rock (14)",
-              "Position": "515.7271,-5548.306,-488.9821",
+              "Position": "515.7271,-5548.31,-488.9821",
               "Scale": "1.905543,1.905543,1.905543",
               "Enabled": true,
               "Components": [
@@ -4270,7 +4273,7 @@
               "__guid": "d512a6c7-c87a-4b33-8bfb-cd76c460b11e",
               "Flags": 0,
               "Name": "flashlight",
-              "Position": "284.6741,-6476.641,-1026.407",
+              "Position": "284.6741,-6476.645,-1026.407",
               "Rotation": "0.4552504,0.2202164,0.8057032,0.3083737",
               "Scale": "25.70878,25.70878,25.70878",
               "Enabled": true,
@@ -4360,20 +4363,659 @@
             {
               "__guid": "652b3a07-2907-4cff-a44b-ed280e5a3c21",
               "Flags": 0,
-              "Name": "semaforo3",
-              "Position": "1813.176,-5604.564,-1039.145",
-              "Rotation": "-0.08492053,-0.007663053,0.9923261,-0.08954553",
+              "Name": "Street Light",
+              "Position": "1813.176,-5502.647,-1039.145",
+              "Rotation": "0.0000000007162743,0.000000007051702,0.9948809,0.1010547",
               "Enabled": true,
               "Components": [
                 {
                   "__type": "Sandbox.Prop",
-                  "__guid": "a21c84cc-1e7b-4379-b2e7-e837cd310f74",
+                  "__guid": "73dd43f7-1760-4d72-a1a8-a8eb952d5b30",
                   "BodyGroups": 18446744073709551615,
                   "Health": 0,
                   "IsStatic": true,
                   "Model": "semaforo3.vmdl",
                   "StartAsleep": false,
                   "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.States.StateMachineComponent",
+                  "__guid": "546e087a-4f3a-4888-9183-5d8735cb8751",
+                  "Serialized": {
+                    "States": [
+                      {
+                        "Name": "Idle",
+                        "UserData": {
+                          "Position": "-384,-96"
+                        }
+                      },
+                      {
+                        "Id": 1,
+                        "Name": "Start",
+                        "OnEnterState": {
+                          "__version": 8,
+                          "__guid": "dab65378-7e2d-4b44-aa5f-7789267cbb24",
+                          "__changeId": 8,
+                          "UserData": {
+                            "Title": "Enter",
+                            "ReferencedComponentTypes": []
+                          },
+                          "Variables": [],
+                          "Nodes": [
+                            {
+                              "Id": 0,
+                              "Type": "input"
+                            },
+                            {
+                              "Id": 1,
+                              "Type": "call",
+                              "Properties": {
+                                "_isStatic": false,
+                                "_name": "SendMessage",
+                                "_type": "Sandbox.States.StateMachineComponent"
+                              },
+                              "UserData": {
+                                "Position": "168,-0"
+                              }
+                            }
+                          ],
+                          "Links": [
+                            {
+                              "SrcId": 0,
+                              "SrcName": "_signal",
+                              "DstId": 1,
+                              "DstName": "_signal"
+                            },
+                            {
+                              "Id": 2,
+                              "Value": null,
+                              "DstId": 1,
+                              "DstName": "_target"
+                            },
+                            {
+                              "Id": 3,
+                              "Value": "red",
+                              "DstId": 1,
+                              "DstName": "message"
+                            }
+                          ],
+                          "Defaults": {
+                            "$2._value": {
+                              "_type": "component",
+                              "component_id": "e3bf16e8-57ae-4a07-9f94-4c03e7d0aebc",
+                              "go": "f85060b7-943a-47fc-b5b8-05d555d0d60c",
+                              "component_type": "StateMachineComponent"
+                            }
+                          }
+                        },
+                        "UserData": {
+                          "Position": "-64,-96"
+                        }
+                      }
+                    ],
+                    "Transitions": [
+                      {
+                        "Id": 2,
+                        "TargetId": 1,
+                        "Delay": 5
+                      }
+                    ],
+                    "InitialStateId": 0
+                  }
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "f85060b7-943a-47fc-b5b8-05d555d0d60c",
+                  "Flags": 0,
+                  "Name": "Red Light",
+                  "Position": "0,-22,150",
+                  "Tags": "light_point,light",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "45a24475-296e-408d-b50e-0a657b3c5e9a",
+                      "__enabled": false,
+                      "Attenuation": 0,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.1907,0.1907,1",
+                      "Radius": 8,
+                      "Shadows": false
+                    },
+                    {
+                      "__type": "Sandbox.States.StateMachineComponent",
+                      "__guid": "e3bf16e8-57ae-4a07-9f94-4c03e7d0aebc",
+                      "Serialized": {
+                        "States": [
+                          {
+                            "Name": "Off",
+                            "OnEnterState": {
+                              "__version": 8,
+                              "__guid": "c556b7d1-7748-43a5-827a-9ce4f762a4d6",
+                              "__changeId": 5,
+                              "UserData": {
+                                "Title": "Enter"
+                              },
+                              "Variables": [],
+                              "Nodes": [
+                                {
+                                  "Id": 0,
+                                  "Type": "input"
+                                },
+                                {
+                                  "Id": 1,
+                                  "Type": "scene.get",
+                                  "Properties": {
+                                    "T": "Sandbox.PointLight"
+                                  },
+                                  "UserData": {
+                                    "Position": "204,120"
+                                  }
+                                },
+                                {
+                                  "Id": 2,
+                                  "Type": "property",
+                                  "Properties": {
+                                    "_name": "Enabled",
+                                    "_type": "Sandbox.Component"
+                                  },
+                                  "UserData": {
+                                    "Position": "456,84"
+                                  }
+                                }
+                              ],
+                              "Links": [
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_target",
+                                  "DstId": 1,
+                                  "DstName": "_this"
+                                },
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_signal",
+                                  "DstId": 2,
+                                  "DstName": "_signal"
+                                },
+                                {
+                                  "SrcId": 1,
+                                  "SrcName": "_result",
+                                  "DstId": 2,
+                                  "DstName": "_target"
+                                },
+                                {
+                                  "Id": 3,
+                                  "Value": false,
+                                  "DstId": 2,
+                                  "DstName": "_value"
+                                }
+                              ]
+                            },
+                            "UserData": {
+                              "Position": "-416,-224"
+                            }
+                          },
+                          {
+                            "Id": 1,
+                            "Name": "On",
+                            "OnEnterState": {
+                              "__version": 8,
+                              "__guid": "b388f2be-f44f-44c8-9f89-aeea95347e94",
+                              "__changeId": 10,
+                              "UserData": {
+                                "Title": "Enter",
+                                "ReferencedComponentTypes": [
+                                  "Sandbox.PointLight"
+                                ]
+                              },
+                              "Variables": [],
+                              "Nodes": [
+                                {
+                                  "Id": 0,
+                                  "Type": "input"
+                                },
+                                {
+                                  "Id": 1,
+                                  "Type": "scene.get",
+                                  "Properties": {
+                                    "T": "Sandbox.PointLight"
+                                  },
+                                  "UserData": {
+                                    "Position": "-12,36"
+                                  }
+                                },
+                                {
+                                  "Id": 2,
+                                  "Type": "property",
+                                  "Properties": {
+                                    "_name": "Enabled",
+                                    "_type": "Sandbox.Component"
+                                  },
+                                  "UserData": {
+                                    "Position": "216,0"
+                                  }
+                                }
+                              ],
+                              "Links": [
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_target",
+                                  "DstId": 1,
+                                  "DstName": "_this"
+                                },
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_signal",
+                                  "DstId": 2,
+                                  "DstName": "_signal"
+                                },
+                                {
+                                  "SrcId": 1,
+                                  "SrcName": "_result",
+                                  "DstId": 2,
+                                  "DstName": "_target"
+                                },
+                                {
+                                  "Id": 3,
+                                  "Value": true,
+                                  "DstId": 2,
+                                  "DstName": "_value"
+                                }
+                              ]
+                            },
+                            "UserData": {
+                              "Position": "-160,-224"
+                            }
+                          },
+                          {
+                            "Id": 11,
+                            "Name": "Walk",
+                            "OnEnterState": {
+                              "__version": 8,
+                              "__guid": "e0e66ac2-57df-49e7-bf57-0e43ce56b4b6",
+                              "__changeId": 17,
+                              "UserData": {
+                                "Title": "Enter",
+                                "ReferencedComponentTypes": [
+                                  "Sandbox.PointLight"
+                                ]
+                              },
+                              "Variables": [],
+                              "Nodes": [
+                                {
+                                  "Id": 0,
+                                  "Type": "input",
+                                  "UserData": {
+                                    "Position": "-12,36"
+                                  }
+                                },
+                                {
+                                  "Id": 1,
+                                  "Type": "call",
+                                  "Properties": {
+                                    "_isStatic": false,
+                                    "_name": "SendMessage",
+                                    "_type": "Sandbox.States.StateMachineComponent"
+                                  },
+                                  "UserData": {
+                                    "Position": "144,60"
+                                  }
+                                },
+                                {
+                                  "Id": 8,
+                                  "Type": "scene.get",
+                                  "Properties": {
+                                    "T": "Sandbox.PointLight"
+                                  },
+                                  "UserData": {
+                                    "Position": "276,132"
+                                  }
+                                },
+                                {
+                                  "Id": 9,
+                                  "Type": "property",
+                                  "Properties": {
+                                    "_name": "Enabled",
+                                    "_type": "Sandbox.Component"
+                                  },
+                                  "UserData": {
+                                    "Position": "456,108"
+                                  }
+                                }
+                              ],
+                              "Links": [
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_signal",
+                                  "DstId": 1,
+                                  "DstName": "_signal"
+                                },
+                                {
+                                  "Id": 10,
+                                  "Value": null,
+                                  "DstId": 1,
+                                  "DstName": "_target"
+                                },
+                                {
+                                  "Id": 11,
+                                  "Value": "green",
+                                  "DstId": 1,
+                                  "DstName": "message"
+                                },
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_target",
+                                  "DstId": 8,
+                                  "DstName": "_this"
+                                },
+                                {
+                                  "SrcId": 1,
+                                  "SrcName": "_signal",
+                                  "DstId": 9,
+                                  "DstName": "_signal"
+                                },
+                                {
+                                  "SrcId": 8,
+                                  "SrcName": "_result",
+                                  "DstId": 9,
+                                  "DstName": "_target"
+                                },
+                                {
+                                  "Id": 12,
+                                  "Value": false,
+                                  "DstId": 9,
+                                  "DstName": "_value"
+                                }
+                              ],
+                              "Defaults": {
+                                "$10._value": {
+                                  "_type": "component",
+                                  "component_id": "3c502031-4ff2-41a6-85a6-0e7d96775881",
+                                  "go": "82834fd4-0b12-4cce-ad0f-adcb03f37909",
+                                  "component_type": "StateMachineComponent"
+                                }
+                              }
+                            },
+                            "UserData": {
+                              "Position": "96,-224"
+                            }
+                          }
+                        ],
+                        "Transitions": [
+                          {
+                            "Id": 2,
+                            "TargetId": 1,
+                            "Message": "red"
+                          },
+                          {
+                            "Id": 12,
+                            "SourceId": 1,
+                            "TargetId": 11,
+                            "Delay": 2
+                          }
+                        ],
+                        "InitialStateId": 0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "__guid": "82834fd4-0b12-4cce-ad0f-adcb03f37909",
+                  "Flags": 0,
+                  "Name": "Walk Light",
+                  "Position": "0,-22,132",
+                  "Tags": "light_point,light",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.PointLight",
+                      "__guid": "0a8100b1-1263-4c2b-af2b-f31054327ebb",
+                      "__enabled": false,
+                      "Attenuation": 0,
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "0.1,1,0,1",
+                      "Radius": 8,
+                      "Shadows": false
+                    },
+                    {
+                      "__type": "Sandbox.States.StateMachineComponent",
+                      "__guid": "3c502031-4ff2-41a6-85a6-0e7d96775881",
+                      "Serialized": {
+                        "States": [
+                          {
+                            "Id": 11,
+                            "Name": "Idle",
+                            "OnEnterState": {
+                              "__version": 8,
+                              "__guid": "e186604e-e1ad-49b5-857c-8c526253498f",
+                              "__changeId": 6,
+                              "UserData": {
+                                "Title": "Enter",
+                                "ReferencedComponentTypes": [
+                                  "Sandbox.PointLight"
+                                ]
+                              },
+                              "Variables": [],
+                              "Nodes": [
+                                {
+                                  "Id": 0,
+                                  "Type": "input"
+                                },
+                                {
+                                  "Id": 1,
+                                  "Type": "scene.get",
+                                  "Properties": {
+                                    "T": "Sandbox.PointLight"
+                                  },
+                                  "UserData": {
+                                    "Position": "156,120"
+                                  }
+                                },
+                                {
+                                  "Id": 2,
+                                  "Type": "property",
+                                  "Properties": {
+                                    "_name": "Enabled",
+                                    "_type": "Sandbox.Component"
+                                  },
+                                  "UserData": {
+                                    "Position": "408,84"
+                                  }
+                                }
+                              ],
+                              "Links": [
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_target",
+                                  "DstId": 1,
+                                  "DstName": "_this"
+                                },
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_signal",
+                                  "DstId": 2,
+                                  "DstName": "_signal"
+                                },
+                                {
+                                  "SrcId": 1,
+                                  "SrcName": "_result",
+                                  "DstId": 2,
+                                  "DstName": "_target"
+                                },
+                                {
+                                  "Id": 3,
+                                  "Value": false,
+                                  "DstId": 2,
+                                  "DstName": "_value"
+                                }
+                              ]
+                            },
+                            "UserData": {
+                              "Position": "-256,-64"
+                            }
+                          },
+                          {
+                            "Id": 12,
+                            "Name": "Walk",
+                            "OnEnterState": {
+                              "__version": 8,
+                              "__guid": "48f8a3a0-b388-4599-9f23-4ebbbd98df72",
+                              "__changeId": 17,
+                              "UserData": {
+                                "Title": "Enter",
+                                "ReferencedComponentTypes": [
+                                  "Sandbox.PointLight"
+                                ]
+                              },
+                              "Variables": [],
+                              "Nodes": [
+                                {
+                                  "Id": 0,
+                                  "Type": "input"
+                                },
+                                {
+                                  "Id": 1,
+                                  "Type": "scene.get",
+                                  "Properties": {
+                                    "T": "Sandbox.PointLight"
+                                  },
+                                  "UserData": {
+                                    "Position": "0,36"
+                                  }
+                                },
+                                {
+                                  "Id": 2,
+                                  "Type": "property",
+                                  "Properties": {
+                                    "_name": "Enabled",
+                                    "_type": "Sandbox.Component"
+                                  },
+                                  "UserData": {
+                                    "Position": "252,0"
+                                  }
+                                }
+                              ],
+                              "Links": [
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_target",
+                                  "DstId": 1,
+                                  "DstName": "_this"
+                                },
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_signal",
+                                  "DstId": 2,
+                                  "DstName": "_signal"
+                                },
+                                {
+                                  "SrcId": 1,
+                                  "SrcName": "_result",
+                                  "DstId": 2,
+                                  "DstName": "_target"
+                                },
+                                {
+                                  "Id": 3,
+                                  "Value": true,
+                                  "DstId": 2,
+                                  "DstName": "_value"
+                                }
+                              ]
+                            },
+                            "UserData": {
+                              "Position": "192,-96"
+                            }
+                          },
+                          {
+                            "Id": 15,
+                            "Name": "Stand",
+                            "OnEnterState": {
+                              "__version": 8,
+                              "__guid": "f253ea9a-76d5-44eb-a9ca-4097c080f119",
+                              "__changeId": 3,
+                              "UserData": {
+                                "Title": "Enter",
+                                "ReferencedComponentTypes": []
+                              },
+                              "Variables": [],
+                              "Nodes": [
+                                {
+                                  "Id": 0,
+                                  "Type": "input"
+                                },
+                                {
+                                  "Id": 1,
+                                  "Type": "call",
+                                  "Properties": {
+                                    "_isStatic": false,
+                                    "_name": "SendMessage",
+                                    "_type": "Sandbox.States.StateMachineComponent"
+                                  },
+                                  "UserData": {
+                                    "Position": "336,156"
+                                  }
+                                }
+                              ],
+                              "Links": [
+                                {
+                                  "SrcId": 0,
+                                  "SrcName": "_signal",
+                                  "DstId": 1,
+                                  "DstName": "_signal"
+                                },
+                                {
+                                  "Id": 2,
+                                  "Value": null,
+                                  "DstId": 1,
+                                  "DstName": "_target"
+                                },
+                                {
+                                  "Id": 3,
+                                  "Value": "red",
+                                  "DstId": 1,
+                                  "DstName": "message"
+                                }
+                              ],
+                              "Defaults": {
+                                "$2._value": {
+                                  "_type": "component",
+                                  "component_id": "e3bf16e8-57ae-4a07-9f94-4c03e7d0aebc",
+                                  "go": "f85060b7-943a-47fc-b5b8-05d555d0d60c",
+                                  "component_type": "StateMachineComponent"
+                                }
+                              }
+                            },
+                            "UserData": {
+                              "Position": "-32,64"
+                            }
+                          }
+                        ],
+                        "Transitions": [
+                          {
+                            "Id": 13,
+                            "SourceId": 11,
+                            "TargetId": 12,
+                            "Message": "green"
+                          },
+                          {
+                            "Id": 16,
+                            "SourceId": 12,
+                            "TargetId": 15,
+                            "Delay": 2
+                          },
+                          {
+                            "Id": 17,
+                            "SourceId": 15,
+                            "TargetId": 11
+                          }
+                        ],
+                        "InitialStateId": 11
+                      }
+                    }
+                  ]
                 }
               ]
             }
@@ -4647,7 +5289,7 @@
                   "__guid": "508413ce-36ba-417a-9b5e-9c2275a00e57",
                   "Flags": 0,
                   "Name": "wooden_planks_01",
-                  "Position": "-320.0819,397.0957,49.13004",
+                  "Position": "-320.0829,397.0944,49.13026",
                   "Rotation": "0.2702898,0.5896818,-0.383358,0.6574613",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4668,7 +5310,7 @@
                   "__guid": "4585d2bf-6e47-4d3c-bec6-3aaa7441d506",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (4)",
-                  "Position": "1.294287,469.2318,9.728568",
+                  "Position": "1.29302,469.2318,9.728568",
                   "Rotation": "0.5066945,0.4955327,-0.5027555,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4731,7 +5373,7 @@
                   "__guid": "7b5da4e1-b97f-450d-a621-fdc9165a8ca7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (12)",
-                  "Position": "-14.46356,-362.618,5.913402",
+                  "Position": "-14.46254,-362.6178,5.91336",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4752,7 +5394,7 @@
                   "__guid": "88e86c73-3d5f-4467-92be-93becc76b63e",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (8)",
-                  "Position": "-1.332561,330.5712,9.093059",
+                  "Position": "-1.333553,330.571,9.093101",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4815,7 +5457,7 @@
                   "__guid": "0b627483-9c13-4367-8eb5-9ba83d861021",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (16)",
-                  "Position": "-17.08989,-501.2752,5.275825",
+                  "Position": "-17.08843,-501.2752,5.27568",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4836,7 +5478,7 @@
                   "__guid": "4fe10399-f8e3-43ed-ab28-cc40d50e10bb",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (7)",
-                  "Position": "-0.0198465,399.8733,9.411216",
+                  "Position": "-0.02096039,399.8732,9.411239",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4899,7 +5541,7 @@
                   "__guid": "7d082510-adad-4219-bbab-2b00776722f3",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (14)",
-                  "Position": "-15.77672,-431.9748,5.595504",
+                  "Position": "-15.77544,-431.9748,5.595504",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4941,7 +5583,7 @@
                   "__guid": "e55908e3-c690-4bb3-bd04-52d2af69873e",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (10)",
-                  "Position": "-13.15175,-293.3438,6.231257",
+                  "Position": "-13.15096,-293.3438,6.23125",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -4983,7 +5625,7 @@
                   "__guid": "dce2fef8-0661-4444-b558-1a9b1fae492d",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (10)",
-                  "Position": "-18.4047,-570.6301,4.956481",
+                  "Position": "-18.40326,-570.6301,4.95623",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5004,7 +5646,7 @@
                   "__guid": "6ed84c3d-b205-4801-a511-3db66db3780a",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (5)",
-                  "Position": "0.6362818,434.4969,9.570037",
+                  "Position": "0.6351069,434.4966,9.570083",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5067,7 +5709,7 @@
                   "__guid": "895476d3-173d-4145-b2e0-71f7712c2fbd",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (13)",
-                  "Position": "-15.12012,-397.3508,5.754497",
+                  "Position": "-15.11896,-397.3506,5.754474",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5088,7 +5730,7 @@
                   "__guid": "a5db7797-9e80-4d8d-b1cb-eadbf9b75181",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (9)",
-                  "Position": "-1.990825,295.8409,8.933604",
+                  "Position": "-1.991634,295.8408,8.933627",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5151,7 +5793,7 @@
                   "__guid": "e874b072-62c1-43d2-b48a-ae9acab49021",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (9)",
-                  "Position": "-17.7481,-536.0076,5.114982",
+                  "Position": "-17.74666,-536.0074,5.114814",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5172,7 +5814,7 @@
                   "__guid": "13992706-1a63-4464-a78b-47d3f1aab401",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (6)",
-                  "Position": "-0.677638,365.144,9.251105",
+                  "Position": "-0.6786451,365.1439,9.251121",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5235,7 +5877,7 @@
                   "__guid": "b8efb169-a91e-494d-8a33-ce11246b27c9",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (15)",
-                  "Position": "-16.43579,-466.7071,5.43547",
+                  "Position": "-16.43444,-466.7069,5.435318",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5277,7 +5919,7 @@
                   "__guid": "26590b36-2e09-4be9-bb07-541538558d84",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (11)",
-                  "Position": "-13.8095,-328.0771,6.072368",
+                  "Position": "-13.80844,-328.0771,6.072375",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5319,7 +5961,7 @@
                   "__guid": "7248652e-38e2-4e80-8781-264178b502be",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (11)",
-                  "Position": "-19.06263,-605.3619,4.795799",
+                  "Position": "-19.06089,-605.3615,4.795715",
                   "Rotation": "0.5066944,0.4955329,-0.5027554,0.4949194",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5340,7 +5982,7 @@
                   "__guid": "3ff983cb-2de4-40f9-8b04-7cb3452916f4",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (1)",
-                  "Position": "-345.6879,170.622,91.56429",
+                  "Position": "-345.6883,170.6208,91.5645",
                   "Rotation": "0.5288243,0.3756675,-0.003458522,0.7610564",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5361,7 +6003,7 @@
                   "__guid": "c9d0bb9b-fa64-4ca3-805a-c447b7cfc894",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (2)",
-                  "Position": "145.9471,439.2172,-302.6407",
+                  "Position": "145.9457,439.2176,-302.6405",
                   "Rotation": "0.09873718,0.641118,-0.5485317,0.5275717",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5382,7 +6024,7 @@
                   "__guid": "22975448-4b82-491c-9358-1eb5acd098a7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "333.3637,-297.5952,157.4462",
+                  "Position": "333.3644,-297.5941,157.4458",
                   "Rotation": "0.09873718,0.641118,-0.5485317,0.5275717",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5403,7 +6045,7 @@
                   "__guid": "1d888129-3148-4fd7-ac07-deda33ca4a20",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "908.6502,-277.4045,1392.787",
+                  "Position": "908.6509,-277.4022,1392.787",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5424,7 +6066,7 @@
                   "__guid": "5d4de5f5-6a36-4a0b-93f6-d214d2b47342",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "777.3402,-57.72791,1398.743",
+                  "Position": "777.3406,-57.72573,1398.743",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5445,7 +6087,7 @@
                   "__guid": "f52c36a3-4944-4060-b434-b5f36f2a06aa",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1039.976,-497.078,1386.831",
+                  "Position": "1039.978,-497.0753,1386.831",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5466,7 +6108,7 @@
                   "__guid": "560e9d7e-2d55-4907-993f-4d2a4d7207a5",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "711.6841,52.10863,1401.722",
+                  "Position": "711.684,52.11033,1401.722",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5487,7 +6129,7 @@
                   "__guid": "84ce787e-f753-4743-aa16-2d9331ab7be3",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "974.3038,-387.2433,1389.809",
+                  "Position": "974.3047,-387.2409,1389.809",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5508,7 +6150,7 @@
                   "__guid": "abce72f2-3481-416a-9382-fab6ab76467b",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "842.9915,-167.5682,1395.765",
+                  "Position": "842.9919,-167.5661,1395.765",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5529,7 +6171,7 @@
                   "__guid": "990bd629-b1f8-416e-8916-2c17b774c1fb",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1105.635,-606.9191,1383.852",
+                  "Position": "1105.637,-606.9166,1383.852",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5550,7 +6192,7 @@
                   "__guid": "f7e97ccd-1020-47d2-a4f8-8dd074a93b15",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1204.114,-771.6713,1379.384",
+                  "Position": "1204.116,-771.668,1379.384",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5571,7 +6213,7 @@
                   "__guid": "67145630-ceb6-4ce2-a503-4823f124bdc9",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "646.0312,161.946,1404.7",
+                  "Position": "646.0309,161.9473,1404.7",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.607775",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5592,7 +6234,7 @@
                   "__guid": "69f79e99-df7e-4a1c-a19c-0a75c92446e2",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "678.8582,107.0253,1403.211",
+                  "Position": "678.8581,107.027,1403.211",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5613,7 +6255,7 @@
                   "__guid": "e9651e24-9213-45e6-95c9-f3e55df0b95f",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "941.477,-332.3241,1391.299",
+                  "Position": "941.4779,-332.3217,1391.299",
                   "Rotation": "0.3528472,0.6222,-0.3449279,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5634,7 +6276,7 @@
                   "__guid": "2a88fc20-efe9-4a14-a99e-756d1bd0b706",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "810.1619,-112.6506,1397.255",
+                  "Position": "810.1619,-112.6488,1397.255",
                   "Rotation": "0.3528472,0.6222,-0.3449279,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5655,7 +6297,7 @@
                   "__guid": "fff48f0c-6d19-48b2-b0f9-c2d00ebd3de0",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1072.806,-552.0018,1385.342",
+                  "Position": "1072.808,-551.9988,1385.342",
                   "Rotation": "0.3528472,0.6222,-0.3449279,0.6077747",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5676,7 +6318,7 @@
                   "__guid": "a61a8e6f-8541-4bf3-82f2-019cb57bc9a2",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1171.287,-716.7541,1380.875",
+                  "Position": "1171.289,-716.7507,1380.875",
                   "Rotation": "0.3528471,0.6222,-0.3449279,0.6077747",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5697,7 +6339,7 @@
                   "__guid": "43e2b2d8-a81b-4f41-be95-c0514b5a2d0c",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "744.5129,-2.808777,1400.233",
+                  "Position": "744.5129,-2.806915,1400.233",
                   "Rotation": "0.3528472,0.6222,-0.3449279,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5718,7 +6360,7 @@
                   "__guid": "14fb94ec-055a-4f08-a5ba-414f442adef7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1007.117,-442.1606,1388.32",
+                  "Position": "1007.117,-442.1577,1388.32",
                   "Rotation": "0.3528472,0.6222,-0.3449279,0.6077747",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5739,7 +6381,7 @@
                   "__guid": "95f0f5f2-c5d5-4123-9599-828001a5378e",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "875.822,-222.4854,1394.277",
+                  "Position": "875.8225,-222.4832,1394.277",
                   "Rotation": "0.3528472,0.6222,-0.3449279,0.6077747",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5760,7 +6402,7 @@
                   "__guid": "36e27079-9e6e-48f6-8f9e-3c7ccec25823",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1138.461,-661.8371,1382.364",
+                  "Position": "1138.464,-661.834,1382.364",
                   "Rotation": "0.3528471,0.6222,-0.3449279,0.6077747",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5781,7 +6423,7 @@
                   "__guid": "80ed3e42-e455-482b-b12c-78b47e88287e",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1236.939,-826.5884,1377.899",
+                  "Position": "1236.941,-826.5849,1377.899",
                   "Rotation": "0.3528471,0.6221999,-0.3449279,0.6077747",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5802,7 +6444,7 @@
                   "__guid": "9bf25e2a-e083-40b7-9930-043670518807",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "646.0316,161.9475,1404.7",
+                  "Position": "646.0311,161.9501,1404.7",
                   "Rotation": "0.3528473,0.6222001,-0.344928,0.607775",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5823,7 +6465,7 @@
                   "__guid": "6794ce77-dc58-4f16-832d-06a7a93c7e3d",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "662.4456,134.4841,1403.955",
+                  "Position": "662.4454,134.486,1403.955",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5855,7 +6497,7 @@
                   "__guid": "50a945c7-ec1f-4694-9257-93788846a599",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "925.0628,-304.8645,1392.043",
+                  "Position": "925.0635,-304.8622,1392.043",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5876,7 +6518,7 @@
                   "__guid": "85616195-0038-42f8-a3ec-e38378bc05f5",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "793.7488,-85.19093,1397.999",
+                  "Position": "793.7488,-85.18916,1397.999",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5897,7 +6539,7 @@
                   "__guid": "9c0e437f-eccf-452c-b82f-1504ce610448",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1056.391,-524.5419,1386.087",
+                  "Position": "1056.393,-524.5391,1386.087",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5918,7 +6560,7 @@
                   "__guid": "c546d8f4-a337-4216-bb8b-e95689964a0f",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "728.0978,24.65013,1400.977",
+                  "Position": "728.0981,24.65205,1400.977",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5939,7 +6581,7 @@
                   "__guid": "faa9e37e-09a3-4de3-a770-a89c120bb3b5",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "990.7181,-414.7033,1389.065",
+                  "Position": "990.7191,-414.7009,1389.065",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5960,7 +6602,7 @@
                   "__guid": "5755932e-ee0b-4af6-b6f0-bd609f02c779",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "859.4071,-195.0267,1395.021",
+                  "Position": "859.4075,-195.0245,1395.021",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -5981,7 +6623,7 @@
                   "__guid": "9144885b-9d26-41ad-8b99-fd4519a4feb0",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1122.048,-634.3784,1383.109",
+                  "Position": "1122.05,-634.3753,1383.109",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6002,7 +6644,7 @@
                   "__guid": "40757f24-0ad2-4d29-98aa-085e97b8dbf2",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1220.526,-799.1331,1378.641",
+                  "Position": "1220.528,-799.1302,1378.641",
                   "Rotation": "0.3528471,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6023,7 +6665,7 @@
                   "__guid": "6e909fa2-a81c-4c24-9451-abcaa10d48cd",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "695.2719,79.56692,1402.467",
+                  "Position": "695.272,79.56823,1402.467",
                   "Rotation": "0.3528473,0.6222,-0.344928,0.6077749",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6044,7 +6686,7 @@
                   "__guid": "5eff8eeb-9aac-4280-8623-8d7e47aad201",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "957.891,-359.7837,1390.555",
+                  "Position": "957.892,-359.7812,1390.555",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6065,7 +6707,7 @@
                   "__guid": "4167f5ff-e0be-4fae-bcdf-bbd42f9beb49",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "826.577,-140.1095,1396.511",
+                  "Position": "826.5771,-140.1076,1396.511",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6086,7 +6728,7 @@
                   "__guid": "ee61d873-68bd-41ba-a8dc-3005d84fa2f3",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1089.22,-579.459,1384.598",
+                  "Position": "1089.222,-579.4559,1384.598",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6107,7 +6749,7 @@
                   "__guid": "9d1f261f-0a8a-4c6f-92c5-1e474f1f9e18",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1187.7,-744.2148,1380.133",
+                  "Position": "1187.703,-744.2114,1380.133",
                   "Rotation": "0.3528471,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6128,7 +6770,7 @@
                   "__guid": "0502d3ef-33ac-4f83-9053-a92b91148ee0",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "760.9269,-30.26867,1399.489",
+                  "Position": "760.9272,-30.26667,1399.489",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6149,7 +6791,7 @@
                   "__guid": "abb7dac0-7b67-4d4d-a5c2-babf9ff82ddb",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1023.534,-469.6209,1387.577",
+                  "Position": "1023.534,-469.6183,1387.577",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6170,7 +6812,7 @@
                   "__guid": "c7d3967e-c9e7-4672-9ca2-44de74c7927c",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "892.2357,-249.9438,1393.533",
+                  "Position": "892.2361,-249.9412,1393.533",
                   "Rotation": "0.3528472,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6191,7 +6833,7 @@
                   "__guid": "9b35472a-677c-4bb3-88c0-da9cbe6d53bf",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1154.875,-689.3018,1381.62",
+                  "Position": "1154.877,-689.2991,1381.62",
                   "Rotation": "0.3528471,0.6222,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6212,7 +6854,7 @@
                   "__guid": "3d945c30-b2a1-4e6a-bfc7-7d089902c9aa",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1253.354,-854.0542,1377.155",
+                  "Position": "1253.356,-854.051,1377.155",
                   "Rotation": "0.3528471,0.6221999,-0.344928,0.6077748",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6233,7 +6875,7 @@
                   "__guid": "e8c1c00e-6515-4ae7-aa46-6f6a6969f330",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "1269.766,-881.5086,1376.413",
+                  "Position": "1269.768,-881.5048,1376.413",
                   "Rotation": "0.352847,0.6221998,-0.344928,0.6077747",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6275,7 +6917,7 @@
                   "__guid": "67361b3f-e99c-4167-a396-6a3762cb0ca7",
                   "Flags": 0,
                   "Name": "wooden_planks_01 (3)",
-                  "Position": "-267.2897,-509.2784,-108.6389",
+                  "Position": "-267.288,-509.2787,-108.639",
                   "Rotation": "-0.449634,0.467558,-0.7522037,-0.1157956",
                   "Scale": "3,3,3",
                   "Enabled": true,
@@ -6629,7 +7271,7 @@
               "__guid": "91c3b3f9-cefd-4ff9-ab70-3e46cd29eea7",
               "Flags": 0,
               "Name": "rock_med_a (17)",
-              "Position": "-1516.578,30.47964,-600.7178",
+              "Position": "-1516.578,30.47966,-600.7178",
               "Rotation": "0.970717,-0.02537009,0.2072218,0.1188445",
               "Scale": "0.8381335,0.8381335,0.8381335",
               "Enabled": true,
@@ -6734,7 +7376,7 @@
               "__guid": "f50dbaba-a582-4a7f-a005-4c6fa89604ce",
               "Flags": 0,
               "Name": "rock_med_a (29)",
-              "Position": "-1324.872,-98.58124,26.50227",
+              "Position": "-1324.872,-98.58129,26.50241",
               "Rotation": "0.3838273,-0.8089461,-0.4432301,-0.04278702",
               "Scale": "1.718041,1.718041,1.718041",
               "Enabled": true,
@@ -6902,7 +7544,7 @@
               "__guid": "f9325375-f4a9-410c-a0ed-784bcc31a463",
               "Flags": 0,
               "Name": "rock_med_a (20)",
-              "Position": "-1166.866,22.32112,-1201.412",
+              "Position": "-1166.866,22.32117,-1201.412",
               "Rotation": "-0.4833861,0.6855369,0.5443269,0.009230129",
               "Scale": "1.718041,1.718041,1.718041",
               "Enabled": true,
@@ -6986,7 +7628,7 @@
               "__guid": "ae129ff6-a470-472b-948d-cd8454cdbcff",
               "Flags": 0,
               "Name": "rock_med_a (13)",
-              "Position": "-1306.281,30.49679,-937.2397",
+              "Position": "-1306.281,30.49672,-937.2396",
               "Rotation": "0.85791,0.2179042,0.4543956,0.1001632",
               "Scale": "0.8381335,0.8381335,0.8381335",
               "Enabled": true,
@@ -7133,7 +7775,7 @@
               "__guid": "bd53d76c-c455-42af-a08b-61260ab5e6f7",
               "Flags": 0,
               "Name": "rock_cliff_c (9)",
-              "Position": "-286.0166,-1415.377,-186.7702",
+              "Position": "-286.0165,-1415.377,-186.7702",
               "Rotation": "-0.2349771,0.1726815,0.9304048,-0.222068",
               "Scale": "2.222,2.222,2.222",
               "Enabled": true,
@@ -7238,7 +7880,7 @@
               "__guid": "13334b49-c31a-49ab-b1dd-0bbfb719cad3",
               "Flags": 0,
               "Name": "rock_cliff_c (9)",
-              "Position": "209.1222,-1735.669,313.9837",
+              "Position": "209.1223,-1735.669,313.9837",
               "Rotation": "-0.2864014,-0.05484012,0.7955439,0.5311099",
               "Scale": "2.222,2.222,2.222",
               "Enabled": true,
@@ -7280,7 +7922,7 @@
               "__guid": "354986bb-f853-4218-82b4-6c618d6c4dbf",
               "Flags": 0,
               "Name": "rock_cliff_c (7)",
-              "Position": "-1291.839,100.7488,-296.9419",
+              "Position": "-1291.839,100.7487,-296.9419",
               "Rotation": "-0.2783399,0.141809,0.9424683,-0.1190427",
               "Scale": "2.290722,2.290722,2.290722",
               "Enabled": true,
@@ -7550,7 +8192,7 @@
               "__guid": "07c6d662-b43b-4b47-b062-9900d338dea4",
               "Flags": 0,
               "Name": "twosidedshelf",
-              "Position": "-320.272,-1137.666,0.6859325",
+              "Position": "-320.272,-1137.666,0.6859314",
               "Rotation": "-0.8379326,0.4550005,-0.2951418,0.06111141",
               "Scale": "2.290722,2.290722,2.290722",
               "Enabled": true,
@@ -11447,7 +12089,7 @@
               "__guid": "f6bfb8f3-4300-4eeb-886e-d8824a85b18a",
               "Flags": 0,
               "Name": "rock_cliff_c (10)",
-              "Position": "2964.882,-1771.658,-1571.332",
+              "Position": "2976.747,-1708.356,-1588.578",
               "Rotation": "-0.1313073,-0.003401524,-0.08967103,0.9872721",
               "Scale": "1.947028,1.947028,1.947028",
               "Enabled": true,
@@ -12126,7 +12768,7 @@
             {
               "__guid": "b9fa1396-f085-4ea4-94ba-d4c549e9f4ff",
               "Flags": 0,
-              "Name": "willbreaker",
+              "Name": "billbreaker",
               "Position": "-782.4546,200.2476,19.16028",
               "Rotation": "-0.9533286,0.1562287,-0.2549731,-0.04178422",
               "Scale": "10,10,10",
@@ -15817,25 +16459,399 @@
       ]
     },
     {
-      "__guid": "3a4a6e2f-8281-4e1a-b290-d755d0a42500",
+      "__guid": "acfb1678-1d1e-484e-8952-140718a2cfb7",
       "Flags": 0,
-      "Name": "Spot Light",
-      "Position": "-375.5607,-2450.525,876.9729",
-      "Rotation": "0,0,0.6963387,-0.7177134",
-      "Tags": "light_spot,light",
+      "Name": "Box",
+      "Position": "3009.026,43.23596,623.2784",
+      "Rotation": "0.5175321,-0.4739127,-0.434261,0.5647873",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.SpotLight",
-          "__guid": "a9eab26c-258d-4601-869d-a8a880fa135b",
-          "Attenuation": 2.55,
-          "ConeInner": 22.96,
-          "ConeOuter": 6.69,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.25,1,0,1",
-          "Radius": 128,
-          "Shadows": false
+          "__type": "Sandbox.MeshComponent",
+          "__guid": "08be99f7-76d1-4a49-b278-72309c1cdc38",
+          "Collision": "Mesh",
+          "Color": "1,1,1,1",
+          "HideInGame": false,
+          "IsTrigger": false,
+          "Mesh": {
+            "Topology": "H4sIAAAAAAAACk2MAQoAIAgDrSz7/4drBwoOjmKbczO7Ygg0hYuTHuB1hXgS/so\u002Bqi4vOdnOrb6NT15bJXy63JDz/\u002Bg6SXigAAAA",
+            "Positions": [
+              "-58.97388,-43.40405,0",
+              "58.97388,-43.40405,0",
+              "58.97388,43.40405,0",
+              "-58.97388,43.40405,0"
+            ],
+            "TextureCoord": [
+              "0.4607334,0.3390942",
+              "0,0",
+              "0.4607334,-0.3390942",
+              "0,0",
+              "-0.4607334,-0.3390942",
+              "0,0",
+              "-0.4607334,0.3390942",
+              "0,0"
+            ],
+            "TextureUAxis": [
+              "0.1736484,-0.9810603,0.08583166"
+            ],
+            "TextureVAxis": [
+              "0.00000000745058,-0.0871558,-0.9961947"
+            ],
+            "TextureScale": [
+              "0.2500001,0.2500001"
+            ],
+            "TextureOffset": [
+              "425.6302,450.699"
+            ],
+            "MaterialIndex": [
+              1
+            ],
+            "EdgeFlags": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "Materials": [
+              "materials/dev/reflectivity_30.vmat",
+              "materials/noise_fbm.vmat"
+            ]
+          },
+          "SmoothingAngle": 40,
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "9754d3db-368e-498f-ad8f-5bbc05c4acba",
+      "Flags": 0,
+      "Name": "Wood",
+      "Position": "1269.335,3815.526,109.8146",
+      "Rotation": "-0.02663026,0.01762475,0.4460045,0.8944606",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "f2554e38-45e0-4c66-8bbd-db917a5ac569",
+          "Flags": 0,
+          "Name": "untitled_28",
+          "Position": "-1.803374,0.3510987,38.42263",
+          "Rotation": "0.7042319,0.01861274,0.06369811,0.7068619",
+          "Scale": "0.3469756,0.1730931,0.3469756",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "3c29dd89-477a-44f8-92da-0b2ef3519090",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "model/model/untitled_28.vmdl",
+              "StartAsleep": false,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "5e8c2e1b-c05e-4923-b8eb-55eb0a6af593",
+          "Flags": 0,
+          "Name": "wood_club",
+          "Position": "3.166688,36.73732,10.67002",
+          "Rotation": "0.3111492,-0.02156046,0.007061069,0.9500903",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "7320a9a1-9d30-4337-922c-7f6e217cfa06",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/items/weapons/club/wood_club.vmdl",
+              "StartAsleep": false,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "dc051443-9b40-4be2-991a-a5022f39b391",
+          "Flags": 0,
+          "Name": "wood_club (1)",
+          "Position": "0.9231226,-33.97724,9.58758",
+          "Rotation": "-0.05554181,0.3116705,0.9478253,-0.03747153",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "af638df2-706e-41cc-8dcd-3e7fcc195559",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "models/items/weapons/club/wood_club.vmdl",
+              "StartAsleep": false,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "5c0cc212-8886-45f6-8c40-4421a5d1756e",
+          "Flags": 0,
+          "Name": "untitled_110",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "7b0f5a44-1457-4e07-9d21-97f9475a5621",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "Model": "model/27/untitled_110.vmdl",
+              "StartAsleep": false,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "d1824231-3d26-432d-a7b4-97adf57e6098",
+      "Flags": 0,
+      "Name": "zm_teddybear",
+      "Position": "22.25282,19.21072,825.678",
+      "Rotation": "0.2351872,-0.1319364,0.9613149,0.05615487",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "30a98b59-ad2c-49e5-8b39-cb70d80e9db4",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/zm_teddybear.vmdl",
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "5cc68214-f094-4324-9f44-02e7bd20ed04",
+      "Flags": 0,
+      "Name": "glow_stick",
+      "Position": "18.56869,33.076,830.1844",
+      "Rotation": "-0.1769598,-0.02218884,0.9771423,-0.1156969",
+      "Scale": "4,4,4",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "fa4ab7f3-f2c2-4838-b475-1b7adca7bf45",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/glow_stick/glow_stick.vmdl",
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "9abe38ea-dcfd-4952-98b2-06447c57bac2",
+      "Flags": 0,
+      "Name": "USB Stick",
+      "Position": "197.4711,20.12245,811.9338",
+      "Rotation": "-0.000001102686,-0.000001147389,0.9202429,-0.3913475",
+      "Scale": "2,2,2",
+      "Tags": "interactable",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "5c95e9db-6ac0-4607-875f-35aaf1b738b7",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/3dmodelscc0/gadgetselectronics/usb_stick/usb_stick.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ItemBuilder.Interactable",
+          "__guid": "4c0e0555-5c95-4903-814e-011ab1cb8116"
+        },
+        {
+          "__type": "ItemBuilder.Activatable",
+          "__guid": "c4f96550-560e-47dc-a12d-b0e35f603920",
+          "EnableOnSpawn": false
+        },
+        {
+          "__type": "ItemBuilder.Item",
+          "__guid": "9b001026-493e-442e-87b6-7fcaec9564df",
+          "Description": "An unassuming USB stick",
+          "Name": "USB Stick"
+        },
+        {
+          "__type": "ItemBuilder.Carriable",
+          "__guid": "9a79a753-b0fb-4e35-a882-fa11fa7ba4e7",
+          "EnableOnSpawn": false
+        },
+        {
+          "__type": "ItemBuilder.Equipable",
+          "__guid": "caf5d967-c4e3-44cc-96ce-40a110383c10",
+          "EnableOnSpawn": false
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "5cea51c3-4343-49c7-917d-c02ef762f06a",
+          "IsTrigger": false,
+          "Model": "models/3dmodelscc0/gadgetselectronics/usb_stick/usb_stick.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "028f3c58-02e4-4181-97a0-944b75594c23",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "45380324-3b07-4be5-8716-352c27c61590",
+          "Center": "-0.2666667,0,0",
+          "IsTrigger": false,
+          "Scale": "1.333321,0.5333882,0.7332178",
+          "Static": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "ae85923e-73ea-4f3e-8fb2-2a26a7aea8d7",
+          "Flags": 0,
+          "Name": "UI",
+          "Position": "0.5288748,0.377545,4.066225",
+          "Rotation": "0.000001102686,0.00000114739,-0.920243,-0.3913476",
+          "Scale": "0.5,0.5,0.5",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.WorldPanel",
+              "__guid": "a894fb0a-eb33-420c-ba8a-48756cf0b7fa",
+              "__enabled": false,
+              "HorizontalAlign": "Center",
+              "InteractionRange": 1000,
+              "LookAtCamera": true,
+              "PanelSize": "512,128",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderScale": 1,
+              "VerticalAlign": "Center"
+            },
+            {
+              "__type": "ItemBuilder.UI.ItemWorldInfo",
+              "__guid": "ba4b22da-b94f-480a-b14e-c2168e727fc8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "fcdeccfa-86dc-46ad-a4e7-7fd722f4f1f5",
+      "Flags": 0,
+      "Name": "rabbit",
+      "Position": "-50.69387,14.13552,822.2511",
+      "Rotation": "-0.03390411,0.01032948,0.9988875,-0.03110453",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "5dc61a55-f3b7-4d56-bc95-38aa05ab3ec5",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/rabbit.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "a0f00b88-450b-4a90-92e7-5e27f9e2282f",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.HullCollider",
+          "__guid": "529d9b8e-ce93-4b90-97e6-3e5c9b8e61a5",
+          "BoxSize": "16.46667,21.13327,38.6667",
+          "Center": "-0.3333446,-2,22.53332",
+          "Height": 50,
+          "IsTrigger": false,
+          "Radius": 25,
+          "Radius2": 0,
+          "Slices": 16,
+          "Static": false,
+          "Type": "Box"
+        }
+      ]
+    },
+    {
+      "__guid": "746e183d-0752-4cc5-bea7-89edb3aa861e",
+      "Flags": 0,
+      "Name": "billbreaker",
+      "Position": "-53.40159,0.05407566,822.2659",
+      "Rotation": "-0.1180349,0.2731104,-0.1178684,0.9474099",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "f2697575-f5ae-48e8-901b-9224f64f2784",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/cryts_armory/willbreaker.vmdl",
+          "StartAsleep": true,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "a6ab0d48-c250-45a1-9d94-81957006ee86",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     }
@@ -15871,6 +16887,7 @@
     "ambi.maniken#51762",
     "apetavern.stone_hatchet#72367",
     "apetavern.stone_pickaxe#72356",
+    "apetavern.wood_club#72359",
     "baik.baseball#19451",
     "bimbasic.cup#63910",
     "bimbasic.scp_079#66248",
@@ -15934,6 +16951,7 @@
     "frogpond.washingmachine#12962",
     "gkaf.bowlingpin#2003",
     "gkaf.rock_1#53538",
+    "greg.zm_teddybear#35591",
     "halfpeeps.gasstation_canopy#25612",
     "igrotronika.click2#51269",
     "igrotronika.notification7#50720",
@@ -15955,6 +16973,7 @@
     "modelit.equipment_case#30645",
     "nolankicks.lake_water#65330",
     "papasid.fryer_basket#38696",
+    "pxlq.glow_stick#9540",
     "reizer.fire_ex#9743",
     "reizer.ship_cannon_01#20073",
     "roomfield.water#20387",
@@ -15967,6 +16986,7 @@
     "rust.rock_quarry_small_a#25124",
     "rust.rock_quarry_small_b#25126",
     "rust.rock_small_c#25130",
+    "sapodilla.rabbit#11121",
     "sboxchile.semaforo3#23902",
     "scprpfr.watercooler_ref#55295",
     "scprpfr.wetfloor_sign_ref#55292",
@@ -15976,7 +16996,9 @@
     "smlp.moyai#5750",
     "svin.cafe_table#19356",
     "tesssssssssst.umbrella#59172",
+    "tesssssssssst.untitled_1101415414#34928",
     "tesssssssssst.untitled_336#32454",
+    "tesssssssssst.untitled_84185151#32602",
     "testchamber.gnome#9548",
     "tfassets.binder001#23352",
     "tfassets.bridge_cover001#22691",
@@ -15985,6 +17007,7 @@
     "titanovsky.canned_tuna#53764",
     "titanovsky.dagger#53813",
     "titanovsky.hammer#53815",
+    "titanovsky.usb_stick#54461",
     "vidya.model-cc-orange#70206",
     "vidya.model-cc-smore#70204",
     "vidya.model-debugcar#53083"

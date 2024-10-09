@@ -1,0 +1,470 @@
+{
+  "RootObject": {
+    "__guid": "652b3a07-2907-4cff-a44b-ed280e5a3c21",
+    "Flags": 0,
+    "Name": "street_light_walk",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.Prop",
+        "__guid": "a21c84cc-1e7b-4379-b2e7-e837cd310f74",
+        "BodyGroups": 18446744073709551615,
+        "Health": 0,
+        "IsStatic": true,
+        "Model": "semaforo3.vmdl",
+        "StartAsleep": false,
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.States.StateMachineComponent",
+        "__guid": "e00212ba-dc99-43fa-a69c-3cde0eeb9604",
+        "Serialized": {
+          "States": [
+            {
+              "Name": "Start",
+              "OnEnterState": {
+                "__version": 8,
+                "__guid": "f258582e-48ad-4495-b735-494501c4b22c",
+                "__changeId": 3,
+                "UserData": {
+                  "Title": "Enter"
+                },
+                "Variables": [],
+                "Nodes": [
+                  {
+                    "Id": 0,
+                    "Type": "input"
+                  },
+                  {
+                    "Id": 1,
+                    "Type": "call",
+                    "Properties": {
+                      "_isStatic": false,
+                      "_name": "SendMessage",
+                      "_type": "Sandbox.States.StateMachineComponent"
+                    },
+                    "UserData": {
+                      "Position": "168,120"
+                    }
+                  }
+                ],
+                "Links": [
+                  {
+                    "Id": 2,
+                    "Value": null,
+                    "DstId": 1,
+                    "DstName": "_target"
+                  }
+                ],
+                "Defaults": {
+                  "$2._value": {
+                    "_type": "component",
+                    "component_id": "cda15717-2776-4d1b-8c49-fb81373213dc",
+                    "go": "0d83ae94-bedb-4eab-8ff6-52683d63c8b4",
+                    "component_type": "StateMachineComponent"
+                  }
+                }
+              },
+              "UserData": {
+                "Position": "-288,-160"
+              }
+            }
+          ],
+          "Transitions": [],
+          "InitialStateId": 0
+        }
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "0d83ae94-bedb-4eab-8ff6-52683d63c8b4",
+        "Flags": 0,
+        "Name": "Red Light",
+        "Position": "0,-22,150",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "1a0ddebf-7ec3-47bd-bf95-541b6935da54",
+            "Attenuation": 0,
+            "FogMode": "Enabled",
+            "FogStrength": 1,
+            "LightColor": "1,0.1907,0.1907,1",
+            "Radius": 8,
+            "Shadows": false
+          },
+          {
+            "__type": "Sandbox.States.StateMachineComponent",
+            "__guid": "cda15717-2776-4d1b-8c49-fb81373213dc",
+            "Serialized": {
+              "States": [
+                {
+                  "Id": 28,
+                  "Name": "Off",
+                  "OnEnterState": {
+                    "__version": 8,
+                    "__guid": "269d0f05-9756-4225-85ed-565c94846b23",
+                    "__changeId": 9,
+                    "UserData": {
+                      "Title": "Enter",
+                      "ReferencedComponentTypes": [
+                        "Sandbox.PointLight"
+                      ]
+                    },
+                    "Variables": [],
+                    "Nodes": [
+                      {
+                        "Id": 0,
+                        "Type": "input"
+                      },
+                      {
+                        "Id": 1,
+                        "Type": "scene.get",
+                        "Properties": {
+                          "T": "Sandbox.PointLight"
+                        },
+                        "UserData": {
+                          "Position": "-0,48"
+                        }
+                      },
+                      {
+                        "Id": 2,
+                        "Type": "property",
+                        "Properties": {
+                          "_name": "Enabled",
+                          "_type": "Sandbox.Component"
+                        },
+                        "UserData": {
+                          "Position": "300,-0"
+                        }
+                      }
+                    ],
+                    "Links": [
+                      {
+                        "SrcId": 0,
+                        "SrcName": "_target",
+                        "DstId": 1,
+                        "DstName": "_this"
+                      },
+                      {
+                        "SrcId": 0,
+                        "SrcName": "_signal",
+                        "DstId": 2,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 1,
+                        "SrcName": "_result",
+                        "DstId": 2,
+                        "DstName": "_target"
+                      },
+                      {
+                        "Id": 3,
+                        "Value": false,
+                        "DstId": 2,
+                        "DstName": "_value"
+                      }
+                    ]
+                  },
+                  "UserData": {
+                    "Position": "-512,-192"
+                  }
+                },
+                {
+                  "Id": 29,
+                  "Name": "On",
+                  "OnEnterState": {
+                    "__version": 8,
+                    "__guid": "b5414850-dcfe-44d1-b10b-d43fe6ee890a",
+                    "__changeId": 5,
+                    "UserData": {
+                      "Title": "Enter",
+                      "ReferencedComponentTypes": [
+                        "Sandbox.PointLight"
+                      ]
+                    },
+                    "Variables": [],
+                    "Nodes": [
+                      {
+                        "Id": 1,
+                        "Type": "input",
+                        "UserData": {
+                          "Position": "12,72"
+                        }
+                      },
+                      {
+                        "Id": 2,
+                        "Type": "scene.get",
+                        "Properties": {
+                          "T": "Sandbox.PointLight"
+                        },
+                        "UserData": {
+                          "Position": "12,120"
+                        }
+                      },
+                      {
+                        "Id": 3,
+                        "Type": "property",
+                        "Properties": {
+                          "_name": "Enabled",
+                          "_type": "Sandbox.Component"
+                        },
+                        "UserData": {
+                          "Position": "312,72"
+                        }
+                      }
+                    ],
+                    "Links": [
+                      {
+                        "SrcId": 1,
+                        "SrcName": "_target",
+                        "DstId": 2,
+                        "DstName": "_this"
+                      },
+                      {
+                        "SrcId": 1,
+                        "SrcName": "_signal",
+                        "DstId": 3,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 2,
+                        "SrcName": "_result",
+                        "DstId": 3,
+                        "DstName": "_target"
+                      },
+                      {
+                        "Id": 4,
+                        "Value": true,
+                        "DstId": 3,
+                        "DstName": "_value"
+                      }
+                    ]
+                  },
+                  "UserData": {
+                    "Position": "-192,-192"
+                  }
+                }
+              ],
+              "Transitions": [
+                {
+                  "Id": 31,
+                  "SourceId": 28,
+                  "TargetId": 29,
+                  "Message": "red"
+                },
+                {
+                  "Id": 34,
+                  "SourceId": 29,
+                  "TargetId": 28,
+                  "Delay": 2
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "__guid": "f07d13a1-1c49-4d71-a9d0-c35eb998f848",
+        "Flags": 0,
+        "Name": "Walk Light",
+        "Position": "0,-22,132",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "0653eed5-456c-452d-8986-d6edc6d6fe2f",
+            "Attenuation": 0,
+            "FogMode": "Enabled",
+            "FogStrength": 1,
+            "LightColor": "0.1,1,0,1",
+            "Radius": 8,
+            "Shadows": false
+          },
+          {
+            "__type": "Sandbox.States.StateMachineComponent",
+            "__guid": "5de89e48-4803-413b-97f9-c9eb4cf2b4c0",
+            "Serialized": {
+              "States": [
+                {
+                  "Id": 14,
+                  "Name": "Off",
+                  "OnEnterState": {
+                    "__version": 8,
+                    "__guid": "269d0f05-9756-4225-85ed-565c94846b23",
+                    "__changeId": 9,
+                    "UserData": {
+                      "Title": "Enter",
+                      "ReferencedComponentTypes": [
+                        "Sandbox.PointLight"
+                      ]
+                    },
+                    "Variables": [],
+                    "Nodes": [
+                      {
+                        "Id": 0,
+                        "Type": "input"
+                      },
+                      {
+                        "Id": 1,
+                        "Type": "scene.get",
+                        "Properties": {
+                          "T": "Sandbox.PointLight"
+                        },
+                        "UserData": {
+                          "Position": "-0,48"
+                        }
+                      },
+                      {
+                        "Id": 2,
+                        "Type": "property",
+                        "Properties": {
+                          "_name": "Enabled",
+                          "_type": "Sandbox.Component"
+                        },
+                        "UserData": {
+                          "Position": "300,-0"
+                        }
+                      }
+                    ],
+                    "Links": [
+                      {
+                        "SrcId": 0,
+                        "SrcName": "_target",
+                        "DstId": 1,
+                        "DstName": "_this"
+                      },
+                      {
+                        "SrcId": 0,
+                        "SrcName": "_signal",
+                        "DstId": 2,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 1,
+                        "SrcName": "_result",
+                        "DstId": 2,
+                        "DstName": "_target"
+                      },
+                      {
+                        "Id": 4,
+                        "Value": false,
+                        "DstId": 2,
+                        "DstName": "_value"
+                      }
+                    ]
+                  },
+                  "UserData": {
+                    "Position": "-224,0"
+                  }
+                },
+                {
+                  "Id": 15,
+                  "Name": "On",
+                  "OnEnterState": {
+                    "__version": 8,
+                    "__guid": "b5414850-dcfe-44d1-b10b-d43fe6ee890a",
+                    "__changeId": 5,
+                    "UserData": {
+                      "Title": "Enter",
+                      "ReferencedComponentTypes": [
+                        "Sandbox.PointLight"
+                      ]
+                    },
+                    "Variables": [],
+                    "Nodes": [
+                      {
+                        "Id": 1,
+                        "Type": "input",
+                        "UserData": {
+                          "Position": "12,72"
+                        }
+                      },
+                      {
+                        "Id": 2,
+                        "Type": "scene.get",
+                        "Properties": {
+                          "T": "Sandbox.PointLight"
+                        },
+                        "UserData": {
+                          "Position": "12,120"
+                        }
+                      },
+                      {
+                        "Id": 3,
+                        "Type": "property",
+                        "Properties": {
+                          "_name": "Enabled",
+                          "_type": "Sandbox.Component"
+                        },
+                        "UserData": {
+                          "Position": "312,72"
+                        }
+                      }
+                    ],
+                    "Links": [
+                      {
+                        "SrcId": 1,
+                        "SrcName": "_target",
+                        "DstId": 2,
+                        "DstName": "_this"
+                      },
+                      {
+                        "SrcId": 1,
+                        "SrcName": "_signal",
+                        "DstId": 3,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 2,
+                        "SrcName": "_result",
+                        "DstId": 3,
+                        "DstName": "_target"
+                      },
+                      {
+                        "Id": 6,
+                        "Value": true,
+                        "DstId": 3,
+                        "DstName": "_value"
+                      }
+                    ]
+                  },
+                  "UserData": {
+                    "Position": "96,0"
+                  }
+                }
+              ],
+              "Transitions": [
+                {
+                  "Id": 17,
+                  "SourceId": 14,
+                  "TargetId": 15,
+                  "Message": "green"
+                },
+                {
+                  "Id": 20,
+                  "SourceId": 15,
+                  "TargetId": 14,
+                  "Delay": 2
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "sboxchile.semaforo3#23902"
+  ],
+  "IsValid": true,
+  "__version": 1
+}

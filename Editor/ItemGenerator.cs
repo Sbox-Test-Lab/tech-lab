@@ -12,6 +12,7 @@ public class ItemData
 {
 	public string Name { get; set; }
 	public string Description { get; set; }
+	public bool ShowToolTip { get; set; } = true;
 }
 
 [EditorTool]
@@ -160,7 +161,7 @@ public class ItemBuilder : EditorTool
 		uiGameObject.SetParent( gameObject );
 
 		var worldPanel = uiGameObject.Components.Create<WorldPanel>();
-
+		worldPanel.Enabled = ItemData.ShowToolTip;
 		worldPanel.Transform.Position = gameObject.GetBounds().Center;
 		worldPanel.Transform.Position += new Vector3( 0, 0, 8.0f );
 
