@@ -98,8 +98,8 @@ public class MotionPath : Component, Component.ExecuteInEditor
 		if ( Target.IsValid() )
 		{
 			Gizmo.Draw.Color = Gizmo.Colors.Forward;
-			var pointA = Transform.World.PointToLocal( Target.Transform.Position );
-			var pointB = Transform.World.NormalToLocal( Target.Transform.Rotation.Forward ) * 5;
+			var pointA = Transform.World.PointToLocal( Target.WorldPosition );
+			var pointB = Transform.World.NormalToLocal( Target.WorldRotation.Forward ) * 5;
 			Gizmo.Draw.SolidCone( pointA, pointB, 2 );
 		}
 	}

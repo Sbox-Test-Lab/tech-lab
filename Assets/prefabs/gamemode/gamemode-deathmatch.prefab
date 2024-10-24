@@ -1,0 +1,121 @@
+{
+  "RootObject": {
+    "__guid": "baae3b04-7ff5-40ee-b755-234b6b745ec4",
+    "Flags": 0,
+    "Name": "Deathmatch Gamemode",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "TestLab.GameMode",
+        "__guid": "be0ad843-56ea-4fed-9b2d-d8d5329fee46",
+        "Title": "Deathmatch"
+      },
+      {
+        "__type": "Sandbox.States.StateMachineComponent",
+        "__guid": "a2a6ad9c-5ac4-44fa-a618-c9e6c29d77eb",
+        "Serialized": {
+          "States": [
+            {
+              "Name": "Waiting",
+              "OnEnterState": {
+                "__version": 8,
+                "__guid": "649b1cd1-3fcf-4d40-9081-7a21a701c71c",
+                "__changeId": 1,
+                "UserData": {
+                  "Title": "Enter"
+                },
+                "Variables": [],
+                "Nodes": [
+                  {
+                    "Id": 0,
+                    "Type": "input"
+                  }
+                ],
+                "Links": []
+              },
+              "UserData": {
+                "Position": "-448,-224"
+              }
+            },
+            {
+              "Id": 1,
+              "Name": "Preparing",
+              "UserData": {
+                "Position": "-224,-224"
+              }
+            },
+            {
+              "Id": 2,
+              "Name": "Playing",
+              "UserData": {
+                "Position": "32,-224"
+              }
+            }
+          ],
+          "Transitions": [
+            {
+              "Id": 3,
+              "TargetId": 1
+            },
+            {
+              "Id": 4,
+              "SourceId": 1,
+              "TargetId": 2
+            }
+          ],
+          "InitialStateId": 0
+        }
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "e23fe7cc-9bf3-42b9-9f3a-bde2aa380d5b",
+        "Flags": 0,
+        "Name": "States",
+        "Enabled": true
+      }
+    ],
+    "__variables": [
+      {
+        "Id": "Title",
+        "Title": "Title",
+        "Targets": [
+          {
+            "Id": "be0ad843-56ea-4fed-9b2d-d8d5329fee46",
+            "Property": "Title"
+          }
+        ]
+      }
+    ],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

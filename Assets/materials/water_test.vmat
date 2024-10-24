@@ -2,8 +2,34 @@
 
 Layer0
 {
-	shader "shaders/water_test.shader"
+	shader "shaders/hc1water.shader"
 
-	//---- Fog ----
-	g_bFogEnabled "1"
+	//---- General ----
+	g_bPlanarReflections "0"
+	g_flScale "1.857"
+	g_flSpeedA "[0.000 0.000]"
+	g_flSpeedB "[0.000 0.000]"
+	g_vColor "[0.000000 1.000000 0.866667 0.000000]"
+	g_vDeepColor "[0.000000 0.294118 0.305882 0.000000]"
+	NormalMapA "materials/default/default_normal.tga"
+	NormalMapB "materials/default/default_normal.tga"
+
+	//---- Material ----
+	g_flNormalScale "1.000"
+	g_flOpacity "0.470"
+	g_flTilingScale "0.143"
+	g_flTintColor "[1.000000 1.000000 1.000000 0.000000]"
+	TextureColor "[1.000000 1.000000 1.000000 1.000000]"
+	TextureNormal "materials/default/default_normal.tga"
+	TextureTintMask "materials/default/default.tga"
+	TextureTranslucency "materials/default/default_trans.tga"
+
+	//---- Vertex Animation ----
+	g_flWaveFrequency "1.667"
+	g_flWaveHeight "0.762"
+	g_flWaveSpeed "1.000"
+
+	//---- Water ----
+	g_flShorelineFeatheringScale "5.000"
+	g_flWaterDepthScale "14.000"
 }

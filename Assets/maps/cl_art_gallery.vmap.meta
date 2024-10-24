@@ -1,0 +1,24 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "cl_art_gallery",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "cl_art_gallery",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.wood_painted_b_hs#28975",
+        "halfpeeps.gasstation_canopy#25612"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/cl_art_gallery.vmap",
+        "ParentPackage": "testlab.tech-lab"
+      }
+    }
+  }
+}

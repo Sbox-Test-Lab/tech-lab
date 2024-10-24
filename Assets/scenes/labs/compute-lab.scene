@@ -1,0 +1,244 @@
+{
+  "__guid": "10085dad-f17b-40d6-8660-8e8d48b26a4b",
+  "GameObjects": [
+    {
+      "__guid": "ffe35cd6-dad3-4317-8a3a-6f4394092deb",
+      "Flags": 0,
+      "Name": "Map",
+      "Position": "263.4401,84.46336,-113.0457",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "41b8c78e-8ae6-41f0-b5bf-9c5c18748e11",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/cl_art_gallery.vmap",
+          "NoOrigin": false,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "56bc9fce-4bfb-425b-bfd0-048162a9e1d9",
+      "Flags": 0,
+      "Name": "Point Light (1)",
+      "Position": "458.6458,40,51.27949",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "528b968b-7f0d-4b89-a1ce-d05ea584f020",
+          "Attenuation": 1.58,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "1,0.96876,0.85581,1",
+          "Radius": 1024,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "7b41d9bc-f109-46da-bf63-555905361969",
+      "Flags": 0,
+      "Name": "Point Light (2)",
+      "Position": "458.6458,626,51.27949",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "cec53ea1-173b-4d0b-ab6b-d5be2a6aabf0",
+          "Attenuation": 0.84,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "1,0.96876,0.85581,1",
+          "Radius": 1024,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "0c4378ae-e55a-4158-aa79-eea0b81f417d",
+      "Flags": 0,
+      "Name": "Point Light (3)",
+      "Position": "186,1012,51.27949",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "044b30cb-d9f8-40e4-a108-d21ea40aeb8c",
+          "Attenuation": 0.78,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "1,0.96876,0.85581,1",
+          "Radius": 1024,
+          "Shadows": false
+        }
+      ]
+    },
+    {
+      "__guid": "b8206826-5a44-4712-960c-34e3574ccaa2",
+      "Flags": 0,
+      "Name": "Envmap Probe",
+      "Position": "567.4323,460.6236,83.47148",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.EnvmapProbe",
+          "__guid": "d0c71372-c37a-4408-9001-07a22e51113a",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "Bounds": {
+            "Mins": "-1000,-1000,-1000",
+            "Maxs": "1000,1000,1000"
+          },
+          "DelayBetweenUpdates": 0.1,
+          "Feathering": 0.02,
+          "FrameInterval": 5,
+          "MaxDistance": 512,
+          "MultiBounce": true,
+          "Projection": "Box",
+          "RenderDynamically": true,
+          "TintColor": "1,1,1,1",
+          "UpdateStrategy": "OnEnabled",
+          "ZFar": 4096,
+          "ZNear": 16
+        }
+      ]
+    },
+    {
+      "__guid": "da531c98-6d2c-4b7f-96ad-578ed34e2cad",
+      "Flags": 0,
+      "Name": "Network Manager",
+      "Position": "-1479.252,1070.643,830.3672",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.NetworkHelper",
+          "__guid": "cb814d53-52f8-4551-9303-4da56bfdb989",
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/player/player_citizen.prefab"
+          },
+          "SpawnPoints": [
+            {
+              "_type": "gameobject",
+              "go": "6fe3db5c-6d56-4018-aeb7-6ea3990a5cea"
+            }
+          ],
+          "StartServer": true
+        }
+      ]
+    },
+    {
+      "__guid": "6fe3db5c-6d56-4018-aeb7-6ea3990a5cea",
+      "Flags": 0,
+      "Name": "Spawn Point",
+      "Position": "580,0,-50.9832",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "7ba7673f-cff3-48d5-b37f-cb56191fcb8e",
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "__guid": "db1e3efd-a609-4668-affc-a93519941287",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-1479.252,1070.643,830.3672",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "3fd84160-e5f3-4340-81be-a64400f9865c",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "TestLab.PlayerCamera",
+          "__guid": "6fb7c524-fc54-47a9-ab6a-b903fe930437"
+        }
+      ]
+    },
+    {
+      "__guid": "be6b1d49-6e28-466a-9990-ab5185852e87",
+      "Flags": 0,
+      "Name": "Spot Light",
+      "Position": "512,90,26.00001",
+      "Rotation": "0.00000004371139,1,0.00000004371139,0.000000000000001910685",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpotLight",
+          "__guid": "c9f0eadc-bbb7-46e5-b2f6-42053bc51769",
+          "Attenuation": 1,
+          "ConeInner": 15,
+          "ConeOuter": 12.58,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 500,
+          "Shadows": true
+        },
+        {
+          "__type": "ComputeTest",
+          "__guid": "5095e91f-1569-4264-a877-e3ff7ae18950",
+          "SpotLight": {
+            "_type": "component",
+            "component_id": "c9f0eadc-bbb7-46e5-b2f6-42053bc51769",
+            "go": "be6b1d49-6e28-466a-9990-ab5185852e87",
+            "component_type": "SpotLight"
+          }
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "compute-lab",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -10,7 +10,7 @@ public class PlayerMoney : Component
 	protected override void OnAwake()
 	{
 		base.OnAwake();
-
+		
 		CurrentMoney = StartingAmount;
 	}
 

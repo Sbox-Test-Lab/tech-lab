@@ -2,11 +2,9 @@
 
 public class Interactable : Component
 {
-	public delegate void InteractionDelegate( GameObject user );
-	[Property, Category("Actions")] public InteractionDelegate OnInteraction { get; set; }
-
+	private Item Item => GameObject.Components.Get<Item>();
 	public void Interact(GameObject user)
 	{
-		OnInteraction?.Invoke( user );
+		IItemEvent.PostToGameObject( GameObject.Root, x => x.OnItemInteraction(Item, user ) );
 	}
 }

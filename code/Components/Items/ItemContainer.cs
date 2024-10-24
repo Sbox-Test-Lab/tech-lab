@@ -21,7 +21,11 @@ public class ItemContainer : Component
 		Items.Add(json);
 
 		DestroyItem( item.GameObject.Id );
-		
+
+		IItemEvent.PostToGameObject(item.GameObject.Root, x => x.OnItemAdded( item ) );
+
+		GameEventFeed.BroadcastGameFeedEvent( "info", $"Added {item.Name} from inventory: {Items.Count}" );
+
 		return true;
 	}
 
@@ -31,6 +35,8 @@ public class ItemContainer : Component
 			return false;
 
 		Items.RemoveAt( index );
+
+		GameEventFeed.BroadcastGameFeedEvent( "info", $"Removed {GetItemName( index )} from inventory: {Items.Count}" );
 
 		return true;
 	}
@@ -44,9 +50,13 @@ public class ItemContainer : Component
 
 		var json = JsonSerializer.Deserialize<JsonObject>( Items[index] );
 
-		GameEventFeed.BroadcastGameFeedEvent( "info", $"Removed {json["Name"]} from inventory: {Items.Count}" );
+		Log.Info( $"{json}" );
+
+		//IItemEvent.PostToGameObject( GetItemGameObject(index).Root, x => x.OnItemAdded( item ) );
 
 		Items.RemoveAt( index );
+
+
 
 		return true;
 	}
@@ -67,7 +77,7 @@ public class ItemContainer : Component
 			component.Enabled = component.EnableOnSpawn;
 		}
 
-		gameObject.Transform.Position = position;
+		gameObject.WorldPosition = position;
 
 		gameObject.NetworkSpawn( Connection.Host );
 	}
@@ -82,7 +92,7 @@ public class ItemContainer : Component
 		var json = JsonSerializer.Deserialize<JsonObject>( Items[index] );
 
 		var gameObject = new GameObject();
-		gameObject.Deserialize( json);
+		gameObject.Deserialize(json);
 
 		return gameObject;
 	}

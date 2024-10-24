@@ -1,7 +1,13 @@
 ﻿namespace ItemBuilder;
 
-public class Activatable : BaseItemAbility, Component.ITriggerListener
+public class Activatable : BaseItemAbility
 {
+	protected override void OnEnabled()
+	{
+		base.OnEnabled();
+
+		GameObject.Root.Tags.Set( "activatable", true );
+	}
 	public override bool CanActivate( GameObject user )
 	{
 		return true;
@@ -9,17 +15,11 @@ public class Activatable : BaseItemAbility, Component.ITriggerListener
 
 	public override void OnActive( GameObject user )
 	{
-		
+
 	}
 
-	void OnTriggerEnter( Collider other )
-	{
-		Log.Info( "Item Entered Trigger" );
-	}
+	
 
-	void OnTriggerExit( Collider other )
-	{
-		Log.Info( "Item Exited Trigger" );
-	}
+
 }
 
