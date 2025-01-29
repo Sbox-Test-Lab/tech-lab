@@ -80,6 +80,7 @@
 </style>
 
 <root class="@VisibleClass">
+    <!--
     @foreach(var item in PlayerInventory.Items)
     {
         <div class="item">
@@ -88,6 +89,7 @@
             </div>
         </div>
     }
+   -->
 </root>
 
 @code
@@ -98,7 +100,7 @@
     public bool Visible = false;
     public string VisibleClass => Visible ? "visible" : "";
 
-    public PlayerInventory PlayerInventory => Player.Local?.GameObject.Components.Get<PlayerInventory>();
+    //public PlayerInventory PlayerInventory => Player.LocalPlayer()?.GameObject.Components.Get<PlayerInventory>();
     
     public Inventory()
     {
@@ -116,5 +118,5 @@
         Instance.StateHasChanged();
     }
 
-    protected override int BuildHash() => 33 + System.HashCode.Combine(PlayerInventory.Items.Count);
+    //protected override int BuildHash() => 33 + System.HashCode.Combine(PlayerInventory.Items.Count);
 }

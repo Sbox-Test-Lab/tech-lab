@@ -18,15 +18,17 @@ public class InputActionFunction : InputFunction
 	protected override void OnStart()
 	{
 		base.OnStart();
-
+		Log.Info( "Starting" );
 		InputActionActive += OnInputActionActive;
 	}
 
 	protected override void OnFixedUpdate()
 	{
+		Log.Info( "Running" );
+
 		if ( IsProxy )
 			return;
-
+		
 		if(IsStateActive(Action))
 		{
 			InputActionActive?.Invoke( Action, State );

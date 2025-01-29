@@ -7,16 +7,12 @@ public class Item : Component, IItemEvent
 	[Property] public string Name { get; set; }
 	[Property] public string Description { get; set; }
 
-	[RequireComponent] public Interactable Interaction { get; set; }
-
 	public IEnumerable<BaseItemAbility> Abilities => Components.GetAll<BaseItemAbility>();
 
 	public ItemWorldInfo ItemInfo { get; set; }
 
 	protected override void OnStart()
 	{
-		//Interaction.OnInteraction += OnItemInteraction;
-
 		ItemInfo = GameObject.Components.Get<ItemWorldInfo>( FindMode.InChildren );
 	}
 

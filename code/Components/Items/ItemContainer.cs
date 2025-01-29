@@ -97,7 +97,7 @@ public class ItemContainer : Component
 		return gameObject;
 	}
 
-	[Broadcast] 
+	[Rpc.Broadcast] 
 	public void DestroyItem(Guid guid)
 	{
 		Game.ActiveScene.Directory.FindByGuid( guid )?.Destroy();

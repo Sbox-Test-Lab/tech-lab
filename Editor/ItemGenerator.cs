@@ -21,7 +21,7 @@ public class ItemBuilder : EditorTool
 		window.MinimumHeight = 128.0f;
 		window.MaximumWidth = 480.0f;
 
-		window.Layout.Add(new ItemInfoWidget( window ) );
+		
 		window.Layout.Add(new ItemAbilitiesWidget( window ) );
 
 		AddOverlay( window );

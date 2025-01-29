@@ -1,312 +1,107 @@
 {
   "scene.lastopened": {
-    "Value": "[\u0022scenes/mainmenu.scene\u0022,\u0022scenes/itembuilder.scene\u0022,\u0022prefabs/player/player_citizen.prefab\u0022,\u0022prefabs/gamemode/gamemode-default.prefab\u0022,\u0022prefabs/gamemode/gamemode-deathmatch.prefab\u0022]",
-    "Timeout": 1732203984,
+    "Value": "[\u0022scenes/itembuilder.scene\u0022,\u0022prefabs/player/player_citizen.prefab\u0022]",
+    "Timeout": 1740756449,
     "DeleteAt": 0
   },
   "gizmo.settings": {
     "Value": "{\u0022EditMode\u0022:\u0022position\u0022,\u0022Selection\u0022:true,\u0022ViewMode\u0022:\u00223d\u0022,\u0022GizmosEnabled\u0022:true,\u0022GizmoScale\u0022:1,\u0022GridSpacing\u0022:32,\u0022SnapToGrid\u0022:false,\u0022SnapToAngles\u0022:true,\u0022AngleSpacing\u0022:15,\u0022GlobalSpace\u0022:false,\u0022DebugActionGraphs\u0022:false}",
-    "Timeout": 1732202476,
+    "Timeout": 1740760029,
     "DeleteAt": 0
   },
   ".Viewport0": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-2712.482,-1244.799,1265.157\u0022,\u0022CameraRotation\u0022:\u0022-0.01519568,0.0512968,0.2836236,0.9574421\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1732091983,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.AssetsBrowser.ViewMode": {
-    "Value": "2",
-    "Timeout": 1732202478,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.AssetsBrowser.ShowJunkFiles": {
-    "Value": "false",
-    "Timeout": 1732202478,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.AssetsBrowser.ShowRecursiveFiles": {
-    "Value": "false",
-    "Timeout": 1732202478,
+    "Timeout": 1740758614,
     "DeleteAt": 0
   },
   "scenes/itembuilder.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022581.3849,-2736.791,1347.368\u0022,\u0022CameraRotation\u0022:\u0022-0.1944609,0.09109348,0.8844407,0.4143084\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1732204246,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-220.9902,384.517,1015.446\u0022,\u0022CameraRotation\u0022:\u00220.0277021,0.1222543,-0.2192485,0.9675828\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1740760029,
     "DeleteAt": 0
   },
-  "AssetBrowser.History.AssetBrowser.ViewMode": {
-    "Value": "3",
-    "Timeout": 1731625973,
+  "Window.SboxHammer.Dock": {
+    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAACcoAAAT0AAAAAAAAAAAAAAnKAAAE9AAAAAAAAAAACgAAAAAAAAAAAAAACcoAAAT0\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Tool Properties\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Active Material\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAABaAAAAH8A/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Map View\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:1,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022HammerAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022HammerCloudBrowser\u0022,\u0022name\u0022:\u0022Cloud Browser\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAACrwAAAkIA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Outliner\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Selection Sets\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Object Properties\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAA8AAAAPAA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAADAAABYgAABFMAAAFqAP////8BAAAAAQA=\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
+    "Timeout": 1739137457,
     "DeleteAt": 0
   },
-  "AssetBrowser.History.AssetBrowser.ShowJunkFiles": {
+  "CloudBrowser.CloudBrowser.ShowRecursiveFiles": {
     "Value": "false",
-    "Timeout": 1731625973,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.AssetBrowser.ShowRecursiveFiles": {
-    "Value": "false",
-    "Timeout": 1731625973,
-    "DeleteAt": 0
-  },
-  "effects/fire_fast.prefab.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-48.67365,-48.67365,68.83494\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1729797709,
-    "DeleteAt": 0
-  },
-  "LastSaveLocation.prefab": {
-    "Value": "C:/Users/hscot/Dropbox/sbox-projects/tech-lab/Assets/prefabs/effects/fire_effect.scene",
-    "Timeout": 1732204243,
-    "DeleteAt": 0
-  },
-  "prefabs/effects/fire_effect.prefab.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-48.67365,-48.67365,68.83494\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1729797796,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.Foliage/Foliage..ViewMode": {
-    "Value": "0",
-    "Timeout": 1730219005,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.Foliage/Foliage..ShowJunkFiles": {
-    "Value": "false",
-    "Timeout": 1730219005,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.Foliage/Foliage..ShowRecursiveFiles": {
-    "Value": "false",
-    "Timeout": 1730219005,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.Model..ViewMode": {
-    "Value": "2",
-    "Timeout": 1731601166,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.Model..ShowJunkFiles": {
-    "Value": "false",
-    "Timeout": 1731601166,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.Model..ShowRecursiveFiles": {
-    "Value": "false",
-    "Timeout": 1731601166,
-    "DeleteAt": 0
-  },
-  "scenes/labs/terrain-lab.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u00224919.881,1378.078,1532.968\u0022,\u0022CameraRotation\u0022:\u0022-0.322717,0.06879241,0.9232491,0.1968057\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1730131656,
-    "DeleteAt": 0
-  },
-  "scenes/labs/store-lab.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022441.5489,-51.01322,870.7473\u0022,\u0022CameraRotation\u0022:\u0022-0.3313798,0.1578221,0.8398226,0.3999718\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1730131670,
-    "DeleteAt": 0
-  },
-  "expand.4a29873f-29cb-4559-bb00-debfdca9eb83.ParticleEffect": {
-    "Value": "false",
-    "Timeout": 1730218123,
-    "DeleteAt": 0
-  },
-  "expand.4a29873f-29cb-4559-bb00-debfdca9eb83.ParticleModelRenderer": {
-    "Value": "false",
-    "Timeout": 1730218123,
-    "DeleteAt": 0
-  },
-  "expand.4a29873f-29cb-4559-bb00-debfdca9eb83.ParticleConeEmitter": {
-    "Value": "false",
-    "Timeout": 1730208728,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.Material..ViewMode": {
-    "Value": "2",
-    "Timeout": 1731950177,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.Material..ShowJunkFiles": {
-    "Value": "false",
-    "Timeout": 1731950177,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.Material..ShowRecursiveFiles": {
-    "Value": "false",
-    "Timeout": 1731950177,
-    "DeleteAt": 0
-  },
-  "expand.817f8f4b-9503-4e67-9028-87415137e983.DirectionalLight": {
-    "Value": "false",
-    "Timeout": 1731602625,
-    "DeleteAt": 0
-  },
-  "prefabs/environment/street_light_walk.prefab.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-40.68535,-115.6362,143.2677\u0022,\u0022CameraRotation\u0022:\u0022-0.04675166,0.105002,0.4040538,0.9074852\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1730498955,
+    "Timeout": 1740757998,
     "DeleteAt": 0
   },
   "SceneView.Viewport0.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-0.6736481,-0.6736482,0.9526824\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1732204246,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-220.9902,384.517,1015.446\u0022,\u0022CameraRotation\u0022:\u00220.0277021,0.1222543,-0.2192485,0.9675828\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1740760029,
     "DeleteAt": 0
   },
   "SceneView.Layout": {
     "Value": "{\u0022Layout\u0022:0,\u0022SplitterState\u0022:[]}",
-    "Timeout": 1732204246,
+    "Timeout": 1740760029,
     "DeleteAt": 0
   },
-  "examples/example.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-0.6736481,-0.6736482,0.9526824\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1732095161,
-    "DeleteAt": 0
-  },
-  "scenes/mainmenu.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u00223948.06,384.0004,827.8822\u0022,\u0022CameraRotation\u0022:\u0022-0.05117397,-0.000000002236885,0.9986898,-0.00000004365411\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1732204246,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.AssetsBrowser2.ViewMode": {
-    "Value": "2",
-    "Timeout": 1731065947,
-    "DeleteAt": 0
-  },
-  "AssetBrowser.History.AssetsBrowser2.ShowJunkFiles": {
+  "CloudBrowser.CloudBrowser.HideNonAssets": {
     "Value": "false",
-    "Timeout": 1731065947,
+    "Timeout": 1740757998,
     "DeleteAt": 0
   },
-  "AssetBrowser.History.AssetsBrowser2.ShowRecursiveFiles": {
-    "Value": "false",
-    "Timeout": 1731065947,
-    "DeleteAt": 0
-  },
-  "expand.bb001f25-fa91-4de0-b98e-83d8b52b808a.Interactable": {
-    "Value": "false",
-    "Timeout": 1731074387,
-    "DeleteAt": 0
-  },
-  "expand.bb001f25-fa91-4de0-b98e-83d8b52b808a.Carriable": {
-    "Value": "false",
-    "Timeout": 1731074389,
-    "DeleteAt": 0
-  },
-  "expand.bb001f25-fa91-4de0-b98e-83d8b52b808a.Item": {
-    "Value": "false",
-    "Timeout": 1731074389,
-    "DeleteAt": 0
-  },
-  "expand.bb001f25-fa91-4de0-b98e-83d8b52b808a.Activatable": {
-    "Value": "false",
-    "Timeout": 1731074390,
-    "DeleteAt": 0
-  },
-  "expand.bb001f25-fa91-4de0-b98e-83d8b52b808a.ModelRenderer": {
-    "Value": "false",
-    "Timeout": 1731077782,
-    "DeleteAt": 0
-  },
-  "expand.bb001f25-fa91-4de0-b98e-83d8b52b808a.BoxCollider": {
-    "Value": "false",
-    "Timeout": 1731077830,
-    "DeleteAt": 0
-  },
-  "expand.bb001f25-fa91-4de0-b98e-83d8b52b808a.Rigidbody": {
-    "Value": "false",
-    "Timeout": 1731074390,
-    "DeleteAt": 0
-  },
-  "scenes/labs/compute-lab.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u00221002.019,70.51849,126.7762\u0022,\u0022CameraRotation\u0022:\u0022-0.1022031,0.0291127,0.9562969,0.2724026\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1731339209,
-    "DeleteAt": 0
-  },
-  "prefabs/player/player_citizen.prefab.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u00227.171953,-131.7921,84.30719\u0022,\u0022CameraRotation\u0022:\u0022-0.0925144,0.09370553,0.6964517,0.7054186\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1732204246,
-    "DeleteAt": 0
-  },
-  "scenes/itembuilder.scene.Viewport1": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-2103.615,2552.104,1303.245\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:8192}",
-    "Timeout": 1731610527,
-    "DeleteAt": 0
-  },
-  "SceneView.Viewport1.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-2103.615,2552.104,1303.245\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022View\u0022:1,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:8192}",
-    "Timeout": 1731610527,
+  "Window.SboxSceneEditor.Dock": {
+    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAACdIAAATdAAAAAAAAAAAAAAnSAAAE3QAAAAAAAAAACgAAAAAAAAAAAAAACdIAAATd\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneTreeWidget\u0022,\u0022name\u0022:\u0022Hierarchy\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:1,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022GameFrame\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:scenes/itembuilder.scene\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:prefabs/player/player_citizen.prefab\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022Inspector\u0022,\u0022name\u0022:\u0022Inspector\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAGfwAAAiUA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAABJwAACKgA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022currentIndex\u0022:1,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MainAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022ConsoleWidget\u0022,\u0022name\u0022:\u0022Console\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MainCloudBrowser\u0022,\u0022name\u0022:\u0022Cloud Browser\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAACxwAAAhMA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
+    "Timeout": 1740760029,
     "DeleteAt": 0
   },
   "Transform.UseLocal": {
     "Value": "true",
-    "Timeout": 1732204148,
+    "Timeout": 1740759655,
     "DeleteAt": 0
   },
-  "expand.17ee10a0-847f-4ad5-819f-6b0cb119658c.PlayerInteraction": {
+  "CloudBrowser.CloudBrowser.ShowJunkFiles": {
     "Value": "false",
-    "Timeout": 1732020177,
+    "Timeout": 1740757998,
     "DeleteAt": 0
   },
-  "expand.17ee10a0-847f-4ad5-819f-6b0cb119658c.PlayerInventory": {
+  "CloudBrowser.CloudBrowser.ViewMode": {
+    "Value": "2",
+    "Timeout": 1740757998,
+    "DeleteAt": 0
+  },
+  "folder-metadata": {
+    "Value": "{\u0022Assets\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022code\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Editor\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Localization\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022ProjectSettings\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Resources\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\code\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\Assets\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\animgraphs\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\cfg\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\debug\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\dev\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\fgd\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\maps\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\resource\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\resourcemanifests\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\scripts\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\shadercache\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\shaders\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\soundstacks\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022.git\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022.sbox\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022.vs\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\maps\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\materials\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\models\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\prefabs\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\resources\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\scenes\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\shaders\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\terrain\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022code\\\\Components\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022code\\\\Properties\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022code\\\\Resources\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Editor\\\\obj\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Editor\\\\Properties\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Editor\\\\Widgets\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\CitizenPlayer\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\facepunch.libevents\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\facepunch.libpolygon\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\facepunch.libstates\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\facepunch.motionpath\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\stellawisps.scenefoliagepainter\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Resources\\\\logo\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\\\\decals\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\\\\fonts\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\\\\materials\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\\\\postprocess\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\\\\shaders\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\\\\surfaces\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\\\\templates\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\\\\ui\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\code\\\\Components\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\code\\\\Extensions\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\code\\\\Properties\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\code\\\\Styles\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\code\\\\UI\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\Assets\\\\clothing_icons\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\Assets\\\\maps\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\Assets\\\\materials\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\Assets\\\\models\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\Assets\\\\particles\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\animgraphs\\\\tutorial\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\cfg\\\\fpxr\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\dev\\\\helper\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\dev\\\\materialsystem2utils\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\dev\\\\vgui\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\maps\\\\dev\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\maps\\\\editor\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\maps\\\\prefabs\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\maps\\\\templates\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\maps\\\\test\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\maps\\\\tilesets\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\cable\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\cables\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\concrete\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\debug\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\decals\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\default\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\detail\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\dev\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\editor\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\effects\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\gizmo\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\gradients\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\hotspots\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\lights\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\models\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\particle\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\particles\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\physics\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\rendertargetops\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\sbox_test\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\shadertest\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\sky\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\skybox\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\sprites\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\sun\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\tools\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\vfxtest\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\vgui\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\water\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\\\\cloth\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\\\\dev\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\\\\doors\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\\\\editor\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\\\\hammer\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\\\\hands\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\\\\humans\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\\\\humans_clothes\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\\\\vr\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\beams\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\break\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\dev\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\entity\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\env\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\error\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\example\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\explosion\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\fire_extinguisher\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\flashlight\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\precipitation\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\particles\\\\testsystems\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\resourcemanifests\\\\vgui2\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\scripts\\\\hammer\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\scripts\\\\screens\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\scripts\\\\talker\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\scripts\\\\vmidi\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\shadercache\\\\vulkan\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\\\\ambience\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\\\\common\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\\\\editor\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\\\\footsteps\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\\\\Impacts\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\\\\kenney\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\\\\Physics\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\\\\tools\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\\\\water\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\soundstacks\\\\generated\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\soundstacks\\\\vmixtool\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\cables\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\cubemaps\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\dev\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\misc\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\particle\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\particles\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\water\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\\\\colors\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\\\\images\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\\\\keybindings\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\\\\layout\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\\\\met\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\\\\stylesheets\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\scenes\\\\labs\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\materials\\\\default\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\models\\\\dev\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\prefabs\\\\effects\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\prefabs\\\\environment\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\prefabs\\\\gamemode\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\prefabs\\\\item\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\prefabs\\\\player\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\resources\\\\foliage\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\resources\\\\item\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\shaders\\\\compute\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\shaders\\\\noise\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\terrain\\\\snow_peak_01\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\terrain\\\\terrain-materials\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\.bin\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\Recents\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\Everything\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022.\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\Program Files (x86)\\\\Steam\\\\steamapps\\\\common\\\\sbox\\\\core\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\facepunch.libevents\\\\Code\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\facepunch.libevents\\\\UnitTests\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\facepunch.motionpath\\\\Code\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\facepunch.libpolygon\\\\Assets\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\facepunch.libpolygon\\\\Code\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\stellawisps.scenefoliagepainter\\\\Assets\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\stellawisps.scenefoliagepainter\\\\Code\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\stellawisps.scenefoliagepainter\\\\Editor\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Libraries\\\\stellawisps.scenefoliagepainter\\\\UnitTests\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\prefabs\\\\environment\\\\lights\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022Assets\\\\prefabs\\\\environment\\\\items\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\dev\\\\hs\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\dev\\\\simple\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022},\u0022..\\\\..\\\\..\\\\..\\\\..\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\dev\\\\vrad3\u0022:{\u0022Color\u0022:\u00220.46667,0.73333,1,1\u0022,\u0022Icon\u0022:\u0022\u0022}}",
+    "Timeout": 1740756449,
+    "DeleteAt": 0
+  },
+  "AssetBrowser.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\environment\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\environment\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\player\u0022]",
+    "Timeout": 1740756449,
+    "DeleteAt": 0
+  },
+  "AssetBrowser.HistoryIdx": {
+    "Value": "5",
+    "Timeout": 1740756449,
+    "DeleteAt": 0
+  },
+  "AssetBrowser.ViewMode": {
+    "Value": "2",
+    "Timeout": 1740756449,
+    "DeleteAt": 0
+  },
+  "AssetBrowser.ShowJunkFiles": {
     "Value": "false",
-    "Timeout": 1732020177,
+    "Timeout": 1740756449,
     "DeleteAt": 0
   },
-  "expand.17ee10a0-847f-4ad5-819f-6b0cb119658c.PlayerItemDrop": {
+  "AssetBrowser.HideNonAssets": {
     "Value": "false",
-    "Timeout": 1732020177,
+    "Timeout": 1740756449,
     "DeleteAt": 0
   },
-  "expand.e8afd22f-808a-4ec3-a68b-82462554b4d3.PlayerController": {
+  "AssetBrowser.ShowRecursiveFiles": {
     "Value": "false",
-    "Timeout": 1732091823,
+    "Timeout": 1740756449,
     "DeleteAt": 0
   },
-  "expand.e8afd22f-808a-4ec3-a68b-82462554b4d3.CitizenAnimationHelper": {
-    "Value": "false",
-    "Timeout": 1732202991,
-    "DeleteAt": 0
-  },
-  "expand.e8afd22f-808a-4ec3-a68b-82462554b4d3.PlayerClothing": {
-    "Value": "false",
-    "Timeout": 1732202991,
-    "DeleteAt": 0
-  },
-  "expand.e8afd22f-808a-4ec3-a68b-82462554b4d3.Player": {
-    "Value": "false",
-    "Timeout": 1732202991,
-    "DeleteAt": 0
-  },
-  "expand.e8afd22f-808a-4ec3-a68b-82462554b4d3.PlayerInventory": {
-    "Value": "false",
-    "Timeout": 1732202991,
-    "DeleteAt": 0
-  },
-  "expand.e8afd22f-808a-4ec3-a68b-82462554b4d3.PlayerMoney": {
-    "Value": "false",
-    "Timeout": 1732202991,
-    "DeleteAt": 0
-  },
-  "expand.e8afd22f-808a-4ec3-a68b-82462554b4d3.PlayerInteraction": {
-    "Value": "false",
-    "Timeout": 1732202991,
-    "DeleteAt": 0
-  },
-  "expand.e8afd22f-808a-4ec3-a68b-82462554b4d3.PlayerItemDrop": {
-    "Value": "false",
-    "Timeout": 1732202991,
-    "DeleteAt": 0
-  },
-  "expand.e8afd22f-808a-4ec3-a68b-82462554b4d3.PlayerMenu": {
-    "Value": "false",
-    "Timeout": 1732202991,
-    "DeleteAt": 0
-  },
-  "prefabs/gamemode/gamemode-default.prefab.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-0.6736481,-0.6736482,0.9526824\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1732204246,
-    "DeleteAt": 0
-  },
-  "prefabs/gamemode/gamemode-deathmatch.prefab.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-0.6736481,-0.6736482,0.9526824\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1732204246,
+  "prefabs/player/player_citizen.prefab.Viewport0": {
+    "Value": "{\u0022CameraPosition\u0022:\u0022-39.37395,-40.37395,91.0974\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1740760029,
     "DeleteAt": 0
   }
 }

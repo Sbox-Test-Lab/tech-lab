@@ -1,0 +1,27 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Scenery 2",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "scenery2",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.floor_grass_dirt_blend_a#18649",
+        "facepunch.floor_grass_dirt_cliff_blend_a#18754",
+        "facepunch.floor_grass_dirt_leaves_blend_a#18755",
+        "rust.rock_cliff_c#25119",
+        "rust.rock_small_c#25130"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/scenery2.vmap",
+        "ParentPackage": "testlab.tech-lab"
+      }
+    }
+  }
+}

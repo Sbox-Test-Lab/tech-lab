@@ -72,7 +72,7 @@
         Instance = this;
     }
 
-    [Broadcast]
+    [Rpc.Broadcast]
     public static void BroadcastGameFeedEvent(string materialIcon, string eventText)
 	{
 		Instance.Entries.Add(new GameEventEntry(materialIcon, eventText, 0));

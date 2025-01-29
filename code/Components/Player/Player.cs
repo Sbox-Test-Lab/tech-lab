@@ -1,22 +1,49 @@
 ﻿namespace TestLab;
 
-[Title( "Citizen Player" )]
-public partial class Player : Component
+[Title( "Player" )]
+public partial class Player : Component, PlayerController.IEvents
 {
-	[RequireComponent] public PhysicalPlayerController Controller { get; set; }
+	[RequireComponent] public PlayerController Controller { get; set; }
 
-	private static Player _Local = null;
+	[Property] public GameObject Body { get; set; }
 
-	public static Player Local
+	public static Player LocalPlayer()
 	{
-		get
-		{
-			if ( !_Local.IsValid() )
-			{
-				_Local = Game.ActiveScene.GetAllComponents<Player>().FirstOrDefault( x => x.Network.IsOwner );
-			}
+		return Game.ActiveScene.GetAllComponents<Player>().Where(x => !x.IsProxy ).FirstOrDefault();
 
-			return _Local;
+	}
+
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+		Log.Info( "Updating" );
+		OnControl();
+	}
+
+	private void OnControl()
+	{
+		if(Input.Pressed("use"))
+		{
+			Log.Info( "Use pressed" );
 		}
 	}
+
+	Component PlayerController.IEvents.GetUsableComponent( GameObject go )
+	{
+        Log.Info( "Pressed" );
+
+        return default;
+	}
+
+    void PlayerController.IEvents.StartPressing( Sandbox.Component target )
+    {
+        Log.Info( "Pressed" );
+    }
+
+    void PlayerController.IEvents.StopPressing( Sandbox.Component target )
+    {
+        
+    }
+
+
 }
