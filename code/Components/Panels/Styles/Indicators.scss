@@ -1,0 +1,106 @@
+.indicator {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+
+    &.price {
+        color: $primary-white;
+        padding: 0px 10px;
+
+        &.with-icon {
+            background-color: $gray-1;
+
+
+            i, icon, icon {
+                text-transform: lowercase;
+                font-family: Material Icons;
+                font-size: 22px;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &.text {
+            text-transform: uppercase;
+            background-color: $accent-negative;
+        }
+
+        &.numeric {
+            background-color: $primary-black;
+        }
+    }
+
+    &.tag {
+
+    }
+
+    &.timer {
+
+    }
+
+    &.progress {
+
+    }
+}
+
+.pip {
+    &.status-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: $accent-positive;
+
+        i {
+            font-family: Material Icons;
+            font-size: 24px;
+            text-align: center;
+            text-transform: lowercase;
+            color: $primary-white;
+        }
+    }
+
+    &.numeric {
+        padding: 2px 4px;
+        color: $primary-white;
+        background-color: $primary-black;
+        border-radius: 2px;
+    }
+
+    &.dot {
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+
+        &.positive {
+            background-color: $accent-positive;
+        }
+
+        &.negative {
+            background-color: $accent-negative;
+        }
+    }
+
+    &.rarity {
+        width: 32px;
+        height: 32px;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-family: Material Icons;
+            font-size: 22px;
+            text-transform: lowercase;
+            color: $gray-2;
+
+            &.active {
+                color: $primary-black;
+            }
+        }
+    }
+}

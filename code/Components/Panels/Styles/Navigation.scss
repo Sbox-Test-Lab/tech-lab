@@ -1,0 +1,20 @@
+.tabulation {
+
+    flex-direction: row;
+
+    &.primary {
+        gap: 16px;
+    }
+
+    &.secondary {
+
+    }
+
+    &.icon {
+        gap: 6px;
+    }
+}
+
+.pagination {
+
+}

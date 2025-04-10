@@ -1,0 +1,29 @@
+﻿.container {
+	&:active {
+
+	}
+
+	&:hover {
+
+	}
+
+	&.light {
+
+	}
+
+	&.dark {
+
+	}
+
+	&.square {
+		border: 5px solid red;
+		width: 50vw;
+		height: 50vw;
+
+		>.content {
+
+			padding-top: 20%;
+		}
+	}
+
+}

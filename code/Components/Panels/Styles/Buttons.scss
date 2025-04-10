@@ -1,0 +1,248 @@
+$button-lg-standard-padding: 40px 20px;
+$button-m-standard-padding: 32px 16px;
+$button-s-standard-padding: 24px 12px;
+$button-xs-standard-padding: 18px 8px;
+
+$button-primary-hover-color: #8F6FE5;
+$button-primary-active-color: #544E7E;
+
+$button-secondary-hover-color: #9487B5;
+$button-secondary-active-color: #423C52;
+
+$button-tertiary-hover-color: #564861;
+
+
+.button {
+    color: $primary-white;
+    justify-content: center;
+    align-items: center;
+
+    &.primary {
+        background-color: $accent-primary;
+
+        &:hover {
+            background-color: $button-primary-hover-color;
+        }
+
+        &:active {
+            background-color: $button-primary-active-color;
+        }
+    }
+
+    &.secondary {
+        background-color: $primary-gray;
+
+        &:hover {
+            background-color: $button-secondary-hover-color;
+        }
+
+        &:active {
+            background-color: $button-secondary-active-color;
+        }
+    }
+
+    &.tertiary {
+        color: $primary-black;
+
+        &:hover {
+            color: $button-tertiary-hover-color;
+        }
+
+        &:active {
+            opacity: 0.6;
+            color: $accent-primary;
+        }
+    }
+
+    &.standard {
+        &.large {
+            //width: 199px;
+            height: 80px;
+            padding: 20px 40px;
+        }
+
+        &.medium {
+            //width: 150px;
+            height: 60px;
+            padding: 16px 32px;
+        }
+
+        &.small {
+            //width: 121px;
+            height: 50px;
+            padding: 12px 24px;
+        }
+
+        &.x-small {
+            //width: 89px;
+            height: 40px;
+            padding: 8px 16px;
+        }
+    }
+
+    &.icon-text {
+        flex-direction: row;
+        gap: 8px;
+
+        i, icon, icon {
+            text-transform: lowercase;
+            font-family: Material Icons;
+
+            &.large {
+                font-size: 36px;
+            }
+
+            &.medium {
+                font-size: 30px;
+            }
+
+            &.small {
+                font-size: 22px;
+            }
+
+            &.x-small {
+                font-size: 18px;
+            }
+        }
+
+        img {
+            &.large {
+                width: 32px;
+                height: 32px;
+            }
+
+            &.medium {
+                width: 26px;
+                height: 26px;
+            }
+
+            &.small {
+                width: 22px;
+                height: 22px;
+            }
+
+            &.x-small {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        &.large {
+            //width: 199px;
+            height: 80px;
+            padding: 20px 40px;
+        }
+
+        &.medium {
+            //width: 150px;
+            height: 60px;
+            padding: 16px 32px;
+        }
+
+        &.small {
+            //width: 121px;
+            height: 50px;
+            padding: 12px 24px;
+        }
+
+        &.x-small {
+            //width: 89px;
+            height: 40px;
+            padding: 8px 16px;
+        }
+    }
+
+    &.icon {
+
+        i {
+            text-transform: lowercase;
+            font-family: Material Icons;
+
+            &.large {
+                font-size: 36px;
+            }
+
+            &.medium {
+                font-size: 30px;
+            }
+
+            &.small {
+                font-size: 22px;
+            }
+
+            &.x-small {
+                font-size: 18px;
+            }
+        }
+
+
+        &.large {
+            width: 80px;
+            height: 80px;
+        }
+
+        &.medium {
+            width: 60px;
+            height: 60px;
+        }
+
+        &.small {
+            width: 50px;
+            height: 50px;
+        }
+
+        &.x-small {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.nav-button {
+    &.chevron {
+        width: 140px;
+        height: 140px;
+        align-items: center;
+        justify-content: center;
+        color: $primary-black;
+
+        i {
+            text-transform: lowercase;
+            font-family: Material Icons;
+            font-size: 140px;
+        }
+
+        &:hover {
+            color: #564861;
+        }
+
+        &:active {
+            color: rgba(115,87,192, 0.6);
+        }
+    }
+
+    &.circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        color: $primary-black;
+        background-color: #9695AB;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 60px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        &:hover {
+            
+            background-color: $gray-3;
+        }
+
+        &:active {
+            background-color: rgba(115,87,192, 0.40);
+        }
+    }
+}
