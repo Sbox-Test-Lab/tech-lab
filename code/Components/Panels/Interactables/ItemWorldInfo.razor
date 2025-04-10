@@ -11,23 +11,26 @@
     ItemWorldInfo 
     {
         opacity: 0;
+        transform: scale(0);
+        transition: transform 0.5s, opacity 1s, ease;
 
         .container {
             width: 100%;
-            background-color: rgba(0.4,0.4,0.4, 0.8);
-
+            background: linear-gradient(0deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.35) 100%);
+    
             align-items: center;
             justify-content: center;
 
             >.item-name {
-                margin: 4px;
-                color: white;
-                font-size: 32px;
+            margin: 4px;
+            color: white;
+            font-size: 32px;
             }
         }
 
         &.hover {
             opacity: 1;
+            transform: scale(1);
         }
     }
 </style>
@@ -48,10 +51,11 @@
     protected override void OnUpdate()
     {
         base.OnUpdate();
-
+       
         var ray = Scene.Camera.ScreenPixelToRay(Screen.Size / 2);
 
         var traceResult = Game.ActiveScene.Trace.Ray(ray, 512)
+            .WithTag("interactable")
             .WithoutTags("player")
             .Run();
 

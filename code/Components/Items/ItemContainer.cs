@@ -4,7 +4,7 @@ using System.Text.Json.Nodes;
 
 using ItemBuilder.UI;
 
-namespace ItemBuilder;
+
 
 public class ItemContainer : Component
 {
@@ -100,6 +100,8 @@ public class ItemContainer : Component
 	[Rpc.Broadcast] 
 	public void DestroyItem(Guid guid)
 	{
+		Log.Info( "Destroying item" );
+
 		Game.ActiveScene.Directory.FindByGuid( guid )?.Destroy();
 	}
 }

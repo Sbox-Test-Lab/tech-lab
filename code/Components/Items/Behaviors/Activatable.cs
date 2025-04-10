@@ -1,4 +1,4 @@
-﻿namespace ItemBuilder;
+﻿
 
 public class Activatable : BaseItemAbility
 {

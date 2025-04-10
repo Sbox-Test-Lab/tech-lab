@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text.Json.Nodes;
 using System.Linq;
 
-namespace ItemBuilder;
+
 
 public class ItemAbilitiesWidget : Widget
 {	

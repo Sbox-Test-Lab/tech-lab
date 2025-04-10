@@ -7,51 +7,12 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "TestLab.Player",
-        "__guid": "972bcf74-7c73-4b1a-9856-7a8bdd39d816",
+        "__type": "Player",
+        "__guid": "41fa3c72-9d95-41fb-a3ce-f2b5354a62e5",
         "Body": {
           "_type": "gameobject",
           "go": "e2256f9e-1d54-493a-b511-cc862b5a3825"
         },
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null
-      },
-      {
-        "__type": "ItemBuilder.PlayerMoney",
-        "__guid": "13622959-4e35-4f1d-b0e3-a6198cf58f60",
-        "MaxAmount": 1000000000,
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "StartingAmount": 1500
-      },
-      {
-        "__type": "PlayerClothing",
-        "__guid": "5645f824-9cb5-434c-8816-49906e72a414",
-        "BodyRenderer": {
-          "_type": "component",
-          "component_id": "e040ec57-f40f-408f-91d4-cfe55a5ee02c",
-          "go": "e2256f9e-1d54-493a-b511-cc862b5a3825",
-          "component_type": "SkinnedModelRenderer"
-        },
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null
-      },
-      {
-        "__type": "ItemBuilder.PlayerInventory",
-        "__guid": "210d3afc-e2f1-481c-abdd-bfd50942c4be",
-        "MaxItems": 32,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -66,6 +27,7 @@
         "AimStrengthBody": 1,
         "AimStrengthEyes": 1,
         "AimStrengthHead": 1,
+        "AirFriction": 0.1,
         "AltMoveButton": "run",
         "Body": {
           "_type": "component",
@@ -170,32 +132,15 @@
         "StartAsleep": false
       },
       {
-        "__type": "ItemBuilder.PlayerInteraction",
-        "__guid": "dca08deb-3fbe-4214-8b16-3838646383a8",
-        "Action": "use",
-        "InputActionActive": null,
-        "InteractRadius": 4,
-        "InteractRange": 1024,
+        "__type": "PlayerInventory",
+        "__guid": "c9f7dd18-350d-408d-8ec2-8bffa95eba27",
+        "MaxItems": 32,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "State": "Pressed"
-      },
-      {
-        "__type": "ItemBuilder.InputActionFunction",
-        "__guid": "8b19c9d6-860a-42aa-b88d-0ee3e4770787",
-        "Action": "use",
-        "InputActionActive": null,
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "State": "Pressed"
+        "OnComponentUpdate": null
       }
     ],
     "Children": [
@@ -237,6 +182,7 @@
               "vectors": {},
               "rotations": {}
             },
+            "PlaybackRate": 1,
             "RenderOptions": {
               "GameLayer": true,
               "OverlayLayer": false,

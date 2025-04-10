@@ -1,8 +1,8 @@
 ﻿using Editor;
 using Sandbox;
 
-namespace ItemBuilder;
 
+namespace TestLab;
 [EditorTool("ItemBuilder")]
 [Title( "Item Builder" )]
 [Icon("engineering")]

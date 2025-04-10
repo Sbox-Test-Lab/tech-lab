@@ -1,4 +1,4 @@
-﻿namespace ItemBuilder;
+﻿
 
 public interface IItemEvent : ISceneEvent<IItemEvent>
 {

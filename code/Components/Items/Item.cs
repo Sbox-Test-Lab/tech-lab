@@ -1,6 +1,6 @@
 ﻿using ItemBuilder.UI;
 
-namespace ItemBuilder;
+
 
 public class Item : Component, IItemEvent
 {

@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Nodes;
 using System.Text.Json;
 
-namespace ItemBuilder;
+
 
 public partial class PlayerInventory : ItemContainer
 {

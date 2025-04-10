@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ItemBuilder;
+
 
 public abstract class BaseItemAbility : Component
 {

@@ -1,7 +1,5 @@
 ﻿using ItemBuilder.UI;
 
-namespace ItemBuilder;
-
 public class Carriable : BaseItemAbility
 {
 	protected override void OnAwake()
@@ -19,7 +17,14 @@ public class Carriable : BaseItemAbility
 	public override void OnActive(GameObject user)
 	{
 		var inventory = user.Components.Get<PlayerInventory>();
-		inventory?.AddItem( Item );
+
+		if(!inventory.IsValid())
+		{
+			Log.Info( "Could not find PlayerInventory component!" );
+			return;
+		}
+
+		inventory.AddItem( Item );
 
 		GameEventFeed.BroadcastGameFeedEvent( "info", $"Added {Item.Name} to inventory" );
 	}

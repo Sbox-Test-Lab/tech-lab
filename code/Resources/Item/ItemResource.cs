@@ -1,4 +1,4 @@
-﻿namespace ItemBuilder;
+﻿
 
 [GameResource( "Item Resource", "item", "Item data" )]
 public class ItemResource : GameResource
