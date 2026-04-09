@@ -1,6 +1,6 @@
 ﻿
 
-public class Activatable : BaseItemAbility
+public class Activatable : BaseItemBehavior
 {
 	protected override void OnEnabled()
 	{

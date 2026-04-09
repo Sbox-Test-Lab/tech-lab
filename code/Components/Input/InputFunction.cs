@@ -1,6 +1,4 @@
-﻿
-
-public abstract class InputFunction : Component
+﻿public abstract class InputFunction : Component
 {
 
 }

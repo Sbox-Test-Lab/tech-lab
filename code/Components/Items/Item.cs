@@ -1,13 +1,12 @@
 ﻿using ItemBuilder.UI;
 
-
-
 public class Item : Component, IItemEvent
 {
 	[Property] public string Name { get; set; }
 	[Property] public string Description { get; set; }
 
-	public IEnumerable<BaseItemAbility> Abilities => Components.GetAll<BaseItemAbility>();
+	public Texture Thumbnail { get; set; }
+	public IEnumerable<BaseItemBehavior> Abilities => Components.GetAll<BaseItemBehavior>();
 
 	public ItemWorldInfo ItemInfo { get; set; }
 
@@ -37,29 +36,17 @@ public class Item : Component, IItemEvent
 		return true;
 	}
 
-	void IItemEvent.OnItemAdded( Item item )
+	void IItemEvent.OnItemAdded()
 	{
-		if(item != this)
-			return;
-		if(IsProxy)
-			return;
-
-		Log.Info( $"Added {item.Name} to inventory" );
+		GameEventFeed.BroadcastGameFeedEvent( "info", $"Added {Name} to inventory" );
+	}
+	void IItemEvent.OnItemRemoved()
+	{
+		GameEventFeed.BroadcastGameFeedEvent( "info", $"Removed {Name} from inventory" );
 	}
 
-	void IItemEvent.OnItemRemoved( Item item )
+	void IItemEvent.OnItemInteraction(GameObject user)
 	{
-		if ( item != this )
-			return;
-
-		Log.Info($"Removed {item.Name} from inventory");
-	}
-
-	void IItemEvent.OnItemInteraction( Item item, GameObject user )
-	{
-		if ( item != this )
-			return;
-
 		if ( !CanActivate( user ) )
 			return;
 
@@ -68,4 +55,25 @@ public class Item : Component, IItemEvent
 			ability.OnActive( user );
 		}
 	}
+
+	private Texture GenerateThumbnailTexture()
+	{
+		var scene = new Scene();
+		using ( scene.Push() )
+		{
+			var go = new GameObject();
+			var mr = go.AddComponent<ModelRenderer>();
+			mr.Model = Model.Load( "models/error.vmdl" );
+
+			var gameobject = new GameObject();
+			var camera = gameobject.AddComponent<CameraComponent>();
+
+			var texture = Texture.Create( 128, 128 ).Finish();
+
+			camera.RenderToTexture( texture );
+
+			return texture;
+		}
+	}
+
 }

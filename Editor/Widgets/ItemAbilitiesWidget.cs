@@ -14,7 +14,7 @@ public class ItemAbilitiesWidget : Widget
 	{
 		Layout = Layout.Column();
 
-		foreach ( var typeDescription in TypeLibrary.GetTypes<BaseItemAbility>() )
+		foreach ( var typeDescription in TypeLibrary.GetTypes<BaseItemBehavior>() )
 		{
 			if ( typeDescription.IsAbstract )
 				continue;

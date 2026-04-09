@@ -1,11 +1,9 @@
 ﻿using ItemBuilder.UI;
 
-
-
-public class Marketable : BaseItemAbility
+public class Marketable : BaseItemBehavior
 {
 	[Property, ItemAbilityProperty] public SoundEvent PurchaseSound { get; set; } 
-	[Property, ItemAbilityProperty] public int Price { get; set; } = 0;
+	[Property, ItemAbilityProperty, BehaviorState] public int Price { get; set; } = 0;
 	protected override void OnAwake()
 	{
 		base.OnAwake();

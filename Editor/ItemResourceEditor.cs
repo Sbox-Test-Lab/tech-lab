@@ -32,7 +32,7 @@ public sealed class ItemResourceEditor : BaseResourceEditor<ItemResource>
 
 		ResourceObject.OnPropertyChanged += NoteChanged;
 
-		foreach ( var typeDescription in TypeLibrary.GetTypes<BaseItemAbility>() )
+		foreach ( var typeDescription in TypeLibrary.GetTypes<BaseItemBehavior>() )
 		{
 			if ( typeDescription.IsAbstract )
 				continue;

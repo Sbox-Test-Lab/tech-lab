@@ -1,6 +1,4 @@
-﻿using ItemBuilder.UI;
-
-public class Carriable : BaseItemAbility
+﻿public class Carriable : BaseItemBehavior
 {
 	protected override void OnAwake()
 	{
@@ -25,7 +23,5 @@ public class Carriable : BaseItemAbility
 		}
 
 		inventory.AddItem( Item );
-
-		GameEventFeed.BroadcastGameFeedEvent( "info", $"Added {Item.Name} to inventory" );
 	}
 }

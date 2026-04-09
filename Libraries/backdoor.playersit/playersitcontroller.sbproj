@@ -1,0 +1,13 @@
+{
+  "Title": "Player Sit Controller",
+  "Type": "library",
+  "Org": "backdoor",
+  "Ident": "playersit",
+  "Schema": 1,
+  "IncludeSourceFiles": false,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "IsWhitelistDisabled": false,
+  "Metadata": {}
+}

@@ -4,8 +4,6 @@ using System.Text.Json.Nodes;
 
 using ItemBuilder.UI;
 
-
-
 public class ItemContainer : Component
 {
 	[Property] public int MaxItems { get; set; } = 32;
@@ -13,6 +11,10 @@ public class ItemContainer : Component
 
 	public bool AddItem(Item item)
 	{
+		var jsonObj = item.GameObject.Serialize();
+
+		Log.Info( $"{jsonObj}" );
+
 		if ( Items.Count > MaxItems )
 			return false;
 
@@ -20,11 +22,9 @@ public class ItemContainer : Component
 
 		Items.Add(json);
 
+		IItemEvent.PostToGameObject( item.GameObject, x => x.OnItemAdded() );
+
 		DestroyItem( item.GameObject.Id );
-
-		IItemEvent.PostToGameObject(item.GameObject.Root, x => x.OnItemAdded( item ) );
-
-		GameEventFeed.BroadcastGameFeedEvent( "info", $"Added {item.Name} from inventory: {Items.Count}" );
 
 		return true;
 	}
@@ -36,34 +36,16 @@ public class ItemContainer : Component
 
 		Items.RemoveAt( index );
 
-		GameEventFeed.BroadcastGameFeedEvent( "info", $"Removed {GetItemName( index )} from inventory: {Items.Count}" );
-
 		return true;
 	}
 
 	public bool RemoveItem(int index, Vector3 position)
 	{
-		if ( Items.Count < 1)
-			return false;
-
 		SpawnItem( index, position );
 
-		var json = JsonSerializer.Deserialize<JsonObject>( Items[index] );
-
-		Log.Info( $"{json}" );
-
-		//IItemEvent.PostToGameObject( GetItemGameObject(index).Root, x => x.OnItemAdded( item ) );
-
-		Items.RemoveAt( index );
-
-
+		RemoveItem( index );
 
 		return true;
-	}
-
-	public virtual bool CanUpdateItem()
-	{
-		return Items.Count <= MaxItems && Items.Count >= 0;
 	}
 
 	private void SpawnItem(int index, Vector3 position)
@@ -72,14 +54,35 @@ public class ItemContainer : Component
 
 		gameObject.Components.GetOrCreate<Rigidbody>().Gravity = true;
 
-		foreach(var component in gameObject.Components.GetAll<BaseItemAbility>(FindMode.InSelf))
+		foreach(var component in gameObject.Components.GetAll<BaseItemBehavior>(FindMode.InSelf))
 		{
 			component.Enabled = component.EnableOnSpawn;
 		}
 
 		gameObject.WorldPosition = position;
 
-		gameObject.NetworkSpawn( Connection.Host );
+		gameObject.NetworkSpawn();
+
+		IItemEvent.PostToGameObject( gameObject, x => x.OnItemRemoved() );
+	}
+
+	public bool HasEquipableComponent( int index )
+	{
+		var json = JsonSerializer.Deserialize<JsonObject>( Items[index] );
+
+		if ( json["Components"] is JsonArray components )
+		{
+			foreach ( var component in components )
+			{
+				if ( component is JsonObject componentObj &&
+					componentObj["__type"]?.ToString() == "Equipable" )
+				{
+					return true;
+				}
+			}
+		}
+
+		return false;
 	}
 
 	public string GetItemName(int index)
@@ -100,8 +103,6 @@ public class ItemContainer : Component
 	[Rpc.Broadcast] 
 	public void DestroyItem(Guid guid)
 	{
-		Log.Info( "Destroying item" );
-
 		Game.ActiveScene.Directory.FindByGuid( guid )?.Destroy();
 	}
 }

@@ -21,9 +21,6 @@ public partial class Player : Component, PlayerController.IEvents
 
 	private void OnControl()
 	{
-		if(Input.Pressed("use"))
-		{
-			TryInteract();
-		}
+		
 	}
 }

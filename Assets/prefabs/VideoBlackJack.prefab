@@ -1,0 +1,266 @@
+{
+  "RootObject": {
+    "__guid": "416972df-8dab-4ccc-930d-41c12673691d",
+    "__version": 1,
+    "Flags": 0,
+    "Name": "videoblackjack",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "VideoBlackJack",
+        "__guid": "9fb347cd-5fc6-4121-a7f9-c9ad40c2fa4e",
+        "__enabled": true,
+        "MachineModel": {
+          "_type": "component",
+          "component_id": "eadb24aa-75b8-48d1-a1a0-5bc2f5106631",
+          "go": "95be6aa2-23bd-4ef2-bb76-ac60ad7a9869",
+          "component_type": "ModelRenderer"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "SceneCamera": {
+          "_type": "component",
+          "component_id": "0291639a-6b67-4c50-9817-595290c3a45f",
+          "go": "fe6d4724-9713-4b20-8d93-b585c3871f16",
+          "component_type": "CameraComponent"
+        },
+        "WorldPanel": {
+          "_type": "component",
+          "component_id": "49efdac9-3775-42ed-a2c7-73adf7977fc3",
+          "go": "f80aad22-aaa4-4188-abca-7254a7af0b58",
+          "component_type": "WorldPanel"
+        }
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "f80aad22-aaa4-4188-abca-7254a7af0b58",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "Screen",
+        "Position": "0,0,32",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.WorldPanel",
+            "__guid": "49efdac9-3775-42ed-a2c7-73adf7977fc3",
+            "__enabled": true,
+            "HorizontalAlign": "Center",
+            "InteractionRange": 1000,
+            "LookAtCamera": false,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "PanelSize": "1440,1920",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__type": "ItemBuilder.UI.VideoBlackJackPanel",
+            "__guid": "c313cadb-6f98-45f8-8d33-38633d8a40e8",
+            "__enabled": true,
+            "Machine": {
+              "_type": "component",
+              "component_id": "9fb347cd-5fc6-4121-a7f9-c9ad40c2fa4e",
+              "go": "416972df-8dab-4ccc-930d-41c12673691d",
+              "component_type": "VideoBlackJack"
+            },
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "95be6aa2-23bd-4ef2-bb76-ac60ad7a9869",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "arcade1",
+        "Position": "0,-95.99998,0.002240753",
+        "Rotation": "0,0,1,0.0000001947072",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.Prop",
+            "__guid": "76335439-aa6c-4a4a-93f5-083f1387d9f2",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "Health": 0,
+            "IsStatic": true,
+            "MaterialGroup": null,
+            "Model": "models/gamemodes/arcade/arcade1.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "OnPropBreak": null,
+            "OnPropTakeDamage": null,
+            "StartAsleep": false,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "eadb24aa-75b8-48d1-a1a0-5bc2f5106631",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "models/gamemodes/arcade/arcade1.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "f0e31c7c-7eb8-4271-9d04-1cf720eeb022",
+            "__enabled": true,
+            "Elasticity": null,
+            "Friction": null,
+            "IsTrigger": false,
+            "Model": "models/gamemodes/arcade/arcade1.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "OnObjectTriggerEnter": null,
+            "OnObjectTriggerExit": null,
+            "OnTriggerEnter": null,
+            "OnTriggerExit": null,
+            "RollingResistance": null,
+            "Static": true,
+            "Surface": null,
+            "SurfaceVelocity": "0,0,0"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "fe6d4724-9713-4b20-8d93-b585c3871f16",
+        "__version": 1,
+        "Flags": 0,
+        "Name": "Camera",
+        "Position": "-64,0,32",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "maincamera",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.CameraComponent",
+            "__guid": "0291639a-6b67-4c50-9817-595290c3a45f",
+            "__enabled": true,
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 60,
+            "FovAxis": "Horizontal",
+            "IsMainCamera": false,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Orthographic": false,
+            "OrthographicHeight": 1204,
+            "Priority": 1,
+            "RenderExcludeTags": "",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 10
+          }
+        ],
+        "Children": []
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [
+    "trend.arcade1#16702"
+  ],
+  "__version": 2
+}

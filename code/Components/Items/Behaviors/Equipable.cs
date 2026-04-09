@@ -1,6 +1,6 @@
 ﻿
 
-public class Equipable : BaseItemAbility
+public class Equipable : BaseItemBehavior
 {
 	public override bool CanActivate( GameObject user )
 	{
