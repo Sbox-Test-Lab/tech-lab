@@ -167,6 +167,20 @@
         "OnComponentUpdate": null
       },
       {
+        "__type": "PlayerMoney",
+        "__guid": "8f6f6375-d6f4-44de-95a0-ec19b0bd34e6",
+        "__enabled": true,
+        "Flags": 0,
+        "MaxAmount": 1000000000,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "StartingAmount": 1500
+      },
+      {
         "__type": "Sandbox.Dresser",
         "__guid": "f2faa781-6c44-4cd9-8240-e59047da41b6",
         "__enabled": true,
@@ -279,7 +293,7 @@
             "__enabled": true,
             "Flags": 0,
             "AnimationGraph": null,
-            "BodyGroups": 81,
+            "BodyGroups": 80,
             "BoneMergeTarget": null,
             "CreateAttachments": false,
             "CreateBoneObjects": true,
@@ -2076,10 +2090,10 @@
             ]
           },
           {
-            "__guid": "41bcb067-8977-4482-893b-a2c893f26566",
+            "__guid": "a11331c6-f407-4bb3-9405-f542e42571d7",
             "__version": 2,
             "Flags": 0,
-            "Name": "Clothing - hard_hat",
+            "Name": "Clothing - brainy",
             "Position": "0,0,0",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
@@ -2093,7 +2107,7 @@
             "Components": [
               {
                 "__type": "Sandbox.SkinnedModelRenderer",
-                "__guid": "b81bc5f8-3f81-4a16-8516-67654af9daf0",
+                "__guid": "e8317b05-2515-4c57-a696-ec33a97843dc",
                 "__enabled": true,
                 "Flags": 0,
                 "AnimationGraph": null,
@@ -2110,7 +2124,7 @@
                 "MaterialGroup": null,
                 "MaterialOverride": null,
                 "Materials": null,
-                "Model": "models/citizen_clothes/hat/hard_hat/models/hard_hat.vmdl",
+                "Model": "brain.vmdl",
                 "Morphs": {},
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -2145,145 +2159,7 @@
             "Children": []
           },
           {
-            "__guid": "0ec33f4e-6fb9-4d5c-9f9b-9d80dafb4794",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Clothing - safety_glasses",
-            "Position": "0,0,0",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "clothing",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [
-              {
-                "__type": "Sandbox.SkinnedModelRenderer",
-                "__guid": "08dc5b74-941e-4031-9446-ab3a6c353da3",
-                "__enabled": true,
-                "Flags": 0,
-                "AnimationGraph": null,
-                "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": {
-                  "_type": "component",
-                  "component_id": "e040ec57-f40f-408f-91d4-cfe55a5ee02c",
-                  "go": "e2256f9e-1d54-493a-b511-cc862b5a3825",
-                  "component_type": "SkinnedModelRenderer"
-                },
-                "CreateAttachments": false,
-                "CreateBoneObjects": false,
-                "LodOverride": null,
-                "MaterialGroup": null,
-                "MaterialOverride": null,
-                "Materials": null,
-                "Model": "models/clothing/safety_glasses/safety_glasses.vmdl",
-                "Morphs": {},
-                "OnComponentDestroy": null,
-                "OnComponentDisabled": null,
-                "OnComponentEnabled": null,
-                "OnComponentFixedUpdate": null,
-                "OnComponentStart": null,
-                "OnComponentUpdate": null,
-                "Parameters": {
-                  "bools": {},
-                  "ints": {},
-                  "floats": {},
-                  "vectors": {},
-                  "rotations": {}
-                },
-                "PlaybackRate": 1,
-                "RenderOptions": {
-                  "GameLayer": true,
-                  "OverlayLayer": false,
-                  "BloomLayer": false,
-                  "AfterUILayer": false
-                },
-                "RenderType": "On",
-                "Sequence": {
-                  "Name": null,
-                  "Looping": true,
-                  "Blending": false
-                },
-                "Tint": "1,1,1,1",
-                "UseAnimGraph": true
-              }
-            ],
-            "Children": []
-          },
-          {
-            "__guid": "5528294f-3b88-4b79-8874-4c1f3b1a868a",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Clothing - summer shorts",
-            "Position": "0,0,0",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "clothing",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [
-              {
-                "__type": "Sandbox.SkinnedModelRenderer",
-                "__guid": "721ff0df-13eb-4631-8db3-9c92f5948ed4",
-                "__enabled": true,
-                "Flags": 0,
-                "AnimationGraph": null,
-                "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": {
-                  "_type": "component",
-                  "component_id": "e040ec57-f40f-408f-91d4-cfe55a5ee02c",
-                  "go": "e2256f9e-1d54-493a-b511-cc862b5a3825",
-                  "component_type": "SkinnedModelRenderer"
-                },
-                "CreateAttachments": false,
-                "CreateBoneObjects": false,
-                "LodOverride": null,
-                "MaterialGroup": null,
-                "MaterialOverride": null,
-                "Materials": null,
-                "Model": "models/citizen_clothes/shorts/summer_shorts/model/summer_shorts.vmdl",
-                "Morphs": {},
-                "OnComponentDestroy": null,
-                "OnComponentDisabled": null,
-                "OnComponentEnabled": null,
-                "OnComponentFixedUpdate": null,
-                "OnComponentStart": null,
-                "OnComponentUpdate": null,
-                "Parameters": {
-                  "bools": {},
-                  "ints": {},
-                  "floats": {},
-                  "vectors": {},
-                  "rotations": {}
-                },
-                "PlaybackRate": 1,
-                "RenderOptions": {
-                  "GameLayer": true,
-                  "OverlayLayer": false,
-                  "BloomLayer": false,
-                  "AfterUILayer": false
-                },
-                "RenderType": "On",
-                "Sequence": {
-                  "Name": null,
-                  "Looping": true,
-                  "Blending": false
-                },
-                "Tint": "1,1,1,1",
-                "UseAnimGraph": true
-              }
-            ],
-            "Children": []
-          },
-          {
-            "__guid": "61a41e0a-f19d-46a6-8c74-4c317709234c",
+            "__guid": "0257f659-10ee-41c9-9b56-96a7a0c22dc1",
             "__version": 2,
             "Flags": 0,
             "Name": "Clothing - labcoat",
@@ -2300,7 +2176,7 @@
             "Components": [
               {
                 "__type": "Sandbox.SkinnedModelRenderer",
-                "__guid": "3848153b-d2d9-46b3-8301-6f1c4653279c",
+                "__guid": "e807eced-b9a9-4ba7-b3e9-242c8d1c5931",
                 "__enabled": true,
                 "Flags": 0,
                 "AnimationGraph": null,
@@ -2352,10 +2228,10 @@
             "Children": []
           },
           {
-            "__guid": "f0c5514c-37ff-4111-93f6-afeca82bdf20",
+            "__guid": "d3249248-79b7-452d-af27-c00b4f039d76",
             "__version": 2,
             "Flags": 0,
-            "Name": "Clothing - wizard_beard",
+            "Name": "Clothing - tshirt",
             "Position": "0,0,0",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
@@ -2369,7 +2245,7 @@
             "Components": [
               {
                 "__type": "Sandbox.SkinnedModelRenderer",
-                "__guid": "6f2f23d3-5cae-46a0-8d4b-b649e7697300",
+                "__guid": "7e132265-205c-4f89-8d8f-12741e4d9b70",
                 "__enabled": true,
                 "Flags": 0,
                 "AnimationGraph": null,
@@ -2386,76 +2262,7 @@
                 "MaterialGroup": null,
                 "MaterialOverride": null,
                 "Materials": null,
-                "Model": "models/citizen_clothes/seasonal/2025/wizard_outfit/wizard_beard/models/wizard_beard.vmdl",
-                "Morphs": {},
-                "OnComponentDestroy": null,
-                "OnComponentDisabled": null,
-                "OnComponentEnabled": null,
-                "OnComponentFixedUpdate": null,
-                "OnComponentStart": null,
-                "OnComponentUpdate": null,
-                "Parameters": {
-                  "bools": {},
-                  "ints": {},
-                  "floats": {},
-                  "vectors": {},
-                  "rotations": {}
-                },
-                "PlaybackRate": 1,
-                "RenderOptions": {
-                  "GameLayer": true,
-                  "OverlayLayer": false,
-                  "BloomLayer": false,
-                  "AfterUILayer": false
-                },
-                "RenderType": "On",
-                "Sequence": {
-                  "Name": null,
-                  "Looping": true,
-                  "Blending": false
-                },
-                "Tint": "0.64208,0.32205,0.15189,1",
-                "UseAnimGraph": true
-              }
-            ],
-            "Children": []
-          },
-          {
-            "__guid": "82d04b7b-650f-4f64-a75b-93e801d6df20",
-            "__version": 2,
-            "Flags": 0,
-            "Name": "Clothing - modern_watch",
-            "Position": "0,0,0",
-            "Rotation": "0,0,0,1",
-            "Scale": "1,1,1",
-            "Tags": "clothing",
-            "Enabled": true,
-            "NetworkMode": 2,
-            "NetworkFlags": 0,
-            "NetworkOrphaned": 0,
-            "NetworkTransmit": true,
-            "OwnerTransfer": 1,
-            "Components": [
-              {
-                "__type": "Sandbox.SkinnedModelRenderer",
-                "__guid": "da41bf0c-909a-4a56-a79f-14fd4e752fae",
-                "__enabled": true,
-                "Flags": 0,
-                "AnimationGraph": null,
-                "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": {
-                  "_type": "component",
-                  "component_id": "e040ec57-f40f-408f-91d4-cfe55a5ee02c",
-                  "go": "e2256f9e-1d54-493a-b511-cc862b5a3825",
-                  "component_type": "SkinnedModelRenderer"
-                },
-                "CreateAttachments": false,
-                "CreateBoneObjects": false,
-                "LodOverride": null,
-                "MaterialGroup": null,
-                "MaterialOverride": null,
-                "Materials": null,
-                "Model": "models/citizen_clothes/watch/modern_watch/models/modern_watch.vmdl",
+                "Model": "models/citizen_clothes/shirt/tshirt/models/tshirt.vmdl",
                 "Morphs": {},
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -2490,7 +2297,7 @@
             "Children": []
           },
           {
-            "__guid": "48e45c9c-b251-456c-9f93-1c442b80644c",
+            "__guid": "e27c50d3-0436-4410-9ee2-cec3d2874d48",
             "__version": 2,
             "Flags": 0,
             "Name": "Clothing - clogs_and_socks",
@@ -2507,7 +2314,7 @@
             "Components": [
               {
                 "__type": "Sandbox.SkinnedModelRenderer",
-                "__guid": "5718ad04-7ef1-47e4-abe0-446f5a140d94",
+                "__guid": "4318ae5a-b69b-49ce-a0b7-005630ec8008",
                 "__enabled": true,
                 "Flags": 0,
                 "AnimationGraph": null,
@@ -2559,10 +2366,10 @@
             "Children": []
           },
           {
-            "__guid": "ba9ed498-73bd-4ed8-8f08-45b491984014",
+            "__guid": "ddfee49a-ba91-483e-bdad-16d701949794",
             "__version": 2,
             "Flags": 0,
-            "Name": "Clothing - tshirt",
+            "Name": "Clothing - summer shorts",
             "Position": "0,0,0",
             "Rotation": "0,0,0,1",
             "Scale": "1,1,1",
@@ -2576,7 +2383,7 @@
             "Components": [
               {
                 "__type": "Sandbox.SkinnedModelRenderer",
-                "__guid": "5ee11603-6ed1-47ed-897d-d65f4a581a34",
+                "__guid": "f4d4a81c-d98e-4917-a8e7-fe458603f3a7",
                 "__enabled": true,
                 "Flags": 0,
                 "AnimationGraph": null,
@@ -2593,7 +2400,76 @@
                 "MaterialGroup": null,
                 "MaterialOverride": null,
                 "Materials": null,
-                "Model": "models/citizen_clothes/shirt/tshirt/models/tshirt.vmdl",
+                "Model": "models/citizen_clothes/shorts/summer_shorts/model/summer_shorts.vmdl",
+                "Morphs": {},
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "Parameters": {
+                  "bools": {},
+                  "ints": {},
+                  "floats": {},
+                  "vectors": {},
+                  "rotations": {}
+                },
+                "PlaybackRate": 1,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Sequence": {
+                  "Name": null,
+                  "Looping": true,
+                  "Blending": false
+                },
+                "Tint": "1,1,1,1",
+                "UseAnimGraph": true
+              }
+            ],
+            "Children": []
+          },
+          {
+            "__guid": "c53a78f0-d971-4f17-abe6-9cb076be24ad",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Clothing - modern_watch",
+            "Position": "0,0,0",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "clothing",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.SkinnedModelRenderer",
+                "__guid": "b6d91971-ea67-4ca1-8b73-381eb6f1ddeb",
+                "__enabled": true,
+                "Flags": 0,
+                "AnimationGraph": null,
+                "BodyGroups": 18446744073709551615,
+                "BoneMergeTarget": {
+                  "_type": "component",
+                  "component_id": "e040ec57-f40f-408f-91d4-cfe55a5ee02c",
+                  "go": "e2256f9e-1d54-493a-b511-cc862b5a3825",
+                  "component_type": "SkinnedModelRenderer"
+                },
+                "CreateAttachments": false,
+                "CreateBoneObjects": false,
+                "LodOverride": null,
+                "MaterialGroup": null,
+                "MaterialOverride": null,
+                "Materials": null,
+                "Model": "models/citizen_clothes/watch/modern_watch/models/modern_watch.vmdl",
                 "Morphs": {},
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,

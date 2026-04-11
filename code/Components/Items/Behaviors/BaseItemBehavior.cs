@@ -3,7 +3,12 @@
 public abstract class BaseItemBehavior : Component
 {
 	[ItemAbilityProperty] public bool GenerateComponentEditor { get; set; } = false;
-	[Property] public bool EnableOnSpawn { get; set; } = false;
+	/// <summary>
+	/// Whether this behavior should be re-enabled when the item is restored
+	/// from inventory. Defaults to <c>true</c>; set to <c>false</c> for
+	/// one-time behaviors like <see cref="Marketable"/>.
+	/// </summary>
+	[Property] public bool EnableOnRestore { get; set; } = true;
 	[RequireComponent] public Item Item { get; set; }
 
 	public abstract bool CanActivate( GameObject user );

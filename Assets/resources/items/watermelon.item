@@ -1,0 +1,9 @@
+{
+  "Name": "Watermelon",
+  "Description": "A watermelon",
+  "Icon": null,
+  "PrefabFile": "prefabs/items/watermelon.prefab",
+  "MaxStackSize": 999,
+  "__references": [],
+  "__version": 0
+}

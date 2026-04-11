@@ -43,10 +43,10 @@ public partial class PlayerInventory : ItemContainer
         var selectedItem = Items.ElementAt(CurrentItemIndex);
 	
 		// Switch to Equipment Item  
-		if( HasEquipableComponent(CurrentItemIndex) )
-		{
-			EquipItem();
-		}
+		//if( HasEquipableComponent(CurrentItemIndex) )
+		//{
+			//EquipItem();
+		//}
 	}
 
 }

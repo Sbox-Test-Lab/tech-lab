@@ -1,0 +1,25 @@
+﻿@namespace ItemBuilder.UI
+@using Sandbox.UI
+
+@inherits PanelComponent
+
+<style>
+   
+    
+</style>
+
+<root>
+   <VirtualGrid Items=@Items ItemSize=@(120)>
+        <Item Context="item">
+            @if (item is Package entry)
+            {
+                //<SpawnButton Icon="@entry.Thumb" Action="@(() => Spawn(entry))"></SpawnButton>
+            }
+        </Item>
+   </VirtualGrid>
+</root>
+
+@code
+{
+    public Package[] Items { get; set; }
+}

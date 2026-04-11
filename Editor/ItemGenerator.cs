@@ -1,28 +1,37 @@
 ﻿using Editor;
 using Sandbox;
-
+using System.Linq;
 
 namespace TestLab;
-[EditorTool("ItemBuilder")]
+
+[EditorTool( "ItemBuilder" )]
 [Title( "Item Builder" )]
-[Icon("engineering")]
+[Icon( "engineering" )]
 [Alias( "item" )]
 [Group( "0" )]
 public class ItemBuilder : EditorTool
 {
+	private ItemResourceWidget _widget;
+
 	public override void OnEnabled()
 	{
 		var window = new WidgetWindow( SceneOverlay );
 
 		window.WindowTitle = "Item Builder";
 		window.Layout = Layout.Column();
-		
-		window.MinimumSize = new Vector2( 128, 240 );
-		window.MinimumHeight = 128.0f;
-		window.MaximumWidth = 480.0f;
 
-		
-		window.Layout.Add(new ItemAbilitiesWidget( window ) );
+		window.MinimumSize = new Vector2( 640, 400 );
+		window.MaximumSize = new Vector2( 800, 800 );
+
+		var scroll = new ScrollArea( window );
+		scroll.Canvas = new Widget();
+		scroll.Canvas.Layout = Layout.Column();
+
+		_widget = new ItemResourceWidget( scroll.Canvas );
+		scroll.Canvas.Layout.Add( _widget );
+		scroll.Canvas.Layout.AddStretchCell();
+
+		window.Layout.Add( scroll );
 
 		AddOverlay( window );
 	}
@@ -31,19 +40,12 @@ public class ItemBuilder : EditorTool
 	{
 		base.OnUpdate();
 
-		var traceResult = Scene.Trace.Ray( Gizmo.CurrentRay, 4096 )
-			.UseRenderMeshes( true )
-			.UsePhysicsWorld( false )
-			.Run();
+		if ( _widget is null ) return;
 
-		if ( traceResult.Hit )
-		{
-			using ( Gizmo.Scope( "cursor" ) )
-			{
-				//Gizmo.Transform = new Transform( traceResult.HitPosition.SnapToGrid(4.0f), Rotation.LookAt( traceResult.Normal ) );
-				//Gizmo.Draw.SolidSphere(Vector3.Zero, 8.0f);
-			}
-		}
+		// Feed the current scene selection into the widget
+		var selection = SceneEditorSession.Active?.Selection;
+		var selected = selection?.OfType<GameObject>().FirstOrDefault();
+
+		_widget.SetSelectedObject( selected );
 	}
-	
 }

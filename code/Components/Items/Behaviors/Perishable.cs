@@ -1,8 +1,6 @@
 ﻿using System;
 using Sandbox;
 
-
-
 public class Perishable : BaseItemBehavior
 {
 	[BehaviorState] public double DecayTime { get; set; } = 60.0f;

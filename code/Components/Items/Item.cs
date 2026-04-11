@@ -5,6 +5,12 @@ public class Item : Component, IItemEvent
 	[Property] public string Name { get; set; }
 	[Property] public string Description { get; set; }
 
+	/// <summary>
+	/// The <see cref="ItemResource"/> this item was created from.
+	/// Set by <see cref="ItemFactory"/> on instantiation.
+	/// </summary>
+	[Property] public ItemResource Resource { get; set; }
+
 	public Texture Thumbnail { get; set; }
 	public IEnumerable<BaseItemBehavior> Abilities => Components.GetAll<BaseItemBehavior>();
 
@@ -21,7 +27,8 @@ public class Item : Component, IItemEvent
 
 		if ( ItemInfo.IsValid() )
 		{
-			var position = new Vector3( GameObject.GetBounds().Center.x, GameObject.GetBounds().Center.y, GameObject.GetBounds().Center.z + (GameObject.GetBounds().Extents.z + 8.0f) );
+			var bounds = GameObject.GetBounds();
+			var position = new Vector3( bounds.Center.x, bounds.Center.y, bounds.Center.z + (bounds.Extents.z + 8.0f) );
 
 			ItemInfo.WorldPosition = position;
 		}
@@ -31,7 +38,11 @@ public class Item : Component, IItemEvent
 	{
 		//If any item ability cannot be used, don't use any of the item's abilities
 		if ( Abilities.Any( x => !x.CanActivate( user ) ) )
+		{
+			Log.Info( "Cannot activate item because at least one ability cannot be activated." );
+			
 			return false;
+		}
 
 		return true;
 	}

@@ -4,11 +4,10 @@ public class Marketable : BaseItemBehavior
 {
 	[Property, ItemAbilityProperty] public SoundEvent PurchaseSound { get; set; } 
 	[Property, ItemAbilityProperty, BehaviorState] public int Price { get; set; } = 0;
-	protected override void OnAwake()
-	{
-		base.OnAwake();
 
-		EnableOnSpawn = false;
+	public Marketable()
+	{
+		EnableOnRestore = false;
 	}
 
 	public override bool CanActivate(GameObject user)
@@ -16,7 +15,11 @@ public class Marketable : BaseItemBehavior
 		var playerMoney = user.Components.Get<PlayerMoney>();
 
 		if ( !playerMoney.IsValid() )
+		{
+			Log.Warning( "Marketable item does not have a valid PlayerMoney component on the user." );
+
 			return false;
+		}
 
 		if ( !playerMoney.HasAmount(Price) )
 		{

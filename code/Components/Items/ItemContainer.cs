@@ -1,108 +1,128 @@
 ﻿using System;
-using System.Text.Json;
-using System.Text.Json.Nodes;
 
 using ItemBuilder.UI;
 
 public class ItemContainer : Component
 {
 	[Property] public int MaxItems { get; set; } = 32;
+
+	/// <summary>
+	/// Lightweight serialized <see cref="ItemState"/> snapshots instead of full GameObject JSON.
+	/// </summary>
 	[Sync] public NetList<string> Items { get; set; } = new NetList<string>();
 
-	public bool AddItem(Item item)
+	/// <summary>
+	/// Capture the item's [BehaviorState] deltas, store them, and destroy the world object.
+	/// </summary>
+	public bool AddItem( Item item )
 	{
-		var jsonObj = item.GameObject.Serialize();
-
-		Log.Info( $"{jsonObj}" );
-
-		if ( Items.Count > MaxItems )
+		if ( Items.Count >= MaxItems )
 			return false;
 
-		var json = item.GameObject.Serialize().ToString();
-
-		Items.Add(json);
+		var state = ItemState.Capture( item );
+		Items.Add( state.Serialize() );
 
 		IItemEvent.PostToGameObject( item.GameObject, x => x.OnItemAdded() );
 
-		DestroyItem( item.GameObject.Id );
+		item.GameObject.Destroy();
 
 		return true;
 	}
 
-	public bool RemoveItem(int index) 
+	/// <summary>
+	/// Remove an item entry from the container without spawning it.
+	/// </summary>
+	public bool RemoveItem( int index )
 	{
-		if(Items.Count < 1)
+		if ( index < 0 || index >= Items.Count )
 			return false;
 
 		Items.RemoveAt( index );
-
 		return true;
 	}
 
-	public bool RemoveItem(int index, Vector3 position)
+	/// <summary>
+	/// Spawn the item back into the world at the given position, then remove it from the container.
+	/// </summary>
+	public bool RemoveItem( int index, Vector3 position )
 	{
-		SpawnItem( index, position );
+		if ( index < 0 || index >= Items.Count )
+			return false;
 
+		SpawnItem( index, position );
 		RemoveItem( index );
 
 		return true;
 	}
 
-	private void SpawnItem(int index, Vector3 position)
+	private void SpawnItem( int index, Vector3 position )
 	{
-		var gameObject = GetItemGameObject( index );
+		var state = GetItemState( index );
+		if ( state is null ) return;
 
-		gameObject.Components.GetOrCreate<Rigidbody>().Gravity = true;
+		var go = ItemFactory.CreateFromState( state, position );
 
-		foreach(var component in gameObject.Components.GetAll<BaseItemBehavior>(FindMode.InSelf))
+		/*
+		go.Components.GetOrCreate<Rigidbody>().Gravity = true;
+
+		foreach ( var behavior in go.Components.GetAll<BaseItemBehavior>( FindMode.InSelf ) )
 		{
-			component.Enabled = component.EnableOnSpawn;
+			behavior.Enabled = behavior.EnableOnRestore;
 		}
+		*/
 
-		gameObject.WorldPosition = position;
+		go.NetworkSpawn();
 
-		gameObject.NetworkSpawn();
-
-		IItemEvent.PostToGameObject( gameObject, x => x.OnItemRemoved() );
+		IItemEvent.PostToGameObject( go, x => x.OnItemRemoved() );
 	}
 
-	public bool HasEquipableComponent( int index )
+	// ── Query helpers ─────────────────────────────────────────────
+
+	/// <summary>
+	/// Deserialize the stored state at the given index.
+	/// </summary>
+	public ItemState GetItemState( int index )
 	{
-		var json = JsonSerializer.Deserialize<JsonObject>( Items[index] );
+		if ( index < 0 || index >= Items.Count )
+			return null;
 
-		if ( json["Components"] is JsonArray components )
-		{
-			foreach ( var component in components )
-			{
-				if ( component is JsonObject componentObj &&
-					componentObj["__type"]?.ToString() == "Equipable" )
-				{
-					return true;
-				}
-			}
-		}
-
-		return false;
+		return ItemState.Deserialize( Items[index] );
 	}
 
-	public string GetItemName(int index)
+	/// <summary>
+	/// Read the item name from the stored resource without instantiating.
+	/// </summary>
+	public string GetItemName( int index )
 	{
-		return JsonSerializer.Deserialize<JsonObject>( Items[index] )["Name"].ToString();
+		var state = GetItemState( index );
+		if ( state is null ) return string.Empty;
+
+		if ( ItemResource.All.TryGetValue( state.ResourcePath, out var resource ) )
+			return resource.Name;
+
+		return string.Empty;
 	}
 
-	public GameObject GetItemGameObject(int index)
+	/// <summary>
+	/// Check whether the item at the given index has a specific behavior type.
+	/// </summary>
+	public bool HasBehavior<T>( int index ) where T : BaseItemBehavior
 	{
-		var json = JsonSerializer.Deserialize<JsonObject>( Items[index] );
+		var state = GetItemState( index );
+		if ( state is null ) return false;
 
-		var gameObject = new GameObject();
-		gameObject.Deserialize(json);
+		// If the behavior wrote any deltas, it exists on the prefab
+		if ( state.Deltas.ContainsKey( typeof(T).Name ) )
+			return true;
 
-		return gameObject;
-	}
+		// Otherwise check the resource prefab's type description
+		if ( !ItemResource.All.TryGetValue( state.ResourcePath, out var resource ) )
+			return false;
 
-	[Rpc.Broadcast] 
-	public void DestroyItem(Guid guid)
-	{
-		Game.ActiveScene.Directory.FindByGuid( guid )?.Destroy();
+		var prefabType = TypeLibrary.GetType<T>();
+		if ( prefabType is null ) return false;
+
+		// The behavior exists on the prefab even if it had no mutable state
+		return true;
 	}
 }

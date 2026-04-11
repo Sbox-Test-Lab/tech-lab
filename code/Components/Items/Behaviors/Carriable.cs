@@ -1,12 +1,5 @@
 ﻿public class Carriable : BaseItemBehavior
 {
-	protected override void OnAwake()
-	{
-		base.OnStart();
-
-		EnableOnSpawn = true;
-	}
-
 	public override bool CanActivate( GameObject user )
 	{
 		return true;

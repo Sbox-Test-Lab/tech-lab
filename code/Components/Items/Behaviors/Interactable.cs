@@ -1,12 +1,5 @@
 ﻿public class Interactable : BaseItemBehavior, IInteractionEvent
 {
-	protected override void OnAwake()
-	{
-		base.OnStart();
-
-		EnableOnSpawn = true;
-	}
-
 	public void OnInteract(GameObject user)
 	{
 		IItemEvent.PostToGameObject( GameObject, x => x.OnItemInteraction(user) );
