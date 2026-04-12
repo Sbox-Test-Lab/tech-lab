@@ -62,16 +62,8 @@ public class ItemContainer : Component
 
 		var go = ItemFactory.CreateFromState( state, position );
 
-		/*
-		go.Components.GetOrCreate<Rigidbody>().Gravity = true;
-
-		foreach ( var behavior in go.Components.GetAll<BaseItemBehavior>( FindMode.InSelf ) )
-		{
-			behavior.Enabled = behavior.EnableOnRestore;
-		}
-		*/
-
-		go.NetworkSpawn();
+		go.NetworkSpawn( Connection.Host );
+		go.Network.DropOwnership();
 
 		IItemEvent.PostToGameObject( go, x => x.OnItemRemoved() );
 	}

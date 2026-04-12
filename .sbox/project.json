@@ -1,32 +1,32 @@
 {
   "gizmo.settings": {
     "Value": "{\u0022EditMode\u0022:\u0022position\u0022,\u0022Selection\u0022:true,\u0022ViewMode\u0022:\u00223d\u0022,\u0022GizmosEnabled\u0022:true,\u0022GizmoScale\u0022:1,\u0022GridSpacing\u0022:32,\u0022SnapToGrid\u0022:false,\u0022SnapToAngles\u0022:true,\u0022AngleSpacing\u0022:15,\u0022GlobalSpace\u0022:false,\u0022DebugActionGraphs\u0022:false,\u0022DisabledGizmos\u0022:{}}",
-    "Timeout": 1778527771,
+    "Timeout": 1778604006,
     "DeleteAt": 0
   },
   "scenes/itembuilder.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022139.2522,191.6361,983.3467\u0022,\u0022CameraRotation\u0022:\u00220.178672,0.05372002,-0.9408361,0.2828744\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528520,
+    "Value": "{\u0022CameraPosition\u0022:\u00221541.726,-660.1069,1146.887\u0022,\u0022CameraRotation\u0022:\u0022-0.06694347,0.01382183,0.9770526,0.2017322\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778606068,
     "DeleteAt": 0
   },
   "SceneView.Viewport0.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022139.2522,191.6361,983.3467\u0022,\u0022CameraRotation\u0022:\u00220.178672,0.05372002,-0.9408361,0.2828744\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Value": "{\u0022CameraPosition\u0022:\u00221541.726,-660.1069,1146.887\u0022,\u0022CameraRotation\u0022:\u0022-0.06694347,0.01382183,0.9770526,0.2017322\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "SceneView.Layout": {
     "Value": "{\u0022Layout\u0022:7,\u0022SplitterState\u0022:[\u0022AAAA/wAAAAEAAAACAAADGQAAAAAB/////wEAAAACAA==\u0022,\u0022AAAA/wAAAAEAAAACAAADGQAAAAAB/////wEAAAACAA==\u0022,\u0022AAAA/wAAAAEAAAACAAAAAAAAAAAB/////wEAAAABAA==\u0022]}",
-    "Timeout": 1778527777,
+    "Timeout": 1778604012,
     "DeleteAt": 0
   },
   "Window.SboxSceneEditor.Dock": {
-    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAACfYAAAUpAAAAAAAAAAAAAAn2AAAFKQAAAAAAAAAACgAAAAAAAAAAAAAACfYAAAUp\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneTreeWidget\u0022,\u0022name\u0022:\u0022Hierarchy\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:scenes/itembuilder.scene\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:scenes/mainmenu.scene\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:prefabs/player/player_citizen.prefab\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAABhwAACGgA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022currentIndex\u0022:1,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MainAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022ConsoleWidget\u0022,\u0022name\u0022:\u0022Console\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAADeQAAAhYA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022Inspector\u0022,\u0022name\u0022:\u0022Inspector\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAH\u002BwAAAfgA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
-    "Timeout": 1778528612,
+    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAACfYAAAUpAAAAAAAAAAAAAAn2AAAFKQAAAAAAAAAACgAAAAAAAAAAAAAACfYAAAUp\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneTreeWidget\u0022,\u0022name\u0022:\u0022Hierarchy\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:scenes/itembuilder.scene\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:scenes/mainmenu.scene\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:prefabs/player/player_citizen.prefab\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022PerformanceDock\u0022,\u0022name\u0022:\u0022Performance\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAADAAABOgAAA14AAANeAP////8BAAAAAQA=\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022currentIndex\u0022:1,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MainAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022ConsoleWidget\u0022,\u0022name\u0022:\u0022Console\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAADeQAAAhYA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022Inspector\u0022,\u0022name\u0022:\u0022Inspector\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAH\u002BwAAAfgA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
+    "Timeout": 1778606194,
     "DeleteAt": 0
   },
   "SceneView.Viewport1.Settings": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-3326.446,454.9192,806.4064\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022View\u0022:2,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:1,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "scenes/islandtest.scene.Viewport1": {
@@ -36,12 +36,12 @@
   },
   "LocalAssetBrowser.History": {
     "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\player\u0022]",
-    "Timeout": 1778528404,
+    "Timeout": 1778604012,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.HistoryIdx": {
     "Value": "11",
-    "Timeout": 1778528404,
+    "Timeout": 1778604012,
     "DeleteAt": 0
   },
   "scenes/islandtest.scene.Viewport0": {
@@ -51,22 +51,22 @@
   },
   "CloudBrowser..ViewMode": {
     "Value": "2",
-    "Timeout": 1778528396,
+    "Timeout": 1778604012,
     "DeleteAt": 0
   },
   "CloudBrowser..ShowJunkFiles": {
     "Value": "false",
-    "Timeout": 1778528396,
+    "Timeout": 1778604012,
     "DeleteAt": 0
   },
   "CloudBrowser..HideNonAssets": {
     "Value": "false",
-    "Timeout": 1778528396,
+    "Timeout": 1778604012,
     "DeleteAt": 0
   },
   "CloudBrowser..ShowRecursiveFiles": {
     "Value": "false",
-    "Timeout": 1778528396,
+    "Timeout": 1778604012,
     "DeleteAt": 0
   },
   "scenes/islandtest.scene.Viewport2": {
@@ -76,7 +76,7 @@
   },
   "SceneView.Viewport2.Settings": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-150.6889,454.9192,3982.164\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022View\u0022:1,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "scenes/islandtest.scene.Viewport3": {
@@ -86,22 +86,22 @@
   },
   "SceneView.Viewport3.Settings": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-150.6901,-2720.845,806.407\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022View\u0022:3,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:2,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "scenes/itembuilder.scene.Viewport3": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-150.6901,-2720.845,806.407\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528520,
+    "Timeout": 1778606068,
     "DeleteAt": 0
   },
   "scenes/itembuilder.scene.Viewport2": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-150.6889,454.9192,3982.164\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778528520,
+    "Timeout": 1778606068,
     "DeleteAt": 0
   },
   "scenes/itembuilder.scene.Viewport1": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-3326.446,454.9192,806.4064\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528520,
+    "Timeout": 1778606068,
     "DeleteAt": 0
   },
   "MeshEditor.MaterialPalette.Default": {
@@ -121,62 +121,62 @@
   },
   "scenes/mainmenu.scene.Viewport3": {
     "Value": "{\u0022CameraPosition\u0022:\u00223948.06,384.0004,827.8822\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "scenes/mainmenu.scene.Viewport2": {
     "Value": "{\u0022CameraPosition\u0022:\u00223948.06,384.0004,827.8822\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "scenes/mainmenu.scene.Viewport1": {
     "Value": "{\u0022CameraPosition\u0022:\u00223948.06,384.0004,827.8822\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "scenes/mainmenu.scene.Viewport0": {
     "Value": "{\u0022CameraPosition\u0022:\u0022232.8949,-95.63969,927.5808\u0022,\u0022CameraRotation\u0022:\u00220.1002076,0.007358878,-0.9922673,0.07286846\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   ".Viewport3": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-150.6901,-2720.845,806.407\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   ".Viewport2": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-150.6889,454.9192,3982.164\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   ".Viewport1": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-3326.446,454.9192,806.4064\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   ".Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022139.2522,191.6361,983.3467\u0022,\u0022CameraRotation\u0022:\u00220.178672,0.05372002,-0.9408361,0.2828744\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Value": "{\u0022CameraPosition\u0022:\u00221541.726,-660.1069,1146.887\u0022,\u0022CameraRotation\u0022:\u0022-0.06694347,0.01382183,0.9770526,0.2017322\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "prefabs/player/player_citizen.prefab.Viewport3": {
     "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "prefabs/player/player_citizen.prefab.Viewport2": {
     "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "prefabs/player/player_citizen.prefab.Viewport1": {
-    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "prefabs/player/player_citizen.prefab.Viewport0": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-38.31169,-38.98403,91.93617\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778528716,
+    "Timeout": 1778612325,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Material.ViewMode": {
