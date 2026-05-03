@@ -1,0 +1,9 @@
+{
+  "Name": "Dynamite",
+  "Description": "Some sticks of dynamite",
+  "Icon": "items/dynamite/dynamite_icon.png",
+  "PrefabFile": "items/dynamite/dynamite.prefab",
+  "MaxStackSize": 999,
+  "__references": [],
+  "__version": 0
+}

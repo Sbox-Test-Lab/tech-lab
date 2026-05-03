@@ -12,6 +12,9 @@ public sealed class ItemState
 	/// <summary>Resource path used to look up the <see cref="ItemResource"/> and its prefab.</summary>
 	public string ResourcePath { get; set; } = string.Empty;
 
+	/// <summary>All behavior type names present on the item at capture time.</summary>
+	public List<string> Behaviors { get; set; } = new();
+
 	/// <summary>BehaviorTypeName → { PropertyName → JSON value }.</summary>
 	public Dictionary<string, Dictionary<string, string>> Deltas { get; set; } = new();
 
@@ -29,6 +32,8 @@ public sealed class ItemState
 		{
 			var typeDesc = TypeLibrary.GetType( behavior.GetType() );
 			if ( typeDesc is null ) continue;
+
+			state.Behaviors.Add( typeDesc.Name );
 
 			var dict = new Dictionary<string, string>();
 			foreach ( var prop in typeDesc.Properties )
@@ -88,7 +93,7 @@ public sealed class ItemState
 	/// <summary>
 	/// Deserialize from a JSON string.
 	/// </summary>
-	public static ItemState? Deserialize( string json )
+	public static ItemState Deserialize( string json )
 	{
 		try { return JsonSerializer.Deserialize<ItemState>( json ); }
 		catch { return null; }

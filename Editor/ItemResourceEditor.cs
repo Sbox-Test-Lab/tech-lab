@@ -11,7 +11,6 @@ namespace ItemBuilder.Editor;
 public sealed class ItemResourceEditor : BaseResourceEditor<ItemResource>
 {
 	private SerializedObject ResourceObject { get; set; }
-	private Layout _behaviorsLayout;
 	private ItemResource _resource;
 
 	public ItemResourceEditor()

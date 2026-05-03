@@ -33,6 +33,11 @@ public partial class ItemResource : GameResource
 
 	// ── Runtime registry ──────────────────────────────────────────
 
+	/// <summary>
+	/// Returns the icon texture to use as a thumbnail in inventory UI.
+	/// </summary>
+	public Texture GetThumbnail() => Icon;
+
 	public static IReadOnlyDictionary<string, ItemResource> All => _all;
 	private static readonly Dictionary<string, ItemResource> _all = new();
 

@@ -1,0 +1,139 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.Razor;
+@using System;
+
+@inherits PanelComponent
+
+@namespace ItemBuilder.UI
+
+<style>
+    InventoryPanel {
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        opacity: 0;
+        transform: translateY( -32px ) scale( 1.02 );
+        transition: all 0.1s ease-in;
+        background-color: rgba( 0, 0, 0, 0.5 );
+        backdrop-filter: blur( 10px );
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        z-index: 0;
+        gap: 16px;
+
+
+        &.visible {
+            opacity: 1.0;
+            transform: scale(1);
+            transition: all 0.1s ease-out;
+            pointer-events: all;
+        }
+
+        .inventory-panel {
+            display: flex;
+            flex-direction: column;
+            width: 480px;
+            height: 560px;
+            background-color: rgba( 0, 0, 0, 0.85 );
+            border: 2px solid rgba( 255, 255, 255, 0.15 );
+            border-radius: 6px;
+            padding: 8px;
+            gap: 8px;
+        }
+
+        .inventory-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4px 4px 4px;
+            border-bottom: 1px solid rgba( 255, 255, 255, 0.1 );
+
+            label {
+                font-size: 16px;
+                color: white;
+                font-weight: bold;
+            }
+
+            .inventory-count {
+                font-size: 13px;
+                color: rgba( 255, 255, 255, 0.5 );
+                font-weight: normal;
+            }
+        }
+
+        VirtualGrid {
+            width: 100%;
+            height: 480px;
+            gap: 4px;
+        }
+    }
+</style>
+
+<root>
+    <div class="inventory-panel">
+        <div class="inventory-header">
+            <label>Inventory</label>
+            <label class="inventory-count">@Inventory?.Items.Count / @Inventory?.MaxItems</label>
+        </div>
+        <VirtualGrid Items=@_cachedItems ItemSize=@(new Vector2( 80, 80 ))>
+            <Item Context="entry">
+                @if ( entry is SlotEntry slot )
+                {
+                    <InventorySlot Index="@slot.Index" State="@slot.State" Resource="@slot.Resource" IsSelected="@(Inventory?.EquippedItem.IsValid() == true && slot.Index == Inventory?.CurrentItemIndex)" />
+                }
+            </Item>
+        </VirtualGrid>
+    </div>
+</root>
+
+@code
+{
+    public PlayerInventory Inventory => Game.ActiveScene?.GetAllComponents<PlayerInventory>().FirstOrDefault( x => !x.IsProxy );
+
+    private record SlotEntry( int Index, ItemState State, ItemResource Resource );
+
+    private List<SlotEntry> _cachedItems = new();
+    private int _lastHash;
+
+    private void RebuildItems()
+    {
+        _cachedItems.Clear();
+        if ( Inventory is null ) return;
+        for ( var i = 0; i < Inventory.Items.Count; i++ )
+        {
+            var state = Inventory.GetItemState( i );
+            if ( state is null ) continue;
+            var resource = ResourceLibrary.Get<ItemResource>( state.ResourcePath );
+            _cachedItems.Add( new SlotEntry( i, state, resource ) );
+        }
+    }
+
+    protected override int BuildHash()
+    {
+        var hc = new HashCode();
+        hc.Add( Inventory?.CurrentItemIndex );
+        if ( Inventory is not null )
+        {
+            foreach ( var item in Inventory.Items )
+                hc.Add( item );
+        }
+        var hash = hc.ToHashCode();
+        if ( hash != _lastHash )
+        {
+            _lastHash = hash;
+            RebuildItems();
+        }
+        return hash;
+    }
+
+    protected override void OnUpdate()
+    {
+        SetClass( "visible", Input.Pressed( "Menu" ) ? !HasClass( "visible" ) : HasClass( "visible" ) );
+    }
+}

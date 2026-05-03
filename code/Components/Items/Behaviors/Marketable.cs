@@ -23,7 +23,7 @@ public class Marketable : BaseItemBehavior
 
 		if ( !playerMoney.HasAmount(Price) )
 		{
-			GameEventFeed.BroadcastGameFeedEvent( "payment", $"Not have enough money to purchase {Item.Name}" );
+			GameEventFeed.ShowGameFeedEvent( "payment", $"Not have enough money to purchase {Item.Name}" );
 
 			return false;
 		}
@@ -39,6 +39,6 @@ public class Marketable : BaseItemBehavior
 
 		Sound.Play( PurchaseSound );
 
-		GameEventFeed.BroadcastGameFeedEvent( "payment", $"Purchased {Item.Name}: {playerMoney.CurrentMoney}" );
+		GameEventFeed.ShowGameFeedEvent( "payment", $"Purchased {Item.Name}: {playerMoney.CurrentMoney}" );
 	}
 }

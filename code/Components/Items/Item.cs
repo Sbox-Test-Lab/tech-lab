@@ -49,11 +49,11 @@ public class Item : Component, IItemEvent
 
 	void IItemEvent.OnItemAdded()
 	{
-		GameEventFeed.BroadcastGameFeedEvent( "info", $"Added {Name} to inventory" );
+		GameEventFeed.ShowGameFeedEvent( "info", $"Added {Name} to inventory" );
 	}
 	void IItemEvent.OnItemRemoved()
 	{
-		GameEventFeed.BroadcastGameFeedEvent( "info", $"Removed {Name} from inventory" );
+		GameEventFeed.ShowGameFeedEvent( "info", $"Removed {Name} from inventory" );
 	}
 
 	void IItemEvent.OnItemInteraction(GameObject user)
@@ -66,25 +66,4 @@ public class Item : Component, IItemEvent
 			ability.OnActive( user );
 		}
 	}
-
-	private Texture GenerateThumbnailTexture()
-	{
-		var scene = new Scene();
-		using ( scene.Push() )
-		{
-			var go = new GameObject();
-			var mr = go.AddComponent<ModelRenderer>();
-			mr.Model = Model.Load( "models/error.vmdl" );
-
-			var gameobject = new GameObject();
-			var camera = gameobject.AddComponent<CameraComponent>();
-
-			var texture = Texture.Create( 128, 128 ).Finish();
-
-			camera.RenderToTexture( texture );
-
-			return texture;
-		}
-	}
-
 }

@@ -3,10 +3,6 @@
 
 @inherits PanelComponent
 
-<style>
-   
-    
-</style>
 
 <root>
    <VirtualGrid Items=@Items ItemSize=@(120)>
@@ -22,4 +18,11 @@
 @code
 {
     public Package[] Items { get; set; }
+
+    protected override void OnUpdate()
+    {
+        
+
+        SetClass("visible", Input.Down("Menu"));
+    }
 }

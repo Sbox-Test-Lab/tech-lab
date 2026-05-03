@@ -103,18 +103,6 @@ public class ItemContainer : Component
 		var state = GetItemState( index );
 		if ( state is null ) return false;
 
-		// If the behavior wrote any deltas, it exists on the prefab
-		if ( state.Deltas.ContainsKey( typeof(T).Name ) )
-			return true;
-
-		// Otherwise check the resource prefab's type description
-		if ( !ItemResource.All.TryGetValue( state.ResourcePath, out var resource ) )
-			return false;
-
-		var prefabType = TypeLibrary.GetType<T>();
-		if ( prefabType is null ) return false;
-
-		// The behavior exists on the prefab even if it had no mutable state
-		return true;
+		return state.Behaviors.Contains( typeof(T).Name );
 	}
 }

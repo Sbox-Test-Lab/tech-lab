@@ -1,32 +1,32 @@
 {
   "gizmo.settings": {
     "Value": "{\u0022EditMode\u0022:\u0022position\u0022,\u0022Selection\u0022:true,\u0022ViewMode\u0022:\u00223d\u0022,\u0022GizmosEnabled\u0022:true,\u0022GizmoScale\u0022:1,\u0022GridSpacing\u0022:32,\u0022SnapToGrid\u0022:false,\u0022SnapToAngles\u0022:true,\u0022AngleSpacing\u0022:15,\u0022GlobalSpace\u0022:false,\u0022DebugActionGraphs\u0022:false,\u0022DisabledGizmos\u0022:{}}",
-    "Timeout": 1778604006,
+    "Timeout": 1780427070,
     "DeleteAt": 0
   },
   "scenes/itembuilder.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u00221541.726,-660.1069,1146.887\u0022,\u0022CameraRotation\u0022:\u0022-0.06694347,0.01382183,0.9770526,0.2017322\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778606068,
+    "Value": "{\u0022CameraPosition\u0022:\u0022125.964005,-487.207642,1016.13519\u0022,\u0022CameraRotation\u0022:\u0022-0.0750366971,0.0765341669,0.696053743,0.709944487\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "SceneView.Viewport0.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u00221541.726,-660.1069,1146.887\u0022,\u0022CameraRotation\u0022:\u0022-0.06694347,0.01382183,0.9770526,0.2017322\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u0022125.964005,-487.207642,1016.13519\u0022,\u0022CameraRotation\u0022:\u0022-0.0750366971,0.0765341669,0.696053743,0.709944487\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "SceneView.Layout": {
     "Value": "{\u0022Layout\u0022:7,\u0022SplitterState\u0022:[\u0022AAAA/wAAAAEAAAACAAADGQAAAAAB/////wEAAAACAA==\u0022,\u0022AAAA/wAAAAEAAAACAAADGQAAAAAB/////wEAAAACAA==\u0022,\u0022AAAA/wAAAAEAAAACAAAAAAAAAAAB/////wEAAAABAA==\u0022]}",
-    "Timeout": 1778604012,
+    "Timeout": 1780427077,
     "DeleteAt": 0
   },
   "Window.SboxSceneEditor.Dock": {
-    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAACfYAAAUpAAAAAAAAAAAAAAn2AAAFKQAAAAAAAAAACgAAAAAAAAAAAAAACfYAAAUp\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneTreeWidget\u0022,\u0022name\u0022:\u0022Hierarchy\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:scenes/itembuilder.scene\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:scenes/mainmenu.scene\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:prefabs/player/player_citizen.prefab\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022PerformanceDock\u0022,\u0022name\u0022:\u0022Performance\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAADAAABOgAAA14AAANeAP////8BAAAAAQA=\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022currentIndex\u0022:1,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MainAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022ConsoleWidget\u0022,\u0022name\u0022:\u0022Console\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAADeQAAAhYA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022Inspector\u0022,\u0022name\u0022:\u0022Inspector\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAH\u002BwAAAfgA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
-    "Timeout": 1778606194,
+    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAACfYAAAUpAAAAAAAAAAAAAAn2AAAFKQAAAAAAAAAACgAAAAAAAAAAAAAACfYAAAUp\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneTreeWidget\u0022,\u0022name\u0022:\u0022Hierarchy\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022PanelInspectorWidget\u0022,\u0022name\u0022:\u0022UI Panels\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:scenes/itembuilder.scene\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:scenes/mainmenu.scene\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:prefabs/player/player_citizen.prefab\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:untitled\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAACRwAABbAA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MainAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022ConsoleWidget\u0022,\u0022name\u0022:\u0022Console\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAETQAAAhYA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022Inspector\u0022,\u0022name\u0022:\u0022Inspector\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAH\u002BwAAAfgA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
+    "Timeout": 1780427290,
     "DeleteAt": 0
   },
   "SceneView.Viewport1.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-3326.446,454.9192,806.4064\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022View\u0022:2,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:1,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-3326.44604,454.919189,806.406372\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022View\u0022:2,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:1,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "scenes/islandtest.scene.Viewport1": {
@@ -35,13 +35,13 @@
     "DeleteAt": 0
   },
   "LocalAssetBrowser.History": {
-    "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\player\u0022]",
-    "Timeout": 1778604012,
+    "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\items\\\\dynamite\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\items\\\\dynamite\u0022]",
+    "Timeout": 1780427348,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.HistoryIdx": {
-    "Value": "11",
-    "Timeout": 1778604012,
+    "Value": "6",
+    "Timeout": 1780427348,
     "DeleteAt": 0
   },
   "scenes/islandtest.scene.Viewport0": {
@@ -51,22 +51,22 @@
   },
   "CloudBrowser..ViewMode": {
     "Value": "2",
-    "Timeout": 1778604012,
+    "Timeout": 1780427076,
     "DeleteAt": 0
   },
   "CloudBrowser..ShowJunkFiles": {
     "Value": "false",
-    "Timeout": 1778604012,
+    "Timeout": 1780427076,
     "DeleteAt": 0
   },
   "CloudBrowser..HideNonAssets": {
     "Value": "false",
-    "Timeout": 1778604012,
+    "Timeout": 1780427076,
     "DeleteAt": 0
   },
   "CloudBrowser..ShowRecursiveFiles": {
     "Value": "false",
-    "Timeout": 1778604012,
+    "Timeout": 1780427076,
     "DeleteAt": 0
   },
   "scenes/islandtest.scene.Viewport2": {
@@ -75,8 +75,8 @@
     "DeleteAt": 0
   },
   "SceneView.Viewport2.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-150.6889,454.9192,3982.164\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022View\u0022:1,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-150.688904,454.919189,3982.16406\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022View\u0022:1,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1084.3843}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "scenes/islandtest.scene.Viewport3": {
@@ -85,23 +85,23 @@
     "DeleteAt": 0
   },
   "SceneView.Viewport3.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-150.6901,-2720.845,806.407\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022View\u0022:3,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:2,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-150.690094,-2720.84497,806.406982\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.707106769,0.707106769\u0022,\u0022View\u0022:3,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:2,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "scenes/itembuilder.scene.Viewport3": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-150.6901,-2720.845,806.407\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778606068,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-150.690094,-2720.84497,806.406982\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.707106769,0.707106769\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "scenes/itembuilder.scene.Viewport2": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-150.6889,454.9192,3982.164\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778606068,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-150.688904,454.919189,3982.16406\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "scenes/itembuilder.scene.Viewport1": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-3326.446,454.9192,806.4064\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778606068,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-3326.44604,454.919189,806.406372\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "MeshEditor.MaterialPalette.Default": {
@@ -120,63 +120,63 @@
     "DeleteAt": 0
   },
   "scenes/mainmenu.scene.Viewport3": {
-    "Value": "{\u0022CameraPosition\u0022:\u00223948.06,384.0004,827.8822\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u00223948.06006,384.000397,827.882202\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.707106769,0.707106769\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "scenes/mainmenu.scene.Viewport2": {
-    "Value": "{\u0022CameraPosition\u0022:\u00223948.06,384.0004,827.8822\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u00223948.06006,384.000397,827.882202\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "scenes/mainmenu.scene.Viewport1": {
-    "Value": "{\u0022CameraPosition\u0022:\u00223948.06,384.0004,827.8822\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u00223948.06006,384.000397,827.882202\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "scenes/mainmenu.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022232.8949,-95.63969,927.5808\u0022,\u0022CameraRotation\u0022:\u00220.1002076,0.007358878,-0.9922673,0.07286846\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u0022232.894897,-95.6396866,927.580811\u0022,\u0022CameraRotation\u0022:\u00220.100207597,0.00735887792,-0.992267311,0.0728684589\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   ".Viewport3": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-150.6901,-2720.845,806.407\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-150.690094,-2720.84497,806.406982\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.707106769,0.707106769\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780420477,
     "DeleteAt": 0
   },
   ".Viewport2": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-150.6889,454.9192,3982.164\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-150.688904,454.919189,3982.16406\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
+    "Timeout": 1780420477,
     "DeleteAt": 0
   },
   ".Viewport1": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-3326.446,454.9192,806.4064\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-3326.44604,454.919189,806.406372\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780420477,
     "DeleteAt": 0
   },
   ".Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u00221541.726,-660.1069,1146.887\u0022,\u0022CameraRotation\u0022:\u0022-0.06694347,0.01382183,0.9770526,0.2017322\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u002271.1703491,-47.5215988,893.044006\u0022,\u0022CameraRotation\u0022:\u0022-0.137803257,0.0904029682,0.824698687,0.541026473\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780420477,
     "DeleteAt": 0
   },
   "prefabs/player/player_citizen.prefab.Viewport3": {
-    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.707106769,0.707106769\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "prefabs/player/player_citizen.prefab.Viewport2": {
     "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778612325,
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "prefabs/player/player_citizen.prefab.Viewport1": {
     "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "prefabs/player/player_citizen.prefab.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-38.31169,-38.98403,91.93617\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778612325,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-38.3116913,-38.9840317,91.9361725\u0022,\u0022CameraRotation\u0022:\u0022-0.146446601,0.353553414,0.353553414,0.853553414\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427412,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Material.ViewMode": {
@@ -266,32 +266,32 @@
   },
   "LocalAssetBrowser.Sound Event.History": {
     "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022]",
-    "Timeout": 1778528447,
+    "Timeout": 1778612927,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Sound Event.HistoryIdx": {
     "Value": "1",
-    "Timeout": 1778528447,
+    "Timeout": 1778612927,
     "DeleteAt": 0
   },
   "prefabs/items/watermelon.prefab.Viewport3": {
-    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.7071068,0.7071068\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778524344,
+    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.707106769,0.707106769\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427017,
     "DeleteAt": 0
   },
   "prefabs/items/watermelon.prefab.Viewport2": {
     "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
-    "Timeout": 1778524344,
+    "Timeout": 1780427017,
     "DeleteAt": 0
   },
   "prefabs/items/watermelon.prefab.Viewport1": {
-    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778524344,
+    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427017,
     "DeleteAt": 0
   },
   "prefabs/items/watermelon.prefab.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-494.6514,-343.5941,363.7818\u0022,\u0022CameraRotation\u0022:\u0022-0.06326031,0.2052055,0.2877247,0.9333292\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778524344,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-494.651398,-343.594086,363.781799\u0022,\u0022CameraRotation\u0022:\u0022-0.0632603094,0.2052055,0.287724704,0.933329225\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427017,
     "DeleteAt": 0
   },
   "expand.be88425f-b61d-4b50-a323-5ca005b1230c.ModelCollider": {
@@ -340,13 +340,78 @@
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Item Resource.History": {
-    "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\u0022]",
-    "Timeout": 1778525289,
+    "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022c:\\\\users\\\\hscot\\\\dropbox\\\\sbox-projects\\\\tech-lab\\\\assets\\\\resources\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\items\\\\dynamite\u0022]",
+    "Timeout": 1780427285,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Item Resource.HistoryIdx": {
+    "Value": "8",
+    "Timeout": 1780427285,
+    "DeleteAt": 0
+  },
+  "expand.d245467b-9d42-4db0-8c6f-b6bfab670110.Prop": {
+    "Value": "false",
+    "Timeout": 1778612891,
+    "DeleteAt": 0
+  },
+  "expand.d245467b-9d42-4db0-8c6f-b6bfab670110.ModelRenderer": {
+    "Value": "false",
+    "Timeout": 1778612893,
+    "DeleteAt": 0
+  },
+  "expand.d245467b-9d42-4db0-8c6f-b6bfab670110.ModelCollider": {
+    "Value": "false",
+    "Timeout": 1778612894,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Texture.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022c:\\\\users\\\\hscot\\\\dropbox\\\\sbox-projects\\\\tech-lab\\\\assets\\\\resources\\\\items\\\\thumbnails\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\assets\\\\resources\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\\\\thumbnails\u0022]",
+    "Timeout": 1778627257,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Texture.HistoryIdx": {
     "Value": "6",
-    "Timeout": 1778525289,
+    "Timeout": 1778627257,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Texture,Image.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\\\\thumbnails\u0022]",
+    "Timeout": 1778627272,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Texture,Image.HistoryIdx": {
+    "Value": "5",
+    "Timeout": 1778627272,
+    "DeleteAt": 0
+  },
+  "prefabs/items/health_crate.prefab.Viewport3": {
+    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0.707106769,0.707106769\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427021,
+    "DeleteAt": 0
+  },
+  "prefabs/items/health_crate.prefab.Viewport2": {
+    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1084.3843}",
+    "Timeout": 1780427021,
+    "DeleteAt": 0
+  },
+  "prefabs/items/health_crate.prefab.Viewport1": {
+    "Value": "{\u0022CameraPosition\u0022:\u00220,0,0\u0022,\u0022CameraRotation\u0022:\u0022-0,0,0,1\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427021,
+    "DeleteAt": 0
+  },
+  "prefabs/items/health_crate.prefab.Viewport0": {
+    "Value": "{\u0022CameraPosition\u0022:\u0022-6.4951148,-6.47989607,11.6484499\u0022,\u0022CameraRotation\u0022:\u0022-0.146446601,0.353553414,0.353553414,0.853553414\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1780427021,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Hold Type.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\prefabs\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\resources\\\\holdtypes\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\items\u0022,\u0022C:\\\\Users\\\\hscot\\\\Dropbox\\\\sbox-projects\\\\tech-lab\\\\Assets\\\\items\\\\dynamite\u0022]",
+    "Timeout": 1780426997,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Hold Type.HistoryIdx": {
+    "Value": "11",
+    "Timeout": 1780426997,
     "DeleteAt": 0
   }
 }

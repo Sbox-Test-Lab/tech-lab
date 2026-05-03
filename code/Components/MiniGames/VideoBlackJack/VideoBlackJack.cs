@@ -19,10 +19,10 @@ public partial class VideoBlackJack : Component
 	public int CurrentBet;
 	public int PlayerChips = 1000;
 
-	[Property] public WorldPanel WorldPanel;
-	[Property] public ModelRenderer MachineModel;
+	[Property] public WorldPanel WorldPanel {  get; set; }
+	[Property] public ModelRenderer MachineModel { get; set; }
 
-	[Property] CameraComponent SceneCamera;
+	[Property] CameraComponent SceneCamera {  get; set; }
 	private Texture RenderTarget;
 	private Material Material;
 

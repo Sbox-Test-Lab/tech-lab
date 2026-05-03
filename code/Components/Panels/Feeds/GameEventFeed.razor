@@ -72,6 +72,13 @@
         Instance = this;
     }
 
+    
+    public static void ShowGameFeedEvent(string materialIcon, string eventText)
+	{
+		Instance.Entries.Add(new GameEventEntry(materialIcon, eventText, 0));
+		Instance.StateHasChanged();
+	}
+
     [Rpc.Broadcast]
     public static void BroadcastGameFeedEvent(string materialIcon, string eventText)
 	{
