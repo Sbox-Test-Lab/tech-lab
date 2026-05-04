@@ -26,6 +26,13 @@ public partial class ItemResource : GameResource
 	public PrefabFile PrefabFile { get; set; }
 
 	/// <summary>
+	/// How this item is held — grip, rotation offsets, and finger curl.
+	/// Generated automatically by the Item Builder tool.
+	/// </summary>
+	[Property, Group( "Prefab" )]
+	public HoldTypeResource HoldType { get; set; }
+
+	/// <summary>
 	/// Maximum items per inventory slot. 1 = non-stackable.
 	/// </summary>
 	[Property, Group( "Inventory" )]

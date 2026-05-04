@@ -29,7 +29,6 @@ public class HoldTypeEditorWidget : Widget
 	private GameObject _itemPreviewGo;
 
 	// ── UI references ─────────────────────────────────────────────
-	private Label _statusLabel;
 	private Label _itemLabel;
 	private ControlSheet _holdTypeSheet;
 	private SceneRenderingWidget _renderWidget;
@@ -53,15 +52,8 @@ public class HoldTypeEditorWidget : Widget
 		Layout.Spacing = 4;
 		Layout.Margin = 8;
 
-		// ── Top bar: item selection ────────────────────────────────
+		// ── Top bar: current item display ─────────────────────────
 		_itemLabel = Layout.Add( new Label( "No item selected" ) { Color = Theme.TextLight } );
-
-		var itemRow = Layout.AddRow();
-		var selectItemButton = itemRow.Add( new Button( "Select Item..." ) );
-		selectItemButton.Clicked = OnSelectItem;
-
-		var loadHoldButton = itemRow.Add( new Button( "Load Existing..." ) );
-		loadHoldButton.Clicked = OnLoadExisting;
 
 		Layout.AddSeparator();
 
@@ -124,12 +116,6 @@ public class HoldTypeEditorWidget : Widget
 
 		propsScroll.Canvas = propsCanvas;
 		rightPanel.Layout.Add( propsScroll, 1 );
-
-		rightPanel.Layout.AddSeparator();
-
-		_statusLabel = rightPanel.Layout.Add( new Label( "" ) );
-		var saveButton = rightPanel.Layout.Add( new Button.Primary( "Save Hold Type" ) );
-		saveButton.Clicked = OnSave;
 
 		splitRow.Add( rightPanel, 0 );
 	}
@@ -294,86 +280,73 @@ public class HoldTypeEditorWidget : Widget
 	}
 
 	/// <summary>
-	/// Called when any hold type property changes — updates the preview in real-time.
+	/// Called when any hold type property changes — preview updates on next OnPreFrame.
 	/// </summary>
 	private void OnHoldPropertyChanged( SerializedProperty prop )
 	{
-		// Preview updates on next OnPreFrame
 	}
 
 	/// <summary>
-	/// Opens a resource picker for an ItemResource.
+	/// Set the item to preview from an external source (e.g. Item Builder).
+	/// Resets the hold type form and rebuilds the preview.
 	/// </summary>
-	private void OnSelectItem()
+	public void SetItem( ItemResource resource )
 	{
-		var picker = AssetPicker.Create( this, AssetType.FromExtension( "item" ) );
-		picker.OnAssetPicked = ( assets ) =>
+		if ( resource is null || resource == _selectedItem ) return;
+
+		_selectedItem = resource;
+		_itemLabel.Text = $"✓ {resource.Name}";
+		_itemLabel.Color = Theme.Green;
+
+		// If SaveHoldType already ran (OnItemGenerated fired before us), keep the
+		// existing resource and current _holdType values rather than wiping them.
+		if ( _existingResource is null )
 		{
-			var asset = assets.FirstOrDefault();
-			if ( asset is null ) return;
-
-			var resource = ResourceLibrary.Get<ItemResource>( asset.Path );
-			if ( resource is null ) return;
-
-			_selectedItem = resource;
-			_itemLabel.Text = $"✓ {resource.Name}";
-			_itemLabel.Color = Theme.Green;
-
-			// Reset to a blank hold type so previous values don't bleed into a new item
-			_existingResource = null;
 			_holdType = new HoldTypeResource();
 			_holdTypeSerialized = _holdType.GetSerialized();
 			_holdTypeSheet.Clear( true );
 			_holdTypeSheet.AddObject( _holdTypeSerialized );
 			_holdTypeSerialized.OnPropertyChanged += OnHoldPropertyChanged;
+		}
 
-			using ( _previewScene.Push() )
-			{
-				RebuildItemPreview();
-			}
-		};
-		picker.Show();
+		using ( _previewScene.Push() )
+		{
+			RebuildItemPreview();
+		}
 	}
 
 	/// <summary>
-	/// Load an existing .holdtype resource to edit.
+	/// Preview a raw model directly — used when a scene object is selected before
+	/// an ItemResource exists. Spawns a simple ModelRenderer in the hold bone.
 	/// </summary>
-	private void OnLoadExisting()
+	public void SetPreviewModel( Model model, string label = null )
 	{
-		var picker = AssetPicker.Create( this, AssetType.FromExtension( "holdtype" ) );
-		picker.OnAssetPicked = ( assets ) =>
+		if ( model is null ) return;
+
+		_itemLabel.Text = label ?? "Scene selection";
+		_itemLabel.Color = Theme.TextLight;
+
+		using ( _previewScene.Push() )
 		{
-			var asset = assets.FirstOrDefault();
-			if ( asset is null ) return;
-
-			var resource = ResourceLibrary.Get<HoldTypeResource>( asset.Path );
-			if ( resource is null ) return;
-
-			_existingResource = resource;
-			_holdType = resource;
-
-			// Rebuild the ControlSheet bound to the loaded resource
-			_holdTypeSerialized = _holdType.GetSerialized();
-			_holdTypeSheet.Clear( true );
-			_holdTypeSheet.AddObject( _holdTypeSerialized );
-			_holdTypeSerialized.OnPropertyChanged += OnHoldPropertyChanged;
-
-			// Restore item preview if the resource remembers which item it was made for
-			if ( resource.PreviewItem is not null )
+			if ( _itemPreviewGo.IsValid() )
 			{
-				_selectedItem = resource.PreviewItem;
-				_itemLabel.Text = $"✓ {resource.PreviewItem.Name}";
-				_itemLabel.Color = Theme.Green;
-
-				using ( _previewScene.Push() )
-				{
-					RebuildItemPreview();
-				}
+				_itemPreviewGo.Destroy();
+				_itemPreviewGo = null;
 			}
 
-			SetStatus( $"Loaded: {resource.ResourceName}", Theme.Yellow );
-		};
-		picker.Show();
+			if ( !_citizenRenderer.IsValid() ) return;
+
+			_itemPreviewGo = new GameObject( true, "preview_model" );
+
+			var renderer = _itemPreviewGo.AddComponent<ModelRenderer>();
+			renderer.Model = model;
+
+			var hand = _citizenRenderer.GetBoneObject( "hold_R" );
+			if ( !hand.IsValid() ) return;
+			_itemPreviewGo.SetParent( hand );
+			_itemPreviewGo.LocalPosition = Vector3.Zero;
+			_itemPreviewGo.LocalRotation = Rotation.Identity;
+		}
 	}
 
 	/// <summary>
@@ -558,52 +531,84 @@ public class HoldTypeEditorWidget : Widget
 	}
 
 	/// <summary>
-	/// Save the hold type resource to disk.
+	/// Save the hold type resource into the given item directory.
+	/// Called by Item Builder when generating all item files at once.
 	/// </summary>
-	private void OnSave()
+	public void SaveHoldType( string itemDir, ItemResource itemResource = null )
 	{
-		// Always stamp PreviewItem so load can restore the model
-		_holdType.PreviewItem = _selectedItem;
-
 		if ( IsEditMode )
 		{
 			var projectRoot = Project.Current.GetRootPath();
 			var assetsPath = Path.Combine( projectRoot, "Assets" );
 			var fullPath = Path.Combine( assetsPath, _existingResource.ResourcePath );
-
 			var asset = AssetSystem.FindByPath( fullPath );
 			asset?.SaveToDisk( _existingResource );
-
-			SetStatus( $"✓ Updated {_existingResource.ResourcePath}", Theme.Green );
 		}
 		else
 		{
-			// Create new resource
-			var name = _selectedItem?.Name ?? "default";
+			var name = _selectedItem?.Name ?? itemResource?.Name ?? "default";
 			var safeName = name.ToLower().Replace( ' ', '_' );
+			Directory.CreateDirectory( itemDir );
 
 			var projectRoot = Project.Current.GetRootPath();
 			var assetsPath = Path.Combine( projectRoot, "Assets" );
-			var holdDir = _selectedItem is not null
-				? Path.Combine( assetsPath, "items", safeName )
-				: Path.Combine( assetsPath, "items", "shared" );
-			Directory.CreateDirectory( holdDir );
+			var holdPath = Path.Combine( itemDir, $"{safeName}.holdtype" );
 
-			var holdPath = Path.Combine( holdDir, $"{safeName}.holdtype" );
-
+			// Step 1: write the file with our in-memory values
 			var newAsset = AssetSystem.CreateResource( "holdtype", holdPath );
 			newAsset.SaveToDisk( _holdType );
 
-			_existingResource = _holdType;
-			SetStatus( $"✓ Created {safeName}.holdtype", Theme.Green );
-		}
-	}
+			// Step 2: derive the relative resource path and load the registered instance
+			var holdResourcePath = Path.GetRelativePath( assetsPath, holdPath ).Replace( '\\', '/' );
+			var registered = ResourceLibrary.Get<HoldTypeResource>( holdResourcePath );
 
-	private void SetStatus( string text, Color color )
-	{
-		if ( _statusLabel is null ) return;
-		_statusLabel.Text = text;
-		_statusLabel.Color = color;
+			if ( registered is not null && registered != _holdType )
+			{
+				registered.HoldType       = _holdType.HoldType;
+				registered.PositionOffset = _holdType.PositionOffset;
+				registered.RotationOffset = _holdType.RotationOffset;
+				registered.Scale          = _holdType.Scale;
+				registered.RightUpperArm  = _holdType.RightUpperArm;
+				registered.RightForearm   = _holdType.RightForearm;
+				registered.RightWrist     = _holdType.RightWrist;
+				registered.LeftUpperArm   = _holdType.LeftUpperArm;
+				registered.LeftForearm    = _holdType.LeftForearm;
+				registered.LeftWrist      = _holdType.LeftWrist;
+				registered.RightThumb     = _holdType.RightThumb;
+				registered.RightIndex     = _holdType.RightIndex;
+				registered.RightMiddle    = _holdType.RightMiddle;
+				registered.RightRing      = _holdType.RightRing;
+				registered.RightPinky     = _holdType.RightPinky;
+				registered.LeftThumb      = _holdType.LeftThumb;
+				registered.LeftIndex      = _holdType.LeftIndex;
+				registered.LeftMiddle     = _holdType.LeftMiddle;
+				registered.LeftRing       = _holdType.LeftRing;
+				registered.LeftPinky      = _holdType.LeftPinky;
+				newAsset.SaveToDisk( registered );
+				_existingResource = registered;
+			}
+			else
+			{
+				// ResourceLibrary hasn't indexed it yet — save what we have and
+				// use the asset handle to give itemResource a valid reference below
+				_existingResource = _holdType;
+				Log.Warning( $"[HoldTypeEditor] Could not load registered HoldTypeResource at '{holdResourcePath}' — HoldType reference on ItemResource may be blank." );
+			}
+
+			// Step 3: link holdtype into the ItemResource via the asset and re-save .item
+			if ( itemResource is not null )
+			{
+				// Find holdtype using relative path — same pattern as PrefabFile.Load
+				var holdType = ResourceLibrary.Get<HoldTypeResource>( holdResourcePath );
+				if ( holdType is not null )
+				{
+					itemResource.HoldType = holdType;
+					var itemFullPath = Path.Combine( assetsPath, itemResource.ResourcePath );
+					var itemAsset = AssetSystem.FindByPath( itemFullPath );
+					itemAsset?.SaveToDisk( itemResource );
+				}
+			}
+		}
 	}
 
 	public override void OnDestroyed()

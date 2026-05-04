@@ -33297,9 +33297,9 @@
       "Children": []
     },
     {
-      "__guid": "da1ca2f0-858b-4f71-8ca9-86f962205415",
+      "__guid": "a86554df-ce49-4c60-9d51-0f7a9599ab97",
       "__version": 2,
-      "__Prefab": "items/dynamite/dynamite.prefab",
+      "__Prefab": "items/beaker/beaker.prefab",
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -33307,36 +33307,162 @@
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "193527d3-5d14-4d49-8a98-6a1c9b0f2fbb"
+              "IdValue": "fbbdc30e-af01-40b7-ab07-484c4db9329c"
             },
             "Property": "Name",
-            "Value": "Dynamite"
+            "Value": "Beaker"
           },
           {
             "Target": {
               "Type": "GameObject",
-              "IdValue": "193527d3-5d14-4d49-8a98-6a1c9b0f2fbb"
+              "IdValue": "fbbdc30e-af01-40b7-ab07-484c4db9329c"
             },
             "Property": "Position",
-            "Value": "-2.21612549,-28.8371201,844.712585"
+            "Value": "-5.80398512,-43.1760216,844.884705"
           }
         ],
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "193527d3-5d14-4d49-8a98-6a1c9b0f2fbb": "da1ca2f0-858b-4f71-8ca9-86f962205415",
-        "20f3a928-db20-4102-ac75-2734202a8449": "6105b68f-9a4c-40d0-a723-53c58a2c1468",
-        "e114d93a-63bf-41a2-9b04-b699b85a8ded": "3f2ba148-ecb0-4d45-97f9-fd42d198c349",
-        "ee712917-b39d-4d27-bf2b-fab274de53cd": "7efcf72f-cf8a-422e-a306-81f411087097",
-        "33554de6-7812-4b68-b0a2-f25fe6043333": "03ff3680-551e-4757-b21d-429e0fd0a2d7",
-        "c3a80bc6-cb77-4705-bba2-6972b66632a4": "001833f7-baa0-428b-b04e-148ddc9af952",
-        "464c6b76-995a-48bf-b014-261896666410": "1335c1e3-ab59-4d91-9107-869f5c3fdbf7",
-        "ea1afee3-3df0-413d-a4bc-c56db6f0cb10": "1490e9ac-5b6e-4cf7-b67b-82f45fc13f92",
-        "03d1d51b-7c40-4cae-9dbb-392afc6758cd": "b4bf2bf9-b7f9-42ae-b384-47494684de8c",
-        "476318e6-a46f-4ff0-9008-82b5145a9029": "111e4441-c319-408f-bddf-0caad90c9e3b",
-        "c5ad2ec8-1d08-49cf-b7bb-5b9bd1258298": "255bebf0-8c83-455f-89f5-f332986a9ae6",
-        "29747aaf-05d5-4b6f-8902-1ee6882c388c": "0a96489c-53f5-42a0-8596-60b34012b498"
+        "fbbdc30e-af01-40b7-ab07-484c4db9329c": "a86554df-ce49-4c60-9d51-0f7a9599ab97",
+        "6d749f68-f131-4a2f-a59a-185dae3b1a2a": "15e0757e-0308-4145-9a93-c8969484bf5c",
+        "9508e702-d0db-48b7-a4be-a8daebe3e8d8": "dd25c4f8-aa71-4dd6-bc29-e35a8a00fd0c",
+        "66e82565-53b7-4fad-bcae-82def34afa1a": "18951b7b-ba4e-4e77-8c4c-33c9e6401b75",
+        "57b8ac68-d340-409c-8866-2f5ccea92060": "4aceb167-c713-4087-a724-5e37aa528841",
+        "876491ad-5976-47ea-88c6-f70e547b1fb0": "7cb865ad-cf58-42c4-ab6c-f19eb1253e9a",
+        "1a1128d4-f390-4c59-b9c3-1c31f57a9e99": "e67dc2a7-f72a-4f3a-879b-13038059a8a5",
+        "baf600ae-ebad-46f8-98c5-467cc99c1dc0": "89a08c5b-f667-43d9-ade3-88b0e5b914ce",
+        "e34e513f-38b9-4a2d-8dec-5709684e9926": "ffa2f057-0382-45bc-931e-a3cbf2a711f2",
+        "fa764afe-90e0-4774-9ba2-8ae9d940dfa4": "3c61e119-d287-4b50-bd21-7dadec096973",
+        "18c0215b-fc65-4763-bacd-296ac95fd5ca": "363ae4d2-5d28-4937-a834-37a28aaeaacc",
+        "baa29a27-fa87-4527-92ac-a05797cdc720": "16fb4621-7f3a-40fa-bd66-54161b0c6d70"
       }
+    },
+    {
+      "__guid": "e2ecf5c3-ea42-4e04-87c1-7c2e3ae8ef71",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "watermelon",
+      "Position": "0.92816931,-7.25226593,844.700073",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "d835cf0f-a87c-4c5c-a370-cb61c467090e",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 3,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/sbox_props/watermelon/watermelon.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "66e4eaf8-a3cc-4658-bda0-f96ac5ac88dc",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/sbox_props/watermelon/watermelon.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "16d40db8-ac2e-4be2-9cf5-ab020fdfca54",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/sbox_props/watermelon/watermelon.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "159f2b4e-8415-4a95-9b07-ea3fe0395d7d",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 3,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 9,
+          "MinImpactDamageSpeed": 300,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -33361,13 +33487,13 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
         }
+      },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
       },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
@@ -33414,6 +33540,7 @@
     "facepunch.tree_oak_big_b#33691",
     "facepunch.tv#33694",
     "facepunch.waste_bin_dev#58707",
+    "facepunch.watermelon#143952",
     "facepunch.wooden_door_frame_single_02b#63899",
     "fdd.campfire#35306",
     "fish.bus_stop#58973",

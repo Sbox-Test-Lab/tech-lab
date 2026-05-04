@@ -1,0 +1,10 @@
+{
+  "Name": "Grenade",
+  "Description": "A grenade",
+  "Icon": "items/grenade/grenade_icon.png",
+  "PrefabFile": "items/grenade/grenade.prefab",
+  "HoldType": "items/grenade/grenade.holdtype",
+  "MaxStackSize": 999,
+  "__references": [],
+  "__version": 0
+}

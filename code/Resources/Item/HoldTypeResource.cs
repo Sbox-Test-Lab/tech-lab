@@ -7,12 +7,6 @@ using Sandbox.Citizen;
 [AssetType( Name = "Hold Type", Extension = "holdtype", Category = "Item data" )]
 public class HoldTypeResource : GameResource
 {
-	/// <summary>
-	/// The item this hold type was authored for. Used to restore the preview when loading.
-	/// </summary>
-	[Property, Group( "Animation" )]
-	public ItemResource PreviewItem { get; set; }
-
 	[Property, Group( "Animation" )]
 	public CitizenAnimationHelper.HoldTypes HoldType { get; set; } = CitizenAnimationHelper.HoldTypes.None;
 

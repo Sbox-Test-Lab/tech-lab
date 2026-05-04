@@ -1,11 +1,11 @@
 {
   "RootObject": {
-    "__guid": "193527d3-5d14-4d49-8a98-6a1c9b0f2fbb",
+    "__guid": "fc90b1b1-0411-43b6-b492-c077e265e866",
     "__version": 2,
     "Flags": 0,
-    "Name": "Dynamite",
+    "Name": "Grenade",
     "Position": "0,0,0",
-    "Rotation": "0,0,0,1",
+    "Rotation": "-1.31130219E-06,-3.08521635E-07,1,-9.25564905E-07",
     "Scale": "1,1,1",
     "Tags": "interactable",
     "Enabled": true,
@@ -17,14 +17,14 @@
     "Components": [
       {
         "__type": "Sandbox.Prop",
-        "__guid": "20f3a928-db20-4102-ac75-2734202a8449",
+        "__guid": "63a7562e-b133-4b36-8e9c-a9f4f074c898",
         "__enabled": true,
         "Flags": 0,
-        "BodyGroups": 18446744073709551615,
+        "BodyGroups": 11,
         "Health": 0,
         "IsStatic": false,
         "MaterialGroup": null,
-        "Model": "models/dynamite/dyn.vmdl",
+        "Model": "models/weapons/sbox_grenade_explosive/w_he_grenade.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -38,16 +38,16 @@
       },
       {
         "__type": "Sandbox.ModelRenderer",
-        "__guid": "e114d93a-63bf-41a2-9b04-b699b85a8ded",
+        "__guid": "e912c5e9-0cef-4bf2-8075-0bf394fd998f",
         "__enabled": true,
         "Flags": 0,
-        "BodyGroups": 18446744073709551615,
+        "BodyGroups": 11,
         "CreateAttachments": false,
         "LodOverride": null,
         "MaterialGroup": null,
         "MaterialOverride": null,
         "Materials": null,
-        "Model": "models/dynamite/dyn.vmdl",
+        "Model": "models/weapons/sbox_grenade_explosive/w_he_grenade.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -65,14 +65,14 @@
       },
       {
         "__type": "Sandbox.ModelCollider",
-        "__guid": "ee712917-b39d-4d27-bf2b-fab274de53cd",
+        "__guid": "53be6ebc-6bf4-47bc-a6e4-213b43eb89f3",
         "__enabled": true,
         "Flags": 0,
         "ColliderFlags": 0,
         "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
-        "Model": "models/dynamite/dyn.vmdl",
+        "Model": "models/weapons/sbox_grenade_explosive/w_he_grenade.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -90,7 +90,7 @@
       },
       {
         "__type": "Sandbox.Rigidbody",
-        "__guid": "33554de6-7812-4b68-b0a2-f25fe6043333",
+        "__guid": "cffc243d-7c5a-41e8-a409-49406630d422",
         "__enabled": true,
         "Flags": 0,
         "AngularDamping": 0,
@@ -109,7 +109,7 @@
           "Roll": false
         },
         "MassCenterOverride": "0,0,0",
-        "MassOverride": 0,
+        "MassOverride": 0.4,
         "MinImpactDamageSpeed": 500,
         "MotionEnabled": true,
         "OnComponentDestroy": null,
@@ -124,22 +124,50 @@
       },
       {
         "__type": "Item",
-        "__guid": "c3a80bc6-cb77-4705-bba2-6972b66632a4",
+        "__guid": "641d171b-a63d-4220-8127-38403c20235b",
         "__enabled": true,
         "Flags": 0,
-        "Description": "Some sticks of dynamite",
-        "Name": "Dynamite",
+        "Description": "A grenade",
+        "Name": "Grenade",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "Resource": null
+        "Resource": "items/grenade/grenade.item"
+      },
+      {
+        "__type": "Perishable",
+        "__guid": "d98d2eb5-f3c8-4031-92cd-b304b1f1f736",
+        "__enabled": true,
+        "Flags": 0,
+        "EnableOnRestore": true,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
+      },
+      {
+        "__type": "Marketable",
+        "__guid": "0ece1f76-7373-4280-b20a-6fd5927541dc",
+        "__enabled": true,
+        "Flags": 0,
+        "EnableOnRestore": false,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Price": 0,
+        "PurchaseSound": null
       },
       {
         "__type": "Interactable",
-        "__guid": "464c6b76-995a-48bf-b014-261896666410",
+        "__guid": "06a81a08-a5c3-4b89-b629-4503d2ac4052",
         "__enabled": true,
         "Flags": 0,
         "EnableOnRestore": true,
@@ -152,11 +180,10 @@
       },
       {
         "__type": "Equipable",
-        "__guid": "ea1afee3-3df0-413d-a4bc-c56db6f0cb10",
+        "__guid": "bc75f1fb-f531-44da-bc0b-bd55c90230d5",
         "__enabled": true,
         "Flags": 0,
         "EnableOnRestore": true,
-        "HoldConfig": null,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -166,7 +193,7 @@
       },
       {
         "__type": "Carriable",
-        "__guid": "03d1d51b-7c40-4cae-9dbb-392afc6758cd",
+        "__guid": "682c77e9-adc7-467a-87ad-3a49bf699bdd",
         "__enabled": true,
         "Flags": 0,
         "EnableOnRestore": true,
@@ -180,12 +207,12 @@
     ],
     "Children": [
       {
-        "__guid": "476318e6-a46f-4ff0-9008-82b5145a9029",
+        "__guid": "fec416f0-5468-410b-ae46-963eac8f9ce3",
         "__version": 2,
         "Flags": 0,
         "Name": "UI",
-        "Position": "0.00348138809,0,20.7599487",
-        "Rotation": "0,0,0,1",
+        "Position": "-0.0427521206,-4.03754075E-06,9.76269531",
+        "Rotation": "1.31130219E-06,3.08521635E-07,-1,-9.25564905E-07",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
@@ -197,7 +224,7 @@
         "Components": [
           {
             "__type": "Sandbox.WorldPanel",
-            "__guid": "c5ad2ec8-1d08-49cf-b7bb-5b9bd1258298",
+            "__guid": "8ccc677a-61b4-47b0-b667-a9a44e652f88",
             "__enabled": true,
             "Flags": 0,
             "HorizontalAlign": "Center",
@@ -221,7 +248,7 @@
           },
           {
             "__type": "ItemBuilder.UI.ItemWorldInfo",
-            "__guid": "29747aaf-05d5-4b6f-8902-1ee6882c388c",
+            "__guid": "f166aac2-72ed-4d4c-91a5-6e420f11e7f6",
             "__enabled": true,
             "Flags": 0,
             "OnComponentDestroy": null,
@@ -242,7 +269,7 @@
   "MenuIcon": null,
   "DontBreakAsTemplate": false,
   "__references": [
-    "gnomefig.dyn#109923"
+    "facepunch.w_he_grenade#144895"
   ],
   "__version": 2
 }

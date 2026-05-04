@@ -1,6 +1,7 @@
 using Editor;
 using ItemBuilder.UI;
 using Sandbox;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,6 +38,17 @@ public class ItemResourceWidget : Widget
 	private Label _statusLabel;
 	private Button _actionButton;
 
+	/// <summary>
+	/// Injects the status label and action button created externally (e.g. in ItemGenerator
+	/// at the bottom of the full scrollable layout).
+	/// </summary>
+	public void SetFooterWidgets( Label statusLabel, Button actionButton )
+	{
+		_statusLabel = statusLabel;
+		_actionButton = actionButton;
+		_actionButton.Clicked = OnActionClicked;
+	}
+
 	// ── Selection from EditorTool ─────────────────────────────────
 
 	private GameObject _selectedObject;
@@ -48,6 +60,24 @@ public class ItemResourceWidget : Widget
 	/// </summary>
 	private ItemResource _existingResource;
 	private bool IsEditMode => _existingResource is not null;
+
+	/// <summary>
+	/// Fired when an item resource becomes active — either an existing item is selected
+	/// in the scene or a new one is successfully generated.
+	/// </summary>
+	public Action<ItemResource> OnItemReady { get; set; }
+
+	/// <summary>
+	/// Fired only when a brand-new item is generated. Provides the resource and the
+	/// absolute path to the item's asset directory so other widgets can save into it.
+	/// </summary>
+	public Action<ItemResource, string> OnItemGenerated { get; set; }
+
+	/// <summary>
+	/// Fired when a scene object with a model is selected but has no ItemResource yet.
+	/// Provides the model and the object name for live preview in the hold type editor.
+	/// </summary>
+	public Action<Model, string> OnModelSelected { get; set; }
 
 	public ItemResourceWidget( Widget parent ) : base( parent, true )
 	{
@@ -97,15 +127,14 @@ public class ItemResourceWidget : Widget
 		}
 
 		Layout.AddSeparator();
+	}
 
-		// ── Status ────────────────────────────────────────────────
-
-		_statusLabel = Layout.Add( new Label( "" ) );
-
-		// ── Action button (text changes based on mode) ────────────
-
-		_actionButton = Layout.Add( new Button.Primary( "Generate Item" ) );
-		_actionButton.Clicked = OnActionClicked;
+	/// <summary>
+	/// Triggers generate or update — called externally by the bottom Generate Item button.
+	/// </summary>
+	public void TriggerGenerate()
+	{
+		OnActionClicked();
 	}
 
 	/// <summary>
@@ -154,6 +183,7 @@ public class ItemResourceWidget : Widget
 			}
 
 			SetStatus( "Editing existing item — changes will overwrite.", Theme.Yellow );
+			OnItemReady?.Invoke( _existingResource );
 		}
 		else
 		{
@@ -167,6 +197,11 @@ public class ItemResourceWidget : Widget
 				if ( _resourceSerialized.TryGetProperty( "Name", out var nameProp ) )
 					nameProp.SetValue( go.Name );
 			}
+
+			// Push the raw model to the hold type preview immediately
+			var modelRenderer = go.Components.Get<ModelRenderer>( FindMode.EverythingInSelf );
+			if ( modelRenderer?.Model is not null )
+				OnModelSelected?.Invoke( modelRenderer.Model, go.Name );
 		}
 
 		_selectedObject = go;
@@ -268,65 +303,69 @@ public class ItemResourceWidget : Widget
 
 		var itemInfoPanel = uiGameObject.Components.Create<ItemWorldInfo>();
 
-		// ── Save as prefab ────────────────────────────────────────
+		// ── Prepare asset paths ───────────────────────────────────
 
 		var projectRoot = Project.Current.GetRootPath();
 		var assetsPath = Path.Combine( projectRoot, "Assets" );
 
-		Log.Info( $"[ItemBuilder] RootPath: {projectRoot}" );
-		Log.Info( $"[ItemBuilder] AssetsPath: {assetsPath}" );
-
 		var itemDir = Path.Combine( assetsPath, "items", safeName );
 		Directory.CreateDirectory( itemDir );
+
 		var prefabPath = Path.Combine( itemDir, $"{safeName}.prefab" );
+		var itemPath = Path.Combine( itemDir, $"{safeName}.item" );
 
-		Log.Info( $"[ItemBuilder] PrefabPath: {prefabPath}" );
+		// ── Step 1: Save a placeholder .item so it gets a ResourcePath ──
 
-		// Let the engine handle prefab creation — just hand it the prepared GO
+		var itemAsset = AssetSystem.CreateResource( "item", itemPath );
+		itemAsset.SaveToDisk( _tempResource );
+
+		var savedItem = ResourceLibrary.Get<ItemResource>( itemAsset.Path );
+		if ( savedItem is null )
+		{
+			SetStatus( "Failed to create item resource.", Theme.Red );
+			return;
+		}
+
+		// ── Step 2: Set Resource on the Item component before prefab save ──
+
+		item.Resource = savedItem;
+
+		// ── Step 3: Convert to prefab once (Resource reference is now set) ──
+
 		using ( SceneEditorSession.Scope() )
 		{
 			EditorUtility.Prefabs.ConvertGameObjectToPrefab( go, prefabPath );
 		}
 
-		// Load the created prefab asset to verify it exists
-		var asset = AssetSystem.FindByPath( prefabPath );
-
-		if ( asset is null )
+		var prefabAsset = AssetSystem.FindByPath( prefabPath );
+		if ( prefabAsset is null )
 		{
 			SetStatus( "Failed to create prefab.", Theme.Red );
 			return;
 		}
 
-		// Convert absolute path to resource path (relative to assets folder)
-		var resourcePath = Path.GetRelativePath( assetsPath, prefabPath ).Replace( '\\', '/' );
-
-		// Load the actual PrefabFile resource
-		var prefab = PrefabFile.Load( resourcePath );
-
+		var prefabResourcePath = Path.GetRelativePath( assetsPath, prefabPath ).Replace( '\\', '/' );
+		var prefab = PrefabFile.Load( prefabResourcePath );
 		if ( prefab is null )
 		{
 			SetStatus( "Failed to load prefab resource.", Theme.Red );
 			return;
 		}
 
-		Log.Info( $"[ItemBuilder] Prefab created: {prefab.ResourcePath}" );
+		// ── Step 4: Update .item with PrefabFile + thumbnail and re-save ──
 
-		// ── Create the ItemResource ───────────────────────────────
+		savedItem.PrefabFile = prefab;
+		savedItem.Icon = GenerateThumbnailTexture( go, assetsPath, safeName );
+		itemAsset.SaveToDisk( savedItem );
 
-		var itemPath = Path.Combine( itemDir, $"{safeName}.item" );
-		_tempResource.PrefabFile = prefab;
-		_tempResource.Icon = GenerateThumbnailTexture( go, assetsPath, safeName );
+		Log.Info( $"[ItemBuilder] Generated: {prefabResourcePath} + {itemAsset.Path}" );
 
-		var itemAsset = AssetSystem.CreateResource( "item", itemPath );
-		itemAsset.SaveToDisk( _tempResource );
-
-		// ── Wire up the back-reference ────────────────────────────
-
-		item.Resource = _tempResource;
+		// Fire OnItemGenerated first so SaveHoldType captures the current (user-edited)
+		// _holdType values before SetItem resets them.
+		OnItemGenerated?.Invoke( savedItem, itemDir );
+		OnItemReady?.Invoke( savedItem );
 
 		SetStatus( $"✓ Created {safeName}.prefab + {safeName}.item", Theme.Green );
-
-		Log.Info( $"[ItemBuilder] Generated resource at {itemPath}" );
 	}
 
 	/// <summary>

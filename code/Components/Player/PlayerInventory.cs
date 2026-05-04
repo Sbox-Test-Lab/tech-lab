@@ -36,6 +36,7 @@ public partial class PlayerInventory : ItemContainer
 
 		var player = Player.LocalPlayer();
 		var go = ItemFactory.CreateFromState( GetItemState( CurrentItemIndex ), Vector3.Zero );
+		var item = go.Components.Get<Item>();
 
 		// Disable physics so the item doesn't fall or collide
 		if ( go.Components.TryGet<Rigidbody>( out var rb ) )
@@ -58,8 +59,8 @@ public partial class PlayerInventory : ItemContainer
 		go.LocalScale = Vector3.One;
 
 		// Apply HoldTypeResource offsets and activate PlayerHoldPose
-		var equipable = go.Components.Get<Equipable>( FindMode.EverythingInSelfAndDescendants );
-		var holdConfig = equipable?.HoldConfig;
+		//var equipable = go.Components.Get<Equipable>( FindMode.EverythingInSelfAndDescendants );
+		var holdConfig = item.Resource.HoldType;
 
 		if ( holdConfig is not null )
 		{

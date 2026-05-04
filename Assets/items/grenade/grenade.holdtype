@@ -1,7 +1,6 @@
 {
-  "PreviewItem": "items/dynamite/dynamite.item",
-  "HoldType": "None",
-  "PositionOffset": "0,0,0",
+  "HoldType": "Pistol",
+  "PositionOffset": "1.46666622,0.75333339,-1.26666665",
   "RotationOffset": "0,0,0",
   "Scale": "1,1,1",
   "RightUpperArm": "0,0,0",

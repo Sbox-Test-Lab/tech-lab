@@ -1,4 +1,4 @@
-﻿using Editor;
+using Editor;
 using Sandbox;
 using System.Linq;
 
@@ -11,7 +11,8 @@ namespace TestLab;
 [Group( "0" )]
 public class ItemBuilder : EditorTool
 {
-	private ItemResourceWidget _widget;
+	private ItemResourceWidget _itemWidget;
+	private HoldTypeEditorWidget _holdTypeWidget;
 
 	public override void OnEnabled()
 	{
@@ -20,15 +21,34 @@ public class ItemBuilder : EditorTool
 		window.WindowTitle = "Item Builder";
 		window.Layout = Layout.Column();
 
-		window.MinimumSize = new Vector2( 640, 400 );
-		window.MaximumSize = new Vector2( 800, 800 );
+		window.MinimumSize = new Vector2( 900, 600 );
+		window.MaximumSize = new Vector2( 1200, 2000 );
 
 		var scroll = new ScrollArea( window );
 		scroll.Canvas = new Widget();
 		scroll.Canvas.Layout = Layout.Column();
+		scroll.Canvas.Layout.Spacing = 0;
 
-		_widget = new ItemResourceWidget( scroll.Canvas );
-		scroll.Canvas.Layout.Add( _widget );
+		_itemWidget = new ItemResourceWidget( scroll.Canvas );
+		scroll.Canvas.Layout.Add( _itemWidget );
+
+		var divider = scroll.Canvas.Layout.Add( new Label( "Hold Type" ) );
+		divider.Color = Theme.Blue;
+		divider.SetStyles( "font-size: 13px; padding: 8px 4px 4px 4px;" );
+		scroll.Canvas.Layout.AddSeparator();
+
+		_holdTypeWidget = new HoldTypeEditorWidget( scroll.Canvas );
+		_itemWidget.OnItemReady = resource => _holdTypeWidget?.SetItem( resource );
+		_itemWidget.OnItemGenerated = ( resource, itemDir ) => _holdTypeWidget?.SaveHoldType( itemDir, resource );
+		_itemWidget.OnModelSelected = ( model, name ) => _holdTypeWidget?.SetPreviewModel( model, name );
+		scroll.Canvas.Layout.Add( _holdTypeWidget );
+
+		// -- Bottom: status + generate button ----------------------
+		scroll.Canvas.Layout.AddSeparator();
+		var statusLabel = scroll.Canvas.Layout.Add( new Label( "" ) );
+		var generateButton = scroll.Canvas.Layout.Add( new Button.Primary( "Generate Item" ) );
+		_itemWidget.SetFooterWidgets( statusLabel, generateButton );
+
 		scroll.Canvas.Layout.AddStretchCell();
 
 		window.Layout.Add( scroll );
@@ -40,12 +60,11 @@ public class ItemBuilder : EditorTool
 	{
 		base.OnUpdate();
 
-		if ( _widget is null ) return;
+		if ( _itemWidget is null ) return;
 
-		// Feed the current scene selection into the widget
 		var selection = SceneEditorSession.Active?.Selection;
 		var selected = selection?.OfType<GameObject>().FirstOrDefault();
 
-		_widget.SetSelectedObject( selected );
+		_itemWidget.SetSelectedObject( selected );
 	}
 }
